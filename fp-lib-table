@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "unicorne")(type "KiCad")(uri "${KIPRJMOD}/lib/unicorne.pretty")(options "")(descr "unicorne project footprints; hotswap sockets from keyswitch-kicad-library (MIT)"))
+)

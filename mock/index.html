@@ -1,0 +1,325 @@
+<title>unicorne Tilt Study</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: drafting sheet. One board plate at full width, then the spec sheet. */
+:root {
+  --bg: #eef1ee; --paper: #f8faf8; --ink: #17211c; --muted: #5b6a62; --rule: #cfd8d2;
+  --mask: #1f4d3a; --mask-edge: #143327; --silk: #f4f7f4; --cap: #f6f3ea; --cap-thumb: #e9d9bd;
+  --cap-edge: #8a8f86; --copper: #a8681f; --led: #ffcf4a; --glow: #5cc8ff; --nano: #26292b;
+  --pad: #d9ddd8; --pad-edge: #9aa39d;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1512; --paper: #151d19; --ink: #e2e9e4; --muted: #94a39a; --rule: #2a3530;
+  --mask: #1d4a37; --mask-edge: #2f6b52; --silk: #e8efe9; --cap: #e6e2d6; --cap-thumb: #d8c39c;
+  --cap-edge: #59605a; --copper: #d39a4e; --led: #ffd45e; --glow: #6fd0ff; --nano: #0a0c0d;
+  --pad: #2a302d; --pad-edge: #4a544e; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f1512; --paper: #151d19; --ink: #e2e9e4; --muted: #94a39a; --rule: #2a3530;
+  --mask: #1d4a37; --mask-edge: #2f6b52; --silk: #e8efe9; --cap: #e6e2d6; --cap-thumb: #d8c39c;
+  --cap-edge: #59605a; --copper: #d39a4e; --led: #ffd45e; --glow: #6fd0ff; --nano: #0a0c0d;
+  --pad: #2a302d; --pad-edge: #4a544e; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--body); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px; }
+header { display: grid; gap: 6px; }
+.eyebrow { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--copper); }
+h1 { font: 600 clamp(30px, 5vw, 44px)/1.05 var(--display); margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+h2 { font: 600 22px/1.2 var(--display); margin: 0; }
+.lede { max-width: 68ch; color: var(--muted); margin: 0; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; padding: 12px 14px;
+  border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+.seg button { font: 500 13px var(--mono); padding: 6px 12px; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.controls label { display: inline-flex; gap: 7px; align-items: center; font-size: 14px; cursor: pointer; }
+.controls .k { font: 500 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--copper); outline-offset: 2px; }
+.plate { display: grid; gap: 10px; padding: 14px; background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; min-width: 0; }
+.plate svg { width: 100%; height: auto; display: block; }
+dl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px 10px; margin: 0; }
+dt { font: 500 11px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+dd { margin: 0; font: 500 14px var(--mono); font-variant-numeric: tabular-nums; }
+.delta { color: var(--muted); font-size: 12px; }
+.spec { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.spec section { padding: 16px 18px; background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.spec p, .spec ul { margin: 0; color: var(--ink); }
+.spec ul { padding-left: 18px; display: grid; gap: 4px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font: 13px var(--mono); font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 5px 8px 5px 0; border-bottom: 1px solid var(--rule); white-space: nowrap; vertical-align: top; }
+th { font-weight: 500; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+.tag { font: 500 11px var(--mono); padding: 1px 6px; border-radius: 3px; border: 1px solid var(--rule); color: var(--muted); }
+.tag.res { color: var(--copper); border-color: var(--copper); }
+.note { font-size: 13px; color: var(--muted); }
+code { font: 13px var(--mono); }
+@media (max-width: 760px) { dl { grid-template-columns: repeat(2, 1fr); } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">unicorne · unibody Corne · rev 0.8 · schematic started</div>
+    <h1>16° per half, trackpad in the middle</h1>
+    <p class="lede">Key spacing, column stagger, thumb cluster and LED positions are copied from the Corne v3 PCB
+      (crkbd <code>v3-final</code>, 19.0&nbsp;mm pitch), and each half is rotated 16°. The nice!nano is on the underside
+      (dotted) with its USB port on the top edge, level with the inner key columns. The Azoteq TPS43 trackpad is centred in
+      the open area between that edge and the bottom of the board. The halves sit as close as they can without a keycap
+      coming within 2&nbsp;mm of the trackpad. Like the original, the outer pinky columns snap off along the dashed lines
+      to make a 36-key board. The outline runs 1.5&nbsp;mm outside the switches and follows the column stagger.</p>
+  </header>
+
+  <div class="controls" role="group" aria-label="Display options">
+    <span class="k">Keycaps</span>
+    <span class="seg"><button id="cap-mx" aria-pressed="true">MX 18×18</button><button id="cap-choc" aria-pressed="false">Choc 17.5×16.5</button></span>
+    <label><input type="checkbox" id="opt-led" checked> Per-key LEDs</label>
+    <label><input type="checkbox" id="opt-glow" checked> Underglow (bottom)</label>
+    <label><input type="checkbox" id="opt-matrix"> Matrix positions</label>
+  </div>
+
+  <article class="plate">
+    <svg id="board" role="img" aria-label="unicorne board at 16 degrees with trackpad"></svg>
+    <dl id="stats"></dl>
+  </article>
+
+  <div class="spec">
+    <section>
+      <h2>Trackpad</h2>
+      <p>Azoteq TPS43 (IQS572), reserved as 43 × 43&nbsp;mm. The datasheet says 43 × 40&nbsp;mm and one distributor
+        lists 43 × 43&nbsp;mm, so the larger size is kept clear until the exact part is chosen.</p>
+      <ul>
+        <li>Talks I²C, so it shares the reserved bus on <code>D2 / D3</code>.</li>
+        <li>Its ready line goes to <code>D4 / P0.22</code>; reset has a 10k pull-up, and SDA/SCL have 4.7k pull-ups.</li>
+        <li>No FPC connector: six bare pads (J2) take short wires to the module's own pads, in the module's order
+          SDA, SCL, 3V3, GND, RST, RDY. That keeps the stack as thin as possible.</li>
+        <li>The nice!nano is under the trackpad, so its header pins must be trimmed flush on the top side, or the
+          trackpad needs a spacer.</li>
+        <li>Battery: through-hole <code>B+</code> / <code>B−</code> pads below the trackpad, reachable from either side.
+          The cell itself can go on the underside under the trackpad, below the nice!nano.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Exposed pads</h2>
+      <p>Through-hole pads, so they can be soldered from either side. Labelled in copper on the drawing.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Group</th><th>Pad</th><th>Connects to</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="2">Battery</td><td>B+</td><td>Battery positive, through the MSK-12C02 power switch to the nice!nano <code>B+</code></td></tr>
+          <tr><td>B−</td><td>Battery negative / GND</td></tr>
+          <tr><td rowspan="6">Expansion</td><td>3V3</td><td>Switched <code>VCC</code> (ZMK can turn it off)</td></tr>
+          <tr><td>GND</td><td>Ground</td></tr>
+          <tr><td>P0.08</td><td>D0 · UART RX</td></tr>
+          <tr><td>P0.06</td><td>D1 · UART TX, or LED data when <code>JP1</code> is closed</td></tr>
+          <tr><td>P0.17</td><td>D2 · I²C SDA, shared with the trackpad</td></tr>
+          <tr><td>P0.20</td><td>D3 · I²C SCL, shared with the trackpad</td></tr>
+          <tr><td rowspan="4">GPIO</td><td>GND</td><td>Ground</td></tr>
+          <tr><td>P0.24</td><td>D5 · free, full speed</td></tr>
+          <tr><td>P1.00</td><td>D6 · LED power enable (also drives Q2)</td></tr>
+          <tr><td>P0.11</td><td>D7 · free, full speed</td></tr>
+          <tr><td rowspan="6">Trackpad</td><td>SDA</td><td>P0.17</td></tr>
+          <tr><td>SCL</td><td>P0.20</td></tr>
+          <tr><td>3V3</td><td>nice!nano <code>VCC</code></td></tr>
+          <tr><td>GND</td><td>Ground</td></tr>
+          <tr><td>RST</td><td>10k pull-up to 3V3</td></tr>
+          <tr><td>RDY</td><td>P0.22</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">The battery pads (4.8&nbsp;mm apart) sit below the trackpad, and the trackpad pads beside it. Both headers are on the underside next to the nice!nano,
+        2.54&nbsp;mm pitch. Any 3 or 4 of the expansion pins can carry SPI instead, since the nRF52840 can route SPI to any pin.</p>
+    </section>
+    <section>
+      <h2>Parts</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>Ref</th><th>Part</th><th>Footprint</th></tr></thead>
+        <tbody>
+          <tr><td>U1</td><td>nice!nano v2, bottom side</td><td>bstiq/nice-nano-kicad <span class="tag">GPLv3</span></td></tr>
+          <tr><td>SW1–42</td><td>MX or Choc V1/V2, hotswap</td><td>Kailh MX / Choc V1V2 sockets (keyswitch-kicad-library, MIT)</td></tr>
+          <tr><td>D1–42</td><td>1N4148W</td><td>SOD-123</td></tr>
+          <tr><td>LED1–12</td><td>WS2812B underglow</td><td>5050, bottom</td></tr>
+          <tr><td>LED13–54</td><td>SK6812MINI-E per key</td><td>reverse mount</td></tr>
+          <tr><td>SW43</td><td>MSK-12C02 power switch</td><td>side-actuated SMD, as on chocowi36</td></tr>
+          <tr><td>SW44</td><td>TL3342 reset</td><td>SMD</td></tr>
+          <tr><td>Q1 / Q2</td><td>AO3401A / 2N7002</td><td>SOT-23</td></tr>
+          <tr><td>R1–R5, C1</td><td>100k ×2, 4.7k ×2, 10k, 10µF</td><td>0603 / 0805</td></tr>
+          <tr><td>JP1</td><td>LED data jumper</td><td>solder jumper, open</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">If the board is published, the nice!nano footprint's GPLv3 license comes with it.</p>
+    </section>
+    <section>
+      <h2>Matrix</h2>
+      <p>6 rows × 7 columns = 42 keys on 13 pins, COL2ROW diodes. The left half uses rows 0–2 and the right half rows 3–5.
+        Columns 0–5 are the finger columns, counted from the outer pinky on both halves, so each column net crosses the
+        centre once. Column 6 holds the three thumb keys, one per row.</p>
+      <p class="note">The matrix uses the three low-frequency pins in the middle of the nice!nano (P1.01, P1.02, P1.07),
+        which is fine for scanning keys. P0.24 and P0.11 stay free; P1.00 switches the LED supply.
+        The 36-key version just leaves column 0 empty, so the same firmware works on both.</p>
+    </section>
+    <section>
+      <h2>LEDs</h2>
+      <ul>
+        <li>One data chain from <code>D1 / P0.06</code> through solder jumper <code>JP1</code>. Leave it open and the pin is a plain reserved pin.</li>
+        <li>Chain order: 12 underglow LEDs, then the per-key LEDs of the inner five columns and thumbs, and the two
+          outer pinky columns last. Breaking those columns off, or leaving the per-key LEDs out, never cuts off an LED
+          that is still fitted.</li>
+        <li>Same parts and positions as Corne v3: WS2812B 5050 underglow on the bottom, SK6812MINI-E per key 4.75&nbsp;mm
+          south of each switch.</li>
+        <li>Their own supply: an AO3401A P-MOSFET switches battery voltage onto <code>LED_VDD</code>, driven through a
+          2N7002 from <code>P1.00</code> (high = on). The nice!nano's <code>VCC</code> stays on for the trackpad, and
+          idle LEDs no longer drain the battery.</li>
+        <li>54 LEDs at full white still draw far more than a small battery should give. Cap brightness in firmware.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Two hotswap versions</h2>
+      <p>Both use this placement on Corne's 19.0&nbsp;mm spacing; only the switch footprint changes.</p>
+      <ul>
+        <li><b>MX:</b> Kailh MX hotswap sockets, MX keycaps.</li>
+        <li><b>Choc:</b> Kailh Choc hotswap sockets. On MX spacing, Choc caps leave wider gaps (toggle above).</li>
+      </ul>
+      <p class="note">The two sockets overlap under the switch, so one board can't carry both.</p>
+    </section>
+    <section>
+      <h2>nice!nano v2 pins</h2>
+      <div class="tbl"><table>
+        <thead><tr><th>Pin</th><th>GPIO</th><th>Use</th></tr></thead>
+        <tbody id="pins"></tbody>
+      </table></div>
+      <p class="note">"mid" pins are the three pads in the middle of the nice!nano (footprint pads 31–33), so the socket needs them too.
+        P0.09 and P0.10 are NFC pins; ZMK needs <code>CONFIG_NFCT_PINS_AS_GPIOS</code> to use them.
+        Exact row/column pin order gets fixed during routing.</p>
+    </section>
+  </div>
+</div>
+
+<script>
+const DATA = {"tilt":16,"keys":[{"name":"K00","side":"L","row":0,"col":0,"x":-126.25,"y":0.0,"rot":16.0,"w":1.0},{"name":"K01","side":"L","row":0,"col":1,"x":-107.986,"y":5.237,"rot":16.0,"w":1.0},{"name":"K02","side":"L","row":0,"col":2,"x":-88.413,"y":5.908,"rot":16.0,"w":1.0},{"name":"K03","side":"L","row":0,"col":3,"x":-69.494,"y":8.862,"rot":16.0,"w":1.0},{"name":"K04","side":"L","row":0,"col":4,"x":-51.885,"y":16.382,"rot":16.0,"w":1.0},{"name":"K05","side":"L","row":0,"col":5,"x":-34.276,"y":23.903,"rot":16.0,"w":1.0},{"name":"K10","side":"L","row":1,"col":0,"x":-131.487,"y":18.264,"rot":16.0,"w":1.0},{"name":"K11","side":"L","row":1,"col":1,"x":-113.223,"y":23.501,"rot":16.0,"w":1.0},{"name":"K12","side":"L","row":1,"col":2,"x":-93.65,"y":24.172,"rot":16.0,"w":1.0},{"name":"K13","side":"L","row":1,"col":3,"x":-74.731,"y":27.126,"rot":16.0,"w":1.0},{"name":"K14","side":"L","row":1,"col":4,"x":-57.122,"y":34.646,"rot":16.0,"w":1.0},{"name":"K15","side":"L","row":1,"col":5,"x":-39.513,"y":42.167,"rot":16.0,"w":1.0},{"name":"K20","side":"L","row":2,"col":0,"x":-136.724,"y":36.528,"rot":16.0,"w":1.0},{"name":"K21","side":"L","row":2,"col":1,"x":-118.46,"y":41.765,"rot":16.0,"w":1.0},{"name":"K22","side":"L","row":2,"col":2,"x":-98.887,"y":42.436,"rot":16.0,"w":1.0},{"name":"K23","side":"L","row":2,"col":3,"x":-79.968,"y":45.39,"rot":16.0,"w":1.0},{"name":"K24","side":"L","row":2,"col":4,"x":-62.359,"y":52.91,"rot":16.0,"w":1.0},{"name":"K25","side":"L","row":2,"col":5,"x":-44.75,"y":60.43,"rot":16.0,"w":1.0},{"name":"T0","side":"L","row":0,"col":6,"x":-76.9,"y":69.157,"rot":16.0,"w":1.0},{"name":"T1","side":"L","row":1,"col":6,"x":-57.472,"y":77.588,"rot":31.0,"w":1.0},{"name":"T2","side":"L","row":2,"col":6,"x":-37.118,"y":87.326,"rot":-44.0,"w":1.5},{"name":"K00","side":"R","row":3,"col":0,"x":126.25,"y":0.0,"rot":-16.0,"w":1.0},{"name":"K01","side":"R","row":3,"col":1,"x":107.986,"y":5.237,"rot":-16.0,"w":1.0},{"name":"K02","side":"R","row":3,"col":2,"x":88.413,"y":5.908,"rot":-16.0,"w":1.0},{"name":"K03","side":"R","row":3,"col":3,"x":69.494,"y":8.862,"rot":-16.0,"w":1.0},{"name":"K04","side":"R","row":3,"col":4,"x":51.885,"y":16.382,"rot":-16.0,"w":1.0},{"name":"K05","side":"R","row":3,"col":5,"x":34.276,"y":23.903,"rot":-16.0,"w":1.0},{"name":"K10","side":"R","row":4,"col":0,"x":131.487,"y":18.264,"rot":-16.0,"w":1.0},{"name":"K11","side":"R","row":4,"col":1,"x":113.223,"y":23.501,"rot":-16.0,"w":1.0},{"name":"K12","side":"R","row":4,"col":2,"x":93.65,"y":24.172,"rot":-16.0,"w":1.0},{"name":"K13","side":"R","row":4,"col":3,"x":74.731,"y":27.126,"rot":-16.0,"w":1.0},{"name":"K14","side":"R","row":4,"col":4,"x":57.122,"y":34.646,"rot":-16.0,"w":1.0},{"name":"K15","side":"R","row":4,"col":5,"x":39.513,"y":42.167,"rot":-16.0,"w":1.0},{"name":"K20","side":"R","row":5,"col":0,"x":136.724,"y":36.528,"rot":-16.0,"w":1.0},{"name":"K21","side":"R","row":5,"col":1,"x":118.46,"y":41.765,"rot":-16.0,"w":1.0},{"name":"K22","side":"R","row":5,"col":2,"x":98.887,"y":42.436,"rot":-16.0,"w":1.0},{"name":"K23","side":"R","row":5,"col":3,"x":79.968,"y":45.39,"rot":-16.0,"w":1.0},{"name":"K24","side":"R","row":5,"col":4,"x":62.359,"y":52.91,"rot":-16.0,"w":1.0},{"name":"K25","side":"R","row":5,"col":5,"x":44.75,"y":60.43,"rot":-16.0,"w":1.0},{"name":"T0","side":"R","row":3,"col":6,"x":76.9,"y":69.157,"rot":-16.0,"w":1.0},{"name":"T1","side":"R","row":4,"col":6,"x":57.472,"y":77.588,"rot":-31.0,"w":1.0},{"name":"T2","side":"R","row":5,"col":6,"x":37.118,"y":87.326,"rot":44.0,"w":1.5}],"outline":[[-132.473,-13.212],[-132.231,-13.158],[-114.086,-7.955],[-114.086,-7.955],[-101.042,-4.215],[-100.245,-4.072],[-99.436,-4.092],[-98.648,-4.274],[-97.912,-4.612],[-97.259,-5.09],[-96.717,-5.691],[-96.328,-6.34],[-96.243,-6.518],[-96.1,-6.753],[-96.066,-6.793],[-95.952,-6.909],[-95.741,-7.085],[-95.696,-7.112],[-95.55,-7.185],[-95.293,-7.282],[-95.242,-7.293],[-95.08,-7.314],[-94.771,-7.325],[-94.635,-7.303],[-94.394,-7.25],[-80.572,-3.287],[-79.776,-3.144],[-78.966,-3.164],[-78.178,-3.346],[-77.442,-3.684],[-76.911,-4.057],[-76.822,-4.131],[-76.777,-4.158],[-76.631,-4.231],[-76.374,-4.328],[-76.323,-4.339],[-76.162,-4.36],[-75.852,-4.37],[-75.717,-4.349],[-75.475,-4.296],[-57.489,0.861],[-57.181,0.978],[-57.068,1.032],[-56.832,1.175],[-56.793,1.209],[-56.677,1.323],[-56.501,1.534],[-56.474,1.579],[-56.401,1.725],[-56.294,2.008],[-55.931,2.731],[-55.43,3.367],[-54.811,3.889],[-54.1,4.275],[-53.658,4.431],[-39.88,8.382],[-39.571,8.498],[-39.458,8.552],[-39.223,8.695],[-39.184,8.729],[-39.067,8.843],[-38.891,9.055],[-38.865,9.1],[-38.701,9.427],[-38.689,9.42],[-38.477,9.843],[-37.976,10.479],[-37.357,11.001],[-36.646,11.387],[-35.872,11.623],[-35.066,11.697],[-34.791,11.686],[-21.577,10.658],[-21.422,10.652],[21.422,10.652],[21.577,10.658],[34.774,11.684],[35.583,11.665],[36.372,11.483],[37.108,11.147],[37.761,10.669],[38.304,10.069],[38.62,9.534],[38.631,9.54],[38.809,9.2],[38.894,9.061],[39.06,8.842],[39.098,8.806],[39.223,8.702],[39.481,8.53],[39.607,8.476],[39.84,8.393],[53.661,4.43],[54.413,4.129],[55.088,3.683],[55.66,3.111],[56.105,2.435],[56.358,1.836],[56.394,1.726],[56.418,1.68],[56.503,1.541],[56.669,1.322],[56.707,1.286],[56.833,1.182],[57.09,1.01],[57.216,0.956],[57.449,0.873],[75.435,-4.284],[75.759,-4.349],[75.883,-4.363],[76.158,-4.367],[76.21,-4.359],[76.369,-4.324],[76.63,-4.238],[76.676,-4.213],[76.815,-4.129],[77.056,-3.946],[77.747,-3.524],[78.509,-3.251],[79.31,-3.136],[80.118,-3.185],[80.576,-3.288],[94.354,-7.239],[94.677,-7.303],[94.802,-7.317],[95.077,-7.321],[95.128,-7.313],[95.287,-7.278],[95.549,-7.192],[95.595,-7.167],[95.734,-7.083],[95.953,-6.916],[95.989,-6.879],[96.093,-6.753],[96.266,-6.496],[96.267,-6.492],[96.277,-6.475],[96.294,-6.439],[96.296,-6.44],[96.658,-5.784],[97.184,-5.169],[97.823,-4.672],[98.549,-4.314],[99.332,-4.109],[100.14,-4.067],[100.941,-4.188],[101.049,-4.217],[114.086,-7.955],[114.086,-7.955],[132.191,-13.147],[132.514,-13.211],[132.639,-13.225],[132.914,-13.229],[132.966,-13.221],[133.125,-13.186],[133.386,-13.1],[133.432,-13.076],[133.571,-12.991],[133.79,-12.825],[133.826,-12.787],[133.93,-12.661],[134.103,-12.404],[134.157,-12.278],[134.24,-12.045],[139.442,6.1],[149.871,42.469],[149.935,42.792],[149.95,42.917],[149.953,43.192],[149.945,43.244],[149.91,43.403],[149.824,43.664],[149.8,43.71],[149.715,43.849],[149.549,44.068],[149.511,44.104],[149.386,44.208],[149.129,44.381],[149.002,44.435],[148.769,44.517],[112.519,54.912],[112.196,54.976],[112.071,54.991],[111.796,54.994],[111.745,54.986],[111.586,54.951],[111.324,54.865],[111.278,54.841],[111.139,54.756],[110.92,54.59],[110.884,54.552],[110.78,54.426],[110.607,54.169],[110.606,54.166],[110.596,54.148],[110.579,54.112],[110.577,54.113],[110.215,53.457],[109.689,52.842],[109.05,52.345],[108.324,51.987],[107.541,51.783],[106.733,51.74],[105.932,51.861],[105.824,51.89],[92.946,55.583],[92.623,55.647],[92.498,55.662],[92.223,55.665],[92.171,55.657],[92.012,55.622],[91.751,55.536],[91.705,55.512],[91.643,55.474],[90.913,55.125],[90.127,54.93],[89.319,54.897],[88.52,55.027],[87.764,55.316],[87.081,55.751],[86.5,56.314],[86.044,56.983],[85.733,57.73],[85.578,58.524],[85.586,59.334],[85.716,59.992],[90.047,75.098],[90.112,75.421],[90.126,75.546],[90.129,75.821],[90.121,75.872],[90.086,76.031],[90.0,76.293],[89.976,76.339],[89.891,76.478],[89.725,76.697],[89.687,76.733],[89.562,76.837],[89.305,77.009],[89.179,77.063],[88.945,77.146],[84.049,78.55],[83.297,78.851],[83.111,78.955],[46.111,100.891],[45.461,101.373],[45.274,101.554],[41.964,104.981],[41.716,105.199],[41.615,105.274],[41.379,105.414],[41.33,105.433],[41.175,105.482],[40.905,105.538],[40.853,105.54],[40.69,105.537],[40.418,105.502],[40.368,105.487],[40.215,105.431],[39.937,105.294],[39.827,105.212],[39.595,105.014],[38.929,104.554],[38.185,104.238],[37.391,104.078],[37.0,104.058],[-37.003,104.058],[-37.808,104.14],[-38.58,104.383],[-39.288,104.775],[-39.534,104.961],[-39.864,105.231],[-39.967,105.302],[-40.209,105.435],[-40.258,105.452],[-40.415,105.495],[-40.686,105.542],[-40.738,105.542],[-40.901,105.533],[-41.172,105.489],[-41.222,105.472],[-41.372,105.41],[-41.645,105.264],[-41.752,105.178],[-41.935,105.011],[-45.274,101.554],[-45.892,101.031],[-46.111,100.891],[-83.111,78.955],[-83.846,78.614],[-84.049,78.55],[-88.905,77.158],[-89.214,77.041],[-89.327,76.987],[-89.562,76.844],[-89.602,76.81],[-89.718,76.696],[-89.894,76.485],[-89.92,76.439],[-89.993,76.294],[-90.091,76.037],[-90.101,75.986],[-90.123,75.824],[-90.133,75.515],[-90.112,75.379],[-90.059,75.137],[-85.718,59.999],[-85.574,59.202],[-85.594,58.393],[-85.777,57.604],[-86.115,56.869],[-86.593,56.216],[-87.193,55.673],[-87.891,55.262],[-88.656,55.0],[-89.459,54.897],[-90.266,54.958],[-91.044,55.181],[-91.581,55.442],[-91.604,55.456],[-91.75,55.529],[-92.007,55.627],[-92.058,55.637],[-92.219,55.659],[-92.529,55.669],[-92.664,55.648],[-92.906,55.594],[-105.831,51.888],[-106.628,51.745],[-107.437,51.765],[-108.225,51.948],[-108.961,52.285],[-109.614,52.764],[-110.157,53.364],[-110.545,54.013],[-110.63,54.192],[-110.773,54.427],[-110.807,54.466],[-110.921,54.583],[-111.132,54.759],[-111.177,54.785],[-111.323,54.858],[-111.58,54.956],[-111.631,54.966],[-111.793,54.988],[-112.102,54.998],[-112.238,54.977],[-112.48,54.923],[-148.729,44.529],[-149.038,44.412],[-149.151,44.358],[-149.386,44.215],[-149.425,44.181],[-149.542,44.067],[-149.718,43.856],[-149.744,43.811],[-149.817,43.665],[-149.915,43.408],[-149.925,43.357],[-149.947,43.196],[-149.957,42.886],[-149.936,42.75],[-149.882,42.509],[-139.442,6.1],[-134.251,-12.005],[-134.134,-12.313],[-134.08,-12.427],[-133.937,-12.662],[-133.903,-12.701],[-133.789,-12.818],[-133.578,-12.994],[-133.533,-13.02],[-133.387,-13.093],[-133.13,-13.191],[-133.079,-13.201],[-132.918,-13.223],[-132.608,-13.233]],"nano":{"x":0,"y":10.652,"w":18.0,"h":33.3,"side":"bottom"},"trackpad":{"x":0,"y":36.605,"w":43.0,"h":43.0},"breaks":[[[-113.259,-10.839],[-131.451,52.604]],[[113.259,-10.839],[131.451,52.604]]],"battery":[{"x":-2.4,"y":90.582,"net":"B+"},{"x":2.4,"y":90.582,"net":"B-"}],"leds":[{"x":-127.559,"y":4.566,"rot":16.0},{"x":-109.295,"y":9.803,"rot":16.0},{"x":-89.722,"y":10.474,"rot":16.0},{"x":-70.803,"y":13.428,"rot":16.0},{"x":-53.194,"y":20.948,"rot":16.0},{"x":-35.585,"y":28.469,"rot":16.0},{"x":-132.796,"y":22.83,"rot":16.0},{"x":-114.532,"y":28.067,"rot":16.0},{"x":-94.959,"y":28.738,"rot":16.0},{"x":-76.041,"y":31.692,"rot":16.0},{"x":-58.431,"y":39.212,"rot":16.0},{"x":-40.822,"y":46.733,"rot":16.0},{"x":-138.033,"y":41.094,"rot":16.0},{"x":-119.77,"y":46.331,"rot":16.0},{"x":-100.196,"y":47.002,"rot":16.0},{"x":-81.278,"y":49.956,"rot":16.0},{"x":-63.668,"y":57.476,"rot":16.0},{"x":-46.059,"y":64.996,"rot":16.0},{"x":-78.21,"y":73.723,"rot":16.0},{"x":-59.918,"y":81.66,"rot":31.0},{"x":-33.819,"y":90.743,"rot":-44.0},{"x":127.559,"y":4.566,"rot":-16.0},{"x":109.295,"y":9.803,"rot":-16.0},{"x":89.722,"y":10.474,"rot":-16.0},{"x":70.803,"y":13.428,"rot":-16.0},{"x":53.194,"y":20.948,"rot":-16.0},{"x":35.585,"y":28.469,"rot":-16.0},{"x":132.796,"y":22.83,"rot":-16.0},{"x":114.532,"y":28.067,"rot":-16.0},{"x":94.959,"y":28.738,"rot":-16.0},{"x":76.041,"y":31.692,"rot":-16.0},{"x":58.431,"y":39.212,"rot":-16.0},{"x":40.822,"y":46.733,"rot":-16.0},{"x":138.033,"y":41.094,"rot":-16.0},{"x":119.77,"y":46.331,"rot":-16.0},{"x":100.196,"y":47.002,"rot":-16.0},{"x":81.278,"y":49.956,"rot":-16.0},{"x":63.668,"y":57.476,"rot":-16.0},{"x":46.059,"y":64.996,"rot":-16.0},{"x":78.21,"y":73.723,"rot":-16.0},{"x":59.918,"y":81.66,"rot":-31.0},{"x":33.819,"y":90.743,"rot":44.0}],"underglow":[{"x":-110.605,"y":14.369,"rot":16.0},{"x":-72.113,"y":17.994,"rot":16.0},{"x":-36.894,"y":33.035,"rot":16.0},{"x":-115.842,"y":32.633,"rot":16.0},{"x":-82.587,"y":54.522,"rot":16.0},{"x":-47.368,"y":69.562,"rot":16.0},{"x":110.605,"y":14.369,"rot":-16.0},{"x":72.113,"y":17.994,"rot":-16.0},{"x":36.894,"y":33.035,"rot":-16.0},{"x":115.842,"y":32.633,"rot":-16.0},{"x":82.587,"y":54.522,"rot":-16.0},{"x":47.368,"y":69.562,"rot":-16.0}],"width":299.91,"height":118.775,"area_cm2":227.137,"half_offset":126.25,"bounds":[-149.957,-13.233,149.953,105.542]};
+const U = 19.0;
+const NS = "http://www.w3.org/2000/svg";
+const state = { cap: "mx", led: true, glow: true, matrix: false };
+const d = DATA;
+const pad = 6;
+const vb = d.bounds;
+const viewBox = `${vb[0] - pad} ${vb[1] - pad} ${vb[2] - vb[0] + 2 * pad} ${vb[3] - vb[1] + 2 * pad}`;
+
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+const pts = o => o.map(p => p.join(",")).join(" ");
+
+function drawBoard(svg, d) {
+  svg.textContent = "";
+  svg.setAttribute("viewBox", viewBox);
+  el("polygon", { points: pts(d.outline), fill: "var(--mask)", stroke: "var(--mask-edge)", "stroke-width": .8 }, svg);
+  const clip = el("clipPath", { id: "board-clip" }, el("defs", {}, svg));
+  el("polygon", { points: pts(d.outline) }, clip);
+  for (const [[ax, ay], [bx, by]] of d.breaks)
+    el("line", { x1: ax, y1: ay, x2: bx, y2: by, stroke: "var(--silk)", "stroke-width": .7,
+      "stroke-dasharray": "3 1.6", "clip-path": "url(#board-clip)" }, svg);
+  for (const b of d.battery) {
+    el("circle", { cx: b.x, cy: b.y, r: 1.6, fill: "var(--copper)" }, svg);
+    el("circle", { cx: b.x, cy: b.y, r: .6, fill: "var(--mask)" }, svg);
+    const bt = el("text", { x: b.x, y: b.y + 5, "text-anchor": "middle", "font-size": 2.6, fill: "var(--silk)",
+      "font-family": "IBM Plex Mono, monospace" }, svg);
+    bt.textContent = b.net;
+  }
+
+  if (state.glow) for (const g of d.underglow) {
+    el("circle", { cx: g.x, cy: g.y, r: 5.5, fill: "var(--glow)", opacity: .18 }, svg);
+    el("rect", { x: -2.5, y: -2.5, width: 5, height: 5, rx: .5, fill: "none", stroke: "var(--glow)", "stroke-width": .5,
+      "stroke-dasharray": "1 .6", transform: `translate(${g.x} ${g.y}) rotate(${g.rot})` }, svg);
+  }
+
+  const tp = d.trackpad;
+  el("rect", { x: -tp.w / 2, y: tp.y, width: tp.w, height: tp.h, rx: 2.5, fill: "var(--pad)", stroke: "var(--pad-edge)", "stroke-width": .5 }, svg);
+  const tl = el("text", { x: 0, y: tp.y + tp.h / 2 + 1.2, "text-anchor": "middle", "font-size": 3.6,
+    fill: "var(--muted)", "font-family": "IBM Plex Mono, monospace" }, svg);
+  tl.textContent = "TPS43";
+  tl.setAttribute("y", tp.y + tp.h - 4);
+  // nice!nano on the bottom side: outline only, USB at the top edge
+  const n = d.nano;
+  el("rect", { x: -n.w / 2, y: n.y, width: n.w, height: n.h, rx: 1, fill: "none", stroke: "var(--ink)",
+    "stroke-width": .5, "stroke-dasharray": "1.2 .9", opacity: .7 }, svg);
+  el("rect", { x: -4.5, y: n.y - 1.2, width: 9, height: 7.4, rx: 1.2, fill: "none", stroke: "var(--ink)",
+    "stroke-width": .4, "stroke-dasharray": "1.2 .9", opacity: .7 }, svg);
+  const lbl = el("text", { x: 0, y: n.y + 11, "text-anchor": "middle", "font-size": 2.6,
+    fill: "var(--muted)", "font-family": "IBM Plex Mono, monospace" }, svg);
+  lbl.textContent = "nice!nano";
+  const lb2 = el("text", { x: 0, y: n.y + 14.5, "text-anchor": "middle", "font-size": 2.6,
+    fill: "var(--muted)", "font-family": "IBM Plex Mono, monospace" }, svg);
+  lb2.textContent = "(bottom)";
+  // Exposed pads, bottom side beside the controller: expansion header on the
+  // right, free full-speed GPIOs on the left
+  const pads = (names, side) => names.forEach((name, i) => {
+    const x = side * (n.w / 2 + 4), y = n.y + 4 + i * 2.54;
+    el("rect", { x: x - .85, y: y - .85, width: 1.7, height: 1.7, rx: .3, fill: "var(--copper)" }, svg);
+    const pt = el("text", { x: x + side * 1.6, y: y + .65, "text-anchor": side > 0 ? "start" : "end",
+      "font-size": 1.8, fill: "var(--silk)", "font-family": "IBM Plex Mono, monospace" }, svg);
+    pt.textContent = name;
+  });
+  pads(["3V3", "GND", "P0.08", "P0.06", "P0.17", "P0.20"], 1);
+  pads(["GND", "P0.24", "P1.00", "P0.11"], -1);
+
+  const [cw, ch] = state.cap === "mx" ? [18, 18] : [17.5, 16.5];
+  for (const k of d.keys) {
+    const g = el("g", { transform: `translate(${k.x} ${k.y}) rotate(${k.rot})` }, svg);
+    const w = cw + (k.w - 1) * U;
+    el("rect", { x: -w / 2, y: -ch / 2, width: w, height: ch, rx: 1.6,
+      fill: k.col === 6 ? "var(--cap-thumb)" : "var(--cap)", stroke: "var(--cap-edge)", "stroke-width": .35 }, g);
+    if (state.matrix) {
+      const t = el("text", { x: 0, y: 1.3, "text-anchor": "middle", "font-size": 3.6, fill: "#3b3f3c",
+        "font-family": "IBM Plex Mono, monospace", transform: `rotate(${-k.rot})` }, g);
+      t.textContent = `${k.row},${k.col}`;
+    }
+  }
+  if (state.led) for (const l of d.leds) {
+    el("circle", { cx: l.x, cy: l.y, r: 2.6, fill: "var(--led)", opacity: .35 }, svg);
+    el("rect", { x: -1.6, y: -1.4, width: 3.2, height: 2.8, rx: .4, fill: "var(--led)",
+      transform: `translate(${l.x} ${l.y}) rotate(${l.rot})` }, svg);
+  }
+}
+
+function render() {
+  drawBoard(document.getElementById("board"), d);
+  document.getElementById("stats").innerHTML = `
+    <div><dt>Width</dt><dd>${d.width.toFixed(1)}<span class="delta"> mm</span></dd></div>
+    <div><dt>Depth</dt><dd>${d.height.toFixed(1)}<span class="delta"> mm</span></dd></div>
+    <div><dt>Area</dt><dd>${Math.round(d.area_cm2)}<span class="delta"> cm²</span></dd></div>
+    <div><dt>Print 1:1</dt><dd class="delta">mock/unicorne.svg</dd></div>`;
+}
+
+const PINS = [
+  ["D1", "P0.06", "Reserved · LED data via JP1", 1], ["D0", "P0.08", "Reserved · UART RX", 1],
+  ["D2", "P0.17", "Reserved · I²C SDA (trackpad)", 1], ["D3", "P0.20", "Reserved · I²C SCL (trackpad)", 1],
+  ["D4", "P0.22", "Trackpad ready", 1],
+  ["D5", "P0.24", "Free (full speed)", 2], ["D6", "P1.00", "LED power enable", 1], ["D7", "P0.11", "Free (full speed)", 2],
+  ["D8", "P1.04", "Matrix", 0], ["D9", "P1.06", "Matrix", 0],
+  ["D10", "P0.09", "Matrix (NFC pin)", 0], ["D16", "P0.10", "Matrix (NFC pin)", 0], ["D14", "P1.11", "Matrix", 0],
+  ["D15", "P1.13", "Matrix", 0], ["D18", "P1.15", "Matrix", 0], ["D19", "P0.02", "Matrix", 0],
+  ["D20", "P0.29", "Matrix", 0], ["D21", "P0.31", "Matrix", 0],
+  ["mid", "P1.01", "Matrix (low-frequency pin)", 0], ["mid", "P1.02", "Matrix (low-frequency pin)", 0],
+  ["mid", "P1.07", "Matrix (low-frequency pin)", 0],
+];
+document.getElementById("pins").innerHTML = PINS.map(([p, g, u, r]) =>
+  `<tr><td>${p}</td><td>${g}</td><td>${r === 1 ? `<span class="tag res">${u}</span>` : r === 2 ? `<span class="tag">${u}</span>` : u}</td></tr>`).join("");
+
+function bind(id, key) {
+  const box = document.getElementById(id);
+  box.addEventListener("change", () => { state[key] = box.checked; render(); });
+}
+bind("opt-led", "led"); bind("opt-glow", "glow"); bind("opt-matrix", "matrix");
+for (const c of ["mx", "choc"]) document.getElementById("cap-" + c).addEventListener("click", () => {
+  state.cap = c;
+  document.getElementById("cap-mx").setAttribute("aria-pressed", c === "mx");
+  document.getElementById("cap-choc").setAttribute("aria-pressed", c === "choc");
+  render();
+});
+render();
+</script>
