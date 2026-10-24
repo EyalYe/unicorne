@@ -902,15 +902,15 @@
 		(uuid "a2968a7a-f320-4ab3-b254-bbeaf83c200e")
 	)
 	(embedded_fonts no)
-	(model "./sparkfun_pro_micro.x3d"
+	(model "${KIPRJMOD}/lib/3d/nice_nano_box.step"
 		(offset
-			(xyz 14 7.6 0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz -0 -0 90)
+			(xyz 0 0 0)
 		)
 	)
 )

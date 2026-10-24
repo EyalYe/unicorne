@@ -134,6 +134,7 @@ def add_part(b, comp, pins, fpid=None):
         fp.GetField(name).SetVisible(False)
     if comp["ref"] in NO_BOM:
         fp.SetAttributes(fp.GetAttributes() | pcbnew.FP_EXCLUDE_FROM_BOM)
+        fp.Models().clear()                  # bare pads: nothing is fitted there
     b.board.Add(fp)
     for pad in fp.Pads():
         net = pins.get((comp["ref"], pad.GetNumber()))
@@ -552,6 +553,19 @@ def build(variant):
         fps[ref].Reference().SetVisible(False)
     # pin table under the trackpad, between the nice!nano and the sensor pad labels
     pin_table(b, ny + nano["h"] + 1.5, py + pad["h"] - 8.5)
+
+    # --- trackpad 3D model on a board-only footprint (the module is glued on)
+    tpfp = pcbnew.FOOTPRINT(b.board)
+    tpfp.SetReference("TP1")
+    tpfp.Reference().SetVisible(False)
+    tpfp.SetValue("TPS43")
+    tpfp.Value().SetVisible(False)
+    tpfp.SetAttributes(pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES | pcbnew.FP_BOARD_ONLY)
+    m = pcbnew.FP_3DMODEL()
+    m.m_Filename = "${KIPRJMOD}/lib/3d/trackpad_tps43_box.step"
+    tpfp.Add3DModel(m)
+    b.board.Add(tpfp)
+    tpfp.SetPosition(b.xy(0, py + pad["h"] / 2))
 
     # --- outline, trackpad, break lines
     polygon(b, [tuple(p) for p in layout["outline"]], pcbnew.Edge_Cuts)

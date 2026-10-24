@@ -99,8 +99,9 @@ MODELS = {
     # Azoteq TPS43: 43.3 x 40.3 mm module, 2.03 mm with adhesive (datasheet stack-up A)
     "trackpad_tps43_box": [(-21.65, -20.15, 0.0, 21.65, 20.15, 2.03)],
     "sk6812mini_box": [(-1.75, -1.75, 0.0, 1.75, 1.75, 1.0)],
-    # MSK-12C02: body plus the lever on the +y side
-    "msk12c02_box": [(-3.35, -1.4, 0.0, 3.35, 1.4, 1.5), (-0.75, 1.4, 0.3, 0.75, 3.1, 1.2)],
+    # MSK-12C02: body plus the lever, which is on the footprint's +y side (the
+    # model's -y: KiCad flips y between footprint and model coordinates)
+    "msk12c02_box": [(-3.35, -1.4, 0.0, 3.35, 1.4, 1.5), (-0.75, -3.1, 0.3, 0.75, -1.4, 1.2)],
     # Cherry MX: housing on the PCB (no plate) and stem
     "mx_switch_box": [(-7.0, -7.0, 0.0, 7.0, 7.0, 5.0), (-7.8, -7.8, 5.0, 7.8, 7.8, 11.6),
                       (-2.0, -2.0, 11.6, 2.0, 2.0, 15.2)],

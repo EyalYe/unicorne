@@ -70,6 +70,15 @@ Leave all of these off for a board without lighting.
 | 42 | Keycaps, MX or Choc | 40 × 1u and 2 × 1.5u (the big thumb key on each half) |
 | 10 | M2 button-head screws (ISO 7380) + standoffs | Mounting holes H1–H10; standoff height depends on the case |
 
+## 3D
+
+`export/unicorne-mx.step` and `export/unicorne-choc.step` are the full boards with parts, for designing a
+case (rendered previews next to them). Sockets and the Choc V1 switch are real models; the nice!nano, TPS43,
+MX switch, SK6812MINI and MSK-12C02 are size-accurate placeholder boxes from `tools/step_box.py`.
+Regenerate with `python3 tools/export_3d.py` after any board change.
+
+![MX board](export/unicorne-mx-top.png)
+
 ## Files
 
 | Path | Contents |
@@ -86,7 +95,8 @@ Leave all of these off for a board without lighting.
 | `tools/finish_route.py` | Routes a freshly generated board: fixed lanes, then KiCad's ratsnest with the maze router, GND pours and stitching |
 | `tools/lanes.py`, `tools/maze_route.py` | Fixed routing lanes for the key grid; the grid A* router |
 | `tools/route.py` | Freerouting driver (not used for the final boards) |
-| `tools/step_box.py`, `lib/3d/` | Placeholder STEP models and the socket / Choc switch models for 3D export |
+| `tools/step_box.py`, `lib/3d/` | Placeholder STEP models and the socket / Choc switch models |
+| `tools/export_3d.py`, `export/` | STEP export of both boards, and 3D renders |
 | `mock/` | Layout data, a 1:1 printable SVG and the design overview page |
 
 ## Regenerating

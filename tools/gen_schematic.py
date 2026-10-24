@@ -323,7 +323,7 @@ FP = {
     "sw15": "unicorne:SW_Hotswap_Kailh_MX_1.50u",
     "diode": "Diode_SMD:D_SOD-123",
     "led_key": "LED_SMD:LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount",
-    "led_glow": "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm",
+    "led_glow": "unicorne:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm",   # stock + 3D model
     "r": "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",
     "c": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
     "sot23": "Package_TO_SOT_SMD:SOT-23",
@@ -332,7 +332,7 @@ FP = {
     "sot23_5": "Package_TO_SOT_SMD:SOT-23-5_HandSoldering",
     "hdr2": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
     "batt": "Connector_Wire:SolderWire-0.5sqmm_1x02_P4.8mm_D0.9mm_OD2.3mm",
-    "pwr_sw": "Button_Switch_SMD:SW_SPDT_Shouhan_MSK12C02",
+    "pwr_sw": "unicorne:SW_SPDT_Shouhan_MSK12C02",                   # stock + 3D model
     "reset": "Button_Switch_THT:SW_PUSH_6mm_H5mm",   # 6x6x5 mm DIP tactile switch
     "hdr6": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
     "hdr4": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
