@@ -516,7 +516,7 @@ def build(variant):
     part("JP1", 17.5, ny + 5.0, 90)                    # LED data jumper, by P0.06
     part("Q2", 18.0, ny + 14.0)
     part("R2", 18.0, ny + 18.0, 90)
-    part("Q1", 18.0, ny + 22.0)
+    part("Q1", 18.0, ny + 22.0, 180)                  # source pin faces JP2
     part("R1", 18.0, ny + 26.0, 90)
     part("C1", 18.0, ny + 30.0)
     part("JP2", 22.0, ny + 22.0, 90)                   # LED source: VCC or J6

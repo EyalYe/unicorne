@@ -358,20 +358,26 @@ def keys_with_refs(layout):
 
 
 def led_chain(keys):
-    """Underglow first, then per-key LEDs row by row, each row running left to
-    right as seen from above (each LED's DIN is on its left, DOUT on its right,
-    so neighbours connect with a short hop). Thumbs follow each half's rows;
-    the breakable outer pinky columns come last."""
-    chain = [("glow", side, i) for side in "LR" for i in range(6)]
-    for side in "LR":
-        half = {(k["row"] % 3, k["col"]): k for k in keys if k["side"] == side}
-        cols = range(1, 6) if side == "L" else range(5, 0, -1)
-        for r in range(3):
-            chain += [("key", half[(r, c)]) for c in cols]
-        chain += [("key", half[(t, 6)]) for t in range(3)]
-    for side in "LR":
-        half = {(k["row"] % 3, k["col"]): k for k in keys if k["side"] == side}
-        chain += [("key", half[(r, 0)]) for r in range(3)]
+    """One pass across the board with a single long hop at the end:
+    left underglow, left rows, left thumbs, right thumbs (they sit next to each
+    other), right rows, right underglow, then the breakable outer pinky columns,
+    right then left. Each row runs left to right as seen from above (DIN is on
+    an LED's left, DOUT on its right). Breaking a pinky column off never cuts
+    an LED that is still fitted."""
+    half = {side: {(k["row"] % 3, k["col"]): k for k in keys if k["side"] == side} for side in "LR"}
+    # underglow spots (mock/layout.json order: (0,1) (0,3) (1,5) (1,1) (2,3) (2,5)),
+    # walked so the left set starts by the nice!nano and ends by the first key
+    # LED, and the right set ends by the pinky column that follows it
+    chain = [("glow", "L", i) for i in (5, 2, 4, 1, 3, 0)]
+    for r in range(3):
+        chain += [("key", half["L"][(r, c)]) for c in range(1, 6)]
+    chain += [("key", half["L"][(t, 6)]) for t in range(3)]
+    chain += [("key", half["R"][(t, 6)]) for t in (2, 1, 0)]
+    for r in range(3):
+        chain += [("key", half["R"][(r, c)]) for c in range(5, 0, -1)]
+    chain += [("glow", "R", i) for i in (3, 4, 5, 2, 1, 0)]
+    chain += [("key", half["R"][(r, 0)]) for r in range(3)]
+    chain += [("key", half["L"][(r, 0)]) for r in range(3)]
     return chain
 
 
@@ -542,8 +548,8 @@ def build():
         nxt = f"LED_D{n}" if n < len(chain) else None
         led.connect("DOUT", nxt)
         prev = nxt
-    leds.text("Chain: LED1-12 underglow (SK6812MINI, bottom), LED13-48 per-key on the inner five columns\n"
-              "and thumbs, LED49-54 the breakable outer pinky columns last. Every LED runs from LED_VDD.",
+    leds.text("Chain: left underglow, left rows (left to right), left thumbs, right thumbs, right rows,\n"
+              "right underglow, then the breakable outer pinky columns (right, then left). LED_VDD powers all.",
               25.4, 254.0)
 
     matrix.path = f"/{root.uuid}/{matrix.uuid}"

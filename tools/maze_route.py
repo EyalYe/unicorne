@@ -146,7 +146,7 @@ def stamp_pads(board, grid, netcode):
     return pads
 
 
-def astar(grid, net, sources, targets, fat, goal_xy):
+def astar(grid, net, sources, targets, fat, goal_xy, vias=None):
     """Shortest path from any source (layer, idx) to any target; returns cells."""
     nx = grid.nx
     own = grid.own
@@ -203,17 +203,22 @@ def astar(grid, net, sources, targets, fat, goal_xy):
                 g[t] = ng
                 prev[t] = s
                 heapq.heappush(heap, (ng + h(j), ng, t))
-        # via: needs room on both layers
+        # via: reuse one of this net's vias here, else a new one needs room on
+        # both layers and a hole's distance from every other via
         o = 1 - L
         t = (o, idx)
-        ok = True
-        for d in (0, 1, -1, nx, -nx, nx + 1, nx - 1, -nx + 1, -nx - 1):
-            for LL in (0, 1):
-                v = own[LL][idx + d]
-                if v != 0 and v != net:
-                    ok = False
+        cost = VIA_COST
+        if vias is not None and vias.at.get(idx) == net:
+            ok, cost = True, 1.0
+        else:
+            ok = vias is None or idx not in vias.near
+            for d in (0, 1, -1, nx, -nx, nx + 1, nx - 1, -nx + 1, -nx - 1):
+                for LL in (0, 1):
+                    v = own[LL][idx + d]
+                    if v != 0 and v != net:
+                        ok = False
         if ok:
-            ng = gc + VIA_COST
+            ng = gc + cost
             if ng < g.get(t, INF):
                 g[t] = ng
                 prev[t] = s
@@ -221,7 +226,27 @@ def astar(grid, net, sources, targets, fat, goal_xy):
     return None
 
 
-def commit(board, grid, net, netinfo, path, width):
+class Vias:
+    """Where vias are: `at` maps a grid cell to the net of the via on it, `near`
+    holds every cell too close to an existing via for a new one."""
+
+    def __init__(self, grid):
+        self.grid = grid
+        self.at = {}
+        self.near = set()
+
+    def add(self, x, y, net):
+        g = self.grid
+        cx, cy = g.cell(x, y)
+        self.at[cy * g.nx + cx] = net
+        r = int(math.ceil((VIA_D + 0.3) / P))
+        for dy in range(-r, r + 1):
+            for dx in range(-r, r + 1):
+                if (dx * dx + dy * dy) * P * P <= (VIA_D + 0.3) ** 2:
+                    self.near.add((cy + dy) * g.nx + cx + dx)
+
+
+def commit(board, grid, net, netinfo, path, width, vias=None):
     """Stamp the path's halo and add its tracks and vias to the board."""
     halo = width / 2 + CLEAR + SIGNAL_W / 2
     vhalo = VIA_D / 2 + CLEAR + SIGNAL_W / 2
@@ -248,6 +273,9 @@ def commit(board, grid, net, netinfo, path, width):
     for a, b in zip(path, path[1:]):
         if b[0] != a[0]:                       # layer change: via at this cell
             track(start, a)
+            if vias is not None and vias.at.get(a[1]) == net:
+                start, direction = b, None     # an existing via of this net
+                continue
             v = pcbnew.PCB_VIA(board)
             v.SetPosition(pos(a))
             v.SetWidth(mm(VIA_D))
@@ -256,6 +284,8 @@ def commit(board, grid, net, netinfo, path, width):
             board.Add(v)
             x, y = grid.xy(a[1] % grid.nx, a[1] // grid.nx)
             grid.disc((0, 1), x, y, vhalo, net)
+            if vias is not None:
+                vias.add(x, y, net)
             start, direction = b, None
             continue
         d = b[1] - a[1]
@@ -277,9 +307,10 @@ def pour_gnd(board, outline):
         z.SetNet(gnd)
         z.SetLocalClearance(mm(ZONE_CLEAR))
         z.SetMinThickness(mm(0.25))
-        z.SetPadConnection(pcbnew.ZONE_CONNECTION_THERMAL)
+        z.SetPadConnection(pcbnew.ZONE_CONNECTION_THT_THERMAL)   # SMD solid, THT spokes for hand soldering
         z.SetThermalReliefGap(mm(0.3))
         z.SetThermalReliefSpokeWidth(mm(0.4))
+        z.SetIslandRemovalMode(pcbnew.ISLAND_REMOVAL_MODE_ALWAYS)
         ol = z.Outline()
         ol.NewOutline()
         for x, y in outline:

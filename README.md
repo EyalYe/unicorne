@@ -3,7 +3,7 @@
 A unibody [Corne](https://github.com/foostan/crkbd): both halves of the Corne v3 key layout on one PCB, each half
 rotated 16°, with an Azoteq TPS43 trackpad in the middle and a nice!nano v2 mounted underneath.
 
-Status: layout fixed, schematic done, both PCBs placed and unrouted (ready for hand routing).
+Status: layout fixed, schematic done. MX board fully routed (DRC clean); Choc board placed, routing next.
 
 ## Design
 
@@ -83,7 +83,9 @@ Leave all of these off for a board without lighting.
 | `tools/layout.py` | Key, trackpad and outline geometry → `mock/layout.json`, `mock/unicorne.svg` |
 | `tools/gen_schematic.py` | Generates the schematic sheets from `mock/layout.json` |
 | `tools/gen_pcb.py` | Builds both PCBs from the schematic netlist and `mock/layout.json` |
-| `tools/lanes.py`, `tools/route.py`, `tools/maze_route.py` | Routing experiments: fixed lanes for the key grid, Freerouting driver, a grid maze router (none finishes the board yet) |
+| `tools/finish_route.py` | Routes a freshly generated board: fixed lanes, then KiCad's ratsnest with the maze router, GND pours and stitching |
+| `tools/lanes.py`, `tools/maze_route.py` | Fixed routing lanes for the key grid; the grid A* router |
+| `tools/route.py` | Freerouting driver (not used for the final boards) |
 | `tools/step_box.py`, `lib/3d/` | Placeholder STEP models and the socket / Choc switch models for 3D export |
 | `mock/` | Layout data, a 1:1 printable SVG and the design overview page |
 
@@ -97,8 +99,10 @@ Leave all of these off for a board without lighting.
 python3 tools/gen_schematic.py
 
 # PCBs (overwrite the board files; placement, outline, holes, silkscreen, no tracks)
+# then route them; both steps throw away any hand routing
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_pcb.py mx
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_pcb.py choc
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/finish_route.py mx
 ```
 
 ## Licenses
