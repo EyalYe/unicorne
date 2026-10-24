@@ -48,6 +48,16 @@
 <text x="0" y="19.302" font-size="3" text-anchor="middle">nice!nano (bottom)</text>
 <line x1="-113.259" y1="-10.839" x2="-131.451" y2="52.604" stroke="#000" stroke-width="0.3" stroke-dasharray="2 1"/>
 <line x1="113.259" y1="-10.839" x2="131.451" y2="52.604" stroke="#000" stroke-width="0.3" stroke-dasharray="2 1"/>
+<circle cx="-45.74" cy="29.317" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="-88.245" cy="58.481" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="-45.58" cy="78.642" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="-102.049" cy="16.822" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="45.74" cy="29.317" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="88.245" cy="58.481" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="45.58" cy="78.642" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="102.049" cy="16.822" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="-14.0" cy="90.582" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
+<circle cx="14.0" cy="90.582" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>
 <circle cx="-2.4" cy="90.582" r="1.2" fill="none" stroke="#000" stroke-width="0.25"/>
 <text x="-2.4" y="95.082" font-size="2.5" text-anchor="middle">B+</text>
 <circle cx="2.4" cy="90.582" r="1.2" fill="none" stroke="#000" stroke-width="0.25"/>

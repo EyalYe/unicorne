@@ -3,7 +3,7 @@
 A unibody [Corne](https://github.com/foostan/crkbd): both halves of the Corne v3 key layout on one PCB, each half
 rotated 16°, with an Azoteq TPS43 trackpad in the middle and a nice!nano v2 mounted underneath.
 
-Status: layout fixed, schematic started, PCB not started.
+Status: layout fixed, schematic done, both PCBs placed (not yet routed).
 
 ## Design
 
@@ -24,10 +24,13 @@ The full pin plan and parts list are in `mock/index.html` (open it in a browser)
 |---|---|
 | `unicorne.kicad_pro` | KiCad 10 project |
 | `unicorne.kicad_sch`, `matrix.kicad_sch`, `leds.kicad_sch` | Schematic (generated, see below) |
-| `unicorne.kicad_pcb` | PCB layout (not started) |
+| `unicorne.kicad_pcb` | MX hotswap PCB (generated, see below) |
+| `unicorne-choc.kicad_pcb`, `unicorne-choc.kicad_pro` | Choc V1/V2 hotswap PCB, same placement |
+| `unicorne.kicad_dru` | Extra DRC rules (LED cutout edge clearance) |
 | `lib/` | Project symbols and footprints; third-party credits in `lib/ATTRIBUTION.md` |
 | `tools/layout.py` | Key, trackpad and outline geometry → `mock/layout.json`, `mock/unicorne.svg` |
 | `tools/gen_schematic.py` | Generates the schematic sheets from `mock/layout.json` |
+| `tools/gen_pcb.py` | Builds both PCBs from the schematic netlist and `mock/layout.json` |
 | `mock/` | Layout data, a 1:1 printable SVG and the design overview page |
 
 ## Regenerating
@@ -38,6 +41,10 @@ The full pin plan and parts list are in `mock/index.html` (open it in a browser)
 
 # Schematic (overwrites the three .kicad_sch files)
 python3 tools/gen_schematic.py
+
+# PCBs (overwrite the board files; placement, outline, holes, silkscreen, no tracks)
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_pcb.py mx
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_pcb.py choc
 ```
 
 ## Licenses

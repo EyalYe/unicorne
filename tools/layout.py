@@ -35,10 +35,17 @@ CORNE_THUMBS = [  # (x, y, KiCad orientation, w)
     (107.608, 91.405, -15, 1.0),
     (129.857, 95.155, 60, 1.5),
 ]
+# Corne v3 M2 holes (left half, corne-cherry.kicad_pcb coordinates). Its pinky
+# hole sits on the column 0/1 corner, which is our break line, so it moves to
+# the column 1/2 corner (SW2 + (8.9, 9.5)) to stay on the 36-key board.
+CORNE_HOLES = [(105.58, 41.77), (72.76, 81.52), (119.33, 89.14), (48.008, 45.28)]
+CENTRE_HOLE_X = 14.0         # two more holes below the trackpad, either side of the battery
 LED_OFFSET = 4.75            # per-key SK6812MINI-E, south of the switch centre
-# Corne underglow (WS2812B 5050, bottom side): (row, col, offset along switch y)
-UNDERGLOW = [(0, 1, 9.5), (0, 3, 9.5), (1, 5, -9.5),
-             (1, 1, 9.5), (2, 3, 9.5), (2, 5, 9.5)]
+# Underglow (SK6812MINI 3.5 mm, bottom side): Corne's six spots, each moved to
+# the middle of the gap between one switch's LED cutout and the next switch's
+# hotswap socket, which a 5 mm WS2812B doesn't fit. (row, col, offset along y)
+UNDERGLOW = [(0, 1, 9.2), (0, 3, 9.2), (1, 5, -9.8),
+             (1, 1, 9.2), (2, 3, 9.2), (2, 5, 9.2)]
 NANO_CLEAR_SW = 0.5          # bottom-side nice!nano to switch cell clearance
 BATT_PITCH = 4.8             # battery B+ / B- pads (Connector_Wire SolderWire 1x02 P4.8mm)
 
@@ -241,6 +248,12 @@ def build(tilt=TILT):
         by = {(k["row"] % 3, k["col"]): k for k in half}
         glow += [local(by[(r, c)], 0, off) for r, c, off in UNDERGLOW]
 
+    holes = []
+    hole_keys = [dict(x=hx - CORNE_X0, y=hy - CORNE_Y0, rot=0.0) for hx, hy in CORNE_HOLES]
+    for mirror in (False, True):
+        holes += [dict(x=h["x"], y=h["y"]) for h in place(hole_keys, tilt, dx, mirror)]
+    holes += [dict(x=sx * CENTRE_HOLE_X, y=batt_y) for sx in (-1, 1)]
+
     r3 = lambda v: round(v, 3)
     return dict(
         tilt=tilt,
@@ -252,6 +265,7 @@ def build(tilt=TILT):
         trackpad=dict(x=0, y=r3(pad_y), w=PAD_W, h=PAD_H),
         breaks=breaks,
         battery=[dict(b, x=r3(b["x"]), y=r3(b["y"])) for b in battery],
+        holes=[dict(x=r3(h["x"]), y=r3(h["y"])) for h in holes],
         leds=[dict(x=r3(l["x"]), y=r3(l["y"]), rot=r3(l["rot"])) for l in leds],
         underglow=[dict(x=r3(g["x"]), y=r3(g["y"]), rot=r3(g["rot"])) for g in glow],
         width=r3(max(xs) - min(xs)), height=r3(max(ys) - min(ys)),
@@ -287,6 +301,9 @@ def to_svg(layout):
     for (ax, ay), (bx, by) in layout["breaks"]:
         s.append(f'<line x1="{ax}" y1="{ay}" x2="{bx}" y2="{by}" stroke="#000" '
                  'stroke-width="0.3" stroke-dasharray="2 1"/>')
+    for h in layout["holes"]:
+        s.append(f'<circle cx="{h["x"]}" cy="{h["y"]}" r="1.1" fill="none" stroke="#000" '
+                 'stroke-width="0.25"/>')
     for b in layout["battery"]:
         s.append(f'<circle cx="{b["x"]}" cy="{b["y"]}" r="1.2" fill="none" stroke="#000" '
                  'stroke-width="0.25"/>')

@@ -4,7 +4,16 @@
       "defaults": {},
       "diff_pair_dimensions": [],
       "drc_exclusions": [],
-      "rules": {},
+      "rules": {
+        "min_copper_edge_clearance": 0.25,
+        "min_clearance": 0.15,
+        "min_track_width": 0.15,
+        "min_via_diameter": 0.45,
+        "min_via_annular_width": 0.1,
+        "min_through_hole_diameter": 0.3,
+        "min_hole_to_hole": 0.25,
+        "min_hole_clearance": 0.25
+      },
       "track_widths": [],
       "via_dimensions": []
     }

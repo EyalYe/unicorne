@@ -187,14 +187,14 @@ class Sheet:
         self.page = "1"
 
     def symbol(self, lib_id, ref, value, x, y, rot=0, footprint="", fields=None, dnp=False,
-               text_dx=0, text_dy=5.08):
+               text_dx=0, text_dy=5.08, in_bom=True):
         sym = libsym(lib_id)
         self.used[lib_id] = sym
         check_footprint(footprint)
         inst = Inst(self, sym, ref, x, y, rot)
         hide_ref = ref.startswith("#")
         node = ["symbol", ["lib_id", Q(lib_id)], ["at", x, y, rot], ["unit", 1],
-                ["exclude_from_sim", "no"], ["in_bom", "no" if hide_ref else "yes"],
+                ["exclude_from_sim", "no"], ["in_bom", "yes" if in_bom and not hide_ref else "no"],
                 ["on_board", "no" if hide_ref else "yes"], ["dnp", "yes" if dnp else "no"],
                 ["uuid", uid()],
                 ["property", Q("Reference"), Q(ref), ["at", x + text_dx, y - text_dy, 0],
@@ -323,7 +323,7 @@ FP = {
     "sw15": "unicorne:SW_Hotswap_Kailh_MX_1.50u",
     "diode": "Diode_SMD:D_SOD-123",
     "led_key": "LED_SMD:LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount",
-    "led_glow": "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm",
+    "led_glow": "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm",
     "r": "Resistor_SMD:R_0603_1608Metric",
     "c": "Capacitor_SMD:C_0805_2012Metric",
     "sot23": "Package_TO_SOT_SMD:SOT-23",
@@ -333,12 +333,13 @@ FP = {
     "reset": "Button_Switch_THT:SW_PUSH_6mm_H5mm",   # 6x6x5 mm DIP tactile switch
     "hdr6": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
     "hdr4": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "sensor": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
     "trackpad": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
 }
 
 NANO_PINS = {
-    1: "P0.06", 2: "P0.08", 3: "GND", 4: "GND", 5: "SDA", 6: "SCL", 7: "TP_RDY",
-    8: "P0.24", 9: "LED_EN", 10: "P0.11", 11: "ROW3", 12: "ROW4",
+    1: "P0.06", 2: "P0.08", 3: "GND", 4: "GND", 5: "SDA_MOSI", 6: "SCL_SCK", 7: "RDY_MOTION",
+    8: "P0.24_MISO", 9: "LED_EN", 10: "P0.11_CS", 11: "ROW3", 12: "ROW4",
     13: "COL4", 14: "COL3", 15: "COL2", 16: "COL1", 17: "COL0",
     18: "ROW2", 19: "ROW1", 20: "ROW0", 21: "+3V3", 22: "RST", 23: "GND", 24: "VBAT",
     31: "COL5", 32: "COL6", 33: "ROW5",
@@ -389,12 +390,12 @@ def build():
               "P0.09 / P0.10 are NFC pins: ZMK needs CONFIG_NFCT_PINS_AS_GPIOS=y.", 172.72, 139.7)
 
     # ---- root: battery, power switch, reset
-    j1 = root.symbol("Connector_Generic:Conn_01x02", "J1", "Battery", 40.64, 45.72, footprint=FP["batt"],
-                     fields={"Description": "Through-hole B+ / B- pads, reachable from both sides"})
+    j1 = root.symbol("Connector_Generic:Conn_01x02", "J1", "Battery", 40.64, 45.72, footprint=FP["batt"], in_bom=False,
+                     fields={"Note": "Through-hole B+ / B- pads, reachable from both sides"})
     j1.connect(1, "BATT+")
     j1.connect(2, "GND")
     sw = root.symbol("Switch:SW_SPDT", "SW43", "Power", 76.2, 45.72, footprint=FP["pwr_sw"],
-                     fields={"Description": "Battery cut-off slide switch (part to confirm)"})
+                     fields={"Note": "Battery cut-off slide switch (part to confirm)"})
     sw.connect(2, "BATT+")
     sw.connect(1, "VBAT")
     sw.connect(3, None)
@@ -421,7 +422,8 @@ def build():
     c1 = root.symbol("Device:C_Small", "C1", "10uF", 121.92, 106.68, footprint=FP["c"])
     c1.connect(1, "LED_VDD")
     c1.connect(2, "GND")
-    jp1 = root.symbol("Jumper:SolderJumper_2_Open", "JP1", "LED data", 121.92, 132.08, footprint=FP["jumper"])
+    jp1 = root.symbol("Jumper:SolderJumper_2_Open", "JP1", "LED data", 121.92, 132.08, footprint=FP["jumper"],
+                      in_bom=False)
     jp1.connect(1, "P0.06")
     jp1.connect(2, "LED_DIN")
     root.text("LED supply: Q1 switches battery voltage onto LED_VDD when P1.00 (LED_EN) is high.\n"
@@ -429,28 +431,39 @@ def build():
               "VCC (trackpad, header) stays on. Close JP1 to drive the LEDs from P0.06.", 27.94, 142.24)
 
     # ---- root: trackpad
-    j2 = root.symbol("Connector_Generic:Conn_01x06", "J2", "TPS43", 307.34, 50.8, footprint=FP["trackpad"],
-                     fields={"Description": "Bare pads for wires to the TPS43, in the module's pad order"})
-    for pin, net in enumerate(["SDA", "SCL", "+3V3", "GND", "TP_NRST", "TP_RDY"], 1):
+    j2 = root.symbol("Connector_Generic:Conn_01x06", "J2", "TPS43", 307.34, 50.8, footprint=FP["trackpad"], in_bom=False,
+                     fields={"Note": "Bare pads for wires to the TPS43, in the module's pad order"})
+    for pin, net in enumerate(["SDA_MOSI", "SCL_SCK", "+3V3", "GND", "NRST", "RDY_MOTION"], 1):
         j2.connect(pin, net)
-    for ref, val, net, x in (("R3", "4.7k", "SDA", 335.28), ("R4", "4.7k", "SCL", 350.52),
-                             ("R5", "10k", "TP_NRST", 365.76)):
+    for ref, val, net, x in (("R3", "4.7k", "SDA_MOSI", 335.28), ("R4", "4.7k", "SCL_SCK", 350.52),
+                             ("R5", "10k", "NRST", 365.76)):
         r = root.symbol("Device:R_Small", ref, val, x, 50.8, footprint=FP["r"])
         r.connect(1, "+3V3")
         r.connect(2, net)
+    # Optical sensor pads: alternative to the trackpad, sharing its pins over SPI
+    j5 = root.symbol("Connector_Generic:Conn_01x08", "J5", "PAW3395 / PMW3360", 307.34, 165.1,
+                     footprint=FP["sensor"], in_bom=False,
+                     fields={"Note": "Bare pads for a PAW3395 or PMW3360 sensor board, used instead of the trackpad"})
+    for pin, net in enumerate(["+3V3", "GND", "SCL_SCK", "SDA_MOSI", "P0.24_MISO", "P0.11_CS",
+                               "RDY_MOTION", "NRST"], 1):
+        j5.connect(pin, net)
+    root.text("J5: optical sensor (PAW3395 / PMW3360) instead of the trackpad, over SPI:\n"
+              "SCK = P0.20, MOSI = P0.17, MISO = P0.24, CS = P0.11, MOTION = P0.22, RST = NRST.\n"
+              "SCK/MOSI/MOTION share the trackpad's SCL/SDA/RDY: fit one or the other, and leave\n"
+              "R3/R4 off with a sensor. Check the sensor board's supply: some want 5 V.", 292.1, 182.88)
     root.text("Trackpad: Azoteq TPS43 (IQS572), I2C at 1.65-3.6 V.\n"
               "J2 is six bare pads for short wires to the module's own pads (no FPC, keeps it thin),\n"
               "in the module's order: SDA, SCL, 3V3, GND, RST, RDY (datasheet v1.06, figure 2.1).", 292.1, 66.04)
 
     # ---- root: exposed headers
     j3 = root.symbol("Connector_Generic:Conn_01x06", "J3", "Expansion", 307.34, 101.6, footprint=FP["hdr6"])
-    for pin, net in enumerate(["+3V3", "GND", "P0.08", "P0.06", "SDA", "SCL"], 1):
+    for pin, net in enumerate(["+3V3", "GND", "P0.08", "P0.06", "SDA_MOSI", "SCL_SCK"], 1):
         j3.connect(pin, net)
     j4 = root.symbol("Connector_Generic:Conn_01x04", "J4", "GPIO", 307.34, 132.08, footprint=FP["hdr4"])
-    for pin, net in enumerate(["GND", "P0.24", "LED_EN", "P0.11"], 1):
+    for pin, net in enumerate(["GND", "P0.24_MISO", "LED_EN", "P0.11_CS"], 1):
         j4.connect(pin, net)
     root.text("J3 expansion: UART on P0.08/P0.06, I2C shared with the trackpad.\n"
-              "J4 GPIO: P0.24 and P0.11 free; P1.00 is LED_EN.", 292.1, 142.24)
+              "J4 GPIO: P0.24 and P0.11 (sensor MISO/CS if J5 is used); P1.00 is LED_EN.", 292.1, 142.24)
 
     # ---- root: power flags and sub-sheets
     for i, net in enumerate(["GND", "VBAT", "LED_VDD", "BATT+"]):
@@ -482,7 +495,7 @@ def build():
         x, y = 30.48 + (i % 9) * 43.18, 38.1 + (i // 9) * 35.56
         if item[0] == "glow":
             _, side, j = item
-            led = leds.symbol("LED:WS2812B", f"LED{n}", "WS2812B", x, y, footprint=FP["led_glow"],
+            led = leds.symbol("LED:SK6812MINI", f"LED{n}", "SK6812MINI", x, y, footprint=FP["led_glow"],
                               fields={"Key": f"{side} UG{j}"}, text_dx=6.35, text_dy=8.89)
         else:
             k = item[1]
@@ -494,7 +507,7 @@ def build():
         nxt = f"LED_D{n}" if n < len(chain) else None
         led.connect("DOUT", nxt)
         prev = nxt
-    leds.text("Chain: LED1-12 underglow (WS2812B, bottom), LED13-48 per-key on the inner five columns\n"
+    leds.text("Chain: LED1-12 underglow (SK6812MINI, bottom), LED13-48 per-key on the inner five columns\n"
               "and thumbs, LED49-54 the breakable outer pinky columns last. Every LED runs from LED_VDD.",
               25.4, 254.0)
 
