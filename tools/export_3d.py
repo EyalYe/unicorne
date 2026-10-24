@@ -3,8 +3,7 @@
     python3 tools/export_3d.py        # writes export/unicorne-mx.step, export/unicorne-choc.step
 
 Models come from lib/3d/ (hotswap sockets, Choc V1 switch, and placeholder
-boxes for parts without a model: nice!nano, TPS43, MX switch, SK6812MINI,
-MSK-12C02) and KiCad's stock 3D library for everything else.
+boxes for parts without a model: nice!nano, TPS43, SK6812MINI, MSK-12C02) and KiCad's stock 3D library for everything else.
 """
 import subprocess
 from pathlib import Path

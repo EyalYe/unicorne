@@ -1,7 +1,7 @@
 """Write simple placeholder 3D models (one or more boxes) as STEP files.
 
 KiCad's STEP export only takes STEP/IGES models, and several parts here have
-none (nice!nano, TPS43, SK6812MINI, MSK-12C02, MX switch), so these stand in
+none (nice!nano, TPS43, SK6812MINI, MSK-12C02), so these stand in
 for them at the right size. Units are mm, in the footprint's frame (z up from
 the board surface).
 
@@ -102,9 +102,6 @@ MODELS = {
     # MSK-12C02: body plus the lever, which is on the footprint's +y side (the
     # model's -y: KiCad flips y between footprint and model coordinates)
     "msk12c02_box": [(-3.35, -1.4, 0.0, 3.35, 1.4, 1.5), (-0.75, -3.1, 0.3, 0.75, -1.4, 1.2)],
-    # Cherry MX: housing on the PCB (no plate) and stem
-    "mx_switch_box": [(-7.0, -7.0, 0.0, 7.0, 7.0, 5.0), (-7.8, -7.8, 5.0, 7.8, 7.8, 11.6),
-                      (-2.0, -2.0, 11.6, 2.0, 2.0, 15.2)],
 }
 
 if __name__ == "__main__":

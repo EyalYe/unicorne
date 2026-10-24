@@ -91,8 +91,8 @@ No assembly: every part is hand-soldered (see the parts list). Regenerate the zi
 ## 3D
 
 `export/unicorne-mx.step` and `export/unicorne-choc.step` are the full boards with parts, for designing a
-case (rendered previews next to them). Sockets and the Choc V1 switch are real models; the nice!nano, TPS43,
-MX switch, SK6812MINI and MSK-12C02 are size-accurate placeholder boxes from `tools/step_box.py`.
+case (rendered previews next to them). Sockets and the Cherry MX and Choc V1 switches are real models; the nice!nano,
+TPS43, SK6812MINI and MSK-12C02 are size-accurate placeholder boxes from `tools/step_box.py`.
 Regenerate with `python3 tools/export_3d.py` after any board change.
 
 ![MX board](export/unicorne-mx-top.png)
