@@ -330,7 +330,7 @@ FP = {
     "jumper": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
     "batt": "Connector_Wire:SolderWire-0.5sqmm_1x02_P4.8mm_D0.9mm_OD2.3mm",
     "pwr_sw": "Button_Switch_SMD:SW_SPDT_Shouhan_MSK12C02",
-    "reset": "Button_Switch_SMD:SW_SPST_TL3342",
+    "reset": "Button_Switch_THT:SW_PUSH_6mm_H5mm",   # 6x6x5 mm DIP tactile switch
     "hdr6": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
     "hdr4": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
     "trackpad": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
