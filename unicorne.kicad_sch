@@ -1,0 +1,19 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "09e2b11b-99df-43a9-81cc-2887b8df42c6")
+	(paper "A4")
+	(title_block
+		(title "unicorne")
+		(date "2026-10-24")
+		(rev "0.1")
+		(comment 1 "Unibody Corne with tilted halves")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

@@ -1,0 +1,19 @@
+# KiCad local/user state
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-backups/
+_autosave-*
+~*.lck
+*.lck
+fp-info-cache
+#auto_saved_files#
+
+# Generated outputs (commit release zips separately if wanted)
+/gerbers/
+/production/
+*.rpt
+*.zip
+
+# OS
+.DS_Store
