@@ -324,10 +324,13 @@ FP = {
     "diode": "Diode_SMD:D_SOD-123",
     "led_key": "LED_SMD:LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount",
     "led_glow": "LED_SMD:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm",
-    "r": "Resistor_SMD:R_0603_1608Metric",
-    "c": "Capacitor_SMD:C_0805_2012Metric",
+    "r": "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",
+    "c": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
     "sot23": "Package_TO_SOT_SMD:SOT-23",
     "jumper": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
+    "jumper3": "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm",
+    "sot23_5": "Package_TO_SOT_SMD:SOT-23-5_HandSoldering",
+    "hdr2": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
     "batt": "Connector_Wire:SolderWire-0.5sqmm_1x02_P4.8mm_D0.9mm_OD2.3mm",
     "pwr_sw": "Button_Switch_SMD:SW_SPDT_Shouhan_MSK12C02",
     "reset": "Button_Switch_THT:SW_PUSH_6mm_H5mm",   # 6x6x5 mm DIP tactile switch
@@ -355,13 +358,15 @@ def keys_with_refs(layout):
 
 
 def led_chain(keys):
-    """Underglow first, then per-key LEDs of the inner columns and thumbs, then
-    the breakable outer pinky columns last."""
+    """Underglow first, then per-key LEDs row by row, each row running left to
+    right as seen from above (each LED's DIN is on its left, DOUT on its right,
+    so neighbours connect with a short hop). Thumbs follow each half's rows;
+    the breakable outer pinky columns come last."""
     chain = [("glow", side, i) for side in "LR" for i in range(6)]
     for side in "LR":
         half = {(k["row"] % 3, k["col"]): k for k in keys if k["side"] == side}
+        cols = range(1, 6) if side == "L" else range(5, 0, -1)
         for r in range(3):
-            cols = range(1, 6) if r % 2 == 0 else range(5, 0, -1)
             chain += [("key", half[(r, c)]) for c in cols]
         chain += [("key", half[(t, 6)]) for t in range(3)]
     for side in "LR":
@@ -405,16 +410,26 @@ def build():
     root.text("Battery: J1 pads -> power switch -> nice!nano RAW/B+.\n"
               "With the switch off the battery is disconnected; USB still powers the board.", 27.94, 76.2)
 
-    # ---- root: switched LED supply (battery voltage), enabled by P1.00
+    # ---- root: LED supply. JP2 picks the source (VCC, or J6 for an external
+    # 5 V supply for full brightness); Q1 switches it onto LED_VDD from P1.00.
+    jp2 = root.symbol("Jumper:SolderJumper_3_Open", "JP2", "LED source", 50.8, 96.52, footprint=FP["jumper3"],
+                      in_bom=False, fields={"Note": "Bridge A-C for VCC (3.3 V) or B-C for J6 (external, e.g. 5 V)"})
+    jp2.connect("A", "+3V3")
+    jp2.connect("C", "LED_SRC")
+    jp2.connect("B", "LED_EXT")
+    j6 = root.symbol("Connector_Generic:Conn_01x02", "J6", "LED power in", 27.94, 96.52, footprint=FP["hdr2"],
+                     in_bom=False, fields={"Note": "External LED supply, up to 5 V (e.g. a USB-C breakout)"})
+    j6.connect(1, "LED_EXT")
+    j6.connect(2, "GND")
     q1 = root.symbol("Transistor_FET:AO3401A", "Q1", "AO3401A", 76.2, 111.76, footprint=FP["sot23"])
     q1.connect("G", "LED_EN_N")
-    q1.connect("S", "VBAT")
+    q1.connect("S", "LED_SRC")
     q1.connect("D", "LED_VDD")
     q2 = root.symbol("Transistor_FET:2N7002", "Q2", "2N7002", 50.8, 132.08, footprint=FP["sot23"])
     q2.connect("G", "LED_EN")
     q2.connect("S", "GND")
     q2.connect("D", "LED_EN_N")
-    for ref, val, a, b, x, y in (("R1", "100k", "VBAT", "LED_EN_N", 101.6, 106.68),
+    for ref, val, a, b, x, y in (("R1", "100k", "LED_SRC", "LED_EN_N", 101.6, 106.68),
                                  ("R2", "100k", "LED_EN", "GND", 101.6, 132.08)):
         r = root.symbol("Device:R_Small", ref, val, x, y, footprint=FP["r"])
         r.connect(1, a)
@@ -425,10 +440,30 @@ def build():
     jp1 = root.symbol("Jumper:SolderJumper_2_Open", "JP1", "LED data", 121.92, 132.08, footprint=FP["jumper"],
                       in_bom=False)
     jp1.connect(1, "P0.06")
-    jp1.connect(2, "LED_DIN")
-    root.text("LED supply: Q1 switches battery voltage onto LED_VDD when P1.00 (LED_EN) is high.\n"
-              "R1/R2 keep it off during boot. ZMK: ext-power on P1.00 for the LEDs only;\n"
-              "VCC (trackpad, header) stays on. Close JP1 to drive the LEDs from P0.06.", 27.94, 142.24)
+    jp1.connect(2, "LED_DATA")
+    # SN74LV1T125 runs from the LED supply and takes 3.3 V logic in, so the data
+    # level is right whether the LEDs get 3.3 V or 5 V
+    u2 = root.symbol("74xGxx:74LVC1G125", "U2", "SN74LV1T125", 152.4, 132.08, footprint=FP["sot23_5"],
+                     fields={"Note": "Must be SN74LV1T125 (TTL inputs at 5 V), not 74LVC1G125"})
+    u2.connect(1, "GND")
+    u2.connect(2, "LED_DATA")
+    u2.connect(3, "GND")
+    u2.connect(4, "LED_DIN")
+    u2.connect(5, "LED_VDD")
+    # JP3 bypasses U2: bridge it when the LEDs run from VCC and U2 is left off
+    jp3 = root.symbol("Jumper:SolderJumper_2_Open", "JP3", "U2 bypass", 152.4, 147.32, footprint=FP["jumper"],
+                      in_bom=False, fields={"Note": "Bridge with JP2 on VCC and U2 not fitted; open with U2 fitted"})
+    jp3.connect(1, "LED_DATA")
+    jp3.connect(2, "LED_DIN")
+    c2 = root.symbol("Device:C_Small", "C2", "100nF", 167.64, 121.92, footprint=FP["c"])
+    c2.connect(1, "LED_VDD")
+    c2.connect(2, "GND")
+    root.text("LED supply: bridge JP2 A-C for VCC (3.3 V, up to the regulator's 1 A) or B-C for J6\n"
+              "(external supply up to 5 V, for full brightness). Never from the battery: RAW is the\n"
+              "charger's battery pin. Q1 switches it onto LED_VDD when P1.00 (LED_EN) is high;\n"
+              "R1/R2 keep it off during boot. ZMK: ext-power on P1.00, VCC kept on by a gpio-hog.\n"
+              "Close JP1 to drive the LEDs from P0.06. U2 shifts the data level for a 5 V supply;\n"
+              "with VCC, leave U2 and C2 off and bridge JP3 instead.", 27.94, 142.24)
 
     # ---- root: trackpad
     j2 = root.symbol("Connector_Generic:Conn_01x06", "J2", "TPS43", 307.34, 50.8, footprint=FP["trackpad"], in_bom=False,
@@ -466,7 +501,7 @@ def build():
               "J4 GPIO: P0.24 and P0.11 (sensor MISO/CS if J5 is used); P1.00 is LED_EN.", 292.1, 142.24)
 
     # ---- root: power flags and sub-sheets
-    for i, net in enumerate(["GND", "VBAT", "LED_VDD", "BATT+"]):
+    for i, net in enumerate(["GND", "VBAT", "LED_VDD", "BATT+", "LED_EXT"]):
         root.flag(net, 27.94 + i * 15.24, 172.72)
     root.sheet_block(matrix, "Key matrix", 27.94, 200.66)
     root.sheet_block(leds, "LEDs", 76.2, 200.66)

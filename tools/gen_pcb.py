@@ -50,13 +50,15 @@ VARIANTS = {
                  hole_body=6.9),
 }
 LED_OFFSET = 4.75            # per-key LED, south of the switch centre (Corne v3)
-NO_BOM = {"J1", "J2", "J5", "JP1"}  # bare pads and the solder jumper
+NO_BOM = {"J1", "J2", "J5", "J6", "JP1", "JP2", "JP3"}  # bare pads and the solder jumpers
 NANO_USB_EDGE = 17.78        # nice_nano footprint origin to its PCB edge at the USB end
 TRACKPAD = (43.3, 40.3)      # TPS43 outline, datasheet figure 2.1
 SLOT_W = 1.0                 # break-line slot width
-TAB_W = 6.0                  # tab width where traces cross the break line
+TAB_W = 9.0                  # tab where the row lanes cross the break line
+TAB_OFFSET = 4.7             # tab centre below the switch centre: spans the lanes at +2.45..+6.9
 BRIDGE = 2.0                 # solid bridge at each board edge
 BITE_D, BITE_PITCH = 0.5, 0.8
+MIN_SLOT = 3.0               # shorter gaps between tabs are left solid (no sliver slots)
 
 
 def mm(v):
@@ -165,13 +167,15 @@ PAD_LABELS = {
                       "7": "MOT", "8": "RST"}),
     "J3": ("UART/I2C", {"1": "3V3", "2": "GND", "3": "RX", "4": "TX", "5": "SDA", "6": "SCL"}),
     "J4": ("GPIO", {"1": "GND", "2": "0.24", "3": "1.00", "4": "0.11"}),
+    "J6": ("LED IN", {"1": "V+", "2": "GND"}),
 }
 SILK = 0.8                    # label text height
 
 
-def silk_text(b, text, pos, angle=0):
-    """Same text on both silkscreens; the bottom copy is mirrored to read from below."""
-    for layer in (pcbnew.F_SilkS, pcbnew.B_SilkS):
+def silk_text(b, text, pos, angle=0, layers=(pcbnew.F_SilkS, pcbnew.B_SilkS)):
+    """Text on the given silkscreens (both by default, for through-hole pads); the
+    bottom copy is mirrored to read from below."""
+    for layer in layers:
         t = pcbnew.PCB_TEXT(b.board)
         t.SetText(text)
         t.SetLayer(layer)
@@ -317,6 +321,7 @@ def clear_spot(b, x, y, outline, reach=10.0, step=0.25, body=None):
     for fp in fps:
         edges += [g for g in fp.GraphicalItems() if g.GetLayer() == pcbnew.Edge_Cuts]
     is_key = lambda fp: fp.GetReference().startswith("SW") and fp.HasField("Key")
+    all_keys = [fp for fp in fps if is_key(fp)]
     keys = [fp for fp in fps if is_key(fp)] if body else []
     yards = [fp.GetCourtyard(layer) for fp in fps for layer in (pcbnew.F_CrtYd, pcbnew.B_CrtYd)
              if not (body and layer == pcbnew.F_CrtYd and is_key(fp))]
@@ -330,6 +335,15 @@ def clear_spot(b, x, y, outline, reach=10.0, step=0.25, body=None):
             return False
         if any(y_.OutlineCount() and y_.Collide(pt, mm(HOLE_KEEPOUT)) for y_ in yards):
             return False
+        # stay off the routing lanes (tools/lanes.py: y = +2.45 .. +6.9 in each switch
+        # frame, jogging between columns), plus the hole's own keep-out
+        for k in all_keys:
+            c = k.GetPosition()
+            a = math.radians(k.GetOrientationDegrees())
+            dx, dy = pcbnew.ToMM(pt.x - c.x), pcbnew.ToMM(pt.y - c.y)
+            lx, ly = dx * math.cos(a) - dy * math.sin(a), dx * math.sin(a) + dy * math.cos(a)
+            if abs(lx) < 10.5 and 2.45 - 1.6 < ly < 6.9 + 1.6:
+                return False
         for k in keys:
             c = k.GetPosition()
             a = math.radians(k.GetOrientationDegrees())
@@ -376,8 +390,16 @@ def break_line(b, ends, outline, row_points, index):
     nx, ny = -uy, ux
     at = lambda s: (a[0] + ux * s, a[1] + uy * s)
     s0, s1 = t0 * length, t1 * length
-    tabs = sorted((p[0] - a[0]) * ux + (p[1] - a[1]) * uy for p in row_points)
+    tabs = sorted((p[0] - a[0]) * ux + (p[1] - a[1]) * uy + TAB_OFFSET for p in row_points)
     solid = [(s0, s0 + BRIDGE)] + [(s - TAB_W / 2, s + TAB_W / 2) for s in tabs] + [(s1 - BRIDGE, s1)]
+    # merge solid sections whose slot between them would be a sliver
+    merged = [solid[0]]
+    for s_, e_ in solid[1:]:
+        if s_ - merged[-1][1] < MIN_SLOT:
+            merged[-1] = (merged[-1][0], max(e_, merged[-1][1]))
+        else:
+            merged.append((s_, e_))
+    solid = merged
     r = SLOT_W / 2
     for (_, e), (n, _) in zip(solid, solid[1:]):
         p, q = at(e + r), at(n - r)
@@ -395,12 +417,16 @@ def break_line(b, ends, outline, row_points, index):
     fp.Value().SetVisible(False)
     fp.SetAttributes(pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES | pcbnew.FP_BOARD_ONLY)
     b.board.Add(fp)
+    # perforate every solid section along its whole length, except where the
+    # routing lanes cross each tab (tools/lanes.py: tab centre -2.25 .. +2.2)
+    keep_clear = [(t - 2.8, t + 2.8) for t in tabs]
     holes = []
-    for i, (s, e) in enumerate(solid):
-        if i > 0:
-            holes += [s + BITE_PITCH * k for k in range(1, 3)]
-        if i < len(solid) - 1:
-            holes += [e - BITE_PITCH * k for k in range(1, 3)]
+    for s_, e_ in solid:
+        h = s_ + 0.5
+        while h <= e_ - 0.5:
+            if not any(lo < h < hi for lo, hi in keep_clear):
+                holes.append(h)
+            h += BITE_PITCH
     for s in holes:
         pad = pcbnew.PAD(fp)
         pad.SetAttribute(pcbnew.PAD_ATTRIB_NPTH)
@@ -481,32 +507,46 @@ def build(variant):
 
     sw43 = add_part(b, comps["SW43"], pins)            # power switch, lever over the top edge
     place(b, sw43, -15.0, ny + 2.0, 0, bottom=True)
-    part("SW44", 15.5, ny + 5.5)                       # reset, 6x6 THT
-    # Left column: GPIO header, then the LED supply switch
-    part("J4", -13.5, ny + 12.0, 180)                  # GPIO header (4 pins)
-    part("Q1", -15.0, ny + 20.0)
-    part("R1", -11.5, ny + 20.0, 90)
-    part("Q2", -15.0, ny + 24.5)
-    part("R2", -11.5, ny + 24.5, 90)
-    part("C1", -15.0, ny + 28.5)
-    # Right column: expansion header, all pins clear of the trackpad, LED jumper beside it
-    part("J3", 13.5, ny + 20.5, 180)                   # expansion header (6 pins)
-    part("JP1", 18.0, ny + 24.0, 90)
+    # Left of the nice!nano: only the power switch and reset (RAW and RST are on
+    # this side), leaving its left edge free for the rows and columns.
+    part("SW44", -15.5, ny + 9.5)                      # reset, 6x6 THT
+    # Right of it: both headers and the LED parts, whose pins are all on this side
+    part("J3", 13.5, ny + 10.0, 180)                   # expansion header (6 pins)
+    part("J4", 13.5, ny + 25.0, 180)                   # GPIO header (4 pins)
+    part("JP1", 17.5, ny + 5.0, 90)                    # LED data jumper, by P0.06
+    part("Q2", 18.0, ny + 14.0)
+    part("R2", 18.0, ny + 18.0, 90)
+    part("Q1", 18.0, ny + 22.0)
+    part("R1", 18.0, ny + 26.0, 90)
+    part("C1", 18.0, ny + 30.0)
+    part("JP2", 22.0, ny + 22.0, 90)                   # LED source: VCC or J6
+    part("U2", 21.5, ny + 10.0)                        # LED data level shifter
+    part("C2", 21.5, ny + 5.5)
+    part("JP3", 22.0, ny + 14.5, 90)                   # U2 bypass
     tp_y = py + pad["h"] + 2.5
     part("J2", 0, tp_y, 270, bottom=False)             # trackpad wire pads, pin 1 (SDA) right
     # optical sensor pads just above the trackpad pads, inside the trackpad area
     part("J5", 0, py + pad["h"] - 2.5, 90, bottom=False)
     for i, ref in enumerate(("R3", "R4", "R5")):
-        part(ref, -3.0 + i * 3.0, tp_y + 4.0, 90)
+        part(ref, -4.5 + i * 4.5, tp_y + 4.3, 0)        # between the pad labels and the battery
     batt = layout["battery"]
     part("J1", (batt[0]["x"] + batt[1]["x"]) / 2, batt[0]["y"], 0, bottom=False)
+    part("J6", 8.0, batt[0]["y"], 0, bottom=False)    # external LED supply, beside the battery
 
     # pad names: trackpad below its row, sensor above (inside the trackpad area),
     # battery below, headers on the side facing the nice!nano
     fps = {f.GetReference(): f for f in b.board.GetFootprints()}
-    for ref, side in (("J2", 1), ("J5", -1), ("J1", 1), ("J3", -1), ("J4", 1)):
+    for ref, side in (("J2", 1), ("J5", -1), ("J1", 1), ("J3", -1), ("J4", -1), ("J6", 1)):
         label_pads(b, fps[ref], side)
-    for ref in ("Q1", "SW43"):                         # no room for these reference labels
+    # which end of JP2 is which: pad 1 = VCC, pad 3 = J6 (external)
+    for num, text in (("1", "VCC"), ("3", "EXT")):
+        x, y = pad_xy(fps["JP2"], num)
+        c = fps["JP2"].GetPosition()
+        dx, dy = x - pcbnew.ToMM(c.x), y - pcbnew.ToMM(c.y)
+        n = math.hypot(dx, dy) or 1
+        silk_text(b, text, pcbnew.VECTOR2I(mm(x + dx / n * 1.9), mm(y + dy / n * 1.9)),
+                  layers=(pcbnew.B_SilkS,))            # JP2 is an SMD jumper on the bottom
+    for ref in ("Q1", "Q2", "U2", "SW43"):             # no room for these reference labels
         fps[ref].Reference().SetVisible(False)
     # pin table under the trackpad, between the nice!nano and the sensor pad labels
     pin_table(b, ny + nano["h"] + 1.5, py + pad["h"] - 8.5)

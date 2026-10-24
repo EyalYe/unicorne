@@ -20,3 +20,11 @@ fp-info-cache
 
 # Python
 __pycache__/
+
+# Routing work files
+/build/
+
+# KiCad local history
+/.history/
+# Freerouting log (written next to the -l language option)
+/en/

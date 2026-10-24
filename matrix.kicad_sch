@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "f07f3c4b-7cfa-4450-878f-7790d7e4c43e")
+	(uuid "4cda110d-8cf9-4b7c-9297-27c29ff0f7fd")
 	(paper "A3")
 	(title_block
 		(title "unicorne - key matrix")
@@ -378,7 +378,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dc96422c-ceda-4667-bf24-419ab4a3805e")
+		(uuid "fc64ffc3-4773-45ea-8cef-25ac9d10b306")
 		(property "Reference" "SW1"
 			(at 30.48 35.56 0)
 			(effects
@@ -423,14 +423,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "fbd23370-fe79-4ce7-a2b6-3ca4cc2ad499")
+			(uuid "4b5cb158-6b65-4e93-ae9e-9a3459da95a8")
 		)
 		(pin "2"
-			(uuid "bedf9b69-95b4-4450-b492-2ed157113d51")
+			(uuid "1c775669-dbef-4cbc-bed2-1fccd9acbb4f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW1")
 					(unit 1)
 				)
@@ -446,7 +446,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5acd3810-b40d-42d4-93a9-60b673d6e10d")
+		(uuid "a85e92d5-6490-4a84-82ba-ad3211729f94")
 	)
 	(global_label "COL0"
 		(shape passive)
@@ -458,7 +458,7 @@
 			)
 			(justify right)
 		)
-		(uuid "bb546e7d-bcfb-42d4-9d86-a3a564eb377f")
+		(uuid "02ae4858-c476-4635-aa4b-30863ec17ba7")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -468,7 +468,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f595c939-0b80-484b-aaae-18bedb853633")
+		(uuid "d6a7499b-8980-412f-b5e2-7ba81c9b5820")
 		(property "Reference" "D1"
 			(at 39.37 35.56 0)
 			(effects
@@ -513,14 +513,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0f674535-f33e-4a3e-b36e-6e0cca6bb8d4")
+			(uuid "367890ac-ee98-4185-ae58-384d51d00993")
 		)
 		(pin "2"
-			(uuid "9c859195-d213-4a40-89a2-b8e40ed51273")
+			(uuid "812780e8-36b4-45af-ba7a-270824b95abc")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D1")
 					(unit 1)
 				)
@@ -536,7 +536,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cc8d7cc8-2535-492c-b29a-66040c2928ff")
+		(uuid "c662a74c-a6c8-4552-afac-26531787cfb3")
 	)
 	(global_label "ROW0"
 		(shape passive)
@@ -548,7 +548,7 @@
 			)
 			(justify left)
 		)
-		(uuid "05aa8208-0641-4435-b7cd-7f0874aaf7c5")
+		(uuid "5cfda694-39f8-4be4-8747-c4b35dae4452")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -558,7 +558,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b7fbd3c2-ca34-4ec9-bcbb-bf75f1589248")
+		(uuid "dd8e6e99-2a4e-402d-9f88-d6328242addc")
 		(property "Reference" "SW2"
 			(at 83.82 35.56 0)
 			(effects
@@ -603,14 +603,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "270f0eeb-ef48-44fb-b31c-5c17ddfbc68e")
+			(uuid "a3c19f5b-a706-4750-bc23-d8278db7c08d")
 		)
 		(pin "2"
-			(uuid "e97e9743-0a6e-4576-9490-ba2e2861daeb")
+			(uuid "bcb0f089-417d-4ea3-92a0-b4d5308724ec")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW2")
 					(unit 1)
 				)
@@ -626,7 +626,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5923ec6e-4e1b-414e-956c-76a524e21753")
+		(uuid "788e051b-82aa-41ea-abc7-6eddde1993f8")
 	)
 	(global_label "COL1"
 		(shape passive)
@@ -638,7 +638,7 @@
 			)
 			(justify right)
 		)
-		(uuid "442edf1d-9f0c-47aa-accc-ffbba6d83d17")
+		(uuid "1c77f80d-719b-4fe5-85a0-2ee3daa85f14")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -648,7 +648,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4fb31c22-219d-421f-8530-89afbdf4ce9d")
+		(uuid "8e6ccd2a-41d4-4b83-86be-5d0fb1f95a4d")
 		(property "Reference" "D2"
 			(at 92.71 35.56 0)
 			(effects
@@ -693,14 +693,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8e425443-90e5-4db8-9442-97a45e58e722")
+			(uuid "1eb9eef0-c4c2-4948-a529-752131d26f72")
 		)
 		(pin "2"
-			(uuid "7ed7eb7b-1e7a-48fa-95e6-e65b17d40a44")
+			(uuid "de4c9e1b-c3b7-4004-8b25-1cef0ad6a216")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D2")
 					(unit 1)
 				)
@@ -716,7 +716,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "003ee5e5-6662-443f-87f2-271642efadf8")
+		(uuid "497523e3-e94c-4e3d-beb5-c60c68e58bf6")
 	)
 	(global_label "ROW0"
 		(shape passive)
@@ -728,7 +728,7 @@
 			)
 			(justify left)
 		)
-		(uuid "024afed2-efc7-45ab-be06-d553f3f3f258")
+		(uuid "ebe29900-5c27-4c20-9e0a-a60a497bb95d")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -738,7 +738,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f2b1157a-98e0-43ff-bf8c-3505b04c6a7d")
+		(uuid "2f8ee7af-955f-4b8f-81f5-ffd6a69e15c5")
 		(property "Reference" "SW3"
 			(at 137.16 35.56 0)
 			(effects
@@ -783,14 +783,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b6f51a2d-7e6a-4c75-a1cc-ff69bd8a340e")
+			(uuid "ce0a5a43-bfda-4a79-bcbc-e3f3986870a3")
 		)
 		(pin "2"
-			(uuid "349e0b10-d6f7-4c11-92dd-16f692ea4ef7")
+			(uuid "7ee7550b-be17-447c-bc15-3e9bfd25a684")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW3")
 					(unit 1)
 				)
@@ -806,7 +806,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d91517a4-5682-44aa-8c80-1eb02c439ae7")
+		(uuid "54d42723-4988-4e3a-a2b0-d1364f0484e4")
 	)
 	(global_label "COL2"
 		(shape passive)
@@ -818,7 +818,7 @@
 			)
 			(justify right)
 		)
-		(uuid "f6be5bd2-533d-4c93-8c05-088a518207eb")
+		(uuid "a5de1f23-ede4-43ef-8aa9-422414e68c28")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -828,7 +828,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "67145fce-69dc-4620-93bf-d4c6b1d32c71")
+		(uuid "46ad15f4-6c21-44a7-b6b6-7fc58e333f40")
 		(property "Reference" "D3"
 			(at 146.05 35.56 0)
 			(effects
@@ -873,14 +873,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1ceafa6d-842f-4919-93d5-1d10f0e3e966")
+			(uuid "172601be-0137-4abe-9fcc-c371d77ae7ae")
 		)
 		(pin "2"
-			(uuid "7fb198e9-b0d1-47ee-b9f7-37a253a2bfef")
+			(uuid "6abdc0a2-c916-4686-bf43-71ecc3f228d2")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D3")
 					(unit 1)
 				)
@@ -896,7 +896,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e0147d29-ae55-40ff-a94f-acfa6f8dff8e")
+		(uuid "b6ff97fd-d358-433e-851a-dc67f46e3143")
 	)
 	(global_label "ROW0"
 		(shape passive)
@@ -908,7 +908,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a78c983c-e86e-41c1-acf2-943e82bce19f")
+		(uuid "7425ab9c-f53e-44d5-af22-403bc316119a")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -918,7 +918,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2f8447f5-3419-47d3-9b29-761c4dbcb800")
+		(uuid "2af087c2-2e79-4476-96fa-6817f75fcc5a")
 		(property "Reference" "SW4"
 			(at 190.5 35.56 0)
 			(effects
@@ -963,14 +963,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f74b35a1-53b2-4b36-8dcb-14cdfe36b4a8")
+			(uuid "4e196b57-ff67-47c7-8b13-b738c57e590d")
 		)
 		(pin "2"
-			(uuid "da0695b8-7d28-4755-83a1-020796feda2e")
+			(uuid "c26db245-c3f9-41cf-9544-844aa3bbf52d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW4")
 					(unit 1)
 				)
@@ -986,7 +986,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "173f662f-9f3f-4150-9dd1-f89805160fb3")
+		(uuid "6ca1cdb3-33cc-4efc-9b54-2bec2af58e14")
 	)
 	(global_label "COL3"
 		(shape passive)
@@ -998,7 +998,7 @@
 			)
 			(justify right)
 		)
-		(uuid "7ec9a516-48c5-42a4-b278-5a560c3bc8f6")
+		(uuid "ee081a67-3e80-4ebc-b313-13effb5dea3f")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -1008,7 +1008,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "bbedf270-4d5c-4f9a-b5bb-a5aaa4f492a9")
+		(uuid "221d657c-511b-4d57-b2be-6326cd89cd69")
 		(property "Reference" "D4"
 			(at 199.39 35.56 0)
 			(effects
@@ -1053,14 +1053,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f49e5c4b-5615-41aa-bb19-54e541e128f3")
+			(uuid "a9fa4b4f-851f-4b2c-8aed-c42a9ec6cb9e")
 		)
 		(pin "2"
-			(uuid "9c698820-8f77-47ef-8c36-c2f196eeebe2")
+			(uuid "728b6f23-9149-48cc-9b02-fb066dd20eeb")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D4")
 					(unit 1)
 				)
@@ -1076,7 +1076,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c400c5ad-ec19-4bf3-8a00-d4e8f435df08")
+		(uuid "aa333b35-06b1-4261-8d16-4ddf425b9836")
 	)
 	(global_label "ROW0"
 		(shape passive)
@@ -1088,7 +1088,7 @@
 			)
 			(justify left)
 		)
-		(uuid "e619fd61-7060-4247-9fd1-08f058362e19")
+		(uuid "8a688483-e8ed-4ddb-9315-3f1c7bac28ef")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -1098,7 +1098,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d2e065c2-5f53-40c9-959e-12e3e1c4449b")
+		(uuid "178d98d8-1081-4dd0-bde5-08eac54a27ba")
 		(property "Reference" "SW5"
 			(at 243.84 35.56 0)
 			(effects
@@ -1143,14 +1143,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "142bcc0a-f257-41a6-9858-9ec3fddabe0d")
+			(uuid "2dbe330c-bb67-42a3-920d-f173d8acf8fa")
 		)
 		(pin "2"
-			(uuid "8a851466-b122-4ddd-8c41-9e56c2bebe87")
+			(uuid "2d08c0af-5427-4cfe-bdcf-2e0cf978249d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW5")
 					(unit 1)
 				)
@@ -1166,7 +1166,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2ae13cdd-1c93-45bc-b638-6f6766858bee")
+		(uuid "e31caf22-f836-46a9-b952-318716d64a68")
 	)
 	(global_label "COL4"
 		(shape passive)
@@ -1178,7 +1178,7 @@
 			)
 			(justify right)
 		)
-		(uuid "2ca9f948-5c16-4eff-853b-3b4bf39ce34b")
+		(uuid "275522f0-c65d-46f4-9814-c5b23fab4ea0")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -1188,7 +1188,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "12132746-8eb6-451a-b79d-34eb81c8905d")
+		(uuid "465364f1-ec8c-4a43-90b5-c804212c01d7")
 		(property "Reference" "D5"
 			(at 252.73 35.56 0)
 			(effects
@@ -1233,14 +1233,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f36bd5e5-4bc1-4a09-bb20-e68d7bc9e405")
+			(uuid "a874a064-50fb-4224-a642-e9540869e981")
 		)
 		(pin "2"
-			(uuid "0ff7a9cd-8da4-4614-8af4-113ad77cbb40")
+			(uuid "63f0dd80-9560-447d-982f-aeff7f2f0226")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D5")
 					(unit 1)
 				)
@@ -1256,7 +1256,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "36703d88-a244-4faf-a647-60e74d5b1d8d")
+		(uuid "c26c62c5-57f6-437b-b25e-03327b05b7cd")
 	)
 	(global_label "ROW0"
 		(shape passive)
@@ -1268,7 +1268,7 @@
 			)
 			(justify left)
 		)
-		(uuid "cd35ce08-ebe6-4c01-ac1f-82271a468cb0")
+		(uuid "63052a6a-46c3-4c21-8a79-72333f2a5066")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -1278,7 +1278,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2370c779-da7f-4068-901f-1f83dfb12fd9")
+		(uuid "3a08e056-5f0f-47e1-a8c6-1f3b75ea637b")
 		(property "Reference" "SW6"
 			(at 297.18 35.56 0)
 			(effects
@@ -1323,14 +1323,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ccb0eaf4-3ba4-4425-9173-eb25e42309d2")
+			(uuid "b53cdc52-bc07-4c92-b51c-358259177be3")
 		)
 		(pin "2"
-			(uuid "6c3553cd-1471-4adb-82b3-a68d56e81b09")
+			(uuid "cce687a7-9b28-4b0d-99ba-c3ad5c050a1f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW6")
 					(unit 1)
 				)
@@ -1346,7 +1346,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9b3ab071-8c01-406a-9738-a847cc59d4ff")
+		(uuid "c13a7876-efdb-4091-9899-d79e0f86b0fd")
 	)
 	(global_label "COL5"
 		(shape passive)
@@ -1358,7 +1358,7 @@
 			)
 			(justify right)
 		)
-		(uuid "a58aae52-54cc-40cb-b43b-c0411dcb217e")
+		(uuid "0b9130b7-d7f3-4326-9011-e9e1b6899243")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -1368,7 +1368,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d54962da-1793-4864-922f-96c3f1d875ea")
+		(uuid "51026ce6-eaf2-444d-bda8-80e96318d562")
 		(property "Reference" "D6"
 			(at 306.07 35.56 0)
 			(effects
@@ -1413,14 +1413,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b33b3479-90e4-46ac-968c-cbd453ea5eeb")
+			(uuid "6f2be557-c6ab-49b7-9e7c-b9e6ba5b467d")
 		)
 		(pin "2"
-			(uuid "cd86d7ee-8e1a-4364-8feb-6c467ad59c7f")
+			(uuid "1780ac37-7dfc-49d5-bcca-56d1ccf9b27a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D6")
 					(unit 1)
 				)
@@ -1436,7 +1436,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0730f4be-7caa-4db8-9c0f-d5a5046e89d7")
+		(uuid "6412fda3-882a-4e9b-912e-41ee3d0c7e3f")
 	)
 	(global_label "ROW0"
 		(shape passive)
@@ -1448,7 +1448,7 @@
 			)
 			(justify left)
 		)
-		(uuid "7ebf03bd-418e-4745-8597-7fc0f782d686")
+		(uuid "6b603c5b-951f-4bd2-88ab-29a5e77b8cf1")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -1458,7 +1458,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "53231558-2ee8-41b1-b7c8-368e88ba5987")
+		(uuid "837f0c4b-883b-4eb3-90de-7b8baab93969")
 		(property "Reference" "SW7"
 			(at 30.48 68.58 0)
 			(effects
@@ -1503,14 +1503,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e668d2eb-338f-4a79-b815-66b0cffe6fb1")
+			(uuid "e5e67e12-c20c-45e3-b18b-3101d7ce970c")
 		)
 		(pin "2"
-			(uuid "fd3bddf8-3083-4d2b-9202-518b7d838d3f")
+			(uuid "e56ee0ee-fc7e-4f2e-96d8-bbabe2e99e99")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW7")
 					(unit 1)
 				)
@@ -1526,7 +1526,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "28160b02-e402-4752-8267-c91ece155796")
+		(uuid "550950e9-3e0f-44b7-8a13-fdb10e33b653")
 	)
 	(global_label "COL0"
 		(shape passive)
@@ -1538,7 +1538,7 @@
 			)
 			(justify right)
 		)
-		(uuid "ea381067-bdda-45a0-bac8-5eeaeeff6581")
+		(uuid "07db98c2-22bc-4476-a86d-d2f9380f884e")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -1548,7 +1548,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0d75672f-522a-4dbc-807a-94e1edfbf7cd")
+		(uuid "17589a7b-5431-4b92-bf46-0828fbd9af91")
 		(property "Reference" "D7"
 			(at 39.37 68.58 0)
 			(effects
@@ -1593,14 +1593,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b2d34e20-2086-44dc-a53a-693618ca4dec")
+			(uuid "3cdd218a-eb20-4bfc-840b-ff15fed7aede")
 		)
 		(pin "2"
-			(uuid "e2c15809-245f-4f96-9562-79bbd625615e")
+			(uuid "161f3265-891d-4662-9775-ea8547b8da15")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D7")
 					(unit 1)
 				)
@@ -1616,7 +1616,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "07202d9b-954e-43fa-8cd3-f5dda73b0179")
+		(uuid "366ff2e2-fcd2-4643-b233-1f60d264a863")
 	)
 	(global_label "ROW1"
 		(shape passive)
@@ -1628,7 +1628,7 @@
 			)
 			(justify left)
 		)
-		(uuid "c091da6b-07c1-4a54-8081-1bb4915b84d5")
+		(uuid "ff720aaa-fcc9-4b1e-8a5d-25ea4036490b")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -1638,7 +1638,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "308e82b7-be6a-4803-b344-104585d62e2f")
+		(uuid "de4a0755-baa2-4454-b02c-510f0d6a2779")
 		(property "Reference" "SW8"
 			(at 83.82 68.58 0)
 			(effects
@@ -1683,14 +1683,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "6aeb6d23-a3d3-4663-aded-854cb333ad40")
+			(uuid "09764bf4-2051-4bf5-a655-8f0ec8d3c4c4")
 		)
 		(pin "2"
-			(uuid "0e21f4ac-ae65-4358-b7a4-0c4000e3c16e")
+			(uuid "95ade086-0b8f-40bd-b79d-c0ec33939ec0")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW8")
 					(unit 1)
 				)
@@ -1706,7 +1706,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2384e19e-1551-4cef-9905-fb04c6173ec3")
+		(uuid "ac506fc8-1e2f-4855-9111-7c7247e6e073")
 	)
 	(global_label "COL1"
 		(shape passive)
@@ -1718,7 +1718,7 @@
 			)
 			(justify right)
 		)
-		(uuid "1b32ddc3-6962-41d4-9b43-dccd1e30655c")
+		(uuid "f2fa7ae2-243a-48b8-91e7-fd48a659c015")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -1728,7 +1728,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "273663f1-9d9e-4125-9c7b-e55f14c51223")
+		(uuid "6c3353ae-6b96-47d5-bcea-31364e92608f")
 		(property "Reference" "D8"
 			(at 92.71 68.58 0)
 			(effects
@@ -1773,14 +1773,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1ca772ae-cda2-4964-ba51-ed540f1ac06f")
+			(uuid "2f013c0c-e755-435c-b983-322ce2d2cc7a")
 		)
 		(pin "2"
-			(uuid "c0dfae59-db22-4632-9195-293f7ee9d9b7")
+			(uuid "d96510cf-7129-4b26-b92c-e85a57b278dd")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D8")
 					(unit 1)
 				)
@@ -1796,7 +1796,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5db4ef7d-e717-41d7-9f2e-80c5e8fa83ed")
+		(uuid "30cce659-ea9f-4f51-8310-61579f12b45e")
 	)
 	(global_label "ROW1"
 		(shape passive)
@@ -1808,7 +1808,7 @@
 			)
 			(justify left)
 		)
-		(uuid "683e9f52-78aa-435e-b1fb-06ccda7b7374")
+		(uuid "813df4a3-e90a-41ff-9a01-16c7162e387a")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -1818,7 +1818,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "28a42ad1-5518-4a48-a17c-7b11641d96c1")
+		(uuid "667daf16-b19a-4a7c-b737-6f774d78f255")
 		(property "Reference" "SW9"
 			(at 137.16 68.58 0)
 			(effects
@@ -1863,14 +1863,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "fa8a132f-e8d2-41df-b79b-5d799487f357")
+			(uuid "514e504b-6bb8-42f2-93da-114d8ded5b01")
 		)
 		(pin "2"
-			(uuid "59e84b66-f624-48cc-b563-e202ffd61ad2")
+			(uuid "6a4e6350-aa99-4cdb-b8f7-25cec90a432d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW9")
 					(unit 1)
 				)
@@ -1886,7 +1886,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c0a34056-c2cd-41df-a219-8dfcb5793101")
+		(uuid "bcc3b21a-7fd2-41a7-a6f3-f26c190753e6")
 	)
 	(global_label "COL2"
 		(shape passive)
@@ -1898,7 +1898,7 @@
 			)
 			(justify right)
 		)
-		(uuid "5752ea35-dc78-473e-8cc3-531bb1562b9f")
+		(uuid "0e1aeb26-1671-4750-a347-e05756f6b4e3")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -1908,7 +1908,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6f52710c-bc85-4c24-8f5a-00b7f18760bf")
+		(uuid "b5752a3f-5473-4cf2-9409-b24de21d000d")
 		(property "Reference" "D9"
 			(at 146.05 68.58 0)
 			(effects
@@ -1953,14 +1953,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "20597f91-0fa6-4c3d-aef6-d681b9e7c79e")
+			(uuid "15a69533-fc1f-4809-aabe-8e1fc309fc94")
 		)
 		(pin "2"
-			(uuid "4becd2f9-8cd9-40cb-a3ba-13e59f0521c3")
+			(uuid "7e715076-8813-44a7-aff1-550b701827e7")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D9")
 					(unit 1)
 				)
@@ -1976,7 +1976,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6b5e7bb4-3745-44f7-a9cd-4ff125b2f22a")
+		(uuid "164ecff7-015c-425d-b853-70f439db858f")
 	)
 	(global_label "ROW1"
 		(shape passive)
@@ -1988,7 +1988,7 @@
 			)
 			(justify left)
 		)
-		(uuid "4d3180bd-cc86-4092-9e00-784b7b03f6eb")
+		(uuid "e18d4620-7f88-4078-b96b-d59a19f9f497")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -1998,7 +1998,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d47aaad2-33e2-409c-a172-9b7b0d3491e6")
+		(uuid "578e85ee-88b8-4341-8fc3-b0764ec8c177")
 		(property "Reference" "SW10"
 			(at 190.5 68.58 0)
 			(effects
@@ -2043,14 +2043,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1b155a29-c8c5-4444-96bc-578675e340c7")
+			(uuid "8d254756-b651-4541-bc4b-83468543d83a")
 		)
 		(pin "2"
-			(uuid "ebd1fd31-83f4-440d-8db4-520902c8f20f")
+			(uuid "84c85674-e4ef-41d1-9b35-a341293eb61d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW10")
 					(unit 1)
 				)
@@ -2066,7 +2066,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0f7a2d17-ebb0-4c28-bd32-5ed928f50847")
+		(uuid "d13e974f-5044-4c8a-b59f-84da09516c7f")
 	)
 	(global_label "COL3"
 		(shape passive)
@@ -2078,7 +2078,7 @@
 			)
 			(justify right)
 		)
-		(uuid "e73d057b-530f-4305-8f1f-fb3781aefcc7")
+		(uuid "d66ce3e3-3648-4a0c-85fb-96d44634273c")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -2088,7 +2088,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d0447851-8548-4471-9b97-f2242f987e47")
+		(uuid "d21da0a9-3af0-4079-9041-29c14e6164c1")
 		(property "Reference" "D10"
 			(at 199.39 68.58 0)
 			(effects
@@ -2133,14 +2133,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4ca14899-f154-46bc-8fc6-f73edb6864ff")
+			(uuid "8150218d-7422-417c-8dee-1d7df4f22722")
 		)
 		(pin "2"
-			(uuid "c81d6b7f-f324-4c82-ad56-fbe6e55f8bdf")
+			(uuid "7303fc3e-5fb9-406b-88d7-e2b2d5de421f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D10")
 					(unit 1)
 				)
@@ -2156,7 +2156,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f79f4314-836e-443e-8feb-2e1da55732b0")
+		(uuid "4875c231-f03b-4856-abbb-852b4ea6f84a")
 	)
 	(global_label "ROW1"
 		(shape passive)
@@ -2168,7 +2168,7 @@
 			)
 			(justify left)
 		)
-		(uuid "60490638-34c2-4fa3-8d33-f639ec8e0419")
+		(uuid "75d44a43-de31-4b93-969e-8b8267ea2aa4")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -2178,7 +2178,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "fad47522-244c-497d-b865-8304dd1503a6")
+		(uuid "9a935f3e-0328-4182-86eb-045346040935")
 		(property "Reference" "SW11"
 			(at 243.84 68.58 0)
 			(effects
@@ -2223,14 +2223,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1be17ec9-33e5-42fb-8989-4ab9a6f8c480")
+			(uuid "cdc41ef9-5808-46b2-a0b3-de24736db8b0")
 		)
 		(pin "2"
-			(uuid "87f62988-4945-47af-b05f-f95fa4216675")
+			(uuid "e7fc9253-afee-4a03-9619-dd67dc5878b5")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW11")
 					(unit 1)
 				)
@@ -2246,7 +2246,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b68f8ff4-1a1b-4067-a142-d1f50bab8dfe")
+		(uuid "ac9c38ba-c744-4a8d-b49c-f7a483430444")
 	)
 	(global_label "COL4"
 		(shape passive)
@@ -2258,7 +2258,7 @@
 			)
 			(justify right)
 		)
-		(uuid "9bbd4bd9-f32e-4c17-af99-2199ad6c3a75")
+		(uuid "26b90cfb-df99-43a6-aa27-f15549d7caf7")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -2268,7 +2268,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "18664999-ce37-4cda-b6f2-4fd59c1809a5")
+		(uuid "e2b3b43d-a3c0-45bf-a964-8f19f66e5664")
 		(property "Reference" "D11"
 			(at 252.73 68.58 0)
 			(effects
@@ -2313,14 +2313,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0236cb81-2f5e-4f85-a5fd-21fed74a7672")
+			(uuid "1fcdb11d-c4ec-4543-ac11-534d3edb4205")
 		)
 		(pin "2"
-			(uuid "7fd5a462-2b37-4e61-b8d7-8e7a5d365a92")
+			(uuid "cf8a85b5-3897-4c69-bae6-d91157c60a1a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D11")
 					(unit 1)
 				)
@@ -2336,7 +2336,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "97915056-49e3-4878-874a-f0784a3b25e0")
+		(uuid "5b298f61-ef5d-4833-a60c-0268f40fe1bf")
 	)
 	(global_label "ROW1"
 		(shape passive)
@@ -2348,7 +2348,7 @@
 			)
 			(justify left)
 		)
-		(uuid "d14fbaa5-471c-41ee-9c09-16a21411ee19")
+		(uuid "a979e6e8-46fb-4678-8656-1d0f3f21acc8")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -2358,7 +2358,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5b40d1e8-537f-4728-ba72-0f22231b9bd7")
+		(uuid "8b4f1736-9d30-4606-9c2f-7db37baa696a")
 		(property "Reference" "SW12"
 			(at 297.18 68.58 0)
 			(effects
@@ -2403,14 +2403,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "12126812-d150-4f7b-85a6-761e1168c49d")
+			(uuid "9934d4eb-6f46-4f62-b576-4316e615844b")
 		)
 		(pin "2"
-			(uuid "01fdc4c7-a143-477d-8d02-86299c7ea635")
+			(uuid "b03588a6-9f3b-4d91-9d90-e80e05d0fb4a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW12")
 					(unit 1)
 				)
@@ -2426,7 +2426,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "666ecb6c-3df7-4691-bcf7-3abebd6a912a")
+		(uuid "b6feb021-5662-455b-8844-569b10ec9c79")
 	)
 	(global_label "COL5"
 		(shape passive)
@@ -2438,7 +2438,7 @@
 			)
 			(justify right)
 		)
-		(uuid "b46d0a59-c68e-46a3-acdb-5730b269c3d4")
+		(uuid "62a8bbbd-645f-458f-aabe-3113a01c3e6b")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -2448,7 +2448,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c6c13021-4827-401a-956e-afd579110a5e")
+		(uuid "6ab6cfe6-312b-45be-90d7-a7c502a5cddb")
 		(property "Reference" "D12"
 			(at 306.07 68.58 0)
 			(effects
@@ -2493,14 +2493,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "968c6c97-b8d6-4255-8ed1-40e48a9fff35")
+			(uuid "5980105f-c26e-484d-8991-657634088f12")
 		)
 		(pin "2"
-			(uuid "12e6eaa1-9d2e-434f-bbff-3564499ba18e")
+			(uuid "d684bd36-f55b-48b9-876a-9f87d663771f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D12")
 					(unit 1)
 				)
@@ -2516,7 +2516,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f9325c5e-b8fc-460b-b019-1ebe5d752f47")
+		(uuid "6aa7a543-c07d-4548-9878-b9fcd2345f7b")
 	)
 	(global_label "ROW1"
 		(shape passive)
@@ -2528,7 +2528,7 @@
 			)
 			(justify left)
 		)
-		(uuid "3dd50086-f5f2-4188-9f1c-78dd577e6f5c")
+		(uuid "ec312225-29be-4f16-8c83-a6d5671bcb6b")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -2538,7 +2538,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1efc2ae2-7d17-4cee-b0e3-118d19f7da36")
+		(uuid "7e7f7fbe-5ed1-4515-a8ce-0df093607245")
 		(property "Reference" "SW13"
 			(at 30.48 101.6 0)
 			(effects
@@ -2583,14 +2583,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8dbe524e-a3b9-4df0-9ea9-7d3f950419f0")
+			(uuid "65347006-7bce-4488-a5c6-81b99a3aa9c9")
 		)
 		(pin "2"
-			(uuid "7d9cf131-ea07-40ce-a74f-edd216998592")
+			(uuid "321f665d-6d0b-4780-8c2f-8133f9931974")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW13")
 					(unit 1)
 				)
@@ -2606,7 +2606,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e1d2bb00-878b-40f9-a7d1-169492096124")
+		(uuid "bfeb6a95-38a9-4152-ae99-f8312a8b4baa")
 	)
 	(global_label "COL0"
 		(shape passive)
@@ -2618,7 +2618,7 @@
 			)
 			(justify right)
 		)
-		(uuid "3fd114a9-d021-4dc0-9581-a3eba61b210c")
+		(uuid "dbd469ee-79bf-4792-8ffc-ebd0bb901871")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -2628,7 +2628,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f4870d14-2289-4421-937b-8c74ee866cb5")
+		(uuid "e6369755-a882-42c8-9e01-a25df5763115")
 		(property "Reference" "D13"
 			(at 39.37 101.6 0)
 			(effects
@@ -2673,14 +2673,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "060f6da5-16af-4974-94f5-fff41f789265")
+			(uuid "73c82aae-2865-48d0-8c89-8c14b5864c6c")
 		)
 		(pin "2"
-			(uuid "9d10a421-69a7-4d78-84ac-91c1835cf8a9")
+			(uuid "b4e10a84-872e-48e0-9d18-cccec7f86326")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D13")
 					(unit 1)
 				)
@@ -2696,7 +2696,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6d00590e-6499-4c9f-ac68-76a721688e45")
+		(uuid "cac9793c-1755-478c-9afd-8fc520359544")
 	)
 	(global_label "ROW2"
 		(shape passive)
@@ -2708,7 +2708,7 @@
 			)
 			(justify left)
 		)
-		(uuid "2a2da136-578d-41ec-8ccf-6c01c5907b40")
+		(uuid "ed65f424-4116-41a7-8a85-8f53a9eb0b2c")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -2718,7 +2718,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "df69ab7d-66c0-4c8f-8125-c1ba39371930")
+		(uuid "ffa27a5f-8c98-4463-b226-2a85ff2445fb")
 		(property "Reference" "SW14"
 			(at 83.82 101.6 0)
 			(effects
@@ -2763,14 +2763,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e3272945-cb1c-4146-b10d-462800f847b1")
+			(uuid "efb9822a-74a9-4f5b-8a91-ea524e79f93e")
 		)
 		(pin "2"
-			(uuid "103e0abf-7876-4940-9eb8-0913c03972dc")
+			(uuid "717a2db7-21f4-4633-ae6d-298b85394ba6")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW14")
 					(unit 1)
 				)
@@ -2786,7 +2786,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "095ff5c8-2c4b-4fbd-89ab-036070fe6993")
+		(uuid "79d046a6-7605-4b07-ac4a-b812420dcacf")
 	)
 	(global_label "COL1"
 		(shape passive)
@@ -2798,7 +2798,7 @@
 			)
 			(justify right)
 		)
-		(uuid "4b1996dc-70d4-479c-af3c-eb5e38c74089")
+		(uuid "d3e953a8-8299-42af-88ea-105bb7ec3b0f")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -2808,7 +2808,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ee140969-a27b-47ee-bd9c-b6a13f6550c4")
+		(uuid "4cfb990d-3514-47c0-9358-feed43200d68")
 		(property "Reference" "D14"
 			(at 92.71 101.6 0)
 			(effects
@@ -2853,14 +2853,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3ede6f64-cddb-4362-b115-34a8ab440085")
+			(uuid "095dbd96-80b1-4ab0-ac29-097fb8b88804")
 		)
 		(pin "2"
-			(uuid "7ccede0e-e606-413b-bad1-ad0b47a1163b")
+			(uuid "6f1e43c6-484a-43bf-8f18-4a9462e5097a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D14")
 					(unit 1)
 				)
@@ -2876,7 +2876,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b07bb395-ad43-40b2-976e-f684306b8f9b")
+		(uuid "25c74f18-f509-4ee3-b302-77bdfe5e2754")
 	)
 	(global_label "ROW2"
 		(shape passive)
@@ -2888,7 +2888,7 @@
 			)
 			(justify left)
 		)
-		(uuid "3df63aec-36ae-486c-b535-0704f3f04f0e")
+		(uuid "82b4147f-68d4-4a89-9fe3-d92a51b8e256")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -2898,7 +2898,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c8a0b3c3-1b22-44ec-8f61-5720f4606b9c")
+		(uuid "29f4456c-31db-40ac-900f-5348478cdbd4")
 		(property "Reference" "SW15"
 			(at 137.16 101.6 0)
 			(effects
@@ -2943,14 +2943,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d535b31a-ffaa-4be6-aad8-6d3b7e8d526d")
+			(uuid "5e6ef2f2-2c2b-48d6-8bc5-dbdbe988bd01")
 		)
 		(pin "2"
-			(uuid "e2acf21a-749a-49d7-9aa3-2f6d6c0ced4c")
+			(uuid "4c0dae6e-4e07-4c23-a8d1-b272d47796d7")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW15")
 					(unit 1)
 				)
@@ -2966,7 +2966,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "dc6e8eaf-082f-4ed7-a569-da15fd87ea31")
+		(uuid "0a101c2b-858a-432a-8984-e7e660312b49")
 	)
 	(global_label "COL2"
 		(shape passive)
@@ -2978,7 +2978,7 @@
 			)
 			(justify right)
 		)
-		(uuid "567d84a9-1657-40ac-a6b6-99d7b2a67d44")
+		(uuid "c5dae32f-622d-4551-a977-56dc2f96f7b9")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -2988,7 +2988,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c65be4f6-889f-4553-b7c4-af53ba16a7ff")
+		(uuid "0539daf6-54c7-4968-89f6-38b518f558be")
 		(property "Reference" "D15"
 			(at 146.05 101.6 0)
 			(effects
@@ -3033,14 +3033,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "dd095382-b7e8-402f-bafc-189af5ce31bd")
+			(uuid "b8f181ac-d32f-442a-bb96-f450165daf4e")
 		)
 		(pin "2"
-			(uuid "ae29f3ec-3f35-4895-878b-48aea756f1f6")
+			(uuid "13b3667f-524d-4d11-955d-d690f4b25024")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D15")
 					(unit 1)
 				)
@@ -3056,7 +3056,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "440ec957-ea46-4602-8eef-629d5ba84e02")
+		(uuid "46bcb7a9-4492-4a1f-b379-465b229cd8fe")
 	)
 	(global_label "ROW2"
 		(shape passive)
@@ -3068,7 +3068,7 @@
 			)
 			(justify left)
 		)
-		(uuid "158f8ad1-b359-4439-9b88-3d080e1838d0")
+		(uuid "7930cc09-2743-45c8-a6a1-2d901316e9b5")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -3078,7 +3078,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4b4f8ff0-3665-4620-b5c8-30f301478b06")
+		(uuid "5d50f66e-f95e-4e54-8202-c1bc7ba5c31c")
 		(property "Reference" "SW16"
 			(at 190.5 101.6 0)
 			(effects
@@ -3123,14 +3123,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "eae0817f-631e-439d-8003-17497cfda9a4")
+			(uuid "ef10eb48-c793-4c1c-953d-3b4c2dd2d707")
 		)
 		(pin "2"
-			(uuid "176c6fd5-207a-4467-9454-e4e64fd099d1")
+			(uuid "3e9963d1-ff7d-46fd-a57c-b60c6527e3ea")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW16")
 					(unit 1)
 				)
@@ -3146,7 +3146,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4e123f67-c58f-423e-a561-36087bdae201")
+		(uuid "bd0b243f-0204-48fd-9dfb-2f5f6c5aa54a")
 	)
 	(global_label "COL3"
 		(shape passive)
@@ -3158,7 +3158,7 @@
 			)
 			(justify right)
 		)
-		(uuid "64924960-5d64-4232-833a-c17194be57d1")
+		(uuid "c9584385-81d9-4bac-8a63-27ccfb6e78cd")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -3168,7 +3168,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "53c9641d-2875-4ccb-b300-8d61645378e0")
+		(uuid "8fa97a97-2c61-4a2d-9e86-6a0329449e5b")
 		(property "Reference" "D16"
 			(at 199.39 101.6 0)
 			(effects
@@ -3213,14 +3213,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2943199c-5c51-404b-b855-cabc1f21a6bf")
+			(uuid "e2371939-ebe9-4a86-a99b-dda13df23774")
 		)
 		(pin "2"
-			(uuid "fce4b4c6-8532-48d8-9685-48e518167929")
+			(uuid "5d662212-6edd-40a9-925a-12710e376b7e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D16")
 					(unit 1)
 				)
@@ -3236,7 +3236,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8c0f6355-f303-48ee-b4c1-25fc425c9f47")
+		(uuid "ce7e65c2-19b0-4415-8069-5c33945da609")
 	)
 	(global_label "ROW2"
 		(shape passive)
@@ -3248,7 +3248,7 @@
 			)
 			(justify left)
 		)
-		(uuid "2343bd79-980a-40f5-b315-be6ba0f9780a")
+		(uuid "07fab459-47e1-4ab9-a60d-6ce4a5c21f16")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -3258,7 +3258,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "eda9a6a7-55e2-40e8-ad00-269361e2c32f")
+		(uuid "8732336b-e63c-43fb-972a-51c45079638b")
 		(property "Reference" "SW17"
 			(at 243.84 101.6 0)
 			(effects
@@ -3303,14 +3303,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "56f01659-536b-4655-9c91-6c799d1dc2b7")
+			(uuid "3f4ee104-2cd3-468f-a678-b281e033b802")
 		)
 		(pin "2"
-			(uuid "394a7b43-8206-499e-84d6-817d00e52e25")
+			(uuid "9a6f96d2-8e38-4444-86c2-ee6f7d1560e8")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW17")
 					(unit 1)
 				)
@@ -3326,7 +3326,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "14854d1a-fab2-44e3-9940-7325890661ca")
+		(uuid "d4fe672a-db44-4a5c-bfa7-5f4dd4f4f40b")
 	)
 	(global_label "COL4"
 		(shape passive)
@@ -3338,7 +3338,7 @@
 			)
 			(justify right)
 		)
-		(uuid "7245bb3b-0e21-487c-8bbc-fc7d2131ad6e")
+		(uuid "b617e881-d516-4f16-a530-ecc779ff74b0")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -3348,7 +3348,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c57040df-91fa-49e7-b668-cb6ec0fdb0f4")
+		(uuid "21f65548-7a4e-4bad-a050-9766a1137860")
 		(property "Reference" "D17"
 			(at 252.73 101.6 0)
 			(effects
@@ -3393,14 +3393,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a19bb627-0fc2-4e61-9172-48d406fbef79")
+			(uuid "c5667219-b839-4bb4-8f32-f50a4910583e")
 		)
 		(pin "2"
-			(uuid "c800c190-9601-42f5-80cc-ca00799d2842")
+			(uuid "f623b0ef-4366-47ee-82b1-297cb9cc8b46")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D17")
 					(unit 1)
 				)
@@ -3416,7 +3416,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f48c8e61-1413-4242-bed1-6197ce61dde3")
+		(uuid "b756b124-b90d-476a-aa59-25aad7270ca5")
 	)
 	(global_label "ROW2"
 		(shape passive)
@@ -3428,7 +3428,7 @@
 			)
 			(justify left)
 		)
-		(uuid "cf0bbbf5-ea3f-4a9a-a49e-b7429884dd76")
+		(uuid "8fbb3eef-be1b-43ab-95df-66e75d1f1ec8")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -3438,7 +3438,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b927330a-d319-4906-b7a1-2678a0e301e3")
+		(uuid "ba772855-76f0-4c36-b4fc-1bbda7672450")
 		(property "Reference" "SW18"
 			(at 297.18 101.6 0)
 			(effects
@@ -3483,14 +3483,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "507319ff-0398-4349-a67d-39a13f5fea4a")
+			(uuid "482a8533-b7d6-47f5-a06e-b0e05cc1b4dc")
 		)
 		(pin "2"
-			(uuid "f4fa63ba-f521-453e-b63f-dec83f1d17e7")
+			(uuid "6dc610d8-eee8-44ea-9941-923a5c02cf59")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW18")
 					(unit 1)
 				)
@@ -3506,7 +3506,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2c0256c5-b9d3-4eb2-85a3-1d42c5b2b1f4")
+		(uuid "c953d00b-a48d-4ef4-9433-5aead6145576")
 	)
 	(global_label "COL5"
 		(shape passive)
@@ -3518,7 +3518,7 @@
 			)
 			(justify right)
 		)
-		(uuid "e79be556-591c-4d0e-a5e3-0e9a0d904d00")
+		(uuid "4dd1cbef-0e02-4292-90fe-0d729bff2f20")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -3528,7 +3528,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e1e2cde2-fe86-41e3-bb57-0ce3ce9a6e05")
+		(uuid "63de5c2b-32d0-4f3c-bebd-c19f2c1505c9")
 		(property "Reference" "D18"
 			(at 306.07 101.6 0)
 			(effects
@@ -3573,14 +3573,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "c2cfa918-9f54-4b0b-943d-085269e8646c")
+			(uuid "96f33e18-04ce-4026-8119-b5895059ae8b")
 		)
 		(pin "2"
-			(uuid "72957b7d-fe81-4500-8483-fd7147a61b9a")
+			(uuid "1389e3b7-516f-460e-b1c8-3879fcaa8bff")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D18")
 					(unit 1)
 				)
@@ -3596,7 +3596,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b10b65bc-e9b8-4468-823f-7ba34db452ef")
+		(uuid "87791f3e-8967-4ecd-a735-e863962f9373")
 	)
 	(global_label "ROW2"
 		(shape passive)
@@ -3608,7 +3608,7 @@
 			)
 			(justify left)
 		)
-		(uuid "06934d51-cfd6-4e15-88e7-64ed1386c97a")
+		(uuid "e92806e2-c831-4504-9558-ac82e1de5199")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -3618,7 +3618,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d49a3c3e-7d37-4b67-bdea-5a09464b5840")
+		(uuid "68f46214-f6aa-4f55-9cb1-7334c034b2b9")
 		(property "Reference" "SW19"
 			(at 350.52 35.56 0)
 			(effects
@@ -3663,14 +3663,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "46679514-46ba-4e72-b48d-568fc235108f")
+			(uuid "b7b49cee-e903-4659-a296-718c46580b42")
 		)
 		(pin "2"
-			(uuid "61486921-14f2-4f1f-9a84-a410d73e9129")
+			(uuid "2273110b-9f58-4f36-b0ab-200cad61d5f3")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW19")
 					(unit 1)
 				)
@@ -3686,7 +3686,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9ae5aae4-7105-4a24-9ec2-a06e8f9821ce")
+		(uuid "c81c91cc-7fd9-491c-b9da-0994b58459be")
 	)
 	(global_label "COL6"
 		(shape passive)
@@ -3698,7 +3698,7 @@
 			)
 			(justify right)
 		)
-		(uuid "5e40e8a4-acc2-471e-847a-953d0ed8ac33")
+		(uuid "e4e6489f-784a-45a8-9c7a-442737bd299d")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -3708,7 +3708,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e592300b-23f5-4c1a-a7cd-08caa57dea88")
+		(uuid "6b20532e-361f-48f5-8300-4605486bb36e")
 		(property "Reference" "D19"
 			(at 359.41 35.56 0)
 			(effects
@@ -3753,14 +3753,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "44d5809d-dd52-4297-9b4e-ba5f540fc27d")
+			(uuid "ff5c81f3-84a3-4565-ab87-1b6d669d8786")
 		)
 		(pin "2"
-			(uuid "f7a5e561-295e-4f7a-9180-c6ce1a86d1e0")
+			(uuid "c29c78e5-0aa4-4ade-be99-959713c30e2c")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D19")
 					(unit 1)
 				)
@@ -3776,7 +3776,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cb557544-8872-4757-bf2f-3413f3639f14")
+		(uuid "ab4dce1d-9864-410d-8db4-5b5f0354d9d0")
 	)
 	(global_label "ROW0"
 		(shape passive)
@@ -3788,7 +3788,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a98e7a6c-a26c-47f7-9b4b-96ff9d67b00f")
+		(uuid "67e106df-3731-449b-82ff-e4feb76c582e")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -3798,7 +3798,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b0551a4b-a376-4a65-b615-dd5337dd9430")
+		(uuid "c39228ea-eb08-400e-86a8-9d20ccd964ac")
 		(property "Reference" "SW20"
 			(at 350.52 68.58 0)
 			(effects
@@ -3843,14 +3843,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "40d05cd4-79f7-4859-8da9-f9411c99f3b5")
+			(uuid "a0ba5bda-9e3e-4d93-924a-53ed974a06f1")
 		)
 		(pin "2"
-			(uuid "c18b0fdb-9eac-4dc6-9bdf-224fedb4a40e")
+			(uuid "6f46cbc1-a575-44d9-8d2c-977287951f15")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW20")
 					(unit 1)
 				)
@@ -3866,7 +3866,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b1d437ef-edca-48ca-9b3c-d0eee83683b8")
+		(uuid "423773ed-945c-4fe1-8dd2-e59877f66a65")
 	)
 	(global_label "COL6"
 		(shape passive)
@@ -3878,7 +3878,7 @@
 			)
 			(justify right)
 		)
-		(uuid "22f99a88-4c04-4647-830e-28b08f1b49f2")
+		(uuid "78cb8d5c-2483-4c37-8730-3bbc2471ea0c")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -3888,7 +3888,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8b708e19-2694-449d-aab0-1aa5d373c903")
+		(uuid "b6fc5a3e-5dd8-4b8d-9556-518985f1898d")
 		(property "Reference" "D20"
 			(at 359.41 68.58 0)
 			(effects
@@ -3933,14 +3933,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "9bc8c71e-8d0c-4055-9442-ec2b6cbb4fca")
+			(uuid "5b98da86-c5d5-4464-9c39-c452bc11d286")
 		)
 		(pin "2"
-			(uuid "272a15e1-e59e-496b-8d3a-a1504bb697a7")
+			(uuid "0f40edd5-8f20-4f9b-9e4b-d521dbadc789")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D20")
 					(unit 1)
 				)
@@ -3956,7 +3956,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "80831819-e8a6-4d14-9379-27a37d1471d9")
+		(uuid "63046697-e39b-42df-8fe4-73e982a64a96")
 	)
 	(global_label "ROW1"
 		(shape passive)
@@ -3968,7 +3968,7 @@
 			)
 			(justify left)
 		)
-		(uuid "4a5d232a-d62c-4e25-8389-0c4372185445")
+		(uuid "3eebb384-9d4a-4e34-a9cd-7cd1cfb1e597")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -3978,7 +3978,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e46b4428-91f3-4316-87f5-676c6785c71e")
+		(uuid "20dada16-a195-495d-ae19-e41be74963cb")
 		(property "Reference" "SW21"
 			(at 350.52 101.6 0)
 			(effects
@@ -4023,14 +4023,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ebaea86a-ec0e-4f53-bb20-4d5882a3a579")
+			(uuid "35394546-b4bd-4fb0-b283-87648ae62ca8")
 		)
 		(pin "2"
-			(uuid "d5ac5cda-53ea-4d35-a6c9-eabe2b9c29fe")
+			(uuid "048f4c78-ba0f-4954-9e46-0051cd69b0f3")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW21")
 					(unit 1)
 				)
@@ -4046,7 +4046,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "40146910-5fca-496d-abc1-ab30b0efd0e7")
+		(uuid "3ce0f345-8189-4a09-b423-fb5be1043d72")
 	)
 	(global_label "COL6"
 		(shape passive)
@@ -4058,7 +4058,7 @@
 			)
 			(justify right)
 		)
-		(uuid "2362b6e1-1274-4058-99a0-f874d54e6a7b")
+		(uuid "bf3f6531-a457-45b9-9c0b-72135b07e277")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -4068,7 +4068,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "50510844-77e6-480a-b094-e9b9f11d9f63")
+		(uuid "e681b4ff-033d-4103-9d0d-366cf42d8524")
 		(property "Reference" "D21"
 			(at 359.41 101.6 0)
 			(effects
@@ -4113,14 +4113,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "5f52813f-5c6f-4261-bb74-e1a8446d1a1e")
+			(uuid "78c633eb-e94f-4d96-824e-fea388509cc3")
 		)
 		(pin "2"
-			(uuid "ad24a642-d574-4c84-b6df-cd608799def3")
+			(uuid "dc8a30f8-d500-443c-a499-f066e4ed7bd9")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D21")
 					(unit 1)
 				)
@@ -4136,7 +4136,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "892e3c00-720d-4cc2-8553-2962d0f05ff8")
+		(uuid "95dbbdca-8f92-4782-acf1-c892116c2de1")
 	)
 	(global_label "ROW2"
 		(shape passive)
@@ -4148,7 +4148,7 @@
 			)
 			(justify left)
 		)
-		(uuid "fa5d40a5-4be8-42b9-952c-e770e7919dcd")
+		(uuid "bae5d947-0662-4a40-bea6-6e2eeb2dd856")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -4158,7 +4158,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dfbd32a7-81cf-4b69-8b33-d58bdcea6c2d")
+		(uuid "4dfc7c72-75b0-427d-901c-daac4354f23f")
 		(property "Reference" "SW22"
 			(at 30.48 134.62 0)
 			(effects
@@ -4203,14 +4203,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7019c72a-4e97-43b9-9089-008ae9eb2542")
+			(uuid "67c8ddbb-ac77-4fea-a2f4-deae1235a096")
 		)
 		(pin "2"
-			(uuid "43f6a0e4-3b42-42a0-9fec-55afea241fde")
+			(uuid "4281f3a7-6299-4868-8018-4ff16ad6cb2f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW22")
 					(unit 1)
 				)
@@ -4226,7 +4226,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bdc0e0e0-d022-4de9-bc35-9f1e09d85df6")
+		(uuid "c3c5cca7-5aa9-4d87-8239-c0e1c8458998")
 	)
 	(global_label "COL0"
 		(shape passive)
@@ -4238,7 +4238,7 @@
 			)
 			(justify right)
 		)
-		(uuid "bb6bf6f5-584a-45cd-bff8-d964aea2785f")
+		(uuid "ef6ac6bc-a283-4f3d-97db-8d35512c32ec")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -4248,7 +4248,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "788aff83-bd4b-4da2-b918-a204f137998a")
+		(uuid "1fb91832-df22-45fd-a611-53f438004041")
 		(property "Reference" "D22"
 			(at 39.37 134.62 0)
 			(effects
@@ -4293,14 +4293,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e635fe32-f0c3-4e96-9242-4411e86bc45f")
+			(uuid "45c5e92e-7a89-43ab-a05c-627b4db0ac05")
 		)
 		(pin "2"
-			(uuid "90dbbf89-cab9-4753-9c92-bccf916b4888")
+			(uuid "43c5d293-2309-4682-81a3-883924c251fa")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D22")
 					(unit 1)
 				)
@@ -4316,7 +4316,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b4d6956d-b393-4f16-9c4a-701c8fb72052")
+		(uuid "f6b2c24a-c44b-408f-80e9-3a432eeb4dcc")
 	)
 	(global_label "ROW3"
 		(shape passive)
@@ -4328,7 +4328,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8426b45f-8b8e-4cf6-8978-56c87cd1e1e8")
+		(uuid "8028a1fe-7781-4232-bf7e-e652e2297fc3")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -4338,7 +4338,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ca551ced-3c67-43b7-b133-3f3c6059efd0")
+		(uuid "ec6deb66-081b-4c71-9714-02695d8e1269")
 		(property "Reference" "SW23"
 			(at 83.82 134.62 0)
 			(effects
@@ -4383,14 +4383,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a294c6b8-4177-437d-bfda-f91821e8260a")
+			(uuid "0d7cca4e-be0e-4c45-87ed-433a69538c07")
 		)
 		(pin "2"
-			(uuid "a235d0b9-3ec2-4a88-87e2-e22f008a9f95")
+			(uuid "8947c21b-e5cb-431f-a65d-071b40bde643")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW23")
 					(unit 1)
 				)
@@ -4406,7 +4406,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "895a5594-1281-42dc-a127-c9a7a55a47b0")
+		(uuid "3cc37b7e-1fca-40c2-8d62-f2f443063201")
 	)
 	(global_label "COL1"
 		(shape passive)
@@ -4418,7 +4418,7 @@
 			)
 			(justify right)
 		)
-		(uuid "fe067006-b0e0-420b-a6e9-61383c0f859a")
+		(uuid "9a35e24a-8a56-4de2-a850-0b789f27055f")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -4428,7 +4428,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "42d5fd7c-00ca-4e3c-bd98-3a3d33699df4")
+		(uuid "d7da8d5d-31f3-4856-b23e-9cf591b63c85")
 		(property "Reference" "D23"
 			(at 92.71 134.62 0)
 			(effects
@@ -4473,14 +4473,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e63a90c4-61ed-43f9-bbfa-e2cf101b58a0")
+			(uuid "473cabde-cd90-4cc6-99d4-cdd193e3fcae")
 		)
 		(pin "2"
-			(uuid "9b9ce884-aa32-4eea-9cfe-bbe132437f11")
+			(uuid "f7dbee80-8f64-462e-bb10-7000e5e35222")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D23")
 					(unit 1)
 				)
@@ -4496,7 +4496,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "21d879f9-1776-48e6-b0da-99d7da1fb599")
+		(uuid "68ab5363-a2e4-4da1-b3ac-18b9f6a983ca")
 	)
 	(global_label "ROW3"
 		(shape passive)
@@ -4508,7 +4508,7 @@
 			)
 			(justify left)
 		)
-		(uuid "63866f31-f02d-4d06-8420-9623fb928581")
+		(uuid "5a4017c1-37ed-4a79-974c-d814fab9f227")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -4518,7 +4518,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d464b805-1e4f-42e4-bc9c-ae691e6a4660")
+		(uuid "12260129-b11e-4b35-9680-ec070078eb21")
 		(property "Reference" "SW24"
 			(at 137.16 134.62 0)
 			(effects
@@ -4563,14 +4563,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3321706b-3e65-4181-8c63-624341596618")
+			(uuid "31351b0c-c3a1-4751-8c3f-a155176779d7")
 		)
 		(pin "2"
-			(uuid "7009638e-e71c-4011-a692-4f35b069f691")
+			(uuid "a1df1a77-71e0-4a82-9e6b-6642f528f6fc")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW24")
 					(unit 1)
 				)
@@ -4586,7 +4586,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "139650ee-907a-4878-b845-dbee3321b30b")
+		(uuid "5a168b8c-75be-4ab6-b730-2b448eeda92e")
 	)
 	(global_label "COL2"
 		(shape passive)
@@ -4598,7 +4598,7 @@
 			)
 			(justify right)
 		)
-		(uuid "1f8a0d89-0ab3-4a0b-a2ae-2490c8d9d1e0")
+		(uuid "16b0dd8e-3b7d-49b4-bbc1-b17852e66800")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -4608,7 +4608,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "cd6fb553-46de-45f0-8195-0881f1e2bda3")
+		(uuid "31c73ef9-e7b3-4572-b5dd-32d23a6e5cc8")
 		(property "Reference" "D24"
 			(at 146.05 134.62 0)
 			(effects
@@ -4653,14 +4653,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "c027af1c-bd9d-42f5-85ab-7549f0316dbb")
+			(uuid "15ca31b5-0432-4031-89f0-f22bfe7d7e59")
 		)
 		(pin "2"
-			(uuid "b435aeab-ad35-46a2-a226-18f5a9a1fd8a")
+			(uuid "970d338b-5dc2-45ca-b367-f0d686ed027d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D24")
 					(unit 1)
 				)
@@ -4676,7 +4676,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "942068bc-f640-4df9-99cd-7036622bc8bc")
+		(uuid "903cba5e-2cf1-4b1f-9f1e-fc77c3a77cf6")
 	)
 	(global_label "ROW3"
 		(shape passive)
@@ -4688,7 +4688,7 @@
 			)
 			(justify left)
 		)
-		(uuid "2f6abf6e-7587-4632-9b1e-bf702d0246a4")
+		(uuid "a4fa7cec-a6a7-4606-8181-e5127af1b868")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -4698,7 +4698,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c57a09c6-468e-48b1-a594-21165d149070")
+		(uuid "36737cd3-b44d-4625-ad99-9a08ff95594b")
 		(property "Reference" "SW25"
 			(at 190.5 134.62 0)
 			(effects
@@ -4743,14 +4743,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "699e82e5-076b-4bbb-8904-d274b5b61a63")
+			(uuid "7869e3cd-340e-4cdc-8062-64f7b8f2eeea")
 		)
 		(pin "2"
-			(uuid "ab12ee31-ced4-4992-a11d-0fe808ff9169")
+			(uuid "1acc70e8-064f-48f6-97c5-334439ebaac9")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW25")
 					(unit 1)
 				)
@@ -4766,7 +4766,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4cb85692-69de-4787-9308-94e7fbf15950")
+		(uuid "32909c91-0c58-4431-97ad-777c8028f36b")
 	)
 	(global_label "COL3"
 		(shape passive)
@@ -4778,7 +4778,7 @@
 			)
 			(justify right)
 		)
-		(uuid "81d44446-75f6-4a60-a55f-37838ff6ed38")
+		(uuid "2b063310-6c2a-4a71-9c2a-dd060e0fb0cd")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -4788,7 +4788,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "74ec7447-d29a-47d8-afb1-8305ff17ce1f")
+		(uuid "36279070-f34c-4bf9-976e-558eaad90c3a")
 		(property "Reference" "D25"
 			(at 199.39 134.62 0)
 			(effects
@@ -4833,14 +4833,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "cb459c07-3669-48f0-831c-2577032eeb5a")
+			(uuid "8ebd26f9-7e1e-46e5-8bd2-c282e5277981")
 		)
 		(pin "2"
-			(uuid "7211e059-6aa1-43d9-9e95-ae7d0e78345b")
+			(uuid "eaefe1f7-acfd-4c89-b717-c0cc64dd80f6")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D25")
 					(unit 1)
 				)
@@ -4856,7 +4856,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1f103b55-0fd2-417c-9119-27340eb84b29")
+		(uuid "6814d77d-7bde-433e-ba35-05ba6975a461")
 	)
 	(global_label "ROW3"
 		(shape passive)
@@ -4868,7 +4868,7 @@
 			)
 			(justify left)
 		)
-		(uuid "937dc467-fb64-49ee-8661-5a6591b4af89")
+		(uuid "0dbdfd14-a198-4082-a880-04589148265e")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -4878,7 +4878,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6d61713d-44fa-47dc-9c3a-63dc575729f6")
+		(uuid "f0577eb1-47a2-4f9b-9723-d6840a6ecf68")
 		(property "Reference" "SW26"
 			(at 243.84 134.62 0)
 			(effects
@@ -4923,14 +4923,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7fca9a47-6a81-46f1-85ea-4afea9984833")
+			(uuid "b0afc083-d97d-4334-b6f9-04be6c487754")
 		)
 		(pin "2"
-			(uuid "e41ffe0a-883d-4f0f-992a-ff38c43f7ce7")
+			(uuid "4b76841e-5d13-4ff0-95bd-aa901992cb99")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW26")
 					(unit 1)
 				)
@@ -4946,7 +4946,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b2778d9c-ae1d-415b-8fb4-387b52d0244c")
+		(uuid "d9cae6fc-5d86-459b-b3f6-54eab72cedc2")
 	)
 	(global_label "COL4"
 		(shape passive)
@@ -4958,7 +4958,7 @@
 			)
 			(justify right)
 		)
-		(uuid "a90b1735-9c31-41be-8e1e-1b8f15e802e8")
+		(uuid "115941d4-e8cc-4e02-b061-30430284eee2")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -4968,7 +4968,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ff24f6ec-cbe9-4654-8a5a-10afa1010cfa")
+		(uuid "e2e888f6-53c0-4030-9e3d-1573b27ee46d")
 		(property "Reference" "D26"
 			(at 252.73 134.62 0)
 			(effects
@@ -5013,14 +5013,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3ca1da19-4e4b-465e-9ef8-d0653f2a9d94")
+			(uuid "1f7016a8-cb7d-4eb9-83fd-9f6f3d6a8fef")
 		)
 		(pin "2"
-			(uuid "88c4a77c-1380-447d-be47-12c7c0e3b008")
+			(uuid "6ae9385d-3ef3-41a6-9a8d-6702e8b15b2c")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D26")
 					(unit 1)
 				)
@@ -5036,7 +5036,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a03067a7-b13f-433f-899c-c6cf94f5e44d")
+		(uuid "6d3d3fa8-335b-480e-b57b-d11f05990c8d")
 	)
 	(global_label "ROW3"
 		(shape passive)
@@ -5048,7 +5048,7 @@
 			)
 			(justify left)
 		)
-		(uuid "b05ed189-f1a0-4ee5-a647-3e68a590d324")
+		(uuid "52b11c26-41cc-42b9-abd6-627ad5800384")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -5058,7 +5058,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c0da543f-e571-412d-af6f-361816441888")
+		(uuid "7e31add6-d9fa-403a-a9a6-e910224205fc")
 		(property "Reference" "SW27"
 			(at 297.18 134.62 0)
 			(effects
@@ -5103,14 +5103,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "674de3ad-ba62-4a13-b607-9e462881543c")
+			(uuid "6091dd75-82d6-44da-b703-568dc6797cfa")
 		)
 		(pin "2"
-			(uuid "0bccad2d-85d1-4f1d-be77-357f0d95dd75")
+			(uuid "549f5d2d-4683-4f1e-9609-10c7df004b87")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW27")
 					(unit 1)
 				)
@@ -5126,7 +5126,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8054911d-4ddb-4043-b86c-3f6a9ef426ba")
+		(uuid "b5000b91-443d-4452-b523-34e5a0c1dcea")
 	)
 	(global_label "COL5"
 		(shape passive)
@@ -5138,7 +5138,7 @@
 			)
 			(justify right)
 		)
-		(uuid "b0207d12-ad09-4f81-ad61-acb579189f92")
+		(uuid "f1a91212-c85d-49c4-860c-c3f73fbe6bb2")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -5148,7 +5148,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5639fed0-1397-4c38-a2ed-0a8e103a79a7")
+		(uuid "d73f28f5-163b-42e3-b890-6a5f250450b0")
 		(property "Reference" "D27"
 			(at 306.07 134.62 0)
 			(effects
@@ -5193,14 +5193,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a9b29460-ca1f-4394-9335-163657eb8bf6")
+			(uuid "31bef7fe-6d63-42d9-8bf8-52f09fbf75d7")
 		)
 		(pin "2"
-			(uuid "f1288857-a9e3-4774-a52b-d589da51fd97")
+			(uuid "d18aad21-caef-4b01-9744-c8167f378802")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D27")
 					(unit 1)
 				)
@@ -5216,7 +5216,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a8b292ab-0237-4654-af2e-5abd569848a2")
+		(uuid "e60a472b-f38f-4d84-85c8-df6c3294c17b")
 	)
 	(global_label "ROW3"
 		(shape passive)
@@ -5228,7 +5228,7 @@
 			)
 			(justify left)
 		)
-		(uuid "2770f4e9-2e22-4999-965b-381011d5f39e")
+		(uuid "84a36b99-9722-4b49-a788-2aa14bba9cd0")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -5238,7 +5238,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c9c48900-a757-431f-b3df-e4bb9a15f9ac")
+		(uuid "606f087b-cf54-4949-bc13-7f0e1fca9169")
 		(property "Reference" "SW28"
 			(at 30.48 167.64 0)
 			(effects
@@ -5283,14 +5283,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3b5ff9b3-1de0-4804-9576-ea9101a737d1")
+			(uuid "e1c5e3d2-db8c-4621-962e-1aeae84b4956")
 		)
 		(pin "2"
-			(uuid "7fecf1ca-42b7-4eb6-b3a8-82f6e307f27e")
+			(uuid "8707778d-9456-47f7-8ee2-da03d612101f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW28")
 					(unit 1)
 				)
@@ -5306,7 +5306,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c12a23a2-4d79-4dc9-ab09-e0140e3912b4")
+		(uuid "ea9065c3-371a-4ff2-9230-501706615bbe")
 	)
 	(global_label "COL0"
 		(shape passive)
@@ -5318,7 +5318,7 @@
 			)
 			(justify right)
 		)
-		(uuid "59d7dc90-534b-445e-a77f-ffa571a5f6d4")
+		(uuid "3790232a-c658-45bf-a6b7-88c79d873abb")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -5328,7 +5328,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3d3b9774-ff81-41e3-844a-f463d644d75e")
+		(uuid "b9452ad1-33cf-420e-98e6-5e20233b980d")
 		(property "Reference" "D28"
 			(at 39.37 167.64 0)
 			(effects
@@ -5373,14 +5373,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4cf70abc-03de-476e-9dd1-d67c136167a5")
+			(uuid "663bb297-9c87-4394-a681-3a471fd97065")
 		)
 		(pin "2"
-			(uuid "a59bdb69-c34f-46b8-9f2b-10447512bdcb")
+			(uuid "42cae99f-b910-488a-ad9f-146758b3fce4")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D28")
 					(unit 1)
 				)
@@ -5396,7 +5396,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c3f066dd-b42f-4be6-a5b4-0b89a1898de9")
+		(uuid "6719ac49-899f-4547-9bda-630d629a6ed4")
 	)
 	(global_label "ROW4"
 		(shape passive)
@@ -5408,7 +5408,7 @@
 			)
 			(justify left)
 		)
-		(uuid "a57d1aa0-5243-44aa-8a85-710b1cab5d42")
+		(uuid "76dee8cb-48cf-4491-aa1f-ce543224df59")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -5418,7 +5418,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "01e1296f-2543-49ad-b8cb-4c0fa14b85e6")
+		(uuid "02df53f8-d0f8-4742-a7dc-5fba1a5f0b7f")
 		(property "Reference" "SW29"
 			(at 83.82 167.64 0)
 			(effects
@@ -5463,14 +5463,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "42598e94-4d6b-4a65-9aec-94301645a223")
+			(uuid "f94f3a78-cf0c-4816-bb16-34fa5bc9f2ee")
 		)
 		(pin "2"
-			(uuid "fd1f0d6b-f243-4d7e-ac5f-783598741c71")
+			(uuid "2f51f5ca-4a75-4c7c-ad15-fc91aa5c7485")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW29")
 					(unit 1)
 				)
@@ -5486,7 +5486,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "db40f24e-61fa-4f6b-b7dc-9d79bb9e5625")
+		(uuid "ce24e958-4e4f-47c6-ad7e-fdd5c118e508")
 	)
 	(global_label "COL1"
 		(shape passive)
@@ -5498,7 +5498,7 @@
 			)
 			(justify right)
 		)
-		(uuid "377f227d-9831-4f11-b76c-d5ce334d8014")
+		(uuid "b09ad337-a4fb-4d42-bd3a-547c1565ec57")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -5508,7 +5508,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0816685d-95e2-4347-9c81-b96de8ac47f0")
+		(uuid "acc5e7e0-d2d2-4b0f-bee1-77612db1d70f")
 		(property "Reference" "D29"
 			(at 92.71 167.64 0)
 			(effects
@@ -5553,14 +5553,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8f34fbe6-233e-4233-b8ff-336e71f56c52")
+			(uuid "ba5b0a63-b02c-4d37-b49d-4e1ea9787752")
 		)
 		(pin "2"
-			(uuid "643c0563-842b-4b83-aa4a-89afdb8b5cde")
+			(uuid "527908b8-630a-4e9f-908a-aa3ed922e7e4")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D29")
 					(unit 1)
 				)
@@ -5576,7 +5576,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "13879e65-4ee8-4932-83ab-4745f79fad9b")
+		(uuid "dfa9f652-791e-460f-8671-a5ba23df8b69")
 	)
 	(global_label "ROW4"
 		(shape passive)
@@ -5588,7 +5588,7 @@
 			)
 			(justify left)
 		)
-		(uuid "efe94930-c409-4bf1-84f0-13c816503c48")
+		(uuid "9c01752e-434c-42bc-85e6-d88ec840d367")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -5598,7 +5598,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e77b1601-2a31-4dae-ac0d-4cdfe5460422")
+		(uuid "25ef1895-be4d-4b8d-8241-4a5c2da945e8")
 		(property "Reference" "SW30"
 			(at 137.16 167.64 0)
 			(effects
@@ -5643,14 +5643,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "eea1007b-30d7-4753-a718-248eabf602b4")
+			(uuid "e126fb9b-c98b-4fe5-9cf2-75b011d1d751")
 		)
 		(pin "2"
-			(uuid "c6e0dd49-5d0d-4675-a7de-6ecf6f373edd")
+			(uuid "74e2eb4c-0466-4700-94c8-a172e755d836")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW30")
 					(unit 1)
 				)
@@ -5666,7 +5666,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "97ccb4c0-18d8-49f2-a0ee-07f404a3fca7")
+		(uuid "0c74f2c6-c7e3-4b6b-a479-d038c686568c")
 	)
 	(global_label "COL2"
 		(shape passive)
@@ -5678,7 +5678,7 @@
 			)
 			(justify right)
 		)
-		(uuid "4886ca3e-fbe8-4c8f-8883-d69797c58f4e")
+		(uuid "5e6bfdf4-e6ac-4ec4-a9bf-b2c33fb56f52")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -5688,7 +5688,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "07cc32e0-ec7d-422c-ac68-7a4e1305a2df")
+		(uuid "6f6a44fd-f008-48db-98b1-35061cbac012")
 		(property "Reference" "D30"
 			(at 146.05 167.64 0)
 			(effects
@@ -5733,14 +5733,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "261232c4-4b77-478b-9b3b-af1e50fe9218")
+			(uuid "403ea581-7c92-46bb-b78a-7a47eb6bf695")
 		)
 		(pin "2"
-			(uuid "87288d0e-7973-4882-953d-dac8d4946dc9")
+			(uuid "2df3d37a-f45a-4a82-84c3-b05d8f20f5a7")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D30")
 					(unit 1)
 				)
@@ -5756,7 +5756,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7726d44c-eafb-4fcf-a817-c467141925bd")
+		(uuid "7167ca67-0996-48ae-8b03-5f7d1d14a53c")
 	)
 	(global_label "ROW4"
 		(shape passive)
@@ -5768,7 +5768,7 @@
 			)
 			(justify left)
 		)
-		(uuid "38c0285c-28bf-4416-b27a-3e7354040430")
+		(uuid "32d3dd27-e343-4fa0-9b73-8e185642891a")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -5778,7 +5778,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "72230d59-bdb3-4ead-9434-305409e9b9e6")
+		(uuid "ae9adef9-29af-4b31-8247-8e4998db1f74")
 		(property "Reference" "SW31"
 			(at 190.5 167.64 0)
 			(effects
@@ -5823,14 +5823,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "c88c9e8f-34e2-49c8-8ccd-af14239ccdee")
+			(uuid "b4e067f8-3096-489b-b65e-8a79955e546a")
 		)
 		(pin "2"
-			(uuid "17311569-1514-48e5-b613-2ebbe82f7975")
+			(uuid "dcd1483e-e19f-4a1c-9112-f6e7b4081a15")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW31")
 					(unit 1)
 				)
@@ -5846,7 +5846,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b8d1c4f9-6597-4f63-80b2-d55936ae7a0c")
+		(uuid "24a5d8d6-453f-49dc-a10f-9f936a1b660f")
 	)
 	(global_label "COL3"
 		(shape passive)
@@ -5858,7 +5858,7 @@
 			)
 			(justify right)
 		)
-		(uuid "aafcae9e-12f6-4174-944b-eb1450e9089a")
+		(uuid "74bda219-d440-427c-be13-c3c563e951f8")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -5868,7 +5868,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ff939a70-5ffe-4537-99b9-ade9a865c861")
+		(uuid "fe9644a8-2830-4d01-919e-0928271c1227")
 		(property "Reference" "D31"
 			(at 199.39 167.64 0)
 			(effects
@@ -5913,14 +5913,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "11eec133-ba96-4269-a8d6-cde0bb04d2f6")
+			(uuid "e4342d2a-8b11-4678-b95e-54894b38629c")
 		)
 		(pin "2"
-			(uuid "5c274a5c-861e-4068-8d81-3019d1c5dec7")
+			(uuid "0427edf9-0f9f-4f6c-9de0-fa90f96166b8")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D31")
 					(unit 1)
 				)
@@ -5936,7 +5936,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "83559aff-95db-4a57-aaeb-3c783dd0de38")
+		(uuid "da289906-13a1-483b-a0f0-1d4312e21676")
 	)
 	(global_label "ROW4"
 		(shape passive)
@@ -5948,7 +5948,7 @@
 			)
 			(justify left)
 		)
-		(uuid "33d65cea-e3df-4cc1-a126-ea8352501273")
+		(uuid "e49fa6a1-fcf5-46b5-affe-d570d097ee83")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -5958,7 +5958,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0d2d52cc-7021-4fb6-9f7e-21b180d05a81")
+		(uuid "a8b50816-ac67-437c-ab95-ca78d51f5717")
 		(property "Reference" "SW32"
 			(at 243.84 167.64 0)
 			(effects
@@ -6003,14 +6003,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7601019f-831b-4c14-a0bd-9b07ef678ede")
+			(uuid "38af3d8e-82f3-4047-b621-89e4ac5f32e9")
 		)
 		(pin "2"
-			(uuid "7cd9af48-b981-42d7-91c1-5a41b4634c7f")
+			(uuid "0fc96f5e-ba55-4a3b-bf7b-c6ba2fcf8415")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW32")
 					(unit 1)
 				)
@@ -6026,7 +6026,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8dab208a-0b3f-4b67-8840-959777d8b4a2")
+		(uuid "50f274a7-8740-413d-bea1-36118bd96d5e")
 	)
 	(global_label "COL4"
 		(shape passive)
@@ -6038,7 +6038,7 @@
 			)
 			(justify right)
 		)
-		(uuid "97818a40-7c93-45a0-8cb9-37546540b7d6")
+		(uuid "683da69a-a122-4c6a-9d85-d45c129b1b37")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -6048,7 +6048,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ef2a0acd-964b-4a2e-b648-56eab7419c94")
+		(uuid "07b64731-db25-43ce-8538-4d3994db6ff6")
 		(property "Reference" "D32"
 			(at 252.73 167.64 0)
 			(effects
@@ -6093,14 +6093,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "61a38727-5cb2-4ad6-9056-77c10fdf7fb0")
+			(uuid "be7b806e-d316-4836-b794-ac8389e8b5c3")
 		)
 		(pin "2"
-			(uuid "907d203d-220f-4683-be3e-b7c49a5a3daa")
+			(uuid "b488d3b4-2761-4428-886d-e69465c4d335")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D32")
 					(unit 1)
 				)
@@ -6116,7 +6116,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "421b8fe6-019e-4581-a70c-d6f0a44f1804")
+		(uuid "d262e303-0eb2-44c4-a521-ad43a5d0eba9")
 	)
 	(global_label "ROW4"
 		(shape passive)
@@ -6128,7 +6128,7 @@
 			)
 			(justify left)
 		)
-		(uuid "6dc79830-0e25-4506-9265-6a99078c8bcf")
+		(uuid "e92b8124-55fe-417c-8744-5a6b892b1bc2")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -6138,7 +6138,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7b5c3854-ce1d-421b-86d5-06447b451006")
+		(uuid "03fdf511-2a80-45fb-a5a2-af7e94b0bd2e")
 		(property "Reference" "SW33"
 			(at 297.18 167.64 0)
 			(effects
@@ -6183,14 +6183,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ab90d5bc-1254-48ac-83f9-88d85b52ad7b")
+			(uuid "e8435953-0550-4bd2-ad9a-a804e31ba13c")
 		)
 		(pin "2"
-			(uuid "b7be696a-f33d-42d1-98b2-20823afba27e")
+			(uuid "a250036a-8102-49c1-b802-6cf934d4cb45")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW33")
 					(unit 1)
 				)
@@ -6206,7 +6206,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "088bdf38-2099-4597-b0bd-457e92483b8b")
+		(uuid "d18fb880-1da9-407a-8b1b-2bc7f1de38f5")
 	)
 	(global_label "COL5"
 		(shape passive)
@@ -6218,7 +6218,7 @@
 			)
 			(justify right)
 		)
-		(uuid "df6ebe66-2a02-4698-8d46-c8ced4cb0a0b")
+		(uuid "d5b633ee-86b8-42d0-a871-6773488a50e2")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -6228,7 +6228,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ab206ec7-5b80-4ba2-8b89-9a764e761997")
+		(uuid "d4058026-6807-4ef8-a7f6-36cc0799589b")
 		(property "Reference" "D33"
 			(at 306.07 167.64 0)
 			(effects
@@ -6273,14 +6273,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4b7ca1cc-094e-48d9-95e0-91ec78ca3a74")
+			(uuid "75ab0d58-2604-4f10-8e38-11d1b686422c")
 		)
 		(pin "2"
-			(uuid "9e09cdd9-1170-4eff-98a8-226ee108320c")
+			(uuid "f32bf398-c429-4c3f-9c06-acf42a34dafa")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D33")
 					(unit 1)
 				)
@@ -6296,7 +6296,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e665ed71-690d-4a44-ab65-0ad415f6d8c8")
+		(uuid "0814dc26-74b0-4b71-b4fe-650c7bfdda22")
 	)
 	(global_label "ROW4"
 		(shape passive)
@@ -6308,7 +6308,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8a125c99-59e6-45ee-b050-bd309245b9d7")
+		(uuid "3114a4ec-c4f2-41ac-a28f-41e2706c06c0")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -6318,7 +6318,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f435e895-2b35-4794-9e15-85f02afc3800")
+		(uuid "806ec48e-0953-4424-be28-0ed5e4e62312")
 		(property "Reference" "SW34"
 			(at 30.48 200.66 0)
 			(effects
@@ -6363,14 +6363,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d16d7d53-870c-4c6f-b79a-fe524aaff628")
+			(uuid "f77fecfc-f203-4326-8630-b3d24da2840e")
 		)
 		(pin "2"
-			(uuid "832d4393-8e2b-4390-a6ae-87f065630f8b")
+			(uuid "d2444227-0ff4-4f10-a2f8-9552c572ba80")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW34")
 					(unit 1)
 				)
@@ -6386,7 +6386,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a88e00b3-13be-46c4-9fe1-153ecde0cdbe")
+		(uuid "4899c71d-5802-4bf4-9a7c-f6f68645e261")
 	)
 	(global_label "COL0"
 		(shape passive)
@@ -6398,7 +6398,7 @@
 			)
 			(justify right)
 		)
-		(uuid "a07ea09f-b2ce-47a8-98c2-3fac76919e32")
+		(uuid "f9045909-c200-4177-acd0-c606327c7a48")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -6408,7 +6408,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c110869e-cddc-4f13-baa5-b13eb7449da1")
+		(uuid "40117aff-f69a-469b-922e-91cebdf9026e")
 		(property "Reference" "D34"
 			(at 39.37 200.66 0)
 			(effects
@@ -6453,14 +6453,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "5fdf6994-817c-4c6d-a0df-cddc05fd351a")
+			(uuid "8c36bfd9-8273-42f6-98c0-ef335d7e55f6")
 		)
 		(pin "2"
-			(uuid "0da5b3d2-d467-41ff-89aa-b418b88c5f1e")
+			(uuid "612079e0-b630-4b95-b681-666a673c7196")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D34")
 					(unit 1)
 				)
@@ -6476,7 +6476,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c2ce0acf-df02-4c1f-b347-234d14d3c58a")
+		(uuid "50d74e94-c3e9-45bf-9061-fc62230d3d23")
 	)
 	(global_label "ROW5"
 		(shape passive)
@@ -6488,7 +6488,7 @@
 			)
 			(justify left)
 		)
-		(uuid "e6659ce5-1204-4962-80fe-1e824ef2cfed")
+		(uuid "eab50f46-02de-488d-80dd-35e73dbc1d08")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -6498,7 +6498,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4d8b9047-ea58-4768-8c24-e03106cc0685")
+		(uuid "ed9598a9-155f-4933-a714-205d6ed2ab62")
 		(property "Reference" "SW35"
 			(at 83.82 200.66 0)
 			(effects
@@ -6543,14 +6543,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0327382d-df33-43ff-bfe1-f80621320bf3")
+			(uuid "562e8e0f-d765-4d4f-9185-df258fa84e56")
 		)
 		(pin "2"
-			(uuid "5cc3f50d-9662-4818-a079-61557e46ca3d")
+			(uuid "1b9f085a-85de-47cf-a1e2-8d6876a9f5cf")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW35")
 					(unit 1)
 				)
@@ -6566,7 +6566,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c80b8626-1de6-4123-87c0-f70995137983")
+		(uuid "554428cf-ff4f-4d80-a3e7-568ccd0e8108")
 	)
 	(global_label "COL1"
 		(shape passive)
@@ -6578,7 +6578,7 @@
 			)
 			(justify right)
 		)
-		(uuid "ecfa9bf6-43f7-4390-abf9-7fb31d3e7d70")
+		(uuid "56f444f7-a2af-4f10-a049-7ce3e08af96d")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -6588,7 +6588,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2d74c546-1533-426e-bf42-6a920be508fb")
+		(uuid "b6341391-0d22-4acf-b7f0-360d7842054a")
 		(property "Reference" "D35"
 			(at 92.71 200.66 0)
 			(effects
@@ -6633,14 +6633,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "bdbf7aec-2521-4a81-9614-e7bbf1b9af50")
+			(uuid "49212a97-e650-4d93-9377-576e26ef84e5")
 		)
 		(pin "2"
-			(uuid "e0d690a1-0e0d-4c77-9dc6-eb12dcee48e2")
+			(uuid "00d27312-2615-418b-a517-894d0d9e9399")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D35")
 					(unit 1)
 				)
@@ -6656,7 +6656,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "141a797b-d2f0-4fed-93ce-280e4b7fe3a0")
+		(uuid "ce7693d8-dbfc-48d5-8a3c-d63769ff08a4")
 	)
 	(global_label "ROW5"
 		(shape passive)
@@ -6668,7 +6668,7 @@
 			)
 			(justify left)
 		)
-		(uuid "1d145c84-aa3c-414f-b4eb-fc7964e8a109")
+		(uuid "1ce250c7-3f47-441a-a2a3-b75313364787")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -6678,7 +6678,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "52fdb45e-d4c8-4e67-a785-ccddb420470d")
+		(uuid "89499c54-d008-42fa-b62e-67597fe26e07")
 		(property "Reference" "SW36"
 			(at 137.16 200.66 0)
 			(effects
@@ -6723,14 +6723,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f6b99dd3-3d6f-444d-bd3a-319112570914")
+			(uuid "36771855-bffa-4b44-9eef-b170fd7721d4")
 		)
 		(pin "2"
-			(uuid "30855991-4c32-4fcf-9e13-754ce1631080")
+			(uuid "34551a98-5964-4fca-9d5d-16381ff21211")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW36")
 					(unit 1)
 				)
@@ -6746,7 +6746,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "150a2b7d-b227-46e4-8453-bf0f899811e7")
+		(uuid "f5e2f0f7-e9ed-43fe-9820-581d49dbbc5c")
 	)
 	(global_label "COL2"
 		(shape passive)
@@ -6758,7 +6758,7 @@
 			)
 			(justify right)
 		)
-		(uuid "1da4f4c5-3fff-4ab5-a7a4-f8392eefb8cb")
+		(uuid "d89d3dd2-1aca-467f-a9e9-b266882a184a")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -6768,7 +6768,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c0bb7c7c-f8d6-4056-a096-46f0d441c05f")
+		(uuid "b4cad2c8-5330-4070-9673-126db79dacb5")
 		(property "Reference" "D36"
 			(at 146.05 200.66 0)
 			(effects
@@ -6813,14 +6813,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "073c5858-8f9b-43d7-a5eb-b56dd5dbef23")
+			(uuid "2ad53a76-a362-4df8-a82d-7928ad6f57fd")
 		)
 		(pin "2"
-			(uuid "15bcbdb6-b6a9-43c9-b120-f05f712b0e0f")
+			(uuid "a5a9a2e0-cb01-4c4a-a2cd-3a0469e3707e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D36")
 					(unit 1)
 				)
@@ -6836,7 +6836,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "636a8f58-9dc8-4298-9629-a1ef02ea8e40")
+		(uuid "57d1368f-f082-4f51-a924-6e31d6758aba")
 	)
 	(global_label "ROW5"
 		(shape passive)
@@ -6848,7 +6848,7 @@
 			)
 			(justify left)
 		)
-		(uuid "2a5f8966-dcb8-4a31-8edd-ccfb0881393f")
+		(uuid "e1858add-d877-485e-8c54-708e76f0ceaf")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -6858,7 +6858,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f3915cb8-7894-4fb7-aece-a27a0018abcc")
+		(uuid "d59344c4-2bf3-499c-873f-eebf784c314b")
 		(property "Reference" "SW37"
 			(at 190.5 200.66 0)
 			(effects
@@ -6903,14 +6903,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0e75baae-a8ad-49f5-a5dd-ff9e76727214")
+			(uuid "7fb72fda-c6f3-4157-a47e-2a88f8918649")
 		)
 		(pin "2"
-			(uuid "52ad9b1d-a2f0-4c4c-b2be-88af7956bd4e")
+			(uuid "8f85c9f8-fe63-452d-a889-e363ed595c51")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW37")
 					(unit 1)
 				)
@@ -6926,7 +6926,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6427a167-f974-45a3-a76e-d97a4d2272aa")
+		(uuid "4c3862dd-94e9-4db0-bd01-256f754ae939")
 	)
 	(global_label "COL3"
 		(shape passive)
@@ -6938,7 +6938,7 @@
 			)
 			(justify right)
 		)
-		(uuid "81005086-a6af-4b88-afbc-c1c92ec8b90f")
+		(uuid "74700173-2ac8-4933-96f4-d82230e7ddd3")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -6948,7 +6948,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "35489f9c-9cfe-4a7a-ad98-b1d827cfd62e")
+		(uuid "c8f89764-aeb0-4032-8dcd-18a84d97de75")
 		(property "Reference" "D37"
 			(at 199.39 200.66 0)
 			(effects
@@ -6993,14 +6993,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d0aa5c6f-64d6-49e5-8070-27dc97dfde8a")
+			(uuid "628f4a8f-2e93-49cc-a00b-9649d5286c63")
 		)
 		(pin "2"
-			(uuid "915b5920-21b8-4087-9400-feca3e4df04f")
+			(uuid "3126344b-8255-4f19-b77d-339b8d780997")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D37")
 					(unit 1)
 				)
@@ -7016,7 +7016,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e63405de-4911-43de-9644-a4483b88715c")
+		(uuid "43022fa6-f76f-43a1-a533-fe55a88e655f")
 	)
 	(global_label "ROW5"
 		(shape passive)
@@ -7028,7 +7028,7 @@
 			)
 			(justify left)
 		)
-		(uuid "e0302454-32ee-4f48-b7b0-0d64f4d2c6ed")
+		(uuid "59e2c2b4-306a-43cd-99cc-7b31c7d7083f")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -7038,7 +7038,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a29f9084-387f-4ff9-b773-8eeecd3b720b")
+		(uuid "e7f31c79-e7a9-4bde-b77c-3951b1cd9de1")
 		(property "Reference" "SW38"
 			(at 243.84 200.66 0)
 			(effects
@@ -7083,14 +7083,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1e40514d-d371-4c2b-a879-0b7b307f70fb")
+			(uuid "f9842f68-7a97-454d-8219-b21c952aa7de")
 		)
 		(pin "2"
-			(uuid "b26f8f28-f37f-463f-9bcd-d5aa6bf1366e")
+			(uuid "893d4b7f-9496-41d3-8980-ede51b128dfa")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW38")
 					(unit 1)
 				)
@@ -7106,7 +7106,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4edea8af-a809-41fc-9657-8d3196350914")
+		(uuid "d1b66a16-064f-4691-aba2-e257f96a4bfc")
 	)
 	(global_label "COL4"
 		(shape passive)
@@ -7118,7 +7118,7 @@
 			)
 			(justify right)
 		)
-		(uuid "de63cdf7-e321-4bcc-92ad-52161b385268")
+		(uuid "248b1580-6753-4082-b6e5-2967a9179d7f")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -7128,7 +7128,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "581b1a53-5e1a-4baf-bcc3-de2aee6a9930")
+		(uuid "19f3817d-fe7f-4843-ba40-802fa13da005")
 		(property "Reference" "D38"
 			(at 252.73 200.66 0)
 			(effects
@@ -7173,14 +7173,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d042135e-4848-4946-9adf-5f7adaa3c25c")
+			(uuid "4acfee0b-ec2d-49bb-a4e8-8dad536fdb7b")
 		)
 		(pin "2"
-			(uuid "991f3033-ad27-4727-873a-d3fe174e7fd4")
+			(uuid "ef4f956f-3fa2-423b-91ac-0771dd4aa97a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D38")
 					(unit 1)
 				)
@@ -7196,7 +7196,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2a2ac09e-2c13-46f1-88f2-af1486e31c84")
+		(uuid "bb57c075-cab3-409b-89eb-93cd14867fdb")
 	)
 	(global_label "ROW5"
 		(shape passive)
@@ -7208,7 +7208,7 @@
 			)
 			(justify left)
 		)
-		(uuid "121c283d-2837-47f2-916d-732de9656543")
+		(uuid "b6fdd184-47fb-4ec4-99f9-c53adcac4dc0")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -7218,7 +7218,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3626e46f-711e-4e75-89c9-5ab6cfbdc6b5")
+		(uuid "cec92ea1-3a83-40f0-ac35-bf629195ccd2")
 		(property "Reference" "SW39"
 			(at 297.18 200.66 0)
 			(effects
@@ -7263,14 +7263,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ceaa4851-5930-4eee-826b-bab6d151e0bd")
+			(uuid "fdfa73ce-c8b9-437b-9b76-56666c2c9c62")
 		)
 		(pin "2"
-			(uuid "a655d63b-a999-48f8-9a5a-a98ee0c76f0d")
+			(uuid "88a1ab95-94b1-458a-9c4d-524aad5a41b7")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW39")
 					(unit 1)
 				)
@@ -7286,7 +7286,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f0f646a2-e609-4983-8385-af77072243b0")
+		(uuid "5e7bb9b8-a6c1-4bd6-a1e1-7a65ab378d8a")
 	)
 	(global_label "COL5"
 		(shape passive)
@@ -7298,7 +7298,7 @@
 			)
 			(justify right)
 		)
-		(uuid "b4a4fa18-f83b-4dd4-b61d-b77e20f4c771")
+		(uuid "90b1b27e-95d5-49ad-b373-09cfb684a077")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -7308,7 +7308,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5fb513d0-e545-4cf3-840c-a12cca356907")
+		(uuid "36727cfc-8ef5-48d0-a082-f48e06978bd1")
 		(property "Reference" "D39"
 			(at 306.07 200.66 0)
 			(effects
@@ -7353,14 +7353,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a94037e2-5152-4d67-83a9-4738db78acfa")
+			(uuid "abc152da-7e07-43c0-a22a-efeb485c30f4")
 		)
 		(pin "2"
-			(uuid "b2676f1c-fb6f-4ed3-a35c-29eab6a64d45")
+			(uuid "4b28f90c-9bd7-480f-b730-eab9385ce3eb")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D39")
 					(unit 1)
 				)
@@ -7376,7 +7376,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8904b839-511f-4c5b-94d7-a4713725740b")
+		(uuid "4b4c1281-edc6-4901-a5ab-a1bf41ac1146")
 	)
 	(global_label "ROW5"
 		(shape passive)
@@ -7388,7 +7388,7 @@
 			)
 			(justify left)
 		)
-		(uuid "12c519f3-7753-44e2-b53a-bcdbafdd41ca")
+		(uuid "f807a875-4553-41a8-8041-708a2cea477c")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -7398,7 +7398,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "45584340-67fb-4bad-9344-3e66db70c764")
+		(uuid "20dc29a2-c9df-4626-8a7b-9a76fdc7481f")
 		(property "Reference" "SW40"
 			(at 350.52 134.62 0)
 			(effects
@@ -7443,14 +7443,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8c21f415-0d76-42da-a7ac-2378c0362c17")
+			(uuid "d57e44c5-2414-45d4-8fc3-76c4809ad73e")
 		)
 		(pin "2"
-			(uuid "f112f3bb-e5c3-40de-857d-531adc5b1795")
+			(uuid "d7297650-ae58-4227-b8da-69f605dc34b7")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW40")
 					(unit 1)
 				)
@@ -7466,7 +7466,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "61373ec9-b8e0-4f8b-a24e-6e16fb9a89f4")
+		(uuid "225b9785-1c5a-46be-b438-60957dfe5e3e")
 	)
 	(global_label "COL6"
 		(shape passive)
@@ -7478,7 +7478,7 @@
 			)
 			(justify right)
 		)
-		(uuid "0b642583-a4b0-46b2-861f-ba3714cc56c9")
+		(uuid "85e59ced-1fea-47b8-b8fa-1ec705bf84ce")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -7488,7 +7488,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d870c054-d7bf-405f-853b-5cc25d7d2bc0")
+		(uuid "4dcdf898-2e58-40af-a85d-bcdc73428367")
 		(property "Reference" "D40"
 			(at 359.41 134.62 0)
 			(effects
@@ -7533,14 +7533,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1134c1c4-51f8-47f8-a77e-9faee5ed1fc3")
+			(uuid "52cc33fa-5bc0-4f8e-a8c7-68a5e689fc8f")
 		)
 		(pin "2"
-			(uuid "7b6810b1-a9e7-4dd5-b8e8-5c98ee984e6b")
+			(uuid "dd7ff1d9-a14a-4771-be45-cc14c0dee531")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D40")
 					(unit 1)
 				)
@@ -7556,7 +7556,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "76e6b9ef-1fa7-4bbd-89e1-9278915b8d38")
+		(uuid "ad6c614e-48c2-433b-9e40-889641cdc4b1")
 	)
 	(global_label "ROW3"
 		(shape passive)
@@ -7568,7 +7568,7 @@
 			)
 			(justify left)
 		)
-		(uuid "39ba6046-517d-45fe-8870-c5fc7ec14564")
+		(uuid "72eabbcb-1b80-4297-956b-b3ca1b83ff53")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -7578,7 +7578,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "eb6b5f2a-c3b5-4435-a4ea-3c5758c97601")
+		(uuid "df92829c-bc25-4ea2-8f1d-09b97a02205b")
 		(property "Reference" "SW41"
 			(at 350.52 167.64 0)
 			(effects
@@ -7623,14 +7623,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "086a0044-315c-4b1c-9dab-201bce034d55")
+			(uuid "c866d004-2766-4ce0-953b-da7eff485420")
 		)
 		(pin "2"
-			(uuid "03a96576-63fa-4ca1-91c0-36d7136a428f")
+			(uuid "e83349db-ebf9-4af7-9239-f1c8032042c5")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW41")
 					(unit 1)
 				)
@@ -7646,7 +7646,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "70a788fa-3200-478d-a939-dd64611001a0")
+		(uuid "ca160286-462b-4330-a44d-0675dacb4ed5")
 	)
 	(global_label "COL6"
 		(shape passive)
@@ -7658,7 +7658,7 @@
 			)
 			(justify right)
 		)
-		(uuid "2ed47df5-1747-4a69-abf1-7bd08183a417")
+		(uuid "7b5f2bf0-bd83-47df-855b-60449122dc18")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -7668,7 +7668,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e9348219-7679-4f2b-a33a-739dc080a0fd")
+		(uuid "b5b65ed4-a561-490e-8bfe-bd65f613d3c2")
 		(property "Reference" "D41"
 			(at 359.41 167.64 0)
 			(effects
@@ -7713,14 +7713,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8532d751-9cec-41f8-8fa2-815e0ddb91db")
+			(uuid "7847fb16-77a3-4656-9a1c-f64e29908ac0")
 		)
 		(pin "2"
-			(uuid "d269564a-3a61-47cb-834a-d95c8cece170")
+			(uuid "bd497242-03b8-436b-8aa5-1365fcdaab9e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D41")
 					(unit 1)
 				)
@@ -7736,7 +7736,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f7c004a8-9943-4023-bd19-615a31d910ed")
+		(uuid "9114a89b-48ec-4126-bfd1-8553df7b59af")
 	)
 	(global_label "ROW4"
 		(shape passive)
@@ -7748,7 +7748,7 @@
 			)
 			(justify left)
 		)
-		(uuid "d78f41fa-1d16-4823-8410-788de0b6a639")
+		(uuid "0e1aa482-268a-4ddc-aa79-a8ec1b8fff58")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -7758,7 +7758,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c577193f-e760-463d-b7bb-d293e6dae654")
+		(uuid "04132948-7aa8-44fa-8456-be9c58ea9f7d")
 		(property "Reference" "SW42"
 			(at 350.52 200.66 0)
 			(effects
@@ -7803,14 +7803,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4c0c9758-e079-42ba-acb1-49c846a8487c")
+			(uuid "d75dc8fe-5b7f-4b94-ba77-9e5c1041ab58")
 		)
 		(pin "2"
-			(uuid "50d63b2a-1292-4eb6-b9f3-29335b01091d")
+			(uuid "7e5ee00b-a907-4370-829c-2f59e0b5bb88")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "SW42")
 					(unit 1)
 				)
@@ -7826,7 +7826,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c1fd003a-a42c-4785-824f-48c7c38dec07")
+		(uuid "fe242616-9aa5-4248-8c84-30cbd4850bc4")
 	)
 	(global_label "COL6"
 		(shape passive)
@@ -7838,7 +7838,7 @@
 			)
 			(justify right)
 		)
-		(uuid "4edcc530-86c4-4b8d-a571-9a5c18bd65d0")
+		(uuid "c0844d3e-4627-41b6-8320-3bc05a23c8af")
 	)
 	(symbol
 		(lib_id "Diode:1N4148W")
@@ -7848,7 +7848,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d7ad3618-944d-4d7f-ab3f-aa296e251d02")
+		(uuid "73e0da8b-818b-4624-9bd8-b1f1ca482c36")
 		(property "Reference" "D42"
 			(at 359.41 200.66 0)
 			(effects
@@ -7893,14 +7893,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7d95b016-9346-4fb1-b4a4-197104b6592e")
+			(uuid "3c845bfc-a7cf-4344-a5e7-2bd88e9f7f4e")
 		)
 		(pin "2"
-			(uuid "4095155c-be94-42c7-b6f5-4367351b0653")
+			(uuid "a9704f39-d1bd-4a87-8bb8-c46c435653e4")
 		)
 		(instances
 			(project "unicorne"
-				(path "/9b6d68e9-6f8b-4348-9fba-b6effaea53ea/f07f3c4b-7cfa-4450-878f-7790d7e4c43e"
+				(path "/b6e515af-9267-4e2e-98c1-9d4e40c1d74d/4cda110d-8cf9-4b7c-9297-27c29ff0f7fd"
 					(reference "D42")
 					(unit 1)
 				)
@@ -7916,7 +7916,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8af42934-ab41-4f00-9aa7-89184e17a013")
+		(uuid "37054cc2-0217-4f02-bfe2-02c9ec5025e3")
 	)
 	(global_label "ROW5"
 		(shape passive)
@@ -7928,7 +7928,7 @@
 			)
 			(justify left)
 		)
-		(uuid "28c59e79-aedd-4a1f-afee-7ca7163c57cc")
+		(uuid "a122288a-bce4-4fba-8054-6398ed0994bb")
 	)
 	(text "COL2ROW. Left half: rows 0-2 (SW1-SW21). Right half: rows 3-5 (SW22-SW42).\nColumn 6 is the thumb cluster. Columns count from the outer pinky on both halves;\ncolumn 0 breaks off for the 36-key version."
 		(exclude_from_sim no)
@@ -7939,7 +7939,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "11206cff-5350-4633-9dfe-4026f85469db")
+		(uuid "4500e177-f761-43fe-b55c-13aa990e6761")
 	)
 	(embedded_fonts no)
 )

@@ -47,6 +47,7 @@ dt { font: 500 11px var(--mono); color: var(--muted); text-transform: uppercase;
 dd { margin: 0; font: 500 14px var(--mono); font-variant-numeric: tabular-nums; }
 .delta { color: var(--muted); font-size: 12px; }
 .spec { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.spec section.wide { grid-column: 1 / -1; }
 .spec section { padding: 16px 18px; background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; display: grid; gap: 10px; align-content: start; min-width: 0; }
 .spec p, .spec ul { margin: 0; color: var(--ink); }
 .spec ul { padding-left: 18px; display: grid; gap: 4px; }
@@ -63,7 +64,7 @@ code { font: 13px var(--mono); }
 
 <div class="wrap">
   <header>
-    <div class="eyebrow">unicorne · unibody Corne · rev 0.9 · PCB placed, not routed</div>
+    <div class="eyebrow">unicorne · unibody Corne · rev 0.10 · PCB placed, routing</div>
     <h1>16° per half, trackpad in the middle</h1>
     <p class="lede">Key spacing, column stagger, thumb cluster and LED positions are copied from the Corne v3 PCB
       (crkbd <code>v3-final</code>, 19.0&nbsp;mm pitch), and each half is rotated 16°. The nice!nano is on the underside
@@ -141,28 +142,45 @@ code { font: 13px var(--mono); }
         fit one or the other, and leave the SDA/SCL pull-ups (R3, R4) off with a sensor. Both headers are on the underside next to the nice!nano,
         2.54&nbsp;mm pitch. Any 3 or 4 of the expansion pins can carry SPI instead, since the nRF52840 can route SPI to any pin.</p>
     </section>
-    <section>
-      <h2>Parts</h2>
+    <section class="wide">
+      <h2>Parts list</h2>
+      <p class="note">Everything is hand-soldered. Quantities are for one board; the 36-key build needs 36 of each per-key part.
+        Rows marked <span class="tag">optional</span> can be left off.</p>
       <div class="tbl"><table>
-        <thead><tr><th>Ref</th><th>Part</th><th>Footprint</th></tr></thead>
+        <thead><tr><th>Ref</th><th>Qty</th><th>Part</th><th>Footprint</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>U1</td><td>nice!nano v2, bottom side</td><td>bstiq/nice-nano-kicad <span class="tag">GPLv3</span></td></tr>
-          <tr><td>SW1–42</td><td>MX or Choc V1/V2, hotswap</td><td>Kailh MX / Choc V1V2 sockets (keyswitch-kicad-library, MIT)</td></tr>
-          <tr><td>D1–42</td><td>1N4148W</td><td>SOD-123</td></tr>
-          <tr><td>LED1–12</td><td>SK6812MINI underglow</td><td>3.5&nbsp;mm, bottom</td></tr>
-          <tr><td>LED13–54</td><td>SK6812MINI-E per key</td><td>reverse mount</td></tr>
-          <tr><td>SW43</td><td>MSK-12C02 power switch</td><td>side-actuated SMD, as on chocowi36</td></tr>
-          <tr><td>SW44</td><td>Reset, 6×6×5&nbsp;mm tactile</td><td>through-hole (DIP)</td></tr>
-          <tr><td>Q1 / Q2</td><td>AO3401A / 2N7002</td><td>SOT-23</td></tr>
-          <tr><td>R1–R5, C1</td><td>100k ×2, 4.7k ×2, 10k, 10µF</td><td>0603 / 0805</td></tr>
-          <tr><td>JP1</td><td>LED data jumper</td><td>solder jumper, open</td></tr>
-          <tr><td>J5</td><td>PAW3395 / PMW3360 sensor pads</td><td>8 bare through-hole pads</td></tr>
-          <tr><td>H1–10</td><td>M2 mounting holes</td><td>2.2&nbsp;mm, for button-head screws</td></tr>
+          <tr><th colspan="5">On the PCB</th></tr>
+          <tr><td>U1</td><td>1</td><td>nice!nano v2</td><td>THT, bottom</td><td>Inner pads P1.01 / P1.02 / P1.07 used; bstiq footprint <span class="tag">GPLv3</span></td></tr>
+          <tr><td>SW1–42</td><td>42</td><td>MX, or Choc V1/V2 switches</td><td>hotswap</td><td>MX board / Choc board</td></tr>
+          <tr><td>—</td><td>42</td><td>Kailh MX, or Kailh Choc hotswap sockets</td><td>SMD, bottom</td><td>Choc socket fits V1 and V2</td></tr>
+          <tr><td>D1–42</td><td>42</td><td>1N4148W</td><td>SOD-123, bottom</td><td>One per key</td></tr>
+          <tr><td>SW43</td><td>1</td><td>MSK-12C02 slide switch</td><td>SMD, top edge</td><td>Battery cut-off, as on chocowi36</td></tr>
+          <tr><td>SW44</td><td>1</td><td>6×6×5&nbsp;mm tactile</td><td>THT</td><td>Reset</td></tr>
+          <tr><td>J1</td><td>—</td><td>Battery pads B+ / B−</td><td>THT, 4.8&nbsp;mm</td><td>Battery leads</td></tr>
+          <tr><td>J2</td><td>—</td><td>TPS43 pads</td><td>THT, 2.54&nbsp;mm</td><td>Trackpad build</td></tr>
+          <tr><td>J5</td><td>—</td><td>Sensor pads</td><td>THT, 2.54&nbsp;mm</td><td>PAW3395 / PMW3360 build</td></tr>
+          <tr><td>J3</td><td>1</td><td>1×6 pin header</td><td>THT</td><td><span class="tag">optional</span> expansion</td></tr>
+          <tr><td>J4</td><td>1</td><td>1×4 pin header</td><td>THT</td><td><span class="tag">optional</span> GPIO</td></tr>
+          <tr><td>R3, R4</td><td>2</td><td>4.7&nbsp;kΩ</td><td>0805 hand-solder</td><td>Trackpad build only</td></tr>
+          <tr><td>R5</td><td>1</td><td>10&nbsp;kΩ</td><td>0805 hand-solder</td><td>Trackpad / sensor reset pull-up</td></tr>
+          <tr><th colspan="5">LEDs <span class="tag">optional</span></th></tr>
+          <tr><td>LED1–12</td><td>12</td><td>SK6812MINI</td><td>3.5&nbsp;mm, bottom</td><td>Underglow</td></tr>
+          <tr><td>LED13–54</td><td>42</td><td>SK6812MINI-E</td><td>reverse mount</td><td>Per key</td></tr>
+          <tr><td>Q1 / Q2</td><td>1 / 1</td><td>AO3401A / 2N7002</td><td>SOT-23</td><td>LED supply switch</td></tr>
+          <tr><td>R1, R2</td><td>2</td><td>100&nbsp;kΩ</td><td>0805 hand-solder</td><td>LEDs off during boot</td></tr>
+          <tr><td>C1</td><td>1</td><td>10&nbsp;µF</td><td>0805 hand-solder</td><td>LED supply</td></tr>
+          <tr><td>U2 / C2</td><td>1 / 1</td><td>SN74LV1T125 / 100&nbsp;nF</td><td>SOT-23-5 / 0805</td><td>Level shifter, EXT only (must be LV1T)</td></tr>
+          <tr><td>JP3</td><td>—</td><td>Solder jumper</td><td>—</td><td>U2 bypass: bridge with VCC</td></tr>
+          <tr><td>JP2</td><td>—</td><td>3-pad solder jumper</td><td>—</td><td>LED source: VCC or EXT</td></tr>
+          <tr><td>J6</td><td>—</td><td>LED IN pads (V+, GND)</td><td>THT, 2.54&nbsp;mm</td><td>External LED supply up to 5&nbsp;V</td></tr>
+          <tr><td>JP1</td><td>—</td><td>Solder jumper</td><td>—</td><td>Bridge for LED data on P0.06 (via U2)</td></tr>
+          <tr><th colspan="5">Off the PCB</th></tr>
+          <tr><td>—</td><td>1</td><td>Azoteq TPS43 trackpad</td><td>43.3 × 40.3&nbsp;mm</td><td>Or a PAW3395 / PMW3360 sensor board (3.3&nbsp;V)</td></tr>
+          <tr><td>—</td><td>1</td><td>3.7&nbsp;V LiPo battery</td><td>—</td><td>Under the trackpad; size it to the case</td></tr>
+          <tr><td>—</td><td>42</td><td>Keycaps, MX or Choc</td><td>—</td><td>40 × 1u, 2 × 1.5u</td></tr>
+          <tr><td>H1–10</td><td>10</td><td>M2 button-head screws + standoffs</td><td>ISO 7380</td><td>Standoff height depends on the case</td></tr>
         </tbody>
       </table></div>
-      <p class="note">If the board is published, the nice!nano footprint's GPLv3 license comes with it.
-        Mounting holes: Corne v3's four per half (its pinky hole moved to the column 1/2 corner so it survives
-        the 36-key break) plus two below the trackpad.</p>
     </section>
     <section>
       <h2>Matrix</h2>
@@ -184,10 +202,13 @@ code { font: 13px var(--mono); }
           south of each switch. Underglow uses Corne's six spots per half, but with 3.5&nbsp;mm SK6812MINI LEDs:
           a 5&nbsp;mm WS2812B doesn't fit between a hotswap socket and the next key's LED cutout. On the Choc board
           they sit 5.5&nbsp;mm west of those spots, clear of the larger Choc sockets.</li>
-        <li>Their own supply: an AO3401A P-MOSFET switches battery voltage onto <code>LED_VDD</code>, driven through a
-          2N7002 from <code>P1.00</code> (high = on). The nice!nano's <code>VCC</code> stays on for the trackpad, and
-          idle LEDs no longer drain the battery.</li>
-        <li>54 LEDs at full white still draw far more than a small battery should give. Cap brightness in firmware.</li>
+        <li>Their own switched supply: an AO3401A P-MOSFET, driven through a 2N7002 from <code>P1.00</code> (high = on).
+          The nice!nano's <code>VCC</code> stays on for the trackpad, and idle LEDs draw nothing.</li>
+        <li>Solder jumper <code>JP2</code> picks the source: <b>VCC</b> (3.3&nbsp;V, up to the nice!nano's 1&nbsp;A
+          regulator; cap brightness in firmware) or <b>EXT</b>, the <code>LED IN</code> pads, for an external supply up to
+          5&nbsp;V and full brightness. Never the battery: RAW is the charger's battery pin.</li>
+        <li>With EXT, fit the SN74LV1T125 buffer (U2) so 3.3&nbsp;V data drives LEDs at 5&nbsp;V. With VCC, leave U2 and C2
+          off and bridge <code>JP3</code>, which bypasses it.</li>
       </ul>
     </section>
     <section>
