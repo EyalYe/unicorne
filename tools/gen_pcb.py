@@ -21,6 +21,7 @@ import pcbnew
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from gen_schematic import NANO_PINS, child, libsym, parse  # noqa: E402
 from layout import rot  # noqa: E402
+import lanes  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 KICAD = Path("/Applications/KiCad/KiCad.app")
@@ -54,8 +55,6 @@ NO_BOM = {"J1", "J2", "J5", "J6", "JP1", "JP2", "JP3"}  # bare pads and the sold
 NANO_USB_EDGE = 17.78        # nice_nano footprint origin to its PCB edge at the USB end
 TRACKPAD = (43.3, 40.3)      # TPS43 outline, datasheet figure 2.1
 SLOT_W = 1.0                 # break-line slot width
-TAB_W = 9.0                  # tab where the row lanes cross the break line
-TAB_OFFSET = 4.7             # tab centre below the switch centre: spans the lanes at +2.45..+6.9
 BRIDGE = 2.0                 # solid bridge at each board edge
 BITE_D, BITE_PITCH = 0.5, 0.8
 MIN_SLOT = 3.0               # shorter gaps between tabs are left solid (no sliver slots)
@@ -312,7 +311,7 @@ def inside(poly, x, y):
     return hit
 
 
-def clear_spot(b, x, y, outline, reach=10.0, step=0.25, body=None):
+def clear_spot(b, x, y, outline, reach=10.0, step=0.25, body=None, keep_out=()):
     """Nearest point to (x, y) where an M2 hole clears every courtyard, pad and edge.
     With `body`, key switches are checked as a square of that half-width (their
     body at PCB level) instead of their courtyard."""
@@ -342,7 +341,7 @@ def clear_spot(b, x, y, outline, reach=10.0, step=0.25, body=None):
             a = math.radians(k.GetOrientationDegrees())
             dx, dy = pcbnew.ToMM(pt.x - c.x), pcbnew.ToMM(pt.y - c.y)
             lx, ly = dx * math.cos(a) - dy * math.sin(a), dx * math.sin(a) + dy * math.cos(a)
-            if abs(lx) < 10.5 and 2.45 - 1.6 < ly < 6.9 + 1.6:
+            if abs(lx) < 10.5 and any(lo < ly < hi for lo, hi in keep_out):
                 return False
         for k in keys:
             c = k.GetPosition()
@@ -379,7 +378,7 @@ def segment_hits(a, c, poly):
     return sorted(ts)
 
 
-def break_line(b, ends, outline, row_points, index):
+def break_line(b, ends, outline, row_points, index, tab_spec):
     """Slots along the break line, leaving a bridge at each edge and a tab at each
     key row where tracks cross. Mouse bites at both sides of every tab and bridge."""
     a, c = ends
@@ -390,8 +389,11 @@ def break_line(b, ends, outline, row_points, index):
     nx, ny = -uy, ux
     at = lambda s: (a[0] + ux * s, a[1] + uy * s)
     s0, s1 = t0 * length, t1 * length
-    tabs = sorted((p[0] - a[0]) * ux + (p[1] - a[1]) * uy + TAB_OFFSET for p in row_points)
-    solid = [(s0, s0 + BRIDGE)] + [(s - TAB_W / 2, s + TAB_W / 2) for s in tabs] + [(s1 - BRIDGE, s1)]
+    # a tab wherever routing lanes cross (tools/lanes.py: offset from each row
+    # centre along the line, and width)
+    centres = sorted((p[0] - a[0]) * ux + (p[1] - a[1]) * uy for p in row_points)
+    tabs = sorted((c + off, w) for c in centres for off, w in tab_spec)
+    solid = sorted([(s0, s0 + BRIDGE)] + [(t - w / 2, t + w / 2) for t, w in tabs] + [(s1 - BRIDGE, s1)])
     # merge solid sections whose slot between them would be a sliver
     merged = [solid[0]]
     for s_, e_ in solid[1:]:
@@ -419,7 +421,7 @@ def break_line(b, ends, outline, row_points, index):
     b.board.Add(fp)
     # perforate every solid section along its whole length, except where the
     # routing lanes cross each tab (tools/lanes.py: tab centre -2.25 .. +2.2)
-    keep_clear = [(t - 2.8, t + 2.8) for t in tabs]
+    keep_clear = [(t - w / 2 + 1.7, t + w / 2 - 1.7) if w > 5 else (t - 1.2, t + 1.2) for t, w in tabs]
     holes = []
     for s_, e_ in solid:
         h = s_ + 0.5
@@ -565,7 +567,7 @@ def build(variant):
             dx, dy = rot(sign * v["break_at"][i], y, k0["rot"])
             ends.append((k0["x"] + dx, k0["y"] + dy))
         rows = [(keys[f"{side} K{r}0"]["x"], keys[f"{side} K{r}0"]["y"]) for r in range(3)]
-        break_line(b, ends, outline, rows, i + 1)
+        break_line(b, ends, outline, rows, i + 1, lanes.LAYOUTS[variant]["tabs"])
 
     # --- M2 mounting holes (board-only), nudged clear of everything else
     for i, h in enumerate(layout["holes"]):
@@ -575,7 +577,8 @@ def build(variant):
         fp.SetValue("M2")
         fp.SetAttributes(fp.GetAttributes() | pcbnew.FP_BOARD_ONLY | pcbnew.FP_EXCLUDE_FROM_BOM
                          | pcbnew.FP_EXCLUDE_FROM_POS_FILES)
-        x, y, moved = clear_spot(b, h["x"], h["y"], outline, body=v["hole_body"])
+        x, y, moved = clear_spot(b, h["x"], h["y"], outline, body=v["hole_body"],
+                                 keep_out=lanes.LAYOUTS[variant]["keep_out"])
         b.board.Add(fp)
         place(b, fp, x, y, 0)
         if moved > 0.01:

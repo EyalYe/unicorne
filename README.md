@@ -3,7 +3,7 @@
 A unibody [Corne](https://github.com/foostan/crkbd): both halves of the Corne v3 key layout on one PCB, each half
 rotated 16°, with an Azoteq TPS43 trackpad in the middle and a nice!nano v2 mounted underneath.
 
-Status: layout fixed, schematic done. MX board fully routed (DRC clean); Choc board placed, routing next.
+Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 unconnected, 0 copper violations).
 
 ## Design
 
@@ -103,6 +103,7 @@ python3 tools/gen_schematic.py
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_pcb.py mx
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_pcb.py choc
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/finish_route.py mx
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/finish_route.py choc
 ```
 
 ## Licenses

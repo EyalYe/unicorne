@@ -128,13 +128,99 @@ def stitch(board):
     return n
 
 
-def route(variant="mx"):
-    t0 = time.time()
+HOLE_R = 1.1                  # M2 drill radius
+HOLE_KEEPOUT = 2.04           # MountingHole_2.2mm_M2_ISO7380 courtyard radius
+
+
+def move_holes(board, reach=6.0, step=0.25):
+    """Nudge mounting holes that collide with the lane tracks to the nearest spot
+    clear of tracks, pads, courtyards and edges (the lanes are only known after
+    placement)."""
+    tracks = list(board.GetTracks())
+    fps = list(board.GetFootprints())
+    edges = [d for d in board.GetDrawings() if d.GetLayer() == pcbnew.Edge_Cuts]
+    for fp in fps:
+        edges += [g for g in fp.GraphicalItems() if g.GetLayer() == pcbnew.Edge_Cuts]
+    outline = next(d for d in board.GetDrawings()
+                   if d.GetLayer() == pcbnew.Edge_Cuts and d.GetShape() == pcbnew.SHAPE_T_POLY).GetPolyShape()
+    holes = [fp for fp in fps if fp.GetReference().startswith("H") and fp.GetReference()[1:].isdigit()]
+    others = [fp for fp in fps if fp not in holes]
+    keys = [fp for fp in others if fp.GetReference().startswith("SW") and fp.HasField("Key")]
+    choc = any("Choc" in str(k.GetFPID().GetLibItemName()) for k in keys)
+    yards = [fp.GetCourtyard(L) for fp in others for L in (pcbnew.F_CrtYd, pcbnew.B_CrtYd)
+             if not (choc and L == pcbnew.F_CrtYd and fp in keys)]
+    pads = [p for fp in others for p in fp.Pads()]
+
+    def ok(pt):
+        if not outline.Contains(pt):
+            return False
+        if any(e.HitTest(pt, pcbnew.FromMM(HOLE_KEEPOUT + 0.5)) for e in edges):
+            return False
+        if any(t.HitTest(pt, pcbnew.FromMM(HOLE_R + 0.3)) for t in tracks):
+            return False
+        if any(p.HitTest(pt, pcbnew.FromMM(HOLE_R + 0.25)) for p in pads):
+            return False
+        if any(y.OutlineCount() and y.Collide(pt, pcbnew.FromMM(HOLE_KEEPOUT)) for y in yards):
+            return False
+        for k in keys if choc else ():        # Choc: the body at PCB level, as in gen_pcb
+            c = k.GetPosition()
+            a = math.radians(k.GetOrientationDegrees())
+            dx, dy = pcbnew.ToMM(pt.x - c.x), pcbnew.ToMM(pt.y - c.y)
+            lx, ly = dx * math.cos(a) - dy * math.sin(a), dx * math.sin(a) + dy * math.cos(a)
+            if abs(lx) < 6.9 + HOLE_KEEPOUT and abs(ly) < 6.9 + HOLE_KEEPOUT:
+                return False
+        return True
+
+    moved = []
+    n = int(reach / step)
+    spots = sorted(((i * step) ** 2 + (j * step) ** 2, i, j) for i in range(-n, n + 1) for j in range(-n, n + 1))
+    for h in holes:
+        c = h.GetPosition()
+        if ok(c):
+            continue
+        for d2, i, j in spots:
+            pt = pcbnew.VECTOR2I(c.x + pcbnew.FromMM(i * step), c.y + pcbnew.FromMM(j * step))
+            if ok(pt):
+                h.SetPosition(pt)
+                moved.append((h.GetReference(), math.sqrt(d2)))
+                break
+        else:
+            moved.append((h.GetReference(), -1.0))
+    return moved
+
+
+def route(variant="mx", attempts=4):
+    """Route, and if signal connections fail, start again from the placed board
+    with those connections first. Keeps the attempt with the fewest failures."""
+    import shutil
     path = ROOT / BOARDS[variant]
     board = pcbnew.LoadBoard(str(path))
     if len(board.GetTracks()):
         sys.exit(f"{path.name} already has tracks: run tools/gen_pcb.py {variant} first")
-    print(f"laid {lanes.lay(board)} lane tracks", flush=True)
+    placed = ROOT / "build" / "route" / f"{variant}_placed.kicad_pcb"
+    placed.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy(path, placed)
+    first, best = [], None
+    for attempt in range(attempts):
+        shutil.copy(placed, path)
+        failed = route_once(variant, path, first)
+        signal = [f for f in failed if f[0] != "GND"]
+        print(f"attempt {attempt + 1}: {len(signal)} signal connections failed", flush=True)
+        if best is None or len(signal) < best[0]:
+            best = (len(signal), path.read_bytes())
+        if not signal:
+            break
+        first = list(dict.fromkeys(first + [f[0] for f in signal]))
+    path.write_bytes(best[1])
+    print(f"kept the best attempt: {best[0]} signal connections failed")
+
+
+def route_once(variant, path, first):
+    t0 = time.time()
+    board = pcbnew.LoadBoard(str(path))
+    print(f"laid {lanes.lay(board, variant)} lane tracks", flush=True)
+    for ref, d in move_holes(board):
+        print(f"  {ref} moved {d:.2f} mm off the lanes", flush=True)
     board.Save(str(path))
     pairs = unconnected(path)
     print(f"{len(pairs)} connections left after the lanes", flush=True)
@@ -166,7 +252,8 @@ def route(variant="mx"):
     on_mcu = lambda p: any(" of U1" in i["description"] for i in p["items"])
     # very short local hops first (they have one sensible path), then into the
     # nice!nano while its pins have room, then the rest; GND last
-    tier = lambda p: 3 if net_of(p) == "GND" else 0 if length(p) < 8 else 1 if on_mcu(p) else 2
+    tier = lambda p: (-1 if net_of(p) in first else 3 if net_of(p) == "GND"
+                      else 0 if length(p) < 8 else 1 if on_mcu(p) else 2)
     supply = lambda p: net_of(p).split("/")[-1] in WIDTH
     pairs.sort(key=lambda p: (tier(p), not supply(p), length(p)))
     failed = []
@@ -195,9 +282,11 @@ def route(variant="mx"):
     M.pour_gnd(board, outline)
     print(f"added {stitch(board)} GND stitching vias", flush=True)
     board.Save(str(path))
-    print(f"done in {time.time() - t0:.0f}s: {len(failed)} of {len(pairs)} connections failed")
+    print(f"  done in {time.time() - t0:.0f}s: {len(failed)} of {len(pairs)} connections failed")
     for f in failed:
-        print("  unrouted:", *f)
+        if f[0] != "GND":
+            print("    unrouted:", *f)
+    return failed
 
 
 if __name__ == "__main__":
