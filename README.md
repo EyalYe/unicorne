@@ -70,6 +70,24 @@ Leave all of these off for a board without lighting.
 | 42 | Keycaps, MX or Choc | 40 × 1u and 2 × 1.5u (the big thumb key on each half) |
 | 10 | M2 button-head screws (ISO 7380) + standoffs | Mounting holes H1–H10; standoff height depends on the case |
 
+## Ordering (JLCPCB)
+
+Upload `export/jlcpcb/unicorne-mx-jlcpcb.zip` or `unicorne-choc-jlcpcb.zip` (gerbers plus Excellon drills,
+plated and non-plated separate). Settings:
+
+| Option | Value |
+|---|---|
+| Layers | 2 |
+| Thickness | 1.6 mm |
+| Size | about 300 × 119 mm (read from the outline) |
+| Min. via / hole | 0.3 mm via drill, 0.5 mm mouse-bite holes |
+| Min. track / spacing | 0.2 mm / 0.2 mm (0.15 mm rule minimum) |
+| Surface finish | HASL (lead-free if you prefer) |
+| Everything else | defaults |
+
+No assembly: every part is hand-soldered (see the parts list). Regenerate the zips with
+`python3 tools/export_gerbers.py` after any board change; it refuses to export a board that fails DRC.
+
 ## 3D
 
 `export/unicorne-mx.step` and `export/unicorne-choc.step` are the full boards with parts, for designing a
@@ -97,6 +115,7 @@ Regenerate with `python3 tools/export_3d.py` after any board change.
 | `tools/route.py` | Freerouting driver (not used for the final boards) |
 | `tools/step_box.py`, `lib/3d/` | Placeholder STEP models and the socket / Choc switch models |
 | `tools/export_3d.py`, `export/` | STEP export of both boards, and 3D renders |
+| `tools/export_gerbers.py`, `export/jlcpcb/` | JLCPCB gerber + drill zips |
 | `mock/` | Layout data, a 1:1 printable SVG and the design overview page |
 
 ## Regenerating

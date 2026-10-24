@@ -28,3 +28,6 @@ __pycache__/
 /.history/
 # Freerouting log (written next to the -l language option)
 /en/
+
+# Fabrication outputs are committed
+!/export/jlcpcb/*.zip
