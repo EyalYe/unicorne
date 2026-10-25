@@ -31,3 +31,4 @@ __pycache__/
 
 # Fabrication outputs are committed
 !/export/jlcpcb/*.zip
+!/export/plate/*.zip
