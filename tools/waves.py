@@ -10,6 +10,7 @@ the lines run over them. The lines live in a group named "waves" that is replace
 every run, so this doesn't touch the routing.
 """
 import math
+import re
 import sys
 from pathlib import Path
 
@@ -65,12 +66,24 @@ def box_poly(box, grow):
     return p
 
 
-def clear_old(board):
-    for g in list(board.Groups()):
-        if g.GetName() == GROUP:
-            for item in list(g.GetItems()):
-                board.Remove(item)
-            board.Remove(g)
+def strip_old(path):
+    """Drop a previous run's waves from the board file. Removing thousands of shapes through
+    the Python bindings crashes, so this edits the file text before it is loaded."""
+    text = path.read_text()
+    start = text.find(f'\t(group "{GROUP}"\n')
+    if start < 0:
+        return
+    end = text.index("\n\t)\n", start) + 4
+    group = text[start:end]
+    members = set(re.findall(r'"([0-9a-f-]{36})"', group[group.index("(members"):]))
+    out, i = [], 0
+    for m in re.finditer(r"\t\(gr_line\n.*?\n\t\)\n", text, re.S):
+        if re.search(r'\(uuid "([0-9a-f-]{36})"\)', m.group()).group(1) in members:
+            out.append(text[i:m.start()])
+            i = m.end()
+    out.append(text[i:])
+    text = "".join(out)
+    path.write_text(text.replace(group, "", 1))
 
 
 def free_area(board, silk, crtyd, cu):
@@ -134,8 +147,8 @@ def draw(board, group, layer, area):
 def main(variants):
     for v in variants:
         path = ROOT / BOARDS[v]
+        strip_old(path)
         board = pcbnew.LoadBoard(str(path))
-        clear_old(board)
         group = pcbnew.PCB_GROUP(board)
         group.SetName(GROUP)
         board.Add(group)

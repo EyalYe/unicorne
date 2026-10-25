@@ -42,7 +42,7 @@ VARIANTS = {
     # underglow west of the sockets (column 1 spots move to column 2, clear of
     # the left break line).
     "choc": dict(board="unicorne-choc.kicad_pcb", sw="SW_Hotswap_Kailh_Choc_V1V2_1.00u",
-                 sw15="SW_Hotswap_Kailh_Choc_V1V2_1.50u", diode=(6.5, 4.5, 0), break_at=(10.6, 8.4),
+                 sw15="SW_Hotswap_Kailh_Choc_V1V2_1.50u", diode=(6.5, 4.5, 90), break_at=(10.6, 8.4),
                  glow=[(0, 2, 9.2, -5.5), (0, 3, 9.2, -5.5), (1, 5, -9.8, -5.5),
                        (1, 2, 9.2, -5.5), (2, 3, 9.2, -5.5), (2, 5, 9.2, -5.5)],
                  # The Choc footprint courtyard is the top housing (above the plate);
