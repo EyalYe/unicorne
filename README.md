@@ -129,6 +129,7 @@ M2 holes as its PCB, a 44.3 x 41.3 mm opening for the TPS43, and the same break 
 | `tools/step_box.py`, `lib/3d/` | Placeholder STEP models and the socket / Choc switch models |
 | `tools/export_3d.py`, `export/` | STEP export of both boards, and 3D renders |
 | `tools/export_gerbers.py`, `export/jlcpcb/` | JLCPCB gerber + drill zips |
+| `tools/waves.py` | Wavy silkscreen pattern on both sides of the routed PCBs |
 | `tools/gen_plate.py`, `plate/`, `export/plate/` | Switch plates and their exports |
 | `mock/` | Layout data, a 1:1 printable SVG and the design overview page |
 
@@ -147,6 +148,9 @@ python3 tools/gen_schematic.py
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_pcb.py choc
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/finish_route.py mx
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/finish_route.py choc
+
+# Wavy silkscreen on both PCBs (redraws only the waves, leaves the routing alone)
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/waves.py
 
 # Switch plates and their exports (reads hole positions from the routed boards)
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_plate.py

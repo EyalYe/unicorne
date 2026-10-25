@@ -34,80 +34,7 @@ PLATES = {
     "choc": dict(cut=13.8, thickness=1.2, pcb="unicorne-choc.kicad_pcb"),
 }
 TRACKPAD_CLEAR = 0.5         # around the TPS43's 43.3 x 40.3 mm
-WAVE_PITCH = 1.6             # silkscreen waves: line spacing
-WAVE_WIDTH = 0.2             # JLCPCB's minimum silk line is 0.15
-WAVE_MARGIN = 0.6            # clear of every cut edge and hole
-WAVE_STEP = 0.4              # sampling along each wave
 
-
-def wave_y(x, i):
-    """Line i of the wave field at x. Neighbouring lines differ only by a small phase and
-    amplitude change, so they never cross."""
-    a = 3.2 + 0.9 * math.sin(i * 0.05)
-    return (i * WAVE_PITCH
-            + a * math.sin(x / 14.0 + i * 0.07)
-            + 1.4 * math.sin(x / 5.3 - i * 0.11 + 1.0)
-            + 2.2 * math.sin(x / 31.0 + i * 0.03))
-
-
-def add_waves(b, keep_out):
-    """Flowing parallel lines on F.Silkscreen, clipped to the solid parts of the plate."""
-    area = pcbnew.SHAPE_POLY_SET()
-    b.board.GetBoardPolygonOutlines(area, False)
-    area.Deflate(G.mm(WAVE_MARGIN), pcbnew.CORNER_STRATEGY_ROUND_ALL_CORNERS, G.mm(0.05))
-    for c in keep_out:
-        area.BooleanSubtract(c)
-    box = area.BBox()
-    x0, x1 = pcbnew.ToMM(box.GetLeft()), pcbnew.ToMM(box.GetRight())
-    y0, y1 = pcbnew.ToMM(box.GetTop()), pcbnew.ToMM(box.GetBottom())
-
-    def inside(x, y):
-        return area.Contains(pcbnew.VECTOR2I(G.mm(x), G.mm(y)))
-
-    def flush(run):
-        for (ax, ay), (bx, by) in zip(run, run[1:]):
-            seg = pcbnew.PCB_SHAPE(b.board, pcbnew.SHAPE_T_SEGMENT)
-            seg.SetLayer(pcbnew.F_SilkS)
-            seg.SetWidth(G.mm(WAVE_WIDTH))
-            seg.SetStart(pcbnew.VECTOR2I(G.mm(ax), G.mm(ay)))
-            seg.SetEnd(pcbnew.VECTOR2I(G.mm(bx), G.mm(by)))
-            b.board.Add(seg)
-
-    n = 0
-    i0, i1 = math.floor((y0 - 8) / WAVE_PITCH) - 8, math.ceil((y1 + 8) / WAVE_PITCH) + 8
-    for i in range(i0, i1):
-        run = []
-        x = x0
-        while x <= x1 + WAVE_STEP:
-            y = wave_y(x, i)
-            if inside(x, y):
-                run.append((x, y))
-            elif run:
-                n += max(0, len(simplify(run)) - 1)
-                flush(simplify(run))
-                run = []
-            x += WAVE_STEP
-        if run:
-            n += max(0, len(simplify(run)) - 1)
-            flush(simplify(run))
-    return n
-
-
-def simplify(pts, tol=0.02):
-    """Douglas-Peucker, keeps segment count down without visible change."""
-    if len(pts) < 3:
-        return pts
-    (ax, ay), (bx, by) = pts[0], pts[-1]
-    dx, dy = bx - ax, by - ay
-    d = math.hypot(dx, dy) or 1e-9
-    far, idx = 0.0, 0
-    for k, (px, py) in enumerate(pts[1:-1], 1):
-        e = abs(dy * (px - ax) - dx * (py - ay)) / d
-        if e > far:
-            far, idx = e, k
-    if far <= tol:
-        return [pts[0], pts[-1]]
-    return simplify(pts[:idx + 1], tol)[:-1] + simplify(pts[idx:], tol)
 
 
 def build(variant):
@@ -171,29 +98,6 @@ def build(variant):
     t.SetTextThickness(G.mm(0.2))
     t.SetPosition(b.xy(0, cy + th + 3.0))
     b.board.Add(t)
-
-    # waves everywhere else: keep clear of the holes' screw heads and of the label
-    keep_out = []
-    for pad in b.board.GetPads():
-        r = max(pcbnew.ToMM(pad.GetSize(pcbnew.F_Cu).x), pcbnew.ToMM(pad.GetDrillSize().x)) / 2 + WAVE_MARGIN
-        if pad.GetParentFootprint().GetValue() == "M2":
-            r = max(r, 1.75 + WAVE_MARGIN)          # ISO7380 M2 head is 3.5 mm
-        c = pcbnew.SHAPE_POLY_SET()
-        c.NewOutline()
-        pos = pad.GetPosition()
-        for k in range(24):
-            a = 2 * math.pi * k / 24
-            c.Append(pos.x + int(G.mm(r) * math.cos(a)), pos.y + int(G.mm(r) * math.sin(a)))
-        keep_out.append(c)
-    lb = t.GetBoundingBox()
-    lb.Inflate(G.mm(1.0))
-    c = pcbnew.SHAPE_POLY_SET()
-    c.NewOutline()
-    for x, y in ((lb.GetLeft(), lb.GetTop()), (lb.GetRight(), lb.GetTop()),
-                 (lb.GetRight(), lb.GetBottom()), (lb.GetLeft(), lb.GetBottom())):
-        c.Append(x, y)
-    keep_out.append(c)
-    add_waves(b, keep_out)
 
     out = ROOT / "plate" / f"unicorne-{variant}-plate.kicad_pcb"
     out.parent.mkdir(exist_ok=True)
