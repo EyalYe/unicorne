@@ -1,7 +1,7 @@
 # unicorne
 
 A unibody [Corne](https://github.com/foostan/crkbd): both halves of the Corne v3 key layout on one PCB, each half
-rotated 16°, with an Azoteq TPS43 trackpad in the middle and a nice!nano v2 above it.
+rotated 16°, with an Azoteq TPS43 trackpad in the middle (it sits on the case, over the nice!nano) and a nice!nano v2 at the top.
 
 Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 unconnected, 0 copper violations).
 
@@ -16,7 +16,10 @@ Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 un
 - Two board versions with the same placement: Kailh MX hotswap, and Kailh Choc hotswap (fits Choc V1 and V2)
 - nice!nano v2 on the top side, components up, USB on the top edge; the edge is notched for the
   mid-mount USB-C, whose shell drops below the nano's underside
-- TPS43 trackpad wired to six bare pads (no FPC, to keep it thin)
+- TPS43 trackpad wired to six bare pads (no FPC, to keep it thin). It sits on the case above the board, so it
+  may cover the nice!nano; its position is the one that brings the halves closest together (higher and it
+  meets the inner columns' top keycaps, lower and the thumb keycaps). It is drawn on F.Fab and User.Drawings
+  only, with no 3D model on the board
 - Optional LEDs: 12 SK6812MINI underglow + 42 SK6812MINI-E per key, on their own MOSFET-switched supply.
   A solder jumper picks the source: the nice!nano's 3.3 V VCC (up to its 1 A regulator), or an external
   supply up to 5 V on the LED IN pads for full brightness. Never the battery.
@@ -84,7 +87,7 @@ plated and non-plated separate). Settings:
 |---|---|
 | Layers | 2 |
 | Thickness | 1.6 mm |
-| Size | about 300 × 119 mm (read from the outline) |
+| Size | about 293 × 119 mm (read from the outline) |
 | Min. via / hole | 0.3 mm via drill, 0.5 mm mouse-bite holes |
 | Min. track / spacing | 0.2 mm / 0.2 mm (0.15 mm rule minimum) |
 | Surface finish | HASL (lead-free if you prefer) |
@@ -139,7 +142,8 @@ break lines differ by side, at their average), with rounded corners.
 | `tools/layout.py` | Key, trackpad and outline geometry → `mock/layout.json`, `mock/unicorne.svg` |
 | `tools/gen_schematic.py` | Generates the schematic sheets from `mock/layout.json` |
 | `tools/gen_pcb.py` | Builds both PCBs from the schematic netlist and `mock/layout.json` |
-| `tools/finish_route.py` | Routes a freshly generated board: fixed lanes, then KiCad's ratsnest with the maze router, GND pours and stitching |
+| `tools/finish_route.py` | Routes a freshly generated board: fixed lanes, then KiCad's ratsnest with the maze router, GND pours and stitching; up to 10 attempts, then GND repair and stub cleanup |
+| `tools/gnd_repair.py` | Finds GND copper the pours left cut off and joins it (a via, or rip-up and reroute of whatever boxes it in) |
 | `tools/lanes.py`, `tools/maze_route.py` | Fixed routing lanes for the key grid; the grid A* router |
 | `tools/route.py` | Freerouting driver (not used for the final boards) |
 | `tools/step_box.py`, `lib/3d/` | Placeholder STEP models and the socket / Choc switch models |
