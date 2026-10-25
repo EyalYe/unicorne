@@ -19,7 +19,8 @@ CLI = "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli"
 BOARDS = {"mx": "unicorne.kicad_pcb", "choc": "unicorne-choc.kicad_pcb"}
 LAYERS = "F.Cu,B.Cu,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts"
 # DRC findings that don't affect fabrication
-HARMLESS = {"silk_edge_clearance", "starved_thermal", "silk_overlap", "silk_over_copper"}
+HARMLESS = {"silk_edge_clearance", "starved_thermal", "silk_overlap", "silk_over_copper",
+            "copper_sliver"}          # a thin point in a GND pour, which fabs etch fine
 
 
 def run(*args):

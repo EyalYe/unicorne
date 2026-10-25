@@ -177,21 +177,26 @@ def build(tilt=TILT):
         for b in base[i + 1:]:
             assert not polys_intersect(cap_poly(a), cap_poly(b)), (a, b)
 
-    # Centre column: the nice!nano is on the bottom side with its USB on the
-    # top edge, which lines up with the top of the innermost key column. The
-    # trackpad is centred between that edge and the bottom of the board.
+    # Centre column: the nice!nano is on the top side with its USB on the top
+    # edge, which lines up with the top of the innermost key column. The
+    # trackpad sits on the case above the board, so it may cover the nano; it
+    # goes wherever its keycap keep-out lets the halves come closest (higher
+    # and it meets the inner column's top keys, lower and the thumb keys).
     placed = place(base, tilt, 0, False)
     inner_top = [k for k in placed if k["col"] == 5 and k["row"] == 0][0]
     nano_y = min(y for _, y in cell_poly(inner_top)) - EDGE
     bottom = max(y for k in placed for _, y in cell_poly(k)) + EDGE
-    pad_y = (nano_y + bottom) / 2 - PAD_H / 2
-    keepouts = [
-        (cap_poly, rect(-PAD_W / 2 - CAP_CLEAR, pad_y - CAP_CLEAR,
-                        PAD_W / 2 + CAP_CLEAR, pad_y + PAD_H + CAP_CLEAR)),
-        (cell_poly, rect(-NANO_W / 2 - NANO_CLEAR_SW, nano_y,
-                         NANO_W / 2 + NANO_CLEAR_SW, nano_y + NANO_H + NANO_CLEAR_SW)),
-    ]
-    dx = half_offset(base, tilt, keepouts)
+    nano_keepout = (cell_poly, rect(-NANO_W / 2 - NANO_CLEAR_SW, nano_y,
+                                    NANO_W / 2 + NANO_CLEAR_SW, nano_y + NANO_H + NANO_CLEAR_SW))
+
+    def pad_keepout(y):
+        return (cap_poly, rect(-PAD_W / 2 - CAP_CLEAR, y - CAP_CLEAR, PAD_W / 2 + CAP_CLEAR, y + PAD_H + CAP_CLEAR))
+
+    # closest halves; among equals, the highest trackpad
+    candidates = [nano_y + i * 0.5 for i in range(int((bottom - PAD_H - nano_y) / 0.5) + 1)]
+    dx, pad_y = max(((half_offset(base, tilt, [nano_keepout, pad_keepout(y)]), -y) for y in candidates))
+    pad_y = -pad_y
+    keepouts = [pad_keepout(pad_y), nano_keepout]
 
     left = place(base, tilt, dx, False)
     right = place(base, tilt, dx, True)
@@ -261,7 +266,7 @@ def build(tilt=TILT):
                    x=r3(k["x"]), y=r3(k["y"]), rot=r3(k["rot"]), w=k["w"])
               for k in keys],
         outline=[[r3(x), r3(y)] for x, y in outline],
-        nano=dict(x=0, y=r3(nano_y), w=NANO_W, h=NANO_H, side="bottom"),
+        nano=dict(x=0, y=r3(nano_y), w=NANO_W, h=NANO_H, side="top"),
         trackpad=dict(x=0, y=r3(pad_y), w=PAD_W, h=PAD_H),
         breaks=breaks,
         battery=[dict(b, x=r3(b["x"]), y=r3(b["y"])) for b in battery],

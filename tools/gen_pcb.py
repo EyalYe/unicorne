@@ -52,6 +52,7 @@ VARIANTS = {
 }
 LED_OFFSET = 4.75            # per-key LED, south of the switch centre (Corne v3)
 NO_BOM = {"J1", "J2", "J5", "J6", "JP1", "JP2", "JP3"}  # bare pads and the solder jumpers
+NO_MODEL = {"J3", "J4"}      # optional headers: shown as bare holes in 3D
 NANO_USB_EDGE = 17.78        # nice_nano footprint origin to its PCB edge at the USB end
 # The nice!nano's USB-C is mid-mount: its shell drops 0.7 mm below the nano's
 # underside, into this board, from past the edge to 11.6 mm from the nano's
@@ -140,6 +141,8 @@ def add_part(b, comp, pins, fpid=None):
     if comp["ref"] in NO_BOM:
         fp.SetAttributes(fp.GetAttributes() | pcbnew.FP_EXCLUDE_FROM_BOM)
         fp.Models().clear()                  # bare pads: nothing is fitted there
+    if comp["ref"] in NO_MODEL:
+        fp.Models().clear()
     b.board.Add(fp)
     for pad in fp.Pads():
         net = pins.get((comp["ref"], pad.GetNumber()))
@@ -548,9 +551,11 @@ def build(variant):
     part("R1", -18.0, ny + 26.0, 90)
     part("C1", -18.0, ny + 30.0)
     part("JP2", -22.0, ny + 22.0, 90)                  # LED source: VCC or J6
-    part("U2", -20.5, ny + 10.0)                       # LED data level shifter, clear of the Choc socket
-    part("C2", -21.5, ny + 5.5)
-    part("JP3", -22.0, ny + 14.5, 90)                  # U2 bypass
+    # the inner key column comes within ~6.5 mm of the headers from ny+8 to
+    # ny+17, so the level shifter group sits lower, where there is room
+    part("C2", -23.0, ny + 29.5)
+    part("U2", -23.0, ny + 33.0)                       # LED data level shifter
+    part("JP3", -23.0, ny + 37.0, 90)                  # U2 bypass
     tp_y = py + pad["h"] + 2.5
     part("J2", 0, tp_y, 270, bottom=False)             # trackpad wire pads, pin 1 (SDA) right
     # optical sensor pads just above the trackpad pads, inside the trackpad area
@@ -577,25 +582,17 @@ def build(variant):
     # JP2's reference to its outer side, off Q1's pads
     ref, c = fps["JP2"].Reference(), fps["JP2"].GetPosition()
     ref.SetPosition(pcbnew.VECTOR2I(2 * c.x - ref.GetPosition().x - mm(1.0), ref.GetPosition().y))
+    # C2's reference to the side away from U2
+    ref, c = fps["C2"].Reference(), fps["C2"].GetPosition()
+    ref.SetPosition(pcbnew.VECTOR2I(ref.GetPosition().x, 2 * c.y - ref.GetPosition().y))
     for ref in ("Q1", "Q2", "U2", "SW43"):             # no room for these reference labels
         fps[ref].Reference().SetVisible(False)
     # pin table under the trackpad, between the nice!nano and the sensor pad labels
     pin_table(b, ny + nano["h"] + 1.5, py + pad["h"] - 8.5)
 
-    # --- trackpad 3D model on a board-only footprint (the module is glued on)
-    tpfp = pcbnew.FOOTPRINT(b.board)
-    tpfp.SetReference("TP1")
-    tpfp.Reference().SetVisible(False)
-    tpfp.SetValue("TPS43")
-    tpfp.Value().SetVisible(False)
-    tpfp.SetAttributes(pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES | pcbnew.FP_BOARD_ONLY)
-    m = pcbnew.FP_3DMODEL()
-    m.m_Filename = "${KIPRJMOD}/lib/3d/trackpad_tps43_box.step"
-    tpfp.Add3DModel(m)
-    b.board.Add(tpfp)
-    tpfp.SetPosition(b.xy(0, py + pad["h"] / 2))
-
-    # --- outline (with the USB notch), trackpad, break lines
+    # --- outline (with the USB notch), trackpad, break lines. The trackpad sits on
+    # the case above the board, so it is only drawn (F.Fab and User.Drawings) to show
+    # where it goes; it has no 3D model here.
     outline = usb_notch(layout["outline"], ny + NANO_USB_EDGE)
     polygon(b, outline, pcbnew.Edge_Cuts)
     tw, th = TRACKPAD

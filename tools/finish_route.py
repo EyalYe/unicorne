@@ -12,8 +12,10 @@ Run with KiCad's bundled Python on a freshly generated board:
 4. GND is poured on both layers and the board is saved.
 """
 import json
+import random
 import math
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -24,6 +26,7 @@ import pcbnew
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lanes  # noqa: E402
+import gnd_repair  # noqa: E402
 import maze_route as M  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -254,7 +257,7 @@ def route(variant="mx", attempts=10):
     first, best = [], None
     for attempt in range(attempts):
         shutil.copy(placed, path)
-        failed = route_once(variant, path, first)
+        failed = route_once(variant, path, first, seed=attempt)
         signal = [f for f in failed if f[0] != "GND"]
         # GND failures are fine if the pours join them up; DRC after the pours says
         left = unconnected(path)
@@ -268,7 +271,24 @@ def route(variant="mx", attempts=10):
         first = list(dict.fromkeys(first + [f[0] for f in signal]))
     path.write_bytes(best[1])
     print(f"kept the best attempt: {best[0][0]} signal connections failed, {best[0][1]} unconnected")
+    if best[0][1]:
+        fix_gnd(path)
     print(f"removed {drop_stubs(path)} dangling track stubs")
+
+
+def fix_gnd(path):
+    """Join GND copper the pours left cut off: a via where the pocket overlaps the main
+    ground on the other layer, else rip up whatever boxes it in and route a link."""
+    board = pcbnew.LoadBoard(str(path))
+    added, stuck = gnd_repair.repair(board)
+    joined = 0
+    if stuck:
+        joined = join_cut_off(board)
+        more, stuck = gnd_repair.repair(board)
+        added += more
+    board.Save(str(path))
+    print(f"GND repair: {added} vias, {joined} links out of boxed-in pockets, {stuck} groups still cut off, "
+          f"{len(unconnected(path))} unconnected", flush=True)
 
 
 def drop_stubs(path):
@@ -290,47 +310,18 @@ def drop_stubs(path):
     return len(dead)
 
 
-def route_once(variant, path, first):
-    t0 = time.time()
-    board = pcbnew.LoadBoard(str(path))
-    print(f"laid {lanes.lay(board, variant)} lane tracks", flush=True)
-    for ref, d in move_holes(board):
-        print(f"  {ref} moved {d:.2f} mm off the lanes", flush=True)
-    board.Save(str(path))
-    pairs = unconnected(path)
-    print(f"{len(pairs)} connections left after the lanes", flush=True)
+def net_of(pair):
+    m = re.search(r"\[([^\]]+)\]", pair["items"][0]["description"])
+    return m.group(1) if m else None
 
-    board = pcbnew.LoadBoard(str(path))
-    outline = None
-    for d in board.GetDrawings():
-        if d.GetLayer() == pcbnew.Edge_Cuts and d.GetShape() == pcbnew.SHAPE_T_POLY:
-            pts = d.GetPolyShape().Outline(0)
-            outline = [(pcbnew.ToMM(pts.CPoint(i).x), pcbnew.ToMM(pts.CPoint(i).y))
-                       for i in range(pts.PointCount())]
-    grid = M.Grid(outline)
-    names = sorted({p.GetNetname() for fp in board.GetFootprints() for p in fp.Pads() if p.GetNetname()})
-    netcode = {n: i + 1 for i, n in enumerate(names)}
-    M.edge_mask(board, grid, outline)
-    M.stamp_pads(board, grid, netcode)
-    vias = M.Vias(grid)
-    stamp_copper(board, grid, netcode, vias)
 
-    def net_of(pair):
-        m = re.search(r"\[([^\]]+)\]", pair["items"][0]["description"])
-        return m.group(1) if m else None
+def length(pair):
+    a, b = pair["items"][0]["pos"], pair["items"][1]["pos"]
+    return math.hypot(a["x"] - b["x"], a["y"] - b["y"])
 
-    def length(pair):
-        a, b = pair["items"][0]["pos"], pair["items"][1]["pos"]
-        return math.hypot(a["x"] - b["x"], a["y"] - b["y"])
 
-    # into the nice!nano first while its pins have room, GND last (the pours help)
-    on_mcu = lambda p: any(" of U1" in i["description"] for i in p["items"])
-    # very short local hops first (they have one sensible path), then into the
-    # nice!nano while its pins have room, then the rest; GND last
-    tier = lambda p: (-1 if net_of(p) in first else 3 if net_of(p) == "GND"
-                      else 0 if length(p) < 8 else 1 if on_mcu(p) else 2)
-    supply = lambda p: net_of(p).split("/")[-1] in WIDTH
-    pairs.sort(key=lambda p: (tier(p), not supply(p), length(p)))
+def route_pairs(board, grid, netcode, vias, pairs, t0=None):
+    """Route DRC ratsnest pairs in order with the maze router; returns the failures."""
     failed = []
     for i, pair in enumerate(pairs):
         name = net_of(pair)
@@ -352,8 +343,145 @@ def route_once(variant, path, first):
             failed.append((name, a["description"][:40], b["description"][:40]))
             continue
         M.commit(board, grid, net, board.FindNet(name), p, width, vias)
-        if (i + 1) % 25 == 0:
+        if t0 is not None and (i + 1) % 25 == 0:
             print(f"  {i + 1}/{len(pairs)}, {len(failed)} failed, {time.time() - t0:.0f}s", flush=True)
+    return failed
+
+
+def grid_for(board):
+    """The routing grid for a board as it stands: outline, pads and existing copper."""
+    outline = None
+    for d in board.GetDrawings():
+        if d.GetLayer() == pcbnew.Edge_Cuts and d.GetShape() == pcbnew.SHAPE_T_POLY:
+            pts = d.GetPolyShape().Outline(0)
+            outline = [(pcbnew.ToMM(pts.CPoint(i).x), pcbnew.ToMM(pts.CPoint(i).y))
+                       for i in range(pts.PointCount())]
+    grid = M.Grid(outline)
+    names = sorted({p.GetNetname() for fp in board.GetFootprints() for p in fp.Pads() if p.GetNetname()})
+    netcode = {n: i + 1 for i, n in enumerate(names)}
+    M.edge_mask(board, grid, outline)
+    M.stamp_pads(board, grid, netcode)
+    vias = M.Vias(grid)
+    stamp_copper(board, grid, netcode, vias)
+    return outline, grid, netcode, vias
+
+
+def join_cut_off(board, tries=6):
+    """For GND groups the repair vias can't reach: drop the group's own vias and
+    tracks, then route its pads to the nearest main-ground via or through-hole pad.
+    Returns how many pads were joined."""
+    gs = gnd_repair.groups(board)
+    main_links = [n[1] for n in gs[0] if n[0] == "item" and
+                  (isinstance(n[1], pcbnew.PCB_VIA) or (isinstance(n[1], pcbnew.PAD) and n[1].HasHole()))]
+    lost = [g for g in gs[1:]]
+    pads = []
+    for g in lost:
+        for n in g:
+            if n[0] != "item":
+                continue
+            if isinstance(n[1], pcbnew.PAD):
+                pads.append(n[1])
+            else:
+                board.Remove(n[1])
+    if not pads:
+        return 0
+    pcbnew.ZONE_FILLER(board).Fill(board.Zones())
+    outline, grid, netcode, vias = grid_for(board)
+    net = netcode["GND"]
+
+    def end(item):
+        pos = item.GetPosition()
+        kind = "Via" if isinstance(item, pcbnew.PCB_VIA) else ("PTH pad" if item.HasHole() else
+                                                             "Pad " + ("on F.Cu" if item.IsOnLayer(pcbnew.F_Cu) else "on B.Cu"))
+        return {"description": f"{kind} [GND]", "pos": {"x": pcbnew.ToMM(pos.x), "y": pcbnew.ToMM(pos.y)}}
+
+    def path_out(pad):
+        src = end(pad)
+        for target in sorted(main_links, key=lambda t: (t.GetPosition() - pad.GetPosition()).EuclideanNorm())[:tries]:
+            dst = end(target)
+            for fat in (True, False):
+                p = M.astar(grid, net, end_cells(board, grid, net, "GND", src),
+                            set(end_cells(board, grid, net, "GND", dst)), fat,
+                            grid.cell(dst["pos"]["x"], dst["pos"]["y"]), vias)
+                if p is not None:
+                    return p
+        return None
+
+    joined, ripped = 0, set()
+    for pad in pads:
+        p = path_out(pad)
+        if p is None:
+            # boxed in: find the one neighbouring net whose copper, if lifted, opens a
+            # way out; rip it up, join the pad, and route that net again afterwards
+            cx, cy = grid.cell(*(pcbnew.ToMM(v) for v in (pad.GetPosition().x, pad.GetPosition().y)))
+            near = {}
+            for L in (0, 1):
+                for dy in range(-40, 41):
+                    for dx in range(-40, 41):
+                        o = grid.own[L][(cy + dy) * grid.nx + cx + dx]
+                        if o not in (0, net, M.BLOCK):
+                            near[o] = near.get(o, 0) + 1
+            names = {v: k for k, v in netcode.items()}
+            for o in sorted(near, key=near.get):
+                saved = [(L, i) for L in (0, 1) for i, v in enumerate(grid.own[L]) if v == o]
+                for L, i in saved:
+                    grid.own[L][i] = 0
+                p = path_out(pad)
+                for L, i in saved:
+                    grid.own[L][i] = o
+                if p is not None:
+                    victim = names[o]
+                    for t in [t for t in board.GetTracks() if t.GetNetname() == victim]:
+                        board.Remove(t)
+                    ripped.add(victim)
+                    outline, grid, netcode, vias = grid_for(board)
+                    p = path_out(pad)
+                    break
+        if p is not None:
+            M.commit(board, grid, net, board.FindNet("GND"), p, WIDTH.get("GND", M.SIGNAL_W), vias)
+            joined += 1
+    if ripped:
+        # route the ripped-up nets again, GND joins already in place
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp) / "rip.kicad_pcb"
+            board.Save(str(tmp_path))
+            for ext in (".kicad_pro", ".kicad_dru"):
+                src_file = ROOT / ("unicorne" + ext)
+                if src_file.exists():
+                    shutil.copy(src_file, tmp_path.with_suffix(ext))
+            pairs = [q for q in unconnected(tmp_path) if net_of(q) in ripped]
+        outline, grid, netcode, vias = grid_for(board)
+        failed = route_pairs(board, grid, netcode, vias, sorted(pairs, key=length))
+        print(f"  ripped up {sorted(ripped)} to free cut-off GND, rerouted with {len(failed)} failures", flush=True)
+    pcbnew.ZONE_FILLER(board).Fill(board.Zones())
+    return joined
+
+
+def route_once(variant, path, first, seed=0):
+    t0 = time.time()
+    board = pcbnew.LoadBoard(str(path))
+    print(f"laid {lanes.lay(board, variant)} lane tracks", flush=True)
+    for ref, d in move_holes(board):
+        print(f"  {ref} moved {d:.2f} mm off the lanes", flush=True)
+    board.Save(str(path))
+    pairs = unconnected(path)
+    print(f"{len(pairs)} connections left after the lanes", flush=True)
+
+    board = pcbnew.LoadBoard(str(path))
+    outline, grid, netcode, vias = grid_for(board)
+
+    # into the nice!nano first while its pins have room, GND last (the pours help)
+    on_mcu = lambda p: any(" of U1" in i["description"] for i in p["items"])
+    # very short local hops first (they have one sensible path), then into the
+    # nice!nano while its pins have room, then the rest; GND last
+    tier = lambda p: (-1 if net_of(p) in first else 3 if net_of(p) == "GND"
+                      else 0 if length(p) < 8 else 1 if on_mcu(p) else 2)
+    supply = lambda p: net_of(p).split("/")[-1] in WIDTH
+    # Once the signals all route, every attempt would repeat the same order (and the
+    # same split GND pour): from the second attempt on, jitter the order within a tier
+    jitter = random.Random(seed)
+    pairs.sort(key=lambda p: (tier(p), not supply(p), length(p) * (1 + (0.5 * jitter.random() if seed else 0))))
+    failed = route_pairs(board, grid, netcode, vias, pairs, t0)
     M.pour_gnd(board, outline)
     print(f"added {stitch(board)} GND stitching vias", flush=True)
     board.Save(str(path))
