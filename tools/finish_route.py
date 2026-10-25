@@ -271,9 +271,90 @@ def route(variant="mx", attempts=10):
         first = list(dict.fromkeys(first + [f[0] for f in signal]))
     path.write_bytes(best[1])
     print(f"kept the best attempt: {best[0][0]} signal connections failed, {best[0][1]} unconnected")
+    if best[0][0]:
+        print(f"rescued {rescue(path)} of {best[0][0]} unrouted signal connections", flush=True)
     if best[0][1]:
         fix_gnd(path)
     print(f"removed {drop_stubs(path)} dangling track stubs")
+
+
+def strip_net(path, name):
+    """Delete a net's tracks and vias from a board file (text edit)."""
+    text = Path(path).read_text()
+    tag = f'(net "{name}")'
+    text = re.sub(r"\t\((?:segment|via|arc)\n.*?\n\t\)\n",
+                  lambda m: "" if tag in m.group() else m.group(), text, flags=re.S)
+    Path(path).write_text(text)
+
+
+def rescue(path, candidates=10):
+    """Route signal connections every attempt left unrouted: if no path exists, lift one
+    neighbouring net whose copper is in the way, route the connection, then route the
+    lifted net again; keep the result only if that leaves nothing new unrouted."""
+    fixed = 0
+    for pair in [q for q in unconnected(path) if net_of(q) not in (None, "GND")]:
+        name = net_of(pair)
+        board = pcbnew.LoadBoard(str(path))
+        outline, grid, netcode, vias = grid_for(board)
+        if not route_pairs(board, grid, netcode, vias, [pair]):
+            board.Save(str(path))
+            fixed += 1
+            continue
+        a, b = pair["items"]
+        xs, ys = (a["pos"]["x"], b["pos"]["x"]), (a["pos"]["y"], b["pos"]["y"])
+        c0, r0 = grid.cell(min(xs) - 5, min(ys) - 5)
+        c1, r1 = grid.cell(max(xs) + 5, max(ys) + 5)
+        count = {}
+        for L in (0, 1):
+            for r in range(max(r0, 0), min(r1, grid.ny - 1) + 1):
+                for c in range(max(c0, 0), min(c1, grid.nx - 1) + 1):
+                    o = grid.own[L][r * grid.nx + c]
+                    if o not in (0, M.BLOCK, netcode[name], netcode.get("GND")):
+                        count[o] = count.get(o, 0) + 1
+        names = {v: k for k, v in netcode.items()}
+        net = netcode[name]
+        before = len(unconnected(path))
+        for o in sorted(count, key=count.get)[:candidates]:
+            victim = names[o]
+            board = pcbnew.LoadBoard(str(path))
+            outline, grid, netcode, vias = grid_for(board)
+            saved = [(L, i) for L in (0, 1) for i, v in enumerate(grid.own[L]) if v == o]
+            for L, i in saved:
+                grid.own[L][i] = 0
+            src = end_cells(board, grid, net, name, a)
+            dst = set(end_cells(board, grid, net, name, b))
+            if M.astar(grid, net, src, dst, False, grid.cell(b["pos"]["x"], b["pos"]["y"]), vias) is None:
+                continue
+            with tempfile.TemporaryDirectory() as tmp:
+                trial = Path(tmp) / "rescue.kicad_pcb"
+                for ext in (".kicad_pro", ".kicad_dru"):
+                    if (ROOT / ("unicorne" + ext)).exists():
+                        shutil.copy(ROOT / ("unicorne" + ext), trial.with_suffix(ext))
+                shutil.copy(path, trial)
+                strip_net(trial, victim)       # in the file: removing via the bindings breaks them
+                board = pcbnew.LoadBoard(str(trial))
+                outline, grid, netcode, vias = grid_for(board)
+                if route_pairs(board, grid, netcode, vias, [pair]):
+                    continue
+                pcbnew.ZONE_FILLER(board).Fill(board.Zones())
+                board.Save(str(trial))
+                lifted = [q for q in unconnected(trial) if net_of(q) == victim]
+                board = pcbnew.LoadBoard(str(trial))
+                outline, grid, netcode, vias = grid_for(board)
+                failed = route_pairs(board, grid, netcode, vias, sorted(lifted, key=length))
+                if failed:
+                    continue
+                pcbnew.ZONE_FILLER(board).Fill(board.Zones())
+                board.Save(str(trial))
+                if len(unconnected(trial)) >= before:
+                    continue
+                shutil.copy(trial, path)
+            print(f"  rescued {name} by lifting and rerouting {victim}", flush=True)
+            fixed += 1
+            break
+        else:
+            print(f"  could not rescue {name}", flush=True)
+    return fixed
 
 
 def fix_gnd(path):

@@ -43,8 +43,8 @@ Everything is hand-soldered. Quantities are for one board; the 36-key build need
 | J5 | — | Sensor pads | through-hole, 2.54 mm | Wires to a PAW3395 / PMW3360 board (sensor build) |
 | J3 | 1 | 1×6 pin header, 2.54 mm | through-hole | Optional: expansion (3V3, GND, UART, I2C) |
 | J4 | 1 | 1×4 pin header, 2.54 mm | through-hole | Optional: GPIO (P0.24, P1.00, P0.11) |
-| R3, R4 | 2 | 4.7 kΩ resistor | 0805 hand-solder | Trackpad build only (I2C pull-ups); leave off with a sensor |
-| R5 | 1 | 10 kΩ resistor | 0805 hand-solder | Trackpad / sensor reset pull-up |
+| R3, R4 | 2 | 4.7 kΩ resistor | 0603 hand-solder | Trackpad build only (I2C pull-ups); leave off with a sensor |
+| R5 | 1 | 10 kΩ resistor | 0603 hand-solder | Trackpad / sensor reset pull-up |
 
 ### Optional LEDs
 
@@ -58,10 +58,10 @@ Leave all of these off for a board without lighting.
 | J6 | — | LED IN pads (V+, GND) | through-hole, 2.54 mm | External LED supply up to 5 V, e.g. a USB-C breakout; only with JP2 on EXT |
 | Q1 | 1 | AO3401A P-MOSFET | SOT-23 | Switches the LED supply |
 | Q2 | 1 | 2N7002 N-MOSFET | SOT-23 | Driven by P1.00 |
-| R1, R2 | 2 | 100 kΩ resistor | 0805 hand-solder | Keep the LEDs off during boot |
-| C1 | 1 | 10 µF capacitor | 0805 hand-solder | LED supply |
+| R1, R2 | 2 | 100 kΩ resistor | 0603 hand-solder | Keep the LEDs off during boot |
+| C1 | 1 | 10 µF capacitor | 0603 hand-solder | LED supply |
 | U2 | 1 | SN74LV1T125 buffer | SOT-23-5 hand-solder | LED data level shifter, needed only with JP2 on EXT; must be the LV1T (not 74LVC1G125) so 3.3 V data works at 5 V |
-| C2 | 1 | 100 nF capacitor | 0805 hand-solder | U2 decoupling; leave off with U2 |
+| C2 | 1 | 100 nF capacitor | 0603 hand-solder | U2 decoupling; leave off with U2 |
 | JP3 | — | Solder jumper | — | U2 bypass: bridge it with JP2 on VCC and U2 left off |
 | JP1 | — | Solder jumper | — | Bridge it to send LED data from P0.06 (through U2) |
 
