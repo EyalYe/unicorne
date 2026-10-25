@@ -21,7 +21,10 @@ BOARDS = {"mx": "unicorne.kicad_pcb", "choc": "unicorne-choc.kicad_pcb"}
 GROUP = "waves"
 PITCH = 1.6                  # line spacing
 WIDTH = 0.2                  # JLCPCB's minimum silk line is 0.15
-MARGIN = 0.4                 # clear of courtyards, pads, text and cut edges
+MARGIN = 0.6                 # clear of courtyards, pads, text and cut edges
+CLOSE = 1.6                  # gaps narrower than twice this between parts are filled
+MIN_RUN = 3.0                # drop pieces of line shorter than this
+ROUND = pcbnew.CORNER_STRATEGY_ROUND_ALL_CORNERS
 STEP = 0.4                   # sampling along each wave
 SIDES = ((pcbnew.F_SilkS, pcbnew.F_CrtYd, pcbnew.F_Cu), (pcbnew.B_SilkS, pcbnew.B_CrtYd, pcbnew.B_Cu))
 
@@ -87,29 +90,34 @@ def strip_old(path):
 
 
 def free_area(board, silk, crtyd, cu):
-    """The bare board on one side, as a polygon set."""
+    """The bare board on one side, as a polygon set. Every part, pad and label gets a
+    rounded halo, and halos closer than 2 * CLOSE merge, so the lines end in smooth
+    curves around parts instead of steps and short dashes between them."""
     area = pcbnew.SHAPE_POLY_SET()
     board.GetBoardPolygonOutlines(area, False)
-    area.Deflate(mm(MARGIN), pcbnew.CORNER_STRATEGY_ROUND_ALL_CORNERS, mm(0.05))
-    grow = mm(MARGIN)
+    area.Deflate(mm(MARGIN), ROUND, mm(0.05))
     block = pcbnew.SHAPE_POLY_SET()
     for fp in board.GetFootprints():
         cy = fp.GetCourtyard(crtyd)
         if cy.OutlineCount():
-            c = pcbnew.SHAPE_POLY_SET(cy)
-            c.Inflate(grow, pcbnew.CORNER_STRATEGY_CHAMFER_ALL_CORNERS, mm(0.05))
-            block.BooleanAdd(c)
-        elif fp.GetSide() == (pcbnew.F_Cu if cu == pcbnew.F_Cu else pcbnew.B_Cu) and not fp.GetReference().startswith("MB"):
-            block.BooleanAdd(box_poly(fp.GetBoundingBox(False), grow))
+            block.BooleanAdd(pcbnew.SHAPE_POLY_SET(cy))
+        silk_items = [i for i in list(fp.GraphicalItems()) + [fp.Reference(), fp.Value()]
+                      if i.GetLayer() == silk and (not hasattr(i, "IsVisible") or i.IsVisible())]
+        if silk_items:                    # the whole outline the silkscreen draws, filled
+            box = silk_items[0].GetBoundingBox()
+            for i in silk_items[1:]:
+                box.Merge(i.GetBoundingBox())
+            block.BooleanAdd(box_poly(box, 0))
         for pad in fp.Pads():
             if pad.GetDrillSize().x or pad.IsOnLayer(cu):
-                block.BooleanAdd(box_poly(pad.GetBoundingBox(), grow))
-        for item in list(fp.GraphicalItems()) + [fp.Reference(), fp.Value()]:
-            if item.GetLayer() == silk and (not hasattr(item, "IsVisible") or item.IsVisible()):
-                block.BooleanAdd(box_poly(item.GetBoundingBox(), grow))
+                shape = pcbnew.SHAPE_POLY_SET()
+                pad.TransformShapeToPolygon(shape, cu, 0, mm(0.02), pcbnew.ERROR_INSIDE)
+                block.BooleanAdd(shape)
     for d in board.GetDrawings():
         if d.GetLayer() == silk:
-            block.BooleanAdd(box_poly(d.GetBoundingBox(), grow))
+            block.BooleanAdd(box_poly(d.GetBoundingBox(), 0))
+    block.Inflate(mm(MARGIN + CLOSE), ROUND, mm(0.05))      # halo, then close the gaps
+    block.Deflate(mm(CLOSE), ROUND, mm(0.05))
     area.BooleanSubtract(block)
     return area
 
@@ -120,6 +128,8 @@ def draw(board, group, layer, area):
     y0, y1 = pcbnew.ToMM(box.GetTop()), pcbnew.ToMM(box.GetBottom())
 
     def flush(run):
+        if sum(math.hypot(bx - ax, by - ay) for (ax, ay), (bx, by) in zip(run, run[1:])) < MIN_RUN:
+            return
         for (ax, ay), (bx, by) in zip(run, run[1:]):
             seg = pcbnew.PCB_SHAPE(board, pcbnew.SHAPE_T_SEGMENT)
             seg.SetLayer(layer)
