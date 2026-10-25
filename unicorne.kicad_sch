@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "2a0756de-0542-4e93-b637-a73b25f46807")
+	(uuid "cd13e209-e104-44f6-885c-e8b9e87a2e0f")
 	(paper "A3")
 	(title_block
 		(title "unicorne")
@@ -3715,7 +3715,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "9a9a65a0-0a62-47be-babd-b86759144ef0")
+		(uuid "b4524deb-9d5e-40a7-97d4-11e5ee8adbe7")
 		(property "Reference" "U1"
 			(at 203.2 96.52 0)
 			(effects
@@ -3760,89 +3760,89 @@
 			)
 		)
 		(pin "1"
-			(uuid "25cfc362-b385-49df-ad8c-7098b5bdacca")
+			(uuid "dd3c1f61-348f-473e-8279-29e860da8a20")
 		)
 		(pin "2"
-			(uuid "9cfd7a6a-bcd5-4244-a76a-94fe9cdcfc8f")
+			(uuid "6c13751b-93ea-4b8a-a09c-ded92fac4810")
 		)
 		(pin "3"
-			(uuid "3fe23244-1398-46aa-a5dc-4a900eb4883a")
+			(uuid "a13b5e2c-66d1-455c-af01-4a4e6558cce3")
 		)
 		(pin "4"
-			(uuid "edb0798c-51b3-4530-809b-d9192cb780ed")
+			(uuid "1edc33c4-ee91-4682-af25-95fe5ea30143")
 		)
 		(pin "5"
-			(uuid "59a1f1da-2ab6-4fe7-a056-6b628ec8822f")
+			(uuid "c4737368-624f-4dc4-afb8-2253e8c627bf")
 		)
 		(pin "6"
-			(uuid "0a287f1d-8790-49a4-89d4-e2b99aa1474e")
+			(uuid "78ce7b00-4326-4cf4-9243-a9a653c183e0")
 		)
 		(pin "7"
-			(uuid "574e3585-e79d-4851-a127-b43cabe437ee")
+			(uuid "96f85ef7-ca95-4ba8-9a81-362d987a432c")
 		)
 		(pin "8"
-			(uuid "d0605008-316e-47a8-8404-61c867ace7d8")
+			(uuid "a7103aa7-4339-4124-928e-7ad3ea1b07ea")
 		)
 		(pin "9"
-			(uuid "9a47a034-ffe7-4cb7-a78b-641814579dc5")
+			(uuid "aa607411-7fb7-4996-8a72-365e927b9ea6")
 		)
 		(pin "10"
-			(uuid "06955e0c-3168-4b36-831e-93a9c4b20bf6")
+			(uuid "5937495f-2a3e-4ca2-9fc0-01fa20a55171")
 		)
 		(pin "11"
-			(uuid "2cb374c9-0be4-4d00-9484-10c77ac1f5ac")
+			(uuid "70418666-f4ef-46ab-9c62-acc7f5517e8b")
 		)
 		(pin "12"
-			(uuid "776f4d15-21a7-417f-a52b-76acef1fd621")
+			(uuid "d91cf22f-6836-4c2f-b224-c51e1e5bf3af")
 		)
 		(pin "13"
-			(uuid "20ed7ea6-8fb3-4646-b365-43d8d703d545")
+			(uuid "f5352a55-5c64-42b7-ac57-82e15595b44f")
 		)
 		(pin "14"
-			(uuid "7da0f7bb-acd6-43cb-af9f-4c2b8557eb0e")
+			(uuid "a8647ca5-3b34-474d-ace3-9f54d93bf402")
 		)
 		(pin "15"
-			(uuid "01e04805-9c06-4315-8120-5ef532942bf7")
+			(uuid "1d574d15-4599-4c66-ab08-c21bf9411d17")
 		)
 		(pin "16"
-			(uuid "81bc2b06-2fde-4cca-8b3d-fe85ee481067")
+			(uuid "30f0a6f5-d609-4c45-95f5-ff81888e36d7")
 		)
 		(pin "17"
-			(uuid "8b506489-8585-4615-86b5-50185c125f4c")
+			(uuid "f61a74c7-057e-401c-a78a-63d3e385d2b2")
 		)
 		(pin "18"
-			(uuid "bdd309c6-aa75-405b-bc27-1cc93d7d2ce0")
+			(uuid "015da301-6f5d-4aba-b633-92d457a072ce")
 		)
 		(pin "19"
-			(uuid "5fed90b1-e86a-4d25-9c74-a7d0edb73239")
+			(uuid "eaa8296a-f10f-459d-83b2-81a938132e8c")
 		)
 		(pin "20"
-			(uuid "f5cbcf1f-1e81-4576-ad38-23de35d0ab95")
+			(uuid "bc4133c5-8101-4774-90b3-00d445e8ebff")
 		)
 		(pin "21"
-			(uuid "f5e104ab-5ade-4ed4-8c0d-1ba0fbc0ebcd")
+			(uuid "87eee35b-82ed-4662-83fc-1b0d1978f2f3")
 		)
 		(pin "22"
-			(uuid "53336cd8-7178-4446-9e5b-ca5b3beb623a")
+			(uuid "f884ae8c-fbde-4bc9-b382-c79bc11348ee")
 		)
 		(pin "23"
-			(uuid "afa39f69-443f-420e-87d3-1cf5a8f80613")
+			(uuid "125d4c51-1f3f-44af-a807-0e69df18d522")
 		)
 		(pin "24"
-			(uuid "acf79eb3-9d51-4840-a8ed-214b768de53f")
+			(uuid "d40a0660-2033-4fd1-a037-def8e643e75c")
 		)
 		(pin "31"
-			(uuid "bcfc0979-59d1-4bbe-9397-a9fd503e60f7")
+			(uuid "6794c51e-f347-4e44-8daa-61b942a0a997")
 		)
 		(pin "32"
-			(uuid "bdcbe5b4-4289-4588-8b30-276c047eec0c")
+			(uuid "df0a832c-df5e-4353-aa14-40621c6d9ce9")
 		)
 		(pin "33"
-			(uuid "45e2143c-e7d6-43bc-a55d-62853d7b1d2f")
+			(uuid "748225bf-1f6f-41bb-b5bf-e9262ece2b3e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "U1")
 					(unit 1)
 				)
@@ -3858,7 +3858,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cf1f6d3c-fc88-4ee5-b58c-68f845b004b4")
+		(uuid "f3782443-09e4-43f9-9ade-a319ef51421a")
 	)
 	(label "P0.06"
 		(at 185.42 87.63 180)
@@ -3868,7 +3868,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d28489af-3f47-49f3-89d3-14da0bac627a")
+		(uuid "a1f31163-dcea-44da-a234-8ec3bb51a79f")
 	)
 	(wire
 		(pts
@@ -3879,7 +3879,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "125af446-1825-4e41-aba5-a7bc3239f347")
+		(uuid "837ddbe3-b022-4461-8f25-31a52cdaa2ad")
 	)
 	(label "P0.08"
 		(at 185.42 90.17 180)
@@ -3889,7 +3889,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "cf65d1c3-2754-42d7-8357-4a55a4500974")
+		(uuid "c54bb04d-1bbe-4575-9184-c42a18c86151")
 	)
 	(wire
 		(pts
@@ -3900,7 +3900,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c8b96d45-3256-48ea-9e2c-32d2c1723b69")
+		(uuid "04d6b1b6-8224-4a5e-8683-e6de072e4df9")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3910,7 +3910,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "535a7970-37e5-48ce-8704-7f905c6cb413")
+		(uuid "fa446048-f8ba-42ff-962d-4d0429904d1c")
 		(property "Reference" "#PWRU01"
 			(at 185.42 87.63 0)
 			(effects
@@ -3947,11 +3947,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "46e4cb1b-c380-4a1f-be73-f2176851ae15")
+			(uuid "29ee95d3-667d-4036-9730-f63fc37a7862")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU01")
 					(unit 1)
 				)
@@ -3967,7 +3967,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b8304c67-403d-4bb8-a196-a75dae08d85c")
+		(uuid "030426b8-0bfc-4166-923e-fe2fa551b8bb")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3977,7 +3977,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "bd5c24e2-2272-4c85-8b1c-ca211a88eb75")
+		(uuid "f73629eb-51ec-4f1d-ac5e-c155f81489f2")
 		(property "Reference" "#PWRU02"
 			(at 185.42 90.17 0)
 			(effects
@@ -4014,11 +4014,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "5e9ddaf8-6128-45fc-843d-73eb445bfb54")
+			(uuid "cda39c47-4307-498a-864d-90bb00da83ed")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU02")
 					(unit 1)
 				)
@@ -4034,7 +4034,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e4e397bb-dd0d-4590-915f-b2bc06e823f0")
+		(uuid "4617aaeb-02d9-4be2-b72d-37e33bc97282")
 	)
 	(label "SDA_MOSI"
 		(at 185.42 97.79 180)
@@ -4044,7 +4044,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d42dd3d2-bd68-4fa4-84ea-5313d36877fe")
+		(uuid "3796d0bc-d371-44bd-a7c2-7a18b8a7147d")
 	)
 	(wire
 		(pts
@@ -4055,7 +4055,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c551dfbc-2e6c-47bb-8aeb-6c2a64bd24e5")
+		(uuid "d9c038be-1c65-4694-a909-7cf85dfbb5f3")
 	)
 	(label "SCL_SCK"
 		(at 185.42 100.33 180)
@@ -4065,7 +4065,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3177a8f0-0b18-471a-a71f-3c80ab14b725")
+		(uuid "b44a6974-c72b-4e0e-94e3-308c5a291e2a")
 	)
 	(wire
 		(pts
@@ -4076,7 +4076,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0a5adf90-04d3-47cf-b436-13522aefd56b")
+		(uuid "81ab7a36-af0d-4112-8371-d5fb60395b63")
 	)
 	(label "RDY_MOTION"
 		(at 185.42 102.87 180)
@@ -4086,7 +4086,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "83c0561d-aee2-4d49-b13b-4df635c1ebfb")
+		(uuid "abf8709e-13c1-4bbf-a600-a2bf819ed8ff")
 	)
 	(wire
 		(pts
@@ -4097,7 +4097,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c18682ea-b63b-40ca-9474-6a3f0ee79114")
+		(uuid "3d7053cc-3034-4578-b43d-5e53a6f415be")
 	)
 	(label "P0.24_MISO"
 		(at 185.42 105.41 180)
@@ -4107,7 +4107,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "33d2cbb3-c015-4f44-9cd1-f268a7ca5b93")
+		(uuid "768385a7-af9d-40f8-8926-31f7d5690797")
 	)
 	(wire
 		(pts
@@ -4118,7 +4118,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1e778164-924b-40ae-8fc9-ff4b814afd4f")
+		(uuid "3d6d9122-2876-42fe-b0f0-5daa6bc8ed2a")
 	)
 	(label "LED_EN"
 		(at 185.42 107.95 180)
@@ -4128,7 +4128,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f64c2f18-5c60-4e6b-b0ea-72374739e26d")
+		(uuid "ad562601-40a8-464f-aba7-4755da53acf2")
 	)
 	(wire
 		(pts
@@ -4139,7 +4139,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "66b5d6d1-ed7b-4c0b-8657-4fc4090bb6f1")
+		(uuid "30981d2a-31c2-46ce-a931-a2837284de6f")
 	)
 	(label "P0.11_CS"
 		(at 185.42 110.49 180)
@@ -4149,7 +4149,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "1e386957-1dcb-4f6d-875c-2c79bbdbb2ad")
+		(uuid "7eed3eee-e7ed-462b-aadb-89ba9aa09949")
 	)
 	(wire
 		(pts
@@ -4160,7 +4160,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "40e1cba2-005b-4f69-82db-0220f64e2846")
+		(uuid "95f7ea4c-ac8d-4ca1-b5e1-08d0c4a7fc88")
 	)
 	(global_label "ROW3"
 		(shape passive)
@@ -4172,7 +4172,7 @@
 			)
 			(justify right)
 		)
-		(uuid "79fe3482-8f2e-4021-ad9b-58fe489c2797")
+		(uuid "55323527-7cdc-4bec-bd7a-f306cd4629ac")
 	)
 	(wire
 		(pts
@@ -4183,7 +4183,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6ab602c5-d5a4-4f5c-8f2b-4c6e9ce3b8f2")
+		(uuid "1ff8d108-f686-4634-8318-99bcd6ce8901")
 	)
 	(global_label "ROW4"
 		(shape passive)
@@ -4195,7 +4195,7 @@
 			)
 			(justify right)
 		)
-		(uuid "4a78f875-a4a0-4f7f-a710-c4a0fe833f9b")
+		(uuid "3fa33a67-4660-427b-8ba2-25cb2e1d31c2")
 	)
 	(wire
 		(pts
@@ -4206,7 +4206,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "30a5dab5-f45f-40de-b9fc-7cdb4fc9ef2d")
+		(uuid "e042a9a7-c33a-49d3-a429-cb184f9ad68f")
 	)
 	(global_label "COL4"
 		(shape passive)
@@ -4218,7 +4218,7 @@
 			)
 			(justify left)
 		)
-		(uuid "b421c6fb-5c51-4b8b-835c-3973a5913000")
+		(uuid "05f9e6cb-a62e-4155-a947-50620a6e8e99")
 	)
 	(wire
 		(pts
@@ -4229,7 +4229,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7a884483-c2fd-422c-8e92-42dd227a931b")
+		(uuid "0e7b5857-f478-4fd7-a6b9-01aae5481133")
 	)
 	(global_label "COL3"
 		(shape passive)
@@ -4241,7 +4241,7 @@
 			)
 			(justify left)
 		)
-		(uuid "c87666df-7c8d-4ffd-bcd8-08cb8cf2028c")
+		(uuid "9a7f4d3f-4c05-4ec6-b3d5-6bb44ce77008")
 	)
 	(wire
 		(pts
@@ -4252,7 +4252,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e85ce223-f5e7-41f0-9cf5-d117a3121020")
+		(uuid "b0599cf0-ba67-467f-aaef-54df91f5be8b")
 	)
 	(global_label "COL2"
 		(shape passive)
@@ -4264,7 +4264,7 @@
 			)
 			(justify left)
 		)
-		(uuid "36a07c8d-4b1e-484a-96c5-442847be86f5")
+		(uuid "542f2140-2ad5-4156-b2cf-8f98ba91f6e4")
 	)
 	(wire
 		(pts
@@ -4275,7 +4275,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2bbfc060-a34d-4984-a61f-8759e0bae6e4")
+		(uuid "49c18dfb-716c-448b-9112-921288c972ce")
 	)
 	(global_label "COL1"
 		(shape passive)
@@ -4287,7 +4287,7 @@
 			)
 			(justify left)
 		)
-		(uuid "321cf61b-ba68-4ed3-9251-2e8227c4cfe3")
+		(uuid "546a71b7-85e0-486b-b6fe-85a5a76dd1e6")
 	)
 	(wire
 		(pts
@@ -4298,7 +4298,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bcfdd4fc-9b35-4cd8-a6ee-eab9d6e68d0b")
+		(uuid "e784c68e-42d9-4eb9-aacf-f0f47f3fe3ef")
 	)
 	(global_label "COL0"
 		(shape passive)
@@ -4310,7 +4310,7 @@
 			)
 			(justify left)
 		)
-		(uuid "38b147da-959c-4720-beec-32a62f42d740")
+		(uuid "8548e736-de4e-482b-af5a-7e1c7c26853d")
 	)
 	(wire
 		(pts
@@ -4321,7 +4321,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "28fd56c6-25d2-4182-ac3c-9ca1d139bcfa")
+		(uuid "c2e46b62-8878-49a1-a25c-d9738a1aa5a6")
 	)
 	(global_label "ROW2"
 		(shape passive)
@@ -4333,7 +4333,7 @@
 			)
 			(justify left)
 		)
-		(uuid "d3b99840-46a2-478c-a177-b3298c5e5365")
+		(uuid "01cd3583-2458-45d2-b42b-9821180ed7eb")
 	)
 	(wire
 		(pts
@@ -4344,7 +4344,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d7749de3-8914-431b-996e-50c7191c1e1b")
+		(uuid "1bf3960c-a900-4ab2-bf97-5418d4e8c579")
 	)
 	(global_label "ROW1"
 		(shape passive)
@@ -4356,7 +4356,7 @@
 			)
 			(justify left)
 		)
-		(uuid "1ee6fe8a-0d80-42ed-bbcb-155cb9df6800")
+		(uuid "6bca3dae-0ab3-461b-8daa-5605bcdc6747")
 	)
 	(wire
 		(pts
@@ -4367,7 +4367,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "11737fbc-9005-4b71-bec3-ec00fe7a3b7f")
+		(uuid "33dde9c4-6aee-4196-90e2-8b1af49ec5f5")
 	)
 	(global_label "ROW0"
 		(shape passive)
@@ -4379,7 +4379,7 @@
 			)
 			(justify left)
 		)
-		(uuid "3704e181-0890-4c5a-9a62-1a6ea02abf69")
+		(uuid "05c9a690-66c5-4c89-b008-81d852bb2ae4")
 	)
 	(wire
 		(pts
@@ -4390,7 +4390,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b6af3af9-5dd7-4dcc-829b-12c274932420")
+		(uuid "eea6b99b-7e03-48b4-bd24-0d48870ae7dd")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -4400,7 +4400,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "bc77831c-cf2e-4628-9ccd-93c5b20980a4")
+		(uuid "0198fe36-fafa-4ee5-a7dc-5b6493e74639")
 		(property "Reference" "#PWRU03"
 			(at 220.98 90.17 0)
 			(effects
@@ -4437,11 +4437,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "999abd74-9e16-4bdf-b248-ec2e7ae6ce6a")
+			(uuid "2defbdf2-c673-42fd-a1f0-ec46e6660042")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU03")
 					(unit 1)
 				)
@@ -4457,7 +4457,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "86a1fca1-bc87-4462-bc76-7a764e1f481c")
+		(uuid "7b4c824a-8cc5-44d3-9f44-94b3c196553c")
 	)
 	(label "RST"
 		(at 220.98 92.71 0)
@@ -4467,7 +4467,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "739dbb96-f545-4c4b-ba99-2654c283077a")
+		(uuid "a3ada5f8-85d6-4481-80d2-2f1873fe3db4")
 	)
 	(wire
 		(pts
@@ -4478,7 +4478,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b3247f40-4923-4723-a21c-b2e813607a9a")
+		(uuid "2d8e8ed1-b0ea-45e7-930b-097b9b59ca95")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4488,7 +4488,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "9d406743-899e-4bb0-8fb0-ab019d640144")
+		(uuid "b38b606e-e6a0-4cce-8559-1d30b6362349")
 		(property "Reference" "#PWRU04"
 			(at 220.98 85.09 0)
 			(effects
@@ -4525,11 +4525,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "2af4c941-8d40-4d73-a93a-0ce8c915acb6")
+			(uuid "de6aff12-6790-4657-8a06-003c75a94495")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU04")
 					(unit 1)
 				)
@@ -4545,7 +4545,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5f596e42-6eb0-4e06-8e65-0e54f8c5a224")
+		(uuid "36f0d8b3-fff6-4c38-aef6-482245b2d655")
 	)
 	(label "VBAT"
 		(at 220.98 87.63 0)
@@ -4555,7 +4555,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4a1e2ef4-39cb-4801-a997-52f1b8003f88")
+		(uuid "0f02a0b8-ed90-4240-8128-058269697fe2")
 	)
 	(wire
 		(pts
@@ -4566,7 +4566,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1d6d51de-5e0c-48b2-a4ae-e3d6b3a5a952")
+		(uuid "2741c337-b730-4b6b-ac1a-262aefd2b7ae")
 	)
 	(global_label "COL5"
 		(shape passive)
@@ -4578,7 +4578,7 @@
 			)
 			(justify right)
 		)
-		(uuid "82390f4d-b12c-4b0b-b917-9e94dfb18b25")
+		(uuid "71a76e9a-8914-4ad2-8fe6-1e3ebf551e13")
 	)
 	(wire
 		(pts
@@ -4589,7 +4589,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "675832b0-6561-4c62-8ca4-27d09f3a6dc3")
+		(uuid "76aada2b-7b44-42d5-819a-437ecd71a540")
 	)
 	(global_label "COL6"
 		(shape passive)
@@ -4601,7 +4601,7 @@
 			)
 			(justify right)
 		)
-		(uuid "e2061830-6c55-4c08-8345-ce35791ff3f4")
+		(uuid "0149a79f-85bc-4940-a013-6ac10c6a2ff5")
 	)
 	(wire
 		(pts
@@ -4612,7 +4612,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bf147123-b630-41d5-8fe6-b671d476ae8c")
+		(uuid "c63da7a3-c38c-4ca4-adca-dea409e62ba3")
 	)
 	(global_label "ROW5"
 		(shape passive)
@@ -4624,7 +4624,7 @@
 			)
 			(justify right)
 		)
-		(uuid "7d4b8ee4-c3ca-4fdd-804b-f21d2c125d2d")
+		(uuid "604c524d-d712-4473-bb58-938b10cafae0")
 	)
 	(text "nice!nano v2, mounted on the bottom side under the trackpad.\nPins 31-33 are the three inner pads (low-frequency GPIO), used for the matrix.\nP0.09 / P0.10 are NFC pins: ZMK needs CONFIG_NFCT_PINS_AS_GPIOS=y."
 		(exclude_from_sim no)
@@ -4635,7 +4635,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "56594943-5a1c-448b-aec9-9fbd6fce8ddf")
+		(uuid "151cddfb-6d76-4043-93f2-a86f32950825")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
@@ -4645,7 +4645,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "c55c7789-60ee-433f-a1dc-0dd41ff6b41a")
+		(uuid "ef3a75f8-8d61-4b68-a048-533211190a30")
 		(property "Reference" "J1"
 			(at 40.64 40.64 0)
 			(effects
@@ -4690,14 +4690,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "6159bed6-6f16-4b36-8895-397aac772df7")
+			(uuid "cda174dd-26d2-4baa-94af-bbf12e29deea")
 		)
 		(pin "2"
-			(uuid "518e0c95-c952-4b83-ba2d-1be43dfab648")
+			(uuid "ff5bdc79-63d9-4464-9b72-a3823f185868")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "J1")
 					(unit 1)
 				)
@@ -4713,7 +4713,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "fae8bcd3-e987-4655-90ef-6c307b8d9792")
+		(uuid "a0e38562-cf51-4c02-95ed-17d5d7f12808")
 	)
 	(label "BATT+"
 		(at 33.02 45.72 180)
@@ -4723,7 +4723,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "666a3f73-b7d7-4f5a-9401-0d3ed7b883eb")
+		(uuid "c96c33c4-be31-4bf1-a2d4-21a81b6a6774")
 	)
 	(wire
 		(pts
@@ -4734,7 +4734,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e4d458a3-3e1b-40f2-aa31-4e860513bb8f")
+		(uuid "a7a6ab6d-a4c4-4f42-8ced-1592fe22c339")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4744,7 +4744,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "650f0ca1-65f2-4952-99ac-33f5306cb2d4")
+		(uuid "bdb87230-0ebf-4269-b413-81e575ab2eeb")
 		(property "Reference" "#PWRU05"
 			(at 33.02 43.18 0)
 			(effects
@@ -4781,11 +4781,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "84fdb673-5fee-42f5-b033-42bfab9b2058")
+			(uuid "42def0a0-9960-44c4-8342-5f69651c1475")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU05")
 					(unit 1)
 				)
@@ -4800,7 +4800,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1bf92505-12b7-4774-a7ec-bcb0969a2b5f")
+		(uuid "44081665-60f6-4c6d-8f23-9dee0001139f")
 		(property "Reference" "SW43"
 			(at 76.2 40.64 0)
 			(effects
@@ -4845,17 +4845,17 @@
 			)
 		)
 		(pin "1"
-			(uuid "878061d4-6a0f-4141-a9bd-361037a0d704")
+			(uuid "426482fc-371b-477b-94d7-81e157d58add")
 		)
 		(pin "2"
-			(uuid "e9cf7353-b028-44cb-92ed-45daaf98fd8e")
+			(uuid "b84810c0-5162-45f1-80b2-470a350a6978")
 		)
 		(pin "3"
-			(uuid "d9adb391-819d-45dc-9c49-ad85d77c39e2")
+			(uuid "e346a559-b11e-4ec2-b5c2-61ecb4cb87ff")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "SW43")
 					(unit 1)
 				)
@@ -4871,7 +4871,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "fd1af8d7-44e8-4d78-9049-147c119c833b")
+		(uuid "0dba820a-6e99-4a1b-b4c5-9700a0e60290")
 	)
 	(label "BATT+"
 		(at 68.58 45.72 180)
@@ -4881,7 +4881,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c987d9c5-15d4-4745-81da-b3b1e71d5f59")
+		(uuid "a9ab0061-c2ce-4a4e-9020-64c808d435f3")
 	)
 	(wire
 		(pts
@@ -4892,7 +4892,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3f3e3807-51e0-4c77-b3aa-621b2048bd12")
+		(uuid "2c9c9ff3-05bb-4074-bb1d-eb6d59a13606")
 	)
 	(label "VBAT"
 		(at 83.82 43.18 0)
@@ -4902,11 +4902,11 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ad4fbddd-30dc-496f-a383-1a69cb3bc0b9")
+		(uuid "d1be300d-ca19-41ea-a98f-1146729fed66")
 	)
 	(no_connect
 		(at 81.28 48.26)
-		(uuid "ec7327cd-3b01-4a1e-900a-92afba3c9b7b")
+		(uuid "2e4a5a01-6103-4365-992f-311a4b2946ac")
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
@@ -4916,7 +4916,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7650d208-ef7f-4878-8e76-b86bb437e9d4")
+		(uuid "85158df8-d6e7-4bec-bba2-14b12e587ebd")
 		(property "Reference" "SW44"
 			(at 76.2 60.96 0)
 			(effects
@@ -4952,14 +4952,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "c777229d-c38c-4ab5-b899-3760129c223e")
+			(uuid "d530866d-0920-4866-8c3c-3b112a3a51fb")
 		)
 		(pin "2"
-			(uuid "3a697fe5-9af0-4633-aa54-04d8c38126fe")
+			(uuid "340acf30-9811-4f54-b5a8-9d56cce94de2")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "SW44")
 					(unit 1)
 				)
@@ -4975,7 +4975,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "92d5f243-fb04-402f-b049-e04165acc9b9")
+		(uuid "d03a06f3-52bd-4403-9850-287183088ce4")
 	)
 	(label "RST"
 		(at 68.58 66.04 180)
@@ -4985,7 +4985,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c9493175-e097-45e1-a95b-37871cac2f0c")
+		(uuid "4808461a-410d-45a8-8b14-c557a858604e")
 	)
 	(wire
 		(pts
@@ -4996,7 +4996,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1349579e-1a06-4a7b-bcce-8c4c9ac80093")
+		(uuid "c3aa4bb5-2521-4506-9013-73d2cdc633e1")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5006,7 +5006,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "f95d5e9c-1fff-40de-84d9-85f7f7d430f6")
+		(uuid "f3874622-c11d-4dff-86e7-c72d04977e1e")
 		(property "Reference" "#PWRU06"
 			(at 83.82 60.96 0)
 			(effects
@@ -5043,11 +5043,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "4889e61d-5bbf-4297-9ca9-95ab702ceae5")
+			(uuid "95f1ac88-4cd2-4c56-b670-9e13927bbd9e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU06")
 					(unit 1)
 				)
@@ -5063,7 +5063,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "08dbc048-9511-483b-b746-f4bc64d80a07")
+		(uuid "b71941c8-c24a-47e9-9c08-737122bc6fc4")
 	)
 	(symbol
 		(lib_id "Jumper:SolderJumper_3_Open")
@@ -5073,7 +5073,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "b66be9de-1d97-4429-ad7e-98dcdfaac2a2")
+		(uuid "261baab7-d7fa-4013-b139-9f4e99128ef4")
 		(property "Reference" "JP2"
 			(at 50.8 91.44 0)
 			(effects
@@ -5118,17 +5118,17 @@
 			)
 		)
 		(pin "1"
-			(uuid "63925508-7e36-40ae-a6c5-96777fd39615")
+			(uuid "367e5c1b-8a5a-482c-b513-81a909d7ec5f")
 		)
 		(pin "2"
-			(uuid "21015099-3854-42bc-acc8-c3068f3431cf")
+			(uuid "ef60a45d-3f70-41ac-a5c6-03b5ddf6cc87")
 		)
 		(pin "3"
-			(uuid "cc803264-a558-4509-87b5-dbc53125a70d")
+			(uuid "3562e18a-a337-4ad4-b1f9-09004bf7bad6")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "JP2")
 					(unit 1)
 				)
@@ -5144,7 +5144,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a62a3410-6689-4a0a-bdd5-25fe66411bf3")
+		(uuid "b8293173-14a1-41f1-b4b8-30fc1fac9a16")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -5154,7 +5154,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ecb354b5-4532-44f9-81a4-1e4f945c9f43")
+		(uuid "c3a7db87-d0de-4aae-92d1-3753b41737cb")
 		(property "Reference" "#PWRU07"
 			(at 43.18 91.44 0)
 			(effects
@@ -5191,11 +5191,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "52048b5c-8caa-46aa-9af4-d85f603d3e13")
+			(uuid "a5ee6095-5ad7-427a-8221-e06c63374586")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU07")
 					(unit 1)
 				)
@@ -5211,7 +5211,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "22f618bf-ca54-4582-921b-1a2680fd72cb")
+		(uuid "79308124-7b54-469c-9304-c3aa5b9cb55b")
 	)
 	(label "LED_SRC"
 		(at 50.8 102.87 270)
@@ -5221,7 +5221,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "da8aa344-4d5c-4633-98e9-1923ec2fe959")
+		(uuid "88bdecfc-bf2c-4db2-9165-e41010b035f1")
 	)
 	(wire
 		(pts
@@ -5232,7 +5232,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f71f4c6d-6fba-4d32-8eca-b2eb10af3063")
+		(uuid "3530fb19-f325-49a9-810f-70cd003b88c9")
 	)
 	(label "LED_EXT"
 		(at 58.42 96.52 0)
@@ -5242,7 +5242,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2bc96040-c00f-433e-b1a0-91a16b2a668a")
+		(uuid "99c78db6-a46f-417f-82d4-e07fa4003f68")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
@@ -5252,7 +5252,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "3362a05e-3a78-4c40-a00f-35ca06f6d6fa")
+		(uuid "0fed1075-27f7-40b0-87c5-20a4b9244a2a")
 		(property "Reference" "J6"
 			(at 27.94 91.44 0)
 			(effects
@@ -5297,14 +5297,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0ed8a79a-4b55-4e75-89be-c2a14d59e41a")
+			(uuid "8e7f1f24-4ab7-40e5-a9dc-03c25c0cb77f")
 		)
 		(pin "2"
-			(uuid "c63ba983-a445-4497-85e2-b15afa563862")
+			(uuid "59ee176c-8180-4a8a-9c64-e03d94701a8b")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "J6")
 					(unit 1)
 				)
@@ -5320,7 +5320,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e5148526-5943-49dd-bdd8-dde4f4dcd497")
+		(uuid "1ab60547-1f03-4506-bd80-bfbf6d3f6c8a")
 	)
 	(label "LED_EXT"
 		(at 20.32 96.52 180)
@@ -5330,7 +5330,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2c9dde92-4689-4132-bbdf-8c0405505fbc")
+		(uuid "48efd9b5-0f67-49cd-bf1b-e0fda3d496dd")
 	)
 	(wire
 		(pts
@@ -5341,7 +5341,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "128cc1cb-052d-47ea-a47c-345de50eda42")
+		(uuid "69cf8e6f-f68d-45c5-ae01-8933afdf5fec")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5351,7 +5351,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "591be77b-fde0-4dec-8617-3654e7d2fa56")
+		(uuid "efd09d4b-9342-46e6-b3ea-a75ea0263b2c")
 		(property "Reference" "#PWRU08"
 			(at 20.32 93.98 0)
 			(effects
@@ -5388,11 +5388,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "01e8101b-919b-43b8-8723-f1d438331483")
+			(uuid "297ec4ca-6775-43f6-947f-9fc005c82bcb")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU08")
 					(unit 1)
 				)
@@ -5407,7 +5407,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "223df097-33be-4632-979e-dc15355b74ba")
+		(uuid "9654a94c-9e61-489e-b75f-3748c7b6bc60")
 		(property "Reference" "Q1"
 			(at 76.2 106.68 0)
 			(effects
@@ -5443,17 +5443,17 @@
 			)
 		)
 		(pin "1"
-			(uuid "d036fbe9-3b18-4b26-9b5f-bc32a8ff52d7")
+			(uuid "727f7c6d-ba63-42f5-951d-059019070e8b")
 		)
 		(pin "2"
-			(uuid "2c682a52-610b-464c-bd98-c92e3199ef57")
+			(uuid "e974b2fe-aa41-4686-bfc1-4b2fd16bf0dd")
 		)
 		(pin "3"
-			(uuid "d1facea6-24ce-459f-af2d-69ad240a55fd")
+			(uuid "567438f8-cf45-4adf-bc8c-3ab41768387e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "Q1")
 					(unit 1)
 				)
@@ -5469,7 +5469,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "dc33c392-ab99-4e79-ae47-230505f7b066")
+		(uuid "216d8a56-c11a-4e8b-a177-8a0a3c1bc2de")
 	)
 	(label "LED_EN_N"
 		(at 68.58 111.76 180)
@@ -5479,7 +5479,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "a49615d9-7c06-4fa2-bf23-f23cbb662937")
+		(uuid "647e2ade-c326-4a58-a6d4-f64bb7edefd8")
 	)
 	(wire
 		(pts
@@ -5490,7 +5490,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1b067222-9e6d-470d-ab6a-4344d3d37d90")
+		(uuid "37acf6c6-3e59-4d6a-91cd-37941577b616")
 	)
 	(label "LED_SRC"
 		(at 78.74 119.38 270)
@@ -5500,7 +5500,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2216e245-8fd7-4d6a-8d91-108dccad0b7b")
+		(uuid "fcd0f8b1-49d9-4590-9156-230d58ebd2a2")
 	)
 	(wire
 		(pts
@@ -5511,7 +5511,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0751ad9f-eb8a-4965-83f4-b67ddba4b2d0")
+		(uuid "0706cbdb-d865-4b11-b9da-5b34c7ac2b11")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -5521,7 +5521,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "70617cc7-95a5-4c97-a353-35cee7dd2e0f")
+		(uuid "1181e181-38a5-4747-ae09-a8b690c8a14f")
 		(property "Reference" "#PWRU09"
 			(at 78.74 99.06 0)
 			(effects
@@ -5558,11 +5558,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "545fda47-6de7-4b14-877c-f58ba5da5a43")
+			(uuid "1cb18d11-2533-4a4d-97f1-c4d415414bee")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU09")
 					(unit 1)
 				)
@@ -5577,7 +5577,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "395553e6-14f4-4eea-966e-3587154cba2c")
+		(uuid "7bcc8b06-32d8-45a7-9dfc-9ffe287eeeac")
 		(property "Reference" "Q2"
 			(at 50.8 127 0)
 			(effects
@@ -5613,17 +5613,17 @@
 			)
 		)
 		(pin "1"
-			(uuid "59b76711-924e-4cf2-b858-093f9df9f1cf")
+			(uuid "eb3384d9-21ae-46ae-bdfe-da6fcf1950af")
 		)
 		(pin "2"
-			(uuid "fd241312-0d59-43b7-b5cc-013a159e7109")
+			(uuid "ab81c5d3-e02c-4679-9a3c-e363c62b3c69")
 		)
 		(pin "3"
-			(uuid "140ca612-90ab-41bc-b35a-3f1219cac8ad")
+			(uuid "c9f2b2c7-ad7a-4f3a-a8e3-4b2c1cd23190")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "Q2")
 					(unit 1)
 				)
@@ -5639,7 +5639,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "33a2bcae-567e-4ae7-ad35-1697a654105e")
+		(uuid "77f6720a-a0e9-4be0-8ba0-10b304e512c8")
 	)
 	(label "LED_EN"
 		(at 43.18 132.08 180)
@@ -5649,7 +5649,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "49668f85-1eb5-4e2f-a7a1-e957b8ba7127")
+		(uuid "0d6f1cae-a291-4243-b898-c26df2f66595")
 	)
 	(wire
 		(pts
@@ -5660,7 +5660,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "da750e86-2cb7-4c10-ac78-c3eb3db18d3b")
+		(uuid "fc50e729-a00e-4071-b7ee-cdabaff0c516")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5670,7 +5670,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "6980e879-937d-485e-9fa3-6a60c505d842")
+		(uuid "38b75718-a369-4e04-8826-e11e9557370d")
 		(property "Reference" "#PWRU10"
 			(at 53.34 134.62 0)
 			(effects
@@ -5707,11 +5707,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0ccbf65b-b393-468a-85c1-3710b832c1f5")
+			(uuid "03776680-f0ea-4b8f-8b88-5fecc5d33ff2")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU10")
 					(unit 1)
 				)
@@ -5727,7 +5727,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0b68eac0-d775-49a1-a018-c1d4136c87a3")
+		(uuid "08531a2a-05f1-4ee2-9c04-614d6b887caf")
 	)
 	(label "LED_EN_N"
 		(at 53.34 124.46 90)
@@ -5737,7 +5737,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "08513b23-f362-4551-a9f0-13547e4b380f")
+		(uuid "da905769-0b48-4187-b0f7-ae982f903681")
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -5747,7 +5747,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "154aad64-aab4-439e-ad0b-0af350f35069")
+		(uuid "f3818ee6-3103-451f-8588-3b7d24cd8e12")
 		(property "Reference" "R1"
 			(at 101.6 101.6 0)
 			(effects
@@ -5783,14 +5783,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "008d4414-e8ff-4dc1-b2fe-05cce090ff3b")
+			(uuid "1ff8014b-bf1c-40a8-8d49-ee05ab999a2b")
 		)
 		(pin "2"
-			(uuid "92304709-74b1-4ed4-9d65-8ced021f3b21")
+			(uuid "871b7a05-d38e-41b1-b13d-ce805b5b84fd")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "R1")
 					(unit 1)
 				)
@@ -5806,7 +5806,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "db74bc31-ae30-422a-9fd3-f9bdca47c375")
+		(uuid "7dcd2b98-80e4-4ec9-a693-1ca68ffce9e9")
 	)
 	(label "LED_SRC"
 		(at 101.6 101.6 90)
@@ -5816,7 +5816,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "497e9e29-56ea-4759-bf34-cdf614a7849b")
+		(uuid "89444122-634d-4502-97d9-99bdc4eee21d")
 	)
 	(wire
 		(pts
@@ -5827,7 +5827,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "53b93a54-f2d3-474e-b99f-30574a594bad")
+		(uuid "00fed5b2-c8f1-455d-b6be-ff1ad240cc87")
 	)
 	(label "LED_EN_N"
 		(at 101.6 111.76 270)
@@ -5837,7 +5837,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c096adfe-4d16-4f63-a582-14381a635a4c")
+		(uuid "4c3fc8ad-4206-467e-b62e-8fdccb759e54")
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -5847,7 +5847,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a4f99930-8de0-41cc-a35a-d3525320b1c3")
+		(uuid "e2c1334d-6117-4668-9e0b-0e1cf5fded2f")
 		(property "Reference" "R2"
 			(at 101.6 127 0)
 			(effects
@@ -5883,14 +5883,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d4ed9d62-aad8-41e8-844d-57eb7c516b35")
+			(uuid "7af81b6e-b0f4-4c49-9a46-b2efee753b8a")
 		)
 		(pin "2"
-			(uuid "5add78b3-45b3-4576-bd40-094237ee2eae")
+			(uuid "943b2520-cc15-40db-a10f-2400e17b2391")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "R2")
 					(unit 1)
 				)
@@ -5906,7 +5906,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f45882cb-aa95-4861-9322-61b9859b1aad")
+		(uuid "67d741e1-b7d8-4372-9585-9f7e9fad9c6b")
 	)
 	(label "LED_EN"
 		(at 101.6 127 90)
@@ -5916,7 +5916,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1b667400-405d-4c73-bc56-2527153dd9b6")
+		(uuid "2069acf7-c6f4-450a-8da5-aa09191d718b")
 	)
 	(wire
 		(pts
@@ -5927,7 +5927,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2bcd4e62-84c3-474f-8964-41334368ecd6")
+		(uuid "3c263d6e-44f7-4c44-a4d6-cc3bcefc458f")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5937,7 +5937,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "1d23acbe-bac7-4b28-97f5-1b54f94c1b3b")
+		(uuid "7d91a169-456d-4313-8717-5a36f905d3e4")
 		(property "Reference" "#PWRU11"
 			(at 101.6 132.08 0)
 			(effects
@@ -5974,11 +5974,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "08397043-0006-4ecb-909e-3a2fb5d657b6")
+			(uuid "78da7f09-a8fb-4d8c-89ef-cc0c401899db")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU11")
 					(unit 1)
 				)
@@ -5993,7 +5993,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "cc6f8f29-8868-4cc9-84b4-85e2e3f816e9")
+		(uuid "e6e75453-92cf-4cd6-a39b-b60e1c950f81")
 		(property "Reference" "C1"
 			(at 121.92 101.6 0)
 			(effects
@@ -6029,14 +6029,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2b364193-f284-450a-b20c-223c246b9b2d")
+			(uuid "eb4d25fd-ea98-4db8-8828-9aa844e63c4d")
 		)
 		(pin "2"
-			(uuid "788b80ee-cf93-4d2c-8886-86392419c1ec")
+			(uuid "b2b5ab3f-50db-40c9-bbf6-c5c5320a1226")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "C1")
 					(unit 1)
 				)
@@ -6052,7 +6052,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7eb9934b-f0ee-4674-bea4-a3610079555a")
+		(uuid "3a8dcef4-58bd-4830-8782-915d70aac71c")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -6062,7 +6062,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "8225a3fb-e46f-4739-b8c6-298194edebcc")
+		(uuid "7648f4e6-5e49-40c0-a730-28303ab0c578")
 		(property "Reference" "#PWRU12"
 			(at 121.92 96.52 0)
 			(effects
@@ -6099,11 +6099,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "4093ec43-bafe-48ba-b8ed-dd5911c4f6b9")
+			(uuid "fb4c520e-be97-417d-83bb-f00641ef21d8")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU12")
 					(unit 1)
 				)
@@ -6119,7 +6119,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "22e290a1-719e-4200-a6a2-4363e59e70ce")
+		(uuid "148acb65-4200-4f4a-a354-6e92da494440")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6129,7 +6129,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "96574b61-c89f-4ca3-a03b-5781d0800dfb")
+		(uuid "ce1b371f-7094-44bd-8c17-610594b010e6")
 		(property "Reference" "#PWRU13"
 			(at 121.92 106.68 0)
 			(effects
@@ -6166,11 +6166,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "22ff83db-1395-4d28-b35b-3118177c97b0")
+			(uuid "697e90a4-cbf1-4ce0-bce0-278619e73209")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU13")
 					(unit 1)
 				)
@@ -6185,7 +6185,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "3567db5e-7cec-4ca3-a4cd-eec4c4c337ea")
+		(uuid "3f245484-77eb-4551-bc57-6d34c0222bf1")
 		(property "Reference" "JP1"
 			(at 121.92 127 0)
 			(effects
@@ -6221,14 +6221,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2fe81e53-533b-4f08-be9e-43339c2c33f0")
+			(uuid "96a15a4c-b7a3-452a-a07f-7806779ecf23")
 		)
 		(pin "2"
-			(uuid "71f104a4-9435-41fd-b4ec-f6f30d49b94d")
+			(uuid "57ed1547-0aa5-4086-b485-dfd2e8f63ef9")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "JP1")
 					(unit 1)
 				)
@@ -6244,7 +6244,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "526e6729-0815-4a1b-9315-3d0838fb53cc")
+		(uuid "67a4b98d-f41d-48d1-9932-749b719d977b")
 	)
 	(label "P0.06"
 		(at 114.3 132.08 180)
@@ -6254,7 +6254,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "270d4cbb-2ce7-4976-8768-9f34475549b0")
+		(uuid "e2e1086a-f4e2-49c0-88d5-f7d378b16834")
 	)
 	(wire
 		(pts
@@ -6265,7 +6265,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0476fc79-bb32-49e8-9d71-003f713acff0")
+		(uuid "a184e583-13f2-40dc-88c6-d8850ce83f15")
 	)
 	(label "LED_DATA"
 		(at 129.54 132.08 0)
@@ -6275,7 +6275,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e430b090-1a22-48ec-a2ee-586370c89d36")
+		(uuid "d7a8e530-3571-4f4e-995f-62da2c3523ee")
 	)
 	(symbol
 		(lib_id "74xGxx:74LVC1G125")
@@ -6285,7 +6285,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "280de255-478c-4c4e-8cab-1f2219c2a5d5")
+		(uuid "b5418318-73f8-4ce2-98d6-359e998cb340")
 		(property "Reference" "U2"
 			(at 152.4 127 0)
 			(effects
@@ -6330,23 +6330,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "51d06cef-ac5c-453b-9cda-4617029d1f5a")
+			(uuid "6a87c94e-e248-4c89-acba-71275bcb7c45")
 		)
 		(pin "2"
-			(uuid "c87198be-9033-4efa-beba-fccde3026b30")
+			(uuid "8ce6d277-9f0a-4edb-b44b-b55e8641c383")
 		)
 		(pin "3"
-			(uuid "4c000760-e77f-4474-9678-94600fcc46f2")
+			(uuid "fe5ad67c-214e-4445-bdab-549031bc240f")
 		)
 		(pin "4"
-			(uuid "2184bf46-0d61-46bd-ac52-fc3447949e01")
+			(uuid "3adca0e2-ef0d-4f22-9920-07ce12197848")
 		)
 		(pin "5"
-			(uuid "0f6d9b52-9af5-4226-95be-f135119db89d")
+			(uuid "41ecf14a-9c02-4cf5-a9fb-0f95f35e69f0")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "U2")
 					(unit 1)
 				)
@@ -6362,7 +6362,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9089aac7-9e3c-4d04-b81a-52831bd7a6fd")
+		(uuid "28ac423e-036b-4c40-8292-e836590773cd")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6372,7 +6372,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "baae188f-7a94-4606-a678-da14d04edade")
+		(uuid "4024af7f-aaf4-49c4-8a97-bcfb4a5e5f11")
 		(property "Reference" "#PWRU14"
 			(at 152.4 114.3 0)
 			(effects
@@ -6409,11 +6409,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "c23578a7-4ac7-46dd-9406-9ec64b6334f8")
+			(uuid "a31aa7ea-7897-4d47-b8da-235a2cea8976")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU14")
 					(unit 1)
 				)
@@ -6429,7 +6429,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b896ddda-0ce8-41df-ba45-d86d604e0d3c")
+		(uuid "dd0a8d46-d5bd-4223-8f79-e38de28d2f91")
 	)
 	(label "LED_DATA"
 		(at 134.62 132.08 180)
@@ -6439,7 +6439,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "9b2ee315-4117-457e-89cb-05a3ec7cced8")
+		(uuid "891aab7d-0d80-4543-b97d-401f0aed9364")
 	)
 	(wire
 		(pts
@@ -6450,7 +6450,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ccd9f65d-bce3-4fe7-9a50-756d667b005c")
+		(uuid "d8cca3be-730d-4567-a4df-3c2594b40edf")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6460,7 +6460,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "8c2efb2a-1bdd-462a-8838-cf1726ed2f63")
+		(uuid "c13c3096-5003-44b6-a4d3-77d16caec4b8")
 		(property "Reference" "#PWRU15"
 			(at 147.32 139.7 0)
 			(effects
@@ -6497,11 +6497,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "474c5c48-84a7-4836-bb82-81c3b025fa92")
+			(uuid "f67ea1ad-d2fe-44ef-aac9-dba1cf7d1d63")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU15")
 					(unit 1)
 				)
@@ -6517,7 +6517,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "05be1f7a-4021-40af-af01-39056a73b7f3")
+		(uuid "4116c15f-5620-4e07-83d7-d0634a28c12a")
 	)
 	(global_label "LED_DIN"
 		(shape passive)
@@ -6529,7 +6529,7 @@
 			)
 			(justify left)
 		)
-		(uuid "064bd730-52d2-4028-a5ae-91cf17321dfc")
+		(uuid "1453c7ee-b4f7-4672-8551-2f44594f03b6")
 	)
 	(wire
 		(pts
@@ -6540,7 +6540,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c999f2f1-ce59-46d8-b984-54a5d90f5a5a")
+		(uuid "ef709c0c-64de-47ed-9c8c-b83203d8489f")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -6550,7 +6550,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "f34be176-2a38-4acd-8a12-86c8d782cc52")
+		(uuid "0f5d42db-4793-4d98-bb21-56812cdb060d")
 		(property "Reference" "#PWRU16"
 			(at 147.32 114.3 0)
 			(effects
@@ -6587,11 +6587,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "05276fd2-d0ef-4b54-96e1-43154475b564")
+			(uuid "16d640bf-ee66-45fc-9dea-7d75f6f9ac59")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU16")
 					(unit 1)
 				)
@@ -6606,7 +6606,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "2fa68c28-a675-49d3-aaea-779b15c42031")
+		(uuid "e3f1f72f-2129-4bda-92e3-ac4d1abb818d")
 		(property "Reference" "JP3"
 			(at 152.4 142.24 0)
 			(effects
@@ -6651,14 +6651,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2021a03c-36ed-4539-8fdc-e4e5b047f2fe")
+			(uuid "d71dae01-ee09-416f-87a7-64bf1df8cc73")
 		)
 		(pin "2"
-			(uuid "d2e81094-30f7-43b0-82f5-b32346ebcb06")
+			(uuid "69082935-78f2-405d-99b8-6b20be94b331")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "JP3")
 					(unit 1)
 				)
@@ -6674,7 +6674,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4bf0114a-12e1-4290-bc5a-c700c2f500f8")
+		(uuid "3bbb236a-e57d-497d-a488-e435f0b06bc5")
 	)
 	(label "LED_DATA"
 		(at 144.78 147.32 180)
@@ -6684,7 +6684,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2783be8d-16cf-4604-a4f7-21a0e806185e")
+		(uuid "6c05e836-b069-4c29-903d-51c9c1ca1019")
 	)
 	(wire
 		(pts
@@ -6695,7 +6695,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "64c1effd-5e33-4d11-85fd-ab7644a2d621")
+		(uuid "310b349a-fbcb-4b0a-8f2e-5840c6e3d8df")
 	)
 	(global_label "LED_DIN"
 		(shape passive)
@@ -6707,7 +6707,351 @@
 			)
 			(justify left)
 		)
-		(uuid "a97b1fdb-3663-4cfd-a706-9fb82b3b0756")
+		(uuid "4446ff04-8318-4298-a778-1431fe4e9bb9")
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 121.92 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "ae1b8403-4059-42a6-9ba9-f25941712762")
+		(property "Reference" "JP4"
+			(at 121.92 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "COL5 to P0.24"
+			(at 121.92 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 121.92 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Bridge only with a Pro Micro-style controller (no inner pins); open with a nice!nano"
+			(at 121.92 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7e5af2c8-39eb-4926-a22a-41a6e38c4eae")
+		)
+		(pin "2"
+			(uuid "01c04ffb-6a28-42ab-adc8-a6ca79c53060")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
+					(reference "JP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 116.84 172.72)
+			(xy 114.3 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bebf48e-9fdc-4f79-9365-a61b08fa912e")
+	)
+	(global_label "COL5"
+		(shape passive)
+		(at 114.3 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "404201e0-cab3-4915-8ada-4ed76e237cf1")
+	)
+	(wire
+		(pts
+			(xy 127 172.72)
+			(xy 129.54 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2515a3b3-ee72-4ade-a1c6-ef89b828596c")
+	)
+	(label "P0.24_MISO"
+		(at 129.54 172.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cd17bba9-3714-497c-b355-8c668fa90ebf")
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 121.92 182.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "6b875c6a-fa23-4c4b-ae85-5f9ec87f24fc")
+		(property "Reference" "JP5"
+			(at 121.92 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "COL6 to P0.11"
+			(at 121.92 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 121.92 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Bridge only with a Pro Micro-style controller (no inner pins); open with a nice!nano"
+			(at 121.92 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a0037d8-4104-4797-b3c6-a005371d63f4")
+		)
+		(pin "2"
+			(uuid "0c628d35-ef2b-4ec0-9e5e-759d92f6029b")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
+					(reference "JP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 116.84 182.88)
+			(xy 114.3 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3fb3fcb-604f-46de-9e2e-1f336d7527c5")
+	)
+	(global_label "COL6"
+		(shape passive)
+		(at 114.3 182.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0ec1321e-1030-4a43-a827-a82a500c7d04")
+	)
+	(wire
+		(pts
+			(xy 127 182.88)
+			(xy 129.54 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f52b4a8-2428-4799-b19c-b8ffc17a06e9")
+	)
+	(label "P0.11_CS"
+		(at 129.54 182.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0cf0cc6e-cb03-4039-850d-d725332ad264")
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 121.92 193.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "e6afd630-bef2-4f83-a088-3b70b0818deb")
+		(property "Reference" "JP6"
+			(at 121.92 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ROW5 to P0.08"
+			(at 121.92 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 121.92 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Bridge only with a Pro Micro-style controller (no inner pins); open with a nice!nano"
+			(at 121.92 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e6f95b1-06a8-420a-9f7a-c30b9b9c72f5")
+		)
+		(pin "2"
+			(uuid "30072896-acab-4599-92b4-c45d93772d18")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
+					(reference "JP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 116.84 193.04)
+			(xy 114.3 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6ca7eb0-7bd0-4b13-98ff-f8ab0705370a")
+	)
+	(global_label "ROW5"
+		(shape passive)
+		(at 114.3 193.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1488615e-a071-4610-8447-d27d7119af11")
+	)
+	(wire
+		(pts
+			(xy 127 193.04)
+			(xy 129.54 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81feac1b-f061-4b28-96fd-c20ec4e2d8b4")
+	)
+	(label "P0.08"
+		(at 129.54 193.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "44230748-b04a-4050-a66d-78a07d02dc84")
+	)
+	(text "Pro Micro mode: a controller without the nice!nano's three inner pins needs\nJP4 (COL5 to P0.24), JP5 (COL6 to P0.11) and JP6 (ROW5 to P0.08) bridged.\nLeave them open with a nice!nano, or two controller pins drive one net."
+		(exclude_from_sim no)
+		(at 27.94 172.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "8a77bab5-0551-4cc1-b948-a3be418f17ae")
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -6717,7 +7061,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4c325b9c-63cf-47e2-b27e-e3496097521e")
+		(uuid "d20728f3-0eee-447d-b46a-5a24bae05990")
 		(property "Reference" "C2"
 			(at 167.64 116.84 0)
 			(effects
@@ -6753,14 +7097,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8f649bf3-06e1-4a4c-ae36-77d23390a282")
+			(uuid "4df37b19-93b3-4548-b38c-244b19617e09")
 		)
 		(pin "2"
-			(uuid "0efd9763-83ff-4ade-b3a0-eeefb7d02095")
+			(uuid "9961bccb-ad87-4822-aebf-1f182c4b8bc2")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "C2")
 					(unit 1)
 				)
@@ -6776,7 +7120,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3373904d-4789-4fee-b9a9-10274ff3fe44")
+		(uuid "909d44ec-679d-4c28-9de3-b593d72a2248")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -6786,7 +7130,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "f2bdfbd9-e52b-4d84-8335-4a0cb485dcc1")
+		(uuid "6072ffb1-7f3f-406a-ab14-ff8e60d394a1")
 		(property "Reference" "#PWRU17"
 			(at 167.64 111.76 0)
 			(effects
@@ -6823,11 +7167,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "65e1018b-5709-4f2d-ad0b-5f28c3bf747d")
+			(uuid "dd05710a-e56f-469f-ae34-11f155e69c1a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU17")
 					(unit 1)
 				)
@@ -6843,7 +7187,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ffde93fc-b9d2-4d35-a446-4d5557c8a7dd")
+		(uuid "8e0135e8-8839-4c94-b9ca-58f5832c518d")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6853,7 +7197,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "880725a9-f403-4fc3-99af-55f46482cd08")
+		(uuid "e4018076-e9fe-4d4b-9782-63854e8aa948")
 		(property "Reference" "#PWRU18"
 			(at 167.64 121.92 0)
 			(effects
@@ -6890,11 +7234,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "94ff814a-22e2-48ce-bc6b-35f0413a8d16")
+			(uuid "c2a475d5-35e0-4b51-b0fe-644f7ea3677d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU18")
 					(unit 1)
 				)
@@ -6910,7 +7254,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "137f3fd3-cc33-4dac-905d-8ea70851cb03")
+		(uuid "7ddf7fe8-e9f3-4669-abb5-f871809c0583")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x06")
@@ -6920,7 +7264,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "2c4fc02a-80c4-48c2-a20b-5199adf4c664")
+		(uuid "1b5bd390-9b77-484f-8088-02daa84f731d")
 		(property "Reference" "J2"
 			(at 307.34 45.72 0)
 			(effects
@@ -6965,26 +7309,26 @@
 			)
 		)
 		(pin "1"
-			(uuid "1ed7b24c-371a-43d7-8b38-8f876fb5c35d")
+			(uuid "a577b20a-4866-4d94-9999-457fb391bd67")
 		)
 		(pin "2"
-			(uuid "ae89fbe3-b835-45d0-bf6d-1bd86d132c9a")
+			(uuid "ae69900d-7040-40f1-a197-32913de30f55")
 		)
 		(pin "3"
-			(uuid "e86f110b-efb6-4f94-b99d-9b01f4680a40")
+			(uuid "9590a935-5a2c-4b73-a062-dcb7fd3ef21d")
 		)
 		(pin "4"
-			(uuid "a5f90e98-8b02-4dba-abf1-a35f1fc8d6f8")
+			(uuid "8aa1cbd0-72ac-4835-9f1d-c7262538b25b")
 		)
 		(pin "5"
-			(uuid "8f92d124-3db9-42bf-9cec-f2b34c9a66fb")
+			(uuid "e2a88896-79a1-4098-9b4a-332ca98b62b2")
 		)
 		(pin "6"
-			(uuid "a8be142a-a4b7-4a41-ba2e-23ab5f8298a2")
+			(uuid "5d31eaf6-c567-4260-99b8-dcd260647abb")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "J2")
 					(unit 1)
 				)
@@ -7000,7 +7344,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6cff87cd-4d5c-4cec-992a-507aff9dcb27")
+		(uuid "5528e0a5-0d72-4246-a455-638822a0ea0b")
 	)
 	(label "SDA_MOSI"
 		(at 299.72 45.72 180)
@@ -7010,7 +7354,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "56b5ae6a-efb4-49b8-9dd7-8829b1a7cce2")
+		(uuid "c5a4c285-f4bd-4fa1-a79f-23a5c12f512b")
 	)
 	(wire
 		(pts
@@ -7021,7 +7365,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "da729529-34ea-4d6d-a295-a83cbf8ff3f0")
+		(uuid "ecefb4fc-c3a9-4b09-8c4f-fde4c5936540")
 	)
 	(label "SCL_SCK"
 		(at 299.72 48.26 180)
@@ -7031,7 +7375,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "aa562ba7-3f64-45e3-a190-492ccaacc4b2")
+		(uuid "9def2c7e-3b1e-4bf3-af60-e418340d9883")
 	)
 	(wire
 		(pts
@@ -7042,7 +7386,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9fbc28be-fe34-4c83-9898-b5133296199b")
+		(uuid "4bb3e329-8d28-4125-b55f-441481b744db")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -7052,7 +7396,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "531a1685-19e5-4707-acce-983b24cc7aab")
+		(uuid "e63c0a2a-000e-4501-b4fe-2f923cd02359")
 		(property "Reference" "#PWRU19"
 			(at 299.72 45.72 0)
 			(effects
@@ -7089,11 +7433,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "57fad72f-5b5b-4616-a3d2-bb66d07e80d1")
+			(uuid "d183f3a3-710f-4e51-9921-87d0937cd5e3")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU19")
 					(unit 1)
 				)
@@ -7109,7 +7453,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b950e67d-989d-433e-b375-414ad163b519")
+		(uuid "23561f6d-f225-40fb-8777-752054e9d57f")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7119,7 +7463,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "72d26a66-14ff-4182-ba2f-347d89cdaa9e")
+		(uuid "c9179f01-ffe4-4115-9dd2-c46c449df80e")
 		(property "Reference" "#PWRU20"
 			(at 299.72 48.26 0)
 			(effects
@@ -7156,11 +7500,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "cedc3f39-1d8d-4ac4-885f-de439669f668")
+			(uuid "40fcdd1d-ccf4-44c7-b6d2-a1404a98aa9c")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU20")
 					(unit 1)
 				)
@@ -7176,7 +7520,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "27e4d8f2-18f8-40a2-a753-f1f851ef65e0")
+		(uuid "ff53dd91-56f2-485d-9868-9c968c53bea6")
 	)
 	(label "NRST"
 		(at 299.72 55.88 180)
@@ -7186,7 +7530,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "56a32710-3ad1-4038-a3e4-72d7e248b28b")
+		(uuid "5736c09a-317d-43c3-bbf3-22927d9910b5")
 	)
 	(wire
 		(pts
@@ -7197,7 +7541,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8f291e89-6457-4e10-bc53-51731aedbe4b")
+		(uuid "006859a1-fb9a-4b00-a0aa-fe71fe3fe44f")
 	)
 	(label "RDY_MOTION"
 		(at 299.72 58.42 180)
@@ -7207,7 +7551,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "825c241c-9d65-4e1e-a818-9f386973bd2a")
+		(uuid "a4cc3b38-acb9-47b0-b1e1-1e519f03e048")
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -7217,7 +7561,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "cdb0bdd8-b406-42e3-ad46-a29839fa768f")
+		(uuid "e2ec5cf5-a873-448b-a188-d176fa1db887")
 		(property "Reference" "R3"
 			(at 335.28 45.72 0)
 			(effects
@@ -7253,14 +7597,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d6ab0c9e-0bcd-492c-9bc6-1db0f78eb027")
+			(uuid "957ba810-60e7-46fc-a8bb-912ea27fe300")
 		)
 		(pin "2"
-			(uuid "eeb47648-7da8-435b-b005-cfb136266f06")
+			(uuid "8b293205-07e1-4d06-b4ad-7e317b7e5d00")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "R3")
 					(unit 1)
 				)
@@ -7276,7 +7620,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a74f80df-e970-470d-8be6-533a7a478e78")
+		(uuid "d3b9a0fa-131f-4730-a215-05f9a88adc67")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -7286,7 +7630,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "12339514-c4b3-43d6-9e72-44a430b5b772")
+		(uuid "90f017f6-fdc7-4c29-b652-b1a0f8c143bf")
 		(property "Reference" "#PWRU21"
 			(at 335.28 40.64 0)
 			(effects
@@ -7323,11 +7667,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "c5fb8999-a822-4a1a-8801-afa5c3c015d7")
+			(uuid "f93355d8-e30c-4078-85a4-9e3680b8483c")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU21")
 					(unit 1)
 				)
@@ -7343,7 +7687,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "37f7707a-ec4e-4c65-a115-062a1f0d2bf4")
+		(uuid "321fb9f2-b9c1-4299-b808-1fe35044d60d")
 	)
 	(label "SDA_MOSI"
 		(at 335.28 55.88 270)
@@ -7353,7 +7697,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "5d34c56f-69bb-4d0b-a86e-0f8ab2c1e12d")
+		(uuid "074a95ba-dea3-46aa-8c8a-9f1acdf43b80")
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -7363,7 +7707,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "356d3654-daee-4f1e-ae23-05d7ddd2fc6b")
+		(uuid "5f975fcd-f2b5-41bd-b3ad-9b13b2479036")
 		(property "Reference" "R4"
 			(at 350.52 45.72 0)
 			(effects
@@ -7399,14 +7743,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8f3bbe9f-9d00-424b-92d3-62eb565e79cb")
+			(uuid "99783b3c-d494-409a-81a3-cb62097dfe61")
 		)
 		(pin "2"
-			(uuid "f73d29d6-609a-4f08-98d1-350f4050633f")
+			(uuid "abe3a7c2-7372-4a92-990f-767270ec56ef")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "R4")
 					(unit 1)
 				)
@@ -7422,7 +7766,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bef498b6-bd8b-4528-9a18-f777660a88e7")
+		(uuid "f74f6a0d-afff-457b-b64f-565c9735ebd8")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -7432,7 +7776,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "dd674e40-3196-4cbf-90e6-56b08d5c70c9")
+		(uuid "ce96d1d4-2ba9-4cc3-ae63-b23e77147fd2")
 		(property "Reference" "#PWRU22"
 			(at 350.52 40.64 0)
 			(effects
@@ -7469,11 +7813,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "abd6517d-abbe-4966-95c7-8cf3a952c60d")
+			(uuid "76a7737b-5b6a-49c1-b898-1f4aa3c181f0")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU22")
 					(unit 1)
 				)
@@ -7489,7 +7833,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4582c1b4-fd1b-49f1-aa8f-b45d7f613baf")
+		(uuid "85f9d299-4301-4c4b-9175-89a161613d39")
 	)
 	(label "SCL_SCK"
 		(at 350.52 55.88 270)
@@ -7499,7 +7843,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f8738525-06c2-4820-baa1-bd3a13290b46")
+		(uuid "bf9284b1-d40c-45f4-86a2-48ea09cd6957")
 	)
 	(symbol
 		(lib_id "Device:R_Small")
@@ -7509,7 +7853,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1a01a164-2a16-427c-8e0c-0f3ea229eefe")
+		(uuid "de334557-6bbd-429b-873b-fa43905d1efe")
 		(property "Reference" "R5"
 			(at 365.76 45.72 0)
 			(effects
@@ -7545,14 +7889,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0d2bed7f-c911-4a7d-b792-e519618efdb5")
+			(uuid "2d6c6910-e3df-43db-b897-458d1874fab2")
 		)
 		(pin "2"
-			(uuid "30e9a675-6bca-48d9-97c5-90924436be4e")
+			(uuid "ac9e4cf6-8ecf-46a6-9ba5-48ff3dd08851")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "R5")
 					(unit 1)
 				)
@@ -7568,7 +7912,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "078f2e5d-5449-474d-84c0-55e5d7cb4b27")
+		(uuid "a0cffd20-c486-4e6a-9e8c-3a560c11868c")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -7578,7 +7922,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "1a976657-4701-4e68-8097-3bc070cdb254")
+		(uuid "b6db0750-ecdd-443a-84bc-5434ef9901c0")
 		(property "Reference" "#PWRU23"
 			(at 365.76 40.64 0)
 			(effects
@@ -7615,11 +7959,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "36c5230d-cfae-4c5e-b993-6255e22f520f")
+			(uuid "4558a8f9-dfd4-4b08-9091-e2bf886792c5")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU23")
 					(unit 1)
 				)
@@ -7635,7 +7979,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0a799aa3-d642-47b5-9483-16a6454029d2")
+		(uuid "6ac70129-644c-462e-a969-e85c9b601e11")
 	)
 	(label "NRST"
 		(at 365.76 55.88 270)
@@ -7645,7 +7989,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f53ffdef-ce77-42ea-8607-6f24edca9d15")
+		(uuid "0983b419-6a02-4149-b24b-6b0d9f7b704d")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x08")
@@ -7655,7 +7999,7 @@
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "d3f42665-f0aa-49fd-8fc8-5140694ddfd8")
+		(uuid "aa24ba93-5637-436e-8516-fa29b2bb0e5f")
 		(property "Reference" "J5"
 			(at 307.34 160.02 0)
 			(effects
@@ -7700,32 +8044,32 @@
 			)
 		)
 		(pin "1"
-			(uuid "4ad382f6-0fd6-46bb-a8a1-f5bde705cdc7")
+			(uuid "23857a09-fd47-41c7-8add-3384194747c5")
 		)
 		(pin "2"
-			(uuid "6e8d42fa-b103-4dbd-b555-4d756fa5353d")
+			(uuid "7ac82a2f-9a9c-4211-b6b1-c989dce3c46c")
 		)
 		(pin "3"
-			(uuid "52ef4763-c9dd-4222-83b5-7af44baf3722")
+			(uuid "c2bfa81a-af64-4457-a959-6a37f724a002")
 		)
 		(pin "4"
-			(uuid "794c023c-d07c-415f-b869-ff506e15721f")
+			(uuid "b3cc48ed-96d2-4820-bf22-4054c275e90f")
 		)
 		(pin "5"
-			(uuid "3de23093-9d61-4d88-8fe9-d6c67334125f")
+			(uuid "9dfc7d1c-ff09-4866-ae5f-7c6affa84603")
 		)
 		(pin "6"
-			(uuid "cb0d3cb1-b9f1-4fc2-9f4b-3ac9fa18d5e2")
+			(uuid "54ecfe4c-fa5c-4718-8281-aa0d9a4ddc0e")
 		)
 		(pin "7"
-			(uuid "72c34a95-6eea-4030-bf03-c7e3058e659a")
+			(uuid "4d917fcf-8650-4c81-9fa1-8931ed169878")
 		)
 		(pin "8"
-			(uuid "31c42582-4254-43f8-8d41-529e95170f9d")
+			(uuid "274d0552-d038-40ac-9f96-613164cfa4f2")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "J5")
 					(unit 1)
 				)
@@ -7741,7 +8085,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7c428ee0-3075-4da4-ae7f-4a727d383d79")
+		(uuid "60131a88-9c57-4e77-86b0-8f1315537cb2")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -7751,7 +8095,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "226bb9d6-2e4d-4ae3-88b5-07c0a5d445dc")
+		(uuid "b52607fb-7f71-467e-ba8d-788010de88eb")
 		(property "Reference" "#PWRU24"
 			(at 299.72 152.4 0)
 			(effects
@@ -7788,11 +8132,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "01c45765-f2bf-4c2d-a79a-659c8484422f")
+			(uuid "a0abd06f-81b5-4fa3-ba99-0ed6d783adc8")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU24")
 					(unit 1)
 				)
@@ -7808,7 +8152,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8977faaf-063a-48a0-9d63-ac292c00929c")
+		(uuid "7460762c-7c65-4a17-8cc7-bb266810cd39")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7818,7 +8162,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "e285eb58-7da7-4612-83a3-301369576e16")
+		(uuid "be621365-7151-4584-9461-ec52d723f528")
 		(property "Reference" "#PWRU25"
 			(at 299.72 154.94 0)
 			(effects
@@ -7855,11 +8199,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "80abae0f-5b84-4308-bc98-08977bc4f8c8")
+			(uuid "59636aaa-d8a2-4fab-b6f1-068eedb7f9bc")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU25")
 					(unit 1)
 				)
@@ -7875,7 +8219,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "aa7feed3-8acb-4ce7-bf2e-695d75ccaeb4")
+		(uuid "05c1966b-58e3-40a9-996e-0359b9b1b48f")
 	)
 	(label "SCL_SCK"
 		(at 299.72 162.56 180)
@@ -7885,7 +8229,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3c2eb13d-2bc4-43da-8c4c-bede4ef1561e")
+		(uuid "b9f5ba6d-8dc6-441d-84e8-088f0a50dc65")
 	)
 	(wire
 		(pts
@@ -7896,7 +8240,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9c16bc10-9c36-4d69-bcdb-3ae5913da415")
+		(uuid "8f7d6ced-762b-4a7d-a680-ad80f758ce33")
 	)
 	(label "SDA_MOSI"
 		(at 299.72 165.1 180)
@@ -7906,7 +8250,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f3f60b33-b3f2-45fa-a419-cc2d15a4bd49")
+		(uuid "fb3fc4d9-e179-4494-a98b-602b28cefdc8")
 	)
 	(wire
 		(pts
@@ -7917,7 +8261,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "20854094-93ff-498d-b59d-641f0baaa60b")
+		(uuid "983c5e66-622c-48f6-befc-dbca5795c8f1")
 	)
 	(label "P0.24_MISO"
 		(at 299.72 167.64 180)
@@ -7927,7 +8271,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b966ffab-609d-4aba-9f80-3271795fb0d6")
+		(uuid "7c5b76bf-9ca2-441c-b2ea-ac44787e320a")
 	)
 	(wire
 		(pts
@@ -7938,7 +8282,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "519601bc-74d5-49c3-9d1b-e7bdd81041a6")
+		(uuid "b5e07c4d-7fb7-49c6-8a98-99400e814e62")
 	)
 	(label "P0.11_CS"
 		(at 299.72 170.18 180)
@@ -7948,7 +8292,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "6468a1f7-b7b6-47fc-9cc4-506029592d71")
+		(uuid "38e58eff-6955-4f00-b100-3e845bec2440")
 	)
 	(wire
 		(pts
@@ -7959,7 +8303,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2a422098-cb9b-46e2-a420-717f136aa044")
+		(uuid "a08a39d0-8fcb-4fdb-b3ad-29809a36a3c0")
 	)
 	(label "RDY_MOTION"
 		(at 299.72 172.72 180)
@@ -7969,7 +8313,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c7972886-a38a-4c64-aa01-3d970caa07b6")
+		(uuid "b8d0c560-93fe-41a2-a00c-81f338d62130")
 	)
 	(wire
 		(pts
@@ -7980,7 +8324,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a428c205-9335-4241-b3f4-84bfca72904b")
+		(uuid "27f97420-1f6d-424c-af7c-15dc9e75a99f")
 	)
 	(label "NRST"
 		(at 299.72 175.26 180)
@@ -7990,7 +8334,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "943cb86c-5b5f-42ec-b662-aa8449ac17a0")
+		(uuid "2eb0873e-ed05-459d-86ef-f131674f606b")
 	)
 	(text "J5: optical sensor (PAW3395 / PMW3360) instead of the trackpad, over SPI:\nSCK = P0.20, MOSI = P0.17, MISO = P0.24, CS = P0.11, MOTION = P0.22, RST = NRST.\nSCK/MOSI/MOTION share the trackpad's SCL/SDA/RDY: fit one or the other, and leave\nR3/R4 off with a sensor. Check the sensor board's supply: some want 5 V."
 		(exclude_from_sim no)
@@ -8001,7 +8345,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "8e7a85b7-e452-4cf5-a93a-1a2db3d19e27")
+		(uuid "44324bea-e6eb-4409-bbcd-98f71a59e817")
 	)
 	(text "Trackpad: Azoteq TPS43 (IQS572), I2C at 1.65-3.6 V.\nJ2 is six bare pads for short wires to the module's own pads (no FPC, keeps it thin),\nin the module's order: SDA, SCL, 3V3, GND, RST, RDY (datasheet v1.06, figure 2.1)."
 		(exclude_from_sim no)
@@ -8012,7 +8356,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "fc60cc30-34ff-4e23-96c1-43f938b46037")
+		(uuid "f17e1d3e-1a53-45a2-b561-f68da0eb3632")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x06")
@@ -8022,7 +8366,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "215fcba9-048a-401f-8a0e-5167546e5c06")
+		(uuid "988e0c65-bbad-42dc-b365-033ebe10be13")
 		(property "Reference" "J3"
 			(at 307.34 96.52 0)
 			(effects
@@ -8058,26 +8402,26 @@
 			)
 		)
 		(pin "1"
-			(uuid "da5f23bb-9dc3-4f5a-8413-f04b3afbf04a")
+			(uuid "d21f971b-3842-4c55-ac2c-a7f8cd87a780")
 		)
 		(pin "2"
-			(uuid "565046c3-42b4-4a07-b72d-57a328935225")
+			(uuid "d0a2545c-c311-49d0-9f6c-1512fc1e622a")
 		)
 		(pin "3"
-			(uuid "8458f874-3632-43c9-8693-86fa9844650b")
+			(uuid "45d35eaa-cd77-4b53-8e1e-256e1a565555")
 		)
 		(pin "4"
-			(uuid "31ce5479-2047-46a7-823e-6cfd4d19d9d1")
+			(uuid "2964b47e-3778-40ee-9d5f-5ebb536592ac")
 		)
 		(pin "5"
-			(uuid "567625df-abf0-4406-9986-e34b358d76d9")
+			(uuid "0cb25789-7f33-4194-b764-e5b314be02a8")
 		)
 		(pin "6"
-			(uuid "44e73b62-5286-490b-8581-98e091a42372")
+			(uuid "57b91996-4af1-421d-86a7-7a8c06d313aa")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "J3")
 					(unit 1)
 				)
@@ -8093,7 +8437,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "37117f17-8c23-4897-8430-fab189b16224")
+		(uuid "8c058f64-0649-4475-ab46-4b8a7dbc0c23")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -8103,7 +8447,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "acf53097-3385-495b-80aa-9c9e87dd701f")
+		(uuid "eaf59849-f1a6-40f0-9a0c-3b390fff003b")
 		(property "Reference" "#PWRU26"
 			(at 299.72 91.44 0)
 			(effects
@@ -8140,11 +8484,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "c27b4e3b-ab8c-4169-ad49-89fc410656bd")
+			(uuid "1a6c23ce-2881-4d83-b776-9e9a99eefafd")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU26")
 					(unit 1)
 				)
@@ -8160,7 +8504,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "80634a7e-faa4-435f-88d9-7cf9b310b000")
+		(uuid "fd718756-f533-4a90-8d23-255560904b99")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8170,7 +8514,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "fc39867a-1065-4677-bf69-eaad37b3d3cb")
+		(uuid "907a95c9-baa2-4522-ba23-abd7b632f9c8")
 		(property "Reference" "#PWRU27"
 			(at 299.72 93.98 0)
 			(effects
@@ -8207,11 +8551,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "4d64ca7a-0484-49f8-9fd3-6fead79d84c5")
+			(uuid "8822ca13-521e-49d7-90bb-9991a1659ced")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU27")
 					(unit 1)
 				)
@@ -8227,7 +8571,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "923bee7c-dea5-45f5-97b3-2f62aab52b58")
+		(uuid "f53e2585-7509-46c3-bc00-6f8e51895d0c")
 	)
 	(label "P0.08"
 		(at 299.72 101.6 180)
@@ -8237,7 +8581,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b49167b4-7856-42dd-b897-a0e801c3c4f2")
+		(uuid "38281ee0-0126-42e4-adc9-4107b52c2e04")
 	)
 	(wire
 		(pts
@@ -8248,7 +8592,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a5be70d3-4f57-442f-86a3-425a0a7c3aba")
+		(uuid "37472627-7825-498a-835e-41959852fc3c")
 	)
 	(label "P0.06"
 		(at 299.72 104.14 180)
@@ -8258,7 +8602,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "e7e40826-1294-4e44-9dcb-df0b34dd12fc")
+		(uuid "7ef89217-107b-410e-9bc1-a9447983cdfa")
 	)
 	(wire
 		(pts
@@ -8269,7 +8613,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "aa98b803-349d-4689-8975-cf2ad923aba6")
+		(uuid "6b1c8926-3940-4848-84f0-55ac7b8b3c1e")
 	)
 	(label "SDA_MOSI"
 		(at 299.72 106.68 180)
@@ -8279,7 +8623,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3ad7694e-a2dd-4820-9ec3-51a3e5d19f59")
+		(uuid "bcce0f53-53bc-4502-9900-e1e025472802")
 	)
 	(wire
 		(pts
@@ -8290,7 +8634,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0566d5ca-94aa-4a5d-a553-f1c1e25888ab")
+		(uuid "936aafd1-9402-435d-a0c4-3e359fbd7818")
 	)
 	(label "SCL_SCK"
 		(at 299.72 109.22 180)
@@ -8300,7 +8644,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "a760abef-a37d-4a15-80bb-d30a401bcd65")
+		(uuid "d8465cfb-1ff8-43ff-b97d-d52cfd312ee2")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
@@ -8310,7 +8654,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e32aaf50-9dee-4cd7-8c27-20344f69b9aa")
+		(uuid "d50afe02-8ccc-44e7-995e-15756be11ac9")
 		(property "Reference" "J4"
 			(at 307.34 127 0)
 			(effects
@@ -8346,20 +8690,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "ae05c8b1-b298-4930-a1bd-4b1b65be4a5f")
+			(uuid "0e830d25-6d01-4ef2-8717-45d9827903f2")
 		)
 		(pin "2"
-			(uuid "5aca91d2-821b-4117-aca7-fc9a67d23c45")
+			(uuid "10d4a1c5-e80b-4ae5-b76a-f96ae0482568")
 		)
 		(pin "3"
-			(uuid "6d0ff04c-ddba-4c82-b103-eb4348b2ceeb")
+			(uuid "0e798aa6-b978-4694-b53d-36916b9f3193")
 		)
 		(pin "4"
-			(uuid "3653da6a-621c-41d5-9b37-2c8c0ad66397")
+			(uuid "f9a7371f-4e23-4ace-b639-b325bdaaf739")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "J4")
 					(unit 1)
 				)
@@ -8375,7 +8719,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ce716526-bace-4655-9c83-e27e98c10925")
+		(uuid "39d45150-a8c5-41b7-ac23-d88e54084e58")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8385,7 +8729,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "72f3e303-3279-4a35-8768-1c8612cb840c")
+		(uuid "7151fa21-4342-4fa2-87e3-1bf11429c206")
 		(property "Reference" "#PWRU28"
 			(at 299.72 124.46 0)
 			(effects
@@ -8422,11 +8766,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "053899ff-6e10-4700-a365-d9bdd1319e7b")
+			(uuid "d00adc4e-8e8b-4c8b-a0b4-5e1d968a67ca")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU28")
 					(unit 1)
 				)
@@ -8442,7 +8786,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3fb5b269-44d1-4f9a-be1a-ad35f42cd81f")
+		(uuid "857df18b-1e7b-4432-8490-22121d025f80")
 	)
 	(label "P0.24_MISO"
 		(at 299.72 132.08 180)
@@ -8452,7 +8796,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "722c293c-0e24-4dd0-9aa6-3d20274fe846")
+		(uuid "eb58c9f6-24d4-441c-8e54-ac96f3242fda")
 	)
 	(wire
 		(pts
@@ -8463,7 +8807,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "acc818a1-095b-42eb-83e8-18fdd73f0005")
+		(uuid "b2fd5b3f-7d31-4e80-9a56-a5b9463fd88b")
 	)
 	(label "LED_EN"
 		(at 299.72 134.62 180)
@@ -8473,7 +8817,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "5416cd2a-c3fc-42a6-ae58-1eac843ecb73")
+		(uuid "c6d77123-1af4-4039-aac9-6ecfc21153cf")
 	)
 	(wire
 		(pts
@@ -8484,7 +8828,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ee1568cf-3863-4609-b8f5-8f160a09afde")
+		(uuid "5efdc7be-a8bc-47a1-97f8-a3ce6ec0d534")
 	)
 	(label "P0.11_CS"
 		(at 299.72 137.16 180)
@@ -8494,7 +8838,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b1d30267-9745-44bb-aeba-ef001ee68c58")
+		(uuid "3c49aa63-3600-44a2-b9ef-e276b91e9aeb")
 	)
 	(text "J3 expansion: UART on P0.08/P0.06, I2C shared with the trackpad.\nJ4 GPIO: P0.24 and P0.11 (sensor MISO/CS if J5 is used); P1.00 is LED_EN."
 		(exclude_from_sim no)
@@ -8505,7 +8849,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "4420a3e5-0f12-4b1c-a9b1-2f05003f8257")
+		(uuid "8936e5bd-6eb0-4080-be45-352904fbcaf6")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -8515,7 +8859,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "e772abbe-92a0-436c-901e-f5832d2d0281")
+		(uuid "ea53e9c2-bbb9-4cb5-a3a1-0638c0bb7c18")
 		(property "Reference" "#FLGU29"
 			(at 27.94 167.64 0)
 			(effects
@@ -8552,11 +8896,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "5206b7e3-dca7-47f7-905e-508a661879ad")
+			(uuid "b21eb6ff-fbcd-44cc-854b-c98709a345c5")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#FLGU29")
 					(unit 1)
 				)
@@ -8572,7 +8916,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "acfb21c4-2506-47fa-ae76-a719e4dbc398")
+		(uuid "a186f680-673a-4293-a77e-a6b8eb6ad8ba")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8582,7 +8926,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "b055d42b-18d6-4a86-b507-c2e5a97b41b4")
+		(uuid "11acf3d5-8608-484e-8f31-5c4fec56be9f")
 		(property "Reference" "#PWRU30"
 			(at 27.94 170.18 0)
 			(effects
@@ -8619,11 +8963,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "ef857c5a-8fd7-43e3-92d1-c9c875f6b54f")
+			(uuid "f8b7c16a-2f02-48df-b5a0-5f463847f512")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU30")
 					(unit 1)
 				)
@@ -8638,7 +8982,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "d5b94298-4521-45ca-99f9-7faf66b4d8b8")
+		(uuid "516a94af-c8ff-4751-8a79-31c1e1a41074")
 		(property "Reference" "#FLGU31"
 			(at 43.18 167.64 0)
 			(effects
@@ -8675,11 +9019,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "facc7eda-9565-42aa-ac4b-81ca4195a56b")
+			(uuid "2608fcac-57cd-4e5b-ac6f-c175f490e510")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#FLGU31")
 					(unit 1)
 				)
@@ -8695,7 +9039,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a14a6975-7a1f-4175-bf9d-2fdf93bff1ad")
+		(uuid "973c668f-785b-423b-b12f-4e36bda5421d")
 	)
 	(label "VBAT"
 		(at 43.18 175.26 270)
@@ -8705,7 +9049,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3d9492df-a2f3-41df-a762-b73acc1868b6")
+		(uuid "d57c7b0e-6135-433a-b2da-5ee29859eba8")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -8715,7 +9059,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "5808203e-780d-4ec5-a33e-fb604e98ddcb")
+		(uuid "d89b37a8-4a78-4262-89c3-9466e898d036")
 		(property "Reference" "#FLGU32"
 			(at 58.42 167.64 0)
 			(effects
@@ -8752,11 +9096,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "2675e4cc-b5a6-43e1-9f92-5904393130ab")
+			(uuid "1fb0dfee-7cb5-481c-861f-382373aef611")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#FLGU32")
 					(unit 1)
 				)
@@ -8772,7 +9116,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8a90be21-af7b-4e1d-852a-c5222a027cee")
+		(uuid "76635b88-bd28-448b-900c-cd2c5c4e9725")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -8782,7 +9126,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "a65c4a60-9bcd-4a1c-a9ae-681251587928")
+		(uuid "4e2014d8-3746-4ab8-8dfc-541b00614aff")
 		(property "Reference" "#PWRU33"
 			(at 58.42 170.18 0)
 			(effects
@@ -8819,11 +9163,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d2e40051-b237-4088-95df-42404ea81384")
+			(uuid "9a924b0f-3b1d-4f99-b1ea-0a72a435a9ef")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#PWRU33")
 					(unit 1)
 				)
@@ -8838,7 +9182,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "33048669-42db-4146-a319-aa24b9d8b051")
+		(uuid "74394629-4d1a-4d4e-9f02-05f5f3d4ef22")
 		(property "Reference" "#FLGU34"
 			(at 73.66 167.64 0)
 			(effects
@@ -8875,11 +9219,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "71ae73b2-0016-4c7e-a032-60c72d9c3d22")
+			(uuid "771b1083-08eb-4d84-bb57-3119821ecd68")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#FLGU34")
 					(unit 1)
 				)
@@ -8895,7 +9239,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bdba5d60-fd0a-46ca-94cb-aedb878e7e28")
+		(uuid "8f18d79f-7c9d-4b35-9de3-a021e7f215dd")
 	)
 	(label "BATT+"
 		(at 73.66 175.26 270)
@@ -8905,7 +9249,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "bd411e8a-ba69-4ace-a8e5-2792fd5cbb84")
+		(uuid "6ebfb585-d176-4301-a324-8d85099bf7d6")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -8915,7 +9259,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "a5e7d631-f20c-4093-8a10-a7c03e079706")
+		(uuid "afb9ad89-1b22-449b-b4fb-16f87a6226c1")
 		(property "Reference" "#FLGU35"
 			(at 88.9 167.64 0)
 			(effects
@@ -8952,11 +9296,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "2a23cd58-04d1-4a27-8669-661866afb23b")
+			(uuid "2c30ccaf-c20a-470b-84ea-83adbded5649")
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(reference "#FLGU35")
 					(unit 1)
 				)
@@ -8972,7 +9316,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9d0a0012-7aaa-4ab1-a553-53fdf66925df")
+		(uuid "6d0a2f5f-7f2d-4d38-a728-7ce6361dae9c")
 	)
 	(label "LED_EXT"
 		(at 88.9 175.26 270)
@@ -8982,7 +9326,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3ebf1424-944a-4a59-b07e-40f316de0067")
+		(uuid "0f489acd-1855-4aa6-bc1f-1652517bc0f1")
 	)
 	(sheet
 		(at 27.94 200.66)
@@ -8995,7 +9339,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "64071252-c0b7-4536-a06d-bf78421048f3")
+		(uuid "e5e3bf79-5c75-4f6b-b069-06591ba332ce")
 		(property "Sheetname" "Key matrix"
 			(at 27.94 199.96 0)
 			(effects
@@ -9016,7 +9360,7 @@
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(page "2")
 				)
 			)
@@ -9033,7 +9377,7 @@
 		(fill
 			(color 0 0 0 0)
 		)
-		(uuid "a18e0d88-c02e-4eee-b9c2-1f0e3f5f6563")
+		(uuid "a06187a3-ef5a-4b80-9141-fbb4c2a57054")
 		(property "Sheetname" "LEDs"
 			(at 76.2 199.96 0)
 			(effects
@@ -9054,7 +9398,7 @@
 		)
 		(instances
 			(project "unicorne"
-				(path "/2a0756de-0542-4e93-b637-a73b25f46807"
+				(path "/cd13e209-e104-44f6-885c-e8b9e87a2e0f"
 					(page "3")
 				)
 			)

@@ -461,6 +461,19 @@ def build():
                       in_bom=False, fields={"Note": "Bridge with JP2 on VCC and U2 not fitted; open with U2 fitted"})
     jp3.connect(1, "LED_DATA")
     jp3.connect(2, "LED_DIN")
+    # Pro Micro compatibility: a controller with only the 24 outer pins has no
+    # P1.01 / P1.02 / P1.07, so these move COL5, COL6 and ROW5 onto outer pins that
+    # aren't the Pro Micro I2C pair (SDA/SCL stay free, as do RDY, LED data and LED_EN)
+    for ref, a, b_, y in (("JP4", "COL5", "P0.24_MISO", 172.72), ("JP5", "COL6", "P0.11_CS", 182.88),
+                          ("JP6", "ROW5", "P0.08", 193.04)):
+        jp = root.symbol("Jumper:SolderJumper_2_Open", ref, f"{a} to {b_.split('_')[0]}", 121.92, y,
+                         footprint=FP["jumper"], in_bom=False,
+                         fields={"Note": "Bridge only with a Pro Micro-style controller (no inner pins); open with a nice!nano"})
+        jp.connect(1, a)
+        jp.connect(2, b_)
+    root.text("Pro Micro mode: a controller without the nice!nano's three inner pins needs\n"
+              "JP4 (COL5 to P0.24), JP5 (COL6 to P0.11) and JP6 (ROW5 to P0.08) bridged.\n"
+              "Leave them open with a nice!nano, or two controller pins drive one net.", 27.94, 172.72)
     c2 = root.symbol("Device:C_Small", "C2", "100nF", 167.64, 121.92, footprint=FP["c"])
     c2.connect(1, "LED_VDD")
     c2.connect(2, "GND")

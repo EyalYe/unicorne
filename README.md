@@ -25,6 +25,19 @@ Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 un
   supply up to 5 V on the LED IN pads for full brightness. Never the battery.
 - MSK-12C02 battery cut-off switch, through-hole battery pads
 - Exposed pads: expansion header (3V3, GND, UART, I2C) and GPIO header (P0.24, P1.00, P0.11)
+- Pro Micro mode: a Pro Micro-footprint controller without the nice!nano's three inner pins (P1.01, P1.02,
+  P1.07) works with three solder jumpers bridged, which move those nets to outer pins that aren't the Pro
+  Micro I2C pair:
+
+  | Jumper | Net (nice!nano pin) | Bridged to | That pin's other use, lost in this mode |
+  |---|---|---|---|
+  | JP4 | COL5 (P1.01) | P0.24 | free GPIO / sensor MISO |
+  | JP5 | COL6 (P1.02) | P0.11 | free GPIO / sensor CS |
+  | JP6 | ROW5 (P1.07) | P0.08 | UART RX |
+
+  I2C (SDA/SCL), the trackpad's RDY, LED data (P0.06) and LED power (P1.00) keep working. Leave all three
+  open with a nice!nano, or two controller pins drive one net. In firmware, point COL5, COL6 and ROW5 at the
+  bridged pins.
 
 The full pin plan and parts list are in `mock/index.html` (open it in a browser).
 
@@ -68,6 +81,7 @@ Leave all of these off for a board without lighting.
 | C2 | 1 | 100 nF capacitor | 0603 hand-solder | U2 decoupling; leave off with U2 |
 | JP3 | — | Solder jumper | — | U2 bypass: bridge it with JP2 on VCC and U2 left off |
 | JP1 | — | Solder jumper | — | Bridge it to send LED data from P0.06 (through U2) |
+| JP4–JP6 | — | Solder jumpers | — | Pro Micro mode only: bridge all three without a nice!nano; open with one |
 
 ### Off the PCB
 
