@@ -5,6 +5,10 @@ rotated 16°, with an Azoteq TPS43 trackpad in the middle and a nice!nano v2 mou
 
 Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 unconnected, 0 copper violations).
 
+
+> **`unrouted` branch:** both PCBs are placed but not routed (no tracks, vias or pours), as a
+> starting point for routing by hand. The files in `export/` are still the routed boards from `main`.
+
 ## Design
 
 - 42 keys (3×6 + 3 thumbs per half), outer pinky columns break off for a 36-key board
