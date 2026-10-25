@@ -175,25 +175,15 @@ HAND_PLACED = {
     "Q1": (0.562, 61.568, 0.0, True),
     "JP3": (-10.650, 72.068, 0.0, True),
     "R2": (7.088, 61.568, 0.0, True),
-<<<<<<< ours
-    "R4": (4.088, 25.020, 180.0, True),
-    "JP4": (-4.500, 4.218, 90.0, True),
-    "R3": (-0.412, 25.020, 180.0, True),
-=======
     "R4": (4.088, 25.520, 180.0, True),
     "JP4": (-4.500, 4.218, 90.0, True),
     "R3": (-0.412, 25.520, 180.0, True),
->>>>>>> theirs
     "JP1": (-12.000, -12.932, 180.0, True),
     "JP5": (-3.850, 12.568, 0.0, True),
     "JP2": (-9.000, 64.368, -90.0, True),
     "U2": (-16.350, 67.018, 0.0, True),
     "JP6": (0.500, -7.282, 90.0, True),
-<<<<<<< ours
-    "R5": (9.088, 25.068, 180.0, True),
-=======
     "R5": (9.088, 25.568, 180.0, True),
->>>>>>> theirs
     "Q2": (0.062, 67.018, 180.0, True),
     "R1": (-5.000, 61.480, -90.0, True),
     "C1": (7.500, 65.930, -90.0, True),
@@ -606,15 +596,6 @@ def build(variant):
     # below the nice!nano: the I2C, RDY, reset and SPI nets stay short
     nc = ny + NANO_USB_EDGE
     j5_y = ny + nano["h"] + 6.0
-<<<<<<< ours
-    tp_y = j5_y + 7.0
-    part("J5", 0, j5_y, 90, bottom=False)              # optical sensor pads
-    for i, ref in enumerate(("R3", "R4", "R5")):       # pull-ups between sensor and trackpad pads
-        part(ref, -4.5 + i * 4.5, (j5_y + tp_y) / 2, 90)
-    part("J2", 0, tp_y, 270, bottom=False)             # trackpad wire pads, pin 1 (SDA) right
-    part("J4", -15.0, tp_y, 270)                       # GPIO header, beside the trackpad pads
-    j3_y = tp_y + 5.5
-=======
     tp_y = j5_y + 8.0                                  # 2 tracks fit between the pad rows
     part("J5", 0, j5_y, 90, bottom=False)              # optical sensor pads
     for i, ref in enumerate(("R3", "R4", "R5")):       # pull-ups between sensor and trackpad pads
@@ -622,7 +603,6 @@ def build(variant):
     part("J2", 0, tp_y, 90, bottom=False)              # trackpad wire pads, pin 1 (SDA) left, by the nano's SDA
     part("J4", -15.0, tp_y, 270)                       # GPIO header, beside the trackpad pads
     j3_y = tp_y + 6.5
->>>>>>> theirs
     part("J3", 0, j3_y, 270)                           # UART/I2C header, below the trackpad pads
     # battery pads beside the power switch, LED IN pads high on the LED side
     part("J1", 16.0, nc + 1.9, 270, bottom=False)
@@ -672,11 +652,7 @@ def build(variant):
     for ref in ("Q1", "Q2", "U2", "SW43"):             # no room for these reference labels
         fps[ref].Reference().SetVisible(False)
     # pin table below the pads and pull-ups, above the bottom mounting holes
-<<<<<<< ours
-    pin_table(b, j3_y + 4.5, batt[0]["y"] - 1.0)
-=======
     pin_table(b, j3_y + 3.5, batt[0]["y"] - 1.0)
->>>>>>> theirs
 
     # --- outline (with the USB notch), trackpad, break lines. The trackpad sits on
     # the case above the board, so it is only drawn (F.Fab and User.Drawings) to show
