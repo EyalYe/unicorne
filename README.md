@@ -108,7 +108,8 @@ switch type and size:
 | `plate/unicorne-choc-42-plate.kicad_pcb`, `plate/unicorne-choc-36-plate.kicad_pcb` | 13.8 mm | 1.2 mm |
 
 Each has the same outline, coordinates and M2 holes as its PCB and a 44.3 x 41.3 mm opening for the TPS43.
-The 36-key plates are cut where the PCB snaps off its outer columns, with rounded corners.
+The 36-key plates are cut evenly on both sides where the PCB snaps off its outer columns (on Choc, whose
+break lines differ by side, at their average), with rounded corners.
 `export/plate/` holds, per plate:
 
 - `*-jlcpcb.zip`: order as an FR4 board, no copper (the copper layers are included empty so JLCPCB's

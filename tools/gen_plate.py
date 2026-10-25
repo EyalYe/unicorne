@@ -7,8 +7,8 @@ Run with KiCad's bundled Python:
 
 Same outline, coordinates and mounting holes as the matching PCB, a switch
 cutout at every key and an opening for the trackpad. Plates are solid (no break
-lines): the 36-key plate is cut where the PCB snaps off its outer columns, with
-rounded corners, and keeps only the holes whose screw head still fits. Writes
+lines): the 36-key plate is cut evenly on both sides, where the PCB snaps off its
+outer columns (their average on Choc), with rounded corners, and keeps only the holes whose screw head still fits. Writes
 plate/unicorne-{mx,choc}-{42,36}-plate.kicad_pcb, then exports a JLCPCB
 zip (FR4 plate, no copper), a DXF for laser cutting and a STEP model into
 export/plate/. The copper layers are exported empty: JLCPCB's viewer needs them to
@@ -84,7 +84,10 @@ def build(variant, size):
     outline = [tuple(p) for p in layout["outline"]]
     plate_keys = layout["keys"]
     if size == 36:
-        outline = trim_36(outline, keys, pv["break_at"])
+        # the PCB's break lines differ per side on Choc (its sockets aren't mirrored);
+        # the plate has no sockets to dodge, so it is cut evenly at their average
+        cut = sum(pv["break_at"]) / 2
+        outline = trim_36(outline, keys, (cut, cut))
         plate_keys = [k for k in plate_keys if not (k["name"].startswith("K") and k["name"].endswith("0"))]
     G.polygon(b, outline, pcbnew.Edge_Cuts)
     assert len(plate_keys) == size
