@@ -90,20 +90,26 @@ def strip_old(path):
 
 
 def free_area(board, silk, crtyd, cu):
-    """The bare board on one side, as a polygon set. Every part, pad and label gets a
-    rounded halo, and halos closer than 2 * CLOSE merge, so the lines end in smooth
+    """Where the waves go on one side, as a polygon set. On the top they run over
+    everything (switches, the trackpad's space) and only clear exposed copper, holes,
+    cutouts and text; on the bottom every part, pad and label gets a rounded halo, and halos closer than 2 * CLOSE merge, so the lines end in smooth
     curves around parts instead of steps and short dashes between them."""
     area = pcbnew.SHAPE_POLY_SET()
     board.GetBoardPolygonOutlines(area, False)
     area.Deflate(mm(MARGIN), ROUND, mm(0.05))
     block = pcbnew.SHAPE_POLY_SET()
+    top = silk == pcbnew.F_SilkS
     for fp in board.GetFootprints():
         cy = fp.GetCourtyard(crtyd)
-        if cy.OutlineCount():
+        if cy.OutlineCount() and not top:
             block.BooleanAdd(pcbnew.SHAPE_POLY_SET(cy))
         silk_items = [i for i in list(fp.GraphicalItems()) + [fp.Reference(), fp.Value()]
-                      if i.GetLayer() == silk and (not hasattr(i, "IsVisible") or i.IsVisible())]
-        if silk_items:                    # the whole outline the silkscreen draws, filled
+                      if i.GetLayer() == silk and (not hasattr(i, "IsVisible") or i.IsVisible())
+                      and (not top or isinstance(i, pcbnew.PCB_TEXT))]
+        if top:                           # the top waves run over parts: only text stays clear
+            for i in silk_items:
+                block.BooleanAdd(box_poly(i.GetBoundingBox(), 0))
+        elif silk_items:                  # the whole outline the silkscreen draws, filled
             box = silk_items[0].GetBoundingBox()
             for i in silk_items[1:]:
                 box.Merge(i.GetBoundingBox())
@@ -114,7 +120,7 @@ def free_area(board, silk, crtyd, cu):
                 pad.TransformShapeToPolygon(shape, cu, 0, mm(0.02), pcbnew.ERROR_INSIDE)
                 block.BooleanAdd(shape)
     for d in board.GetDrawings():
-        if d.GetLayer() == silk:
+        if d.GetLayer() == silk and (not top or isinstance(d, pcbnew.PCB_TEXT)):
             block.BooleanAdd(box_poly(d.GetBoundingBox(), 0))
     block.Inflate(mm(MARGIN + CLOSE), ROUND, mm(0.05))      # halo, then close the gaps
     block.Deflate(mm(CLOSE), ROUND, mm(0.05))
