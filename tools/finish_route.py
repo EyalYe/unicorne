@@ -309,7 +309,7 @@ def rescue(path, candidates=10):
             for r in range(max(r0, 0), min(r1, grid.ny - 1) + 1):
                 for c in range(max(c0, 0), min(c1, grid.nx - 1) + 1):
                     o = grid.own[L][r * grid.nx + c]
-                    if o not in (0, M.BLOCK, netcode[name], netcode.get("GND")):
+                    if o not in (0, M.BLOCK, netcode[name]):       # GND too: the pours back it up
                         count[o] = count.get(o, 0) + 1
         names = {v: k for k, v in netcode.items()}
         net = netcode[name]
@@ -368,6 +368,10 @@ def fix_gnd(path):
         more, stuck = gnd_repair.repair(board)
         added += more
     board.Save(str(path))
+    # a link out of a boxed-in pocket lifts a net; if that net didn't fully route
+    # again, rescue it (which keeps a change only when nothing new is left unrouted)
+    if any(net_of(q) not in (None, "GND") for q in unconnected(path)):
+        print(f"  rescued {rescue(path)} signal connections the GND repair left unrouted", flush=True)
     print(f"GND repair: {added} vias, {joined} links out of boxed-in pockets, {stuck} groups still cut off, "
           f"{len(unconnected(path))} unconnected", flush=True)
 
