@@ -1,7 +1,7 @@
 # unicorne
 
 A unibody [Corne](https://github.com/foostan/crkbd): both halves of the Corne v3 key layout on one PCB, each half
-rotated 16°, with an Azoteq TPS43 trackpad in the middle and a nice!nano v2 mounted underneath.
+rotated 16°, with an Azoteq TPS43 trackpad in the middle and a nice!nano v2 above it.
 
 Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 unconnected, 0 copper violations).
 
@@ -10,7 +10,8 @@ Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 un
 - 42 keys (3×6 + 3 thumbs per half), outer pinky columns break off for a 36-key board
 - Key spacing, stagger, thumb cluster and LED positions copied from crkbd `v3-final` (19.0 mm pitch)
 - Two board versions with the same placement: Kailh MX hotswap, and Kailh Choc hotswap (fits Choc V1 and V2)
-- nice!nano v2 on the bottom side, USB on the top edge
+- nice!nano v2 on the top side, components up, USB on the top edge; the edge is notched for the
+  mid-mount USB-C, whose shell drops below the nano's underside
 - TPS43 trackpad wired to six bare pads (no FPC, to keep it thin)
 - Optional LEDs: 12 SK6812MINI underglow + 42 SK6812MINI-E per key, on their own MOSFET-switched supply.
   A solder jumper picks the source: the nice!nano's 3.3 V VCC (up to its 1 A regulator), or an external
@@ -28,12 +29,12 @@ Everything is hand-soldered. Quantities are for one board; the 36-key build need
 
 | Ref | Qty | Part | Footprint | Notes |
 |---|---|---|---|---|
-| U1 | 1 | nice!nano v2 | through-hole, bottom side | Needs the 3 inner pads (P1.01, P1.02, P1.07) too; use low-profile sockets or solder directly |
+| U1 | 1 | nice!nano v2 | through-hole, top side | Needs the 3 inner pads (P1.01, P1.02, P1.07) too; use low-profile sockets or solder directly |
 | SW1–42 | 42 | Key switches: MX, or Choc V1/V2 | hotswap | MX on `unicorne.kicad_pcb`, Choc on `unicorne-choc.kicad_pcb` |
 | — | 42 | Hotswap sockets: Kailh MX, or Kailh Choc | SMD, bottom | The Choc socket fits both V1 and V2 switches |
 | D1–42 | 42 | 1N4148W diode | SOD-123, bottom | |
 | SW43 | 1 | MSK-12C02 slide switch | SMD, bottom, top edge | Battery cut-off |
-| SW44 | 1 | 6×6×5 mm tactile switch | through-hole | Reset |
+| SW44 | 1 | TS-1136 H4.3 tactile switch (6.0×3.5 mm, 4.3 mm tall, 2 pins) | through-hole, top, beside the nano | Reset |
 | J1 | — | Battery B+ / B− pads | through-hole, 4.8 mm | Solder the battery leads here |
 | J2 | — | TPS43 pads | through-hole, 2.54 mm | Wires to the trackpad (trackpad build) |
 | J5 | — | Sensor pads | through-hole, 2.54 mm | Wires to a PAW3395 / PMW3360 board (sensor build) |
@@ -130,6 +131,7 @@ break lines differ by side, at their average), with rounded corners.
 | `unicorne-choc.kicad_pcb`, `unicorne-choc.kicad_pro` | Choc V1/V2 hotswap PCB, same placement |
 | `unicorne.kicad_dru` | Extra DRC rules (LED cutout edge clearance) |
 | `lib/` | Project symbols and footprints; third-party credits in `lib/ATTRIBUTION.md` |
+| `tools/fp_tactile.py` | Generates the reset switch footprint |
 | `tools/layout.py` | Key, trackpad and outline geometry → `mock/layout.json`, `mock/unicorne.svg` |
 | `tools/gen_schematic.py` | Generates the schematic sheets from `mock/layout.json` |
 | `tools/gen_pcb.py` | Builds both PCBs from the schematic netlist and `mock/layout.json` |

@@ -45,7 +45,7 @@
 <rect x="-21.5" y="36.605" width="43.0" height="43.0" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="1 0.6"/>
 <text x="0" y="74.10499999999999" font-size="3" text-anchor="middle">TPS43</text>
 <rect x="-9.0" y="10.652" width="18.0" height="33.3" fill="none" stroke="#000" stroke-width="0.25" stroke-dasharray="0.4 0.6"/>
-<text x="0" y="19.302" font-size="3" text-anchor="middle">nice!nano (bottom)</text>
+<text x="0" y="19.302" font-size="3" text-anchor="middle">nice!nano (top)</text>
 <line x1="-113.259" y1="-10.839" x2="-131.451" y2="52.604" stroke="#000" stroke-width="0.3" stroke-dasharray="2 1"/>
 <line x1="113.259" y1="-10.839" x2="131.451" y2="52.604" stroke="#000" stroke-width="0.3" stroke-dasharray="2 1"/>
 <circle cx="-45.74" cy="29.317" r="1.1" fill="none" stroke="#000" stroke-width="0.25"/>

@@ -101,6 +101,8 @@ MODELS = {
     "sk6812mini_box": [(-1.75, -1.75, 0.0, 1.75, 1.75, 1.0)],
     # MSK-12C02: body plus the lever, which is on the footprint's +y side (the
     # model's -y: KiCad flips y between footprint and model coordinates)
+    # reset: TS-1136 H4.3 tactile switch, 6.0 x 3.5 x 3.35 mm body, 3.0 x 1.5 mm button to 4.3 mm
+    "tactile_3.5x6_h43_box": [(-3.0, -1.75, 0.0, 3.0, 1.75, 3.35), (-1.5, -0.75, 3.35, 1.5, 0.75, 4.3)],
     "msk12c02_box": [(-3.35, -1.4, 0.0, 3.35, 1.4, 1.5), (-0.75, -3.1, 0.3, 0.75, -1.4, 1.2)],
 }
 

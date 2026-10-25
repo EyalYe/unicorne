@@ -291,7 +291,7 @@ def to_svg(layout):
                  f'<rect x="{-ww / 2}" y="{-CAP / 2}" width="{ww}" height="{CAP}" rx="1.5" '
                  'fill="none" stroke="#000" stroke-width="0.25"/>'
                  '<path d="M-1 0H1M0 -1V1" stroke="#000" stroke-width="0.15"/></g>')
-    for part, label, dy in (("trackpad", "TPS43", 16), ("nano", "nice!nano (bottom)", -8)):
+    for part, label, dy in (("trackpad", "TPS43", 16), ("nano", "nice!nano (top)", -8)):
         n = layout[part]
         dash = "1 0.6" if part == "trackpad" else "0.4 0.6"
         s.append(f'<rect x="{-n["w"] / 2}" y="{n["y"]}" width="{n["w"]}" height="{n["h"]}" '

@@ -53,6 +53,11 @@ VARIANTS = {
 LED_OFFSET = 4.75            # per-key LED, south of the switch centre (Corne v3)
 NO_BOM = {"J1", "J2", "J5", "J6", "JP1", "JP2", "JP3"}  # bare pads and the solder jumpers
 NANO_USB_EDGE = 17.78        # nice_nano footprint origin to its PCB edge at the USB end
+# The nice!nano's USB-C is mid-mount: its shell drops 0.7 mm below the nano's
+# underside, into this board, from past the edge to 11.6 mm from the nano's
+# centre and 4.3 mm either side. Notch the edge for it (0.3 mm clearance), with
+# inner corners a fab's router bit can cut.
+USB_NOTCH = dict(half_w=4.7, inner=11.9, radius=0.8)
 TRACKPAD = (43.3, 40.3)      # TPS43 outline, datasheet figure 2.1
 SLOT_W = 1.0                 # break-line slot width
 BRIDGE = 2.0                 # solid bridge at each board edge
@@ -312,6 +317,24 @@ def inside(poly, x, y):
     return hit
 
 
+def usb_notch(outline, nano_y):
+    """The outline with a notch at the top edge for the nice!nano's USB shell."""
+    n = USB_NOTCH
+    poly = pcbnew.SHAPE_POLY_SET()
+    poly.NewOutline()
+    for x, y in outline:
+        poly.Append(mm(x), mm(y))
+    cut = pcbnew.SHAPE_POLY_SET()
+    cut.NewOutline()
+    y_in = nano_y - n["inner"]
+    for x, y in ((-n["half_w"], y_in - 40), (n["half_w"], y_in - 40), (n["half_w"], y_in), (-n["half_w"], y_in)):
+        cut.Append(mm(x), mm(y))
+    poly.BooleanSubtract(cut)
+    poly = poly.Fillet(mm(n["radius"]), mm(0.01))
+    o = poly.Outline(0)
+    return [(pcbnew.ToMM(o.CPoint(i).x), pcbnew.ToMM(o.CPoint(i).y)) for i in range(o.PointCount())]
+
+
 def clear_spot(b, x, y, outline, reach=10.0, step=0.25, body=None, keep_out=()):
     """Nearest point to (x, y) where an M2 hole clears every courtyard, pad and edge.
     With `body`, key switches are checked as a square of that half-width (their
@@ -498,34 +521,36 @@ def build(variant):
         return fp
 
     u1 = add_part(b, comps["U1"], pins)
-    for orient in (0, 90, 180, 270):          # pin 1 (USB end) top right, seen from above
-        place(b, u1, 0, 0, orient, bottom=True)
+    # on the top, components up: pin 1 (P0.06, USB end) is top left seen from above
+    for orient in (0, 90, 180, 270):
+        place(b, u1, 0, 0, orient, bottom=False)
         x1, y1 = pad_xy(u1, "1")
         cx, cy = (pcbnew.ToMM(v_) for v_ in (u1.GetPosition().x, u1.GetPosition().y))
-        if x1 > cx and y1 < cy:
+        if x1 < cx and y1 < cy:
             break
     # The footprint draws the nice!nano's PCB edge 17.78 mm from its origin at the USB
     # end (the receptacle overhangs a further 1.6 mm): put that edge flush with the board edge
-    place(b, u1, 0, ny + NANO_USB_EDGE, u1.GetOrientationDegrees(), bottom=True)
+    place(b, u1, 0, ny + NANO_USB_EDGE, u1.GetOrientationDegrees(), bottom=False)
 
     sw43 = add_part(b, comps["SW43"], pins)            # power switch, lever over the top edge
-    place(b, sw43, -15.0, ny + 2.0, 0, bottom=True)
-    # Left of the nice!nano: only the power switch and reset (RAW and RST are on
-    # this side), leaving its left edge free for the rows and columns.
-    part("SW44", -15.5, ny + 9.5)                      # reset, 6x6 THT
-    # Right of it: both headers and the LED parts, whose pins are all on this side
-    part("J3", 13.5, ny + 10.0, 180)                   # expansion header (6 pins)
-    part("J4", 13.5, ny + 25.0, 180)                   # GPIO header (4 pins)
-    part("JP1", 17.5, ny + 5.0, 90)                    # LED data jumper, by P0.06
-    part("Q2", 18.0, ny + 14.0)
-    part("R2", 18.0, ny + 18.0, 90)
-    part("Q1", 18.0, ny + 22.0, 180)                  # source pin faces JP2
-    part("R1", 18.0, ny + 26.0, 90)
-    part("C1", 18.0, ny + 30.0)
-    part("JP2", 22.0, ny + 22.0, 90)                   # LED source: VCC or J6
-    part("U2", 21.5, ny + 10.0)                        # LED data level shifter
-    part("C2", 21.5, ny + 5.5)
-    part("JP3", 22.0, ny + 14.5, 90)                   # U2 bypass
+    place(b, sw43, 15.0, ny + 2.0, 0, bottom=True)
+    # Right of the nice!nano: only the power switch and reset (RAW and RST are on
+    # this side), leaving its other edge free for the rows and columns.
+    part("SW44", 15.5, ny + 9.5, 90, bottom=False)     # reset, 3x6 THT on top beside the nano
+    # Left of it: both headers and the LED parts, whose pins are all on this side.
+    # SMD parts stay on the bottom.
+    part("J3", -13.5, ny + 10.0, 180)                  # expansion header (6 pins)
+    part("J4", -13.5, ny + 25.0, 180)                  # GPIO header (4 pins)
+    part("JP1", -17.5, ny + 5.0, 90)                   # LED data jumper, by P0.06
+    part("Q2", -18.0, ny + 14.0)
+    part("R2", -18.0, ny + 18.0, 90)
+    part("Q1", -18.0, ny + 22.0, 0)                    # source pin faces JP2
+    part("R1", -18.0, ny + 26.0, 90)
+    part("C1", -18.0, ny + 30.0)
+    part("JP2", -22.0, ny + 22.0, 90)                  # LED source: VCC or J6
+    part("U2", -20.5, ny + 10.0)                       # LED data level shifter, clear of the Choc socket
+    part("C2", -21.5, ny + 5.5)
+    part("JP3", -22.0, ny + 14.5, 90)                  # U2 bypass
     tp_y = py + pad["h"] + 2.5
     part("J2", 0, tp_y, 270, bottom=False)             # trackpad wire pads, pin 1 (SDA) right
     # optical sensor pads just above the trackpad pads, inside the trackpad area
@@ -539,7 +564,7 @@ def build(variant):
     # pad names: trackpad below its row, sensor above (inside the trackpad area),
     # battery below, headers on the side facing the nice!nano
     fps = {f.GetReference(): f for f in b.board.GetFootprints()}
-    for ref, side in (("J2", 1), ("J5", -1), ("J1", 1), ("J3", -1), ("J4", -1), ("J6", 1)):
+    for ref, side in (("J2", 1), ("J5", -1), ("J1", 1), ("J3", 1), ("J4", 1), ("J6", 1)):
         label_pads(b, fps[ref], side)
     # which end of JP2 is which: pad 1 = VCC, pad 3 = J6 (external)
     for num, text in (("1", "VCC"), ("3", "EXT")):
@@ -549,6 +574,9 @@ def build(variant):
         n = math.hypot(dx, dy) or 1
         silk_text(b, text, pcbnew.VECTOR2I(mm(x + dx / n * 1.9), mm(y + dy / n * 1.9)),
                   layers=(pcbnew.B_SilkS,))            # JP2 is an SMD jumper on the bottom
+    # JP2's reference to its outer side, off Q1's pads
+    ref, c = fps["JP2"].Reference(), fps["JP2"].GetPosition()
+    ref.SetPosition(pcbnew.VECTOR2I(2 * c.x - ref.GetPosition().x - mm(1.0), ref.GetPosition().y))
     for ref in ("Q1", "Q2", "U2", "SW43"):             # no room for these reference labels
         fps[ref].Reference().SetVisible(False)
     # pin table under the trackpad, between the nice!nano and the sensor pad labels
@@ -567,13 +595,13 @@ def build(variant):
     b.board.Add(tpfp)
     tpfp.SetPosition(b.xy(0, py + pad["h"] / 2))
 
-    # --- outline, trackpad, break lines
-    polygon(b, [tuple(p) for p in layout["outline"]], pcbnew.Edge_Cuts)
+    # --- outline (with the USB notch), trackpad, break lines
+    outline = usb_notch(layout["outline"], ny + NANO_USB_EDGE)
+    polygon(b, outline, pcbnew.Edge_Cuts)
     tw, th = TRACKPAD
     tx0, ty0 = -tw / 2, py + (pad["h"] - th) / 2
     for layer in (pcbnew.F_Fab, pcbnew.Dwgs_User):
         polygon(b, [(tx0, ty0), (tx0 + tw, ty0), (tx0 + tw, ty0 + th), (tx0, ty0 + th)], layer)
-    outline = [tuple(p) for p in layout["outline"]]
     for i, (side, sign) in enumerate((("L", 1), ("R", -1))):
         k0 = keys[f"{side} K00"]
         ends = []
