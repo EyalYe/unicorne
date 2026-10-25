@@ -6,7 +6,8 @@ Run with KiCad's bundled Python:
     /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_plate.py
 
 Same outline, coordinates and mounting holes as the matching PCB, a switch
-cutout at every key and an opening for the trackpad. Plates are solid (no break
+cutout at every key, openings for the trackpad, the nice!nano (through the top
+edge, so the USB stays reachable) and the reset switch. Plates are solid (no break
 lines): the 36-key plate is cut evenly on both sides, where the PCB snaps off its
 outer columns (their average on Choc), with rounded corners, and keeps only the holes whose screw head still fits. Writes
 plate/unicorne-{mx,choc}-{42,36}-plate.kicad_pcb, then exports a JLCPCB
@@ -36,6 +37,9 @@ PLATES = {
     "choc": dict(cut=13.8, thickness=1.2, pcb="unicorne-choc.kicad_pcb"),
 }
 TRACKPAD_CLEAR = 0.5         # around the TPS43's 43.3 x 40.3 mm
+PART_CLEAR = 0.5             # around the nice!nano and the reset switch
+OPENING_FILLET = 0.8         # corner radius of the openings (a router bit's)
+RESET_BODY = (6.0, 3.5)      # TS-1136 H4.3 body, long axis along its pins
 SIZES = (42, 36)
 CUT_FILLET = 2.0             # corner radius where the 36-key plate is cut
 HEAD_R = 1.75 + 0.5          # ISO7380 M2 head plus a margin to the plate edge
@@ -52,6 +56,30 @@ def to_poly(pts):
 def from_poly(p):
     o = p.Outline(0)
     return [(pcbnew.ToMM(o.CPoint(i).x), pcbnew.ToMM(o.CPoint(i).y)) for i in range(o.PointCount())]
+
+
+def openings(layout, pcb, b):
+    """Openings in the plate (layout coordinates): the trackpad, the nice!nano run out
+    through the top edge, and the reset switch, taken from where the PCB has them."""
+    rects = []
+    pad = layout["trackpad"]
+    tw, th = G.TRACKPAD[0] / 2 + TRACKPAD_CLEAR, G.TRACKPAD[1] / 2 + TRACKPAD_CLEAR
+    cy = pad["y"] + pad["h"] / 2
+    rects.append((-tw, cy - th, tw, cy + th))
+    nano = layout["nano"]
+    nw = nano["w"] / 2 + PART_CLEAR
+    rects.append((nano["x"] - nw, nano["y"] - 20.0, nano["x"] + nw, nano["y"] + nano["h"] + PART_CLEAR))
+    sw = pcb.FindFootprintByReference("SW44")
+    pos = sw.GetPosition()
+    sx, sy = pcbnew.ToMM(pos.x) - b.ox, pcbnew.ToMM(pos.y) - b.oy
+    along_y = round(sw.GetOrientationDegrees()) % 180 == 90
+    hl, hw = RESET_BODY[0] / 2 + PART_CLEAR, RESET_BODY[1] / 2 + PART_CLEAR
+    dx, dy = (hw, hl) if along_y else (hl, hw)
+    rects.append((sx - dx, sy - dy, sx + dx, sy + dy))
+    cuts = pcbnew.SHAPE_POLY_SET()
+    for x0, y0, x1, y1 in rects:
+        cuts.BooleanAdd(to_poly([(x0, y0), (x1, y0), (x1, y1), (x0, y1)]))
+    return cuts
 
 
 def trim_36(outline, keys, break_at):
@@ -89,8 +117,18 @@ def build(variant, size):
         cut = sum(pv["break_at"]) / 2
         outline = trim_36(outline, keys, (cut, cut))
         plate_keys = [k for k in plate_keys if not (k["name"].startswith("K") and k["name"].endswith("0"))]
-    G.polygon(b, outline, pcbnew.Edge_Cuts)
     assert len(plate_keys) == size
+
+    # the plate: outline minus the openings for the trackpad, the nice!nano (open
+    # through the top edge, so the USB stays reachable) and the reset switch
+    pcb = pcbnew.LoadBoard(str(ROOT / v["pcb"]))
+    plate = to_poly(outline)
+    plate.BooleanSubtract(openings(layout, pcb, b))
+    plate = plate.Fillet(G.mm(OPENING_FILLET), G.mm(0.01))
+    for i in range(plate.OutlineCount()):
+        for chain in [plate.Outline(i)] + [plate.Hole(i, j) for j in range(plate.HoleCount(i))]:
+            G.polygon(b, [(pcbnew.ToMM(chain.CPoint(k).x), pcbnew.ToMM(chain.CPoint(k).y))
+                          for k in range(chain.PointCount())], pcbnew.Edge_Cuts)
 
     # switch cutouts, square to each key
     h = v["cut"] / 2
@@ -101,17 +139,14 @@ def build(variant, size):
             corners.append((k["x"] + dx, k["y"] + dy))
         G.polygon(b, corners, pcbnew.Edge_Cuts)
 
-    # trackpad opening
     pad = layout["trackpad"]
-    tw, th = G.TRACKPAD[0] / 2 + TRACKPAD_CLEAR, G.TRACKPAD[1] / 2 + TRACKPAD_CLEAR
+    th = G.TRACKPAD[1] / 2 + TRACKPAD_CLEAR
     cy = pad["y"] + pad["h"] / 2
-    G.polygon(b, [(-tw, cy - th), (tw, cy - th), (tw, cy + th), (-tw, cy + th)], pcbnew.Edge_Cuts)
 
     # mounting holes where the PCB has them
     # (on the 36-key plate, only those whose screw head stays inside the plate)
-    shape = to_poly(outline)
+    shape = pcbnew.SHAPE_POLY_SET(plate)
     shape.Deflate(G.mm(HEAD_R), pcbnew.CORNER_STRATEGY_ROUND_ALL_CORNERS, G.mm(0.01))
-    pcb = pcbnew.LoadBoard(str(ROOT / v["pcb"]))
     for fp in pcb.GetFootprints():
         if fp.GetReference().startswith("H") and fp.GetReference()[1:].isdigit():
             pos = fp.GetPosition()

@@ -111,7 +111,9 @@ switch type and size:
 | `plate/unicorne-mx-42-plate.kicad_pcb`, `plate/unicorne-mx-36-plate.kicad_pcb` | 14.0 mm | 1.5 mm |
 | `plate/unicorne-choc-42-plate.kicad_pcb`, `plate/unicorne-choc-36-plate.kicad_pcb` | 13.8 mm | 1.2 mm |
 
-Each has the same outline, coordinates and M2 holes as its PCB and a 44.3 x 41.3 mm opening for the TPS43.
+Each has the same outline, coordinates and M2 holes as its PCB, a 44.3 x 41.3 mm opening for the TPS43,
+an opening over the nice!nano that runs out through the top edge (so the USB stays reachable) and a window
+over the reset switch, both with 0.5 mm clearance.
 The 36-key plates are cut evenly on both sides where the PCB snaps off its outer columns (on Choc, whose
 break lines differ by side, at their average), with rounded corners.
 `export/plate/` holds, per plate:
