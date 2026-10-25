@@ -6,8 +6,11 @@ rotated 16°, with an Azoteq TPS43 trackpad in the middle (it sits on the case, 
 Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 unconnected, 0 copper violations).
 
 
-> **`unrouted` branch:** both PCBs are placed but not routed (no tracks, vias or pours), as a
-> starting point for routing by hand. The files in `export/` are still the routed boards from `main`.
+> **`heuristic` branch:** both PCBs carry only the fixed routing lanes that `tools/lanes.py` lays for
+> the 42 key cells (column vias, row stubs and lanes, LED data hops, LED_VDD lanes, jogs, GND vias), with
+> mounting holes nudged off them. Everything else (the nice!nano, the pad rows and the LED cluster) is
+> unrouted, with no pours: a starting point for routing the centre by hand. The files in `export/` are
+> the routed boards from `main`.
 
 ## Design
 

@@ -257,8 +257,15 @@ def route(variant="mx", attempts=10):
     first, best = [], None
     for attempt in range(attempts):
         shutil.copy(placed, path)
-        failed = route_once(variant, path, first, seed=attempt)
+        worst = best[0][0] if best else None
+        failed = route_once(variant, path, first, seed=attempt, skip_pour_above=worst)
         signal = [f for f in failed if f[0] != "GND"]
+        if worst is not None and len(signal) > worst:
+            # can't beat the best attempt: no pours, stitching or DRC spent on it
+            print(f"attempt {attempt + 1}: {len(signal)} signal connections failed, "
+                  f"worse than the best ({worst}), not poured", flush=True)
+            first = list(dict.fromkeys(first + [f[0] for f in signal]))
+            continue
         # GND failures are fine if the pours join them up; DRC after the pours says
         left = unconnected(path)
         print(f"attempt {attempt + 1}: {len(signal)} signal connections failed, "
@@ -542,7 +549,7 @@ def join_cut_off(board, tries=6):
     return joined
 
 
-def route_once(variant, path, first, seed=0):
+def route_once(variant, path, first, seed=0, skip_pour_above=None):
     t0 = time.time()
     board = pcbnew.LoadBoard(str(path))
     print(f"laid {lanes.lay(board, variant)} lane tracks", flush=True)
@@ -567,6 +574,8 @@ def route_once(variant, path, first, seed=0):
     jitter = random.Random(seed)
     pairs.sort(key=lambda p: (tier(p), not supply(p), length(p) * (1 + (0.5 * jitter.random() if seed else 0))))
     failed = route_pairs(board, grid, netcode, vias, pairs, t0)
+    if skip_pour_above is not None and sum(f[0] != "GND" for f in failed) > skip_pour_above:
+        return failed                     # already worse than the best attempt
     M.pour_gnd(board, outline)
     print(f"added {stitch(board)} GND stitching vias", flush=True)
     board.Save(str(path))
