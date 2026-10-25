@@ -324,8 +324,8 @@ FP = {
     "diode": "Diode_SMD:D_SOD-123",
     "led_key": "LED_SMD:LED_SK6812MINI-E_3.2x2.8mm_P1.5mm_ReverseMount",
     "led_glow": "unicorne:LED_SK6812MINI_PLCC4_3.5x3.5mm_P1.75mm",   # stock + 3D model
-    "r": "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",
-    "c": "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",
+    "r": "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",
+    "c": "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",
     "sot23": "Package_TO_SOT_SMD:SOT-23",
     "jumper": "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm",
     "jumper3": "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm",
