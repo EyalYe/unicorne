@@ -8,7 +8,8 @@ Same outline, coordinates and mounting holes as the matching PCB, a switch
 cutout at every key, an opening for the trackpad, and the same 36-key break
 lines. Writes plate/unicorne-{mx,choc}-plate.kicad_pcb, then exports a JLCPCB
 zip (FR4 plate, no copper), a DXF for laser cutting and a STEP model into
-export/plate/.
+export/plate/. The copper layers are exported empty: JLCPCB's viewer needs them to
+work out the stack, and without them it shows no silkscreen.
 """
 import json
 import math
@@ -206,7 +207,8 @@ def export(variant, board):
     stem = f"unicorne-{variant}-plate"
     with tempfile.TemporaryDirectory() as tmp:
         subprocess.run([CLI, "pcb", "export", "gerbers", "--layers",
-                        "F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts", "-o", tmp + "/", str(board)],
+                        "F.Cu,B.Cu,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,F.Mask,B.Mask,Edge.Cuts",
+                        "--subtract-soldermask", "-o", tmp + "/", str(board)],
                        check=True, capture_output=True)
         subprocess.run([CLI, "pcb", "export", "drill", "--format", "excellon", "--excellon-separate-th",
                         "--excellon-units", "mm", "-o", tmp + "/", str(board)], check=True, capture_output=True)
