@@ -333,7 +333,7 @@ FP = {
     "hdr2": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
     "batt": "Connector_Wire:SolderWire-0.5sqmm_1x02_P4.8mm_D0.9mm_OD2.3mm",
     "pwr_sw": "unicorne:SW_SPDT_Shouhan_MSK12C02",                   # stock + 3D model
-    "reset": "Button_Switch_THT:SW_PUSH_6mm_H5mm",   # 6x6x5 mm DIP tactile switch
+    "reset": "unicorne:SW_Tactile_SPST_3.5x6mm_H4.3mm_THT",   # TS-1136 H4.3: 6x3.5 mm, 4.3 mm, 2-pin DIP tactile
     "hdr6": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
     "hdr4": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
     "sensor": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",

@@ -240,7 +240,7 @@ def move_holes(board, reach=6.0, step=0.25):
     return moved
 
 
-def route(variant="mx", attempts=4):
+def route(variant="mx", attempts=10):
     """Route, and if signal connections fail, start again from the placed board
     with those connections first. Keeps the attempt with the fewest failures."""
     import shutil
@@ -268,6 +268,26 @@ def route(variant="mx", attempts=4):
         first = list(dict.fromkeys(first + [f[0] for f in signal]))
     path.write_bytes(best[1])
     print(f"kept the best attempt: {best[0][0]} signal connections failed, {best[0][1]} unconnected")
+    print(f"removed {drop_stubs(path)} dangling track stubs")
+
+
+def drop_stubs(path):
+    """Delete the short dead-end stubs the maze router sometimes leaves, then refill."""
+    with tempfile.TemporaryDirectory() as tmp:
+        out = Path(tmp) / "drc.json"
+        subprocess.run([str(CLI), "pcb", "drc", "--format", "json", "-o", str(out), str(path)], capture_output=True)
+        found = json.loads(out.read_text())["violations"]
+    stubs = {i["uuid"] for v in found if v["type"] == "track_dangling" for i in v["items"]}
+    if not stubs:
+        return 0
+    board = pcbnew.LoadBoard(str(path))
+    dead = [t for t in board.GetTracks() if t.m_Uuid.AsString() in stubs and not isinstance(t, pcbnew.PCB_VIA)
+            and t.GetLength() < pcbnew.FromMM(1.0)]
+    for t in dead:
+        board.Remove(t)
+    pcbnew.ZONE_FILLER(board).Fill(board.Zones())
+    board.Save(str(path))
+    return len(dead)
 
 
 def route_once(variant, path, first):

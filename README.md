@@ -1,7 +1,7 @@
 # unicorne
 
 A unibody [Corne](https://github.com/foostan/crkbd): both halves of the Corne v3 key layout on one PCB, each half
-rotated 16°, with an Azoteq TPS43 trackpad in the middle and a nice!nano v2 mounted underneath.
+rotated 16°, with an Azoteq TPS43 trackpad in the middle and a nice!nano v2 above it.
 
 Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 unconnected, 0 copper violations).
 
@@ -14,7 +14,8 @@ Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 un
 - 42 keys (3×6 + 3 thumbs per half), outer pinky columns break off for a 36-key board
 - Key spacing, stagger, thumb cluster and LED positions copied from crkbd `v3-final` (19.0 mm pitch)
 - Two board versions with the same placement: Kailh MX hotswap, and Kailh Choc hotswap (fits Choc V1 and V2)
-- nice!nano v2 on the bottom side, USB on the top edge
+- nice!nano v2 on the top side, components up, USB on the top edge; the edge is notched for the
+  mid-mount USB-C, whose shell drops below the nano's underside
 - TPS43 trackpad wired to six bare pads (no FPC, to keep it thin)
 - Optional LEDs: 12 SK6812MINI underglow + 42 SK6812MINI-E per key, on their own MOSFET-switched supply.
   A solder jumper picks the source: the nice!nano's 3.3 V VCC (up to its 1 A regulator), or an external
@@ -32,12 +33,12 @@ Everything is hand-soldered. Quantities are for one board; the 36-key build need
 
 | Ref | Qty | Part | Footprint | Notes |
 |---|---|---|---|---|
-| U1 | 1 | nice!nano v2 | through-hole, bottom side | Needs the 3 inner pads (P1.01, P1.02, P1.07) too; use low-profile sockets or solder directly |
+| U1 | 1 | nice!nano v2 | through-hole, top side | Needs the 3 inner pads (P1.01, P1.02, P1.07) too; use low-profile sockets or solder directly |
 | SW1–42 | 42 | Key switches: MX, or Choc V1/V2 | hotswap | MX on `unicorne.kicad_pcb`, Choc on `unicorne-choc.kicad_pcb` |
 | — | 42 | Hotswap sockets: Kailh MX, or Kailh Choc | SMD, bottom | The Choc socket fits both V1 and V2 switches |
 | D1–42 | 42 | 1N4148W diode | SOD-123, bottom | |
 | SW43 | 1 | MSK-12C02 slide switch | SMD, bottom, top edge | Battery cut-off |
-| SW44 | 1 | 6×6×5 mm tactile switch | through-hole | Reset |
+| SW44 | 1 | TS-1136 H4.3 tactile switch (6.0×3.5 mm, 4.3 mm tall, 2 pins) | through-hole, top, beside the nano | Reset |
 | J1 | — | Battery B+ / B− pads | through-hole, 4.8 mm | Solder the battery leads here |
 | J2 | — | TPS43 pads | through-hole, 2.54 mm | Wires to the trackpad (trackpad build) |
 | J5 | — | Sensor pads | through-hole, 2.54 mm | Wires to a PAW3395 / PMW3360 board (sensor build) |
@@ -101,18 +102,28 @@ Regenerate with `python3 tools/export_3d.py` after any board change.
 
 ![MX board](export/unicorne-mx-top.png)
 
-## Switch plate
+## Switch plates
 
-The top plate, as a starting point for a case: `plate/unicorne-mx-plate.kicad_pcb` (14.0 mm cutouts, 1.5 mm thick)
-and `plate/unicorne-choc-plate.kicad_pcb` (13.8 mm cutouts, 1.2 mm thick). Each has the same outline, coordinates and
-M2 holes as its PCB, a 44.3 x 41.3 mm opening for the TPS43, and the same break lines for the 36-key version.
-`export/plate/` holds, per variant:
+The top plate, as a starting point for a case. Plates are solid (no break lines), so there is one per
+switch type and size:
 
-- `*-jlcpcb.zip`: order as an FR4 board, no copper; set the thickness above, and pick black for a cleaner look.
+| Plate | Cutouts | Thickness |
+|---|---|---|
+| `plate/unicorne-mx-42-plate.kicad_pcb`, `plate/unicorne-mx-36-plate.kicad_pcb` | 14.0 mm | 1.5 mm |
+| `plate/unicorne-choc-42-plate.kicad_pcb`, `plate/unicorne-choc-36-plate.kicad_pcb` | 13.8 mm | 1.2 mm |
+
+Each has the same outline, coordinates and M2 holes as its PCB and a 44.3 x 41.3 mm opening for the TPS43.
+The 36-key plates are cut evenly on both sides where the PCB snaps off its outer columns (on Choc, whose
+break lines differ by side, at their average), with rounded corners.
+`export/plate/` holds, per plate:
+
+- `*-jlcpcb.zip`: order as an FR4 board, no copper (the copper layers are included empty so JLCPCB's
+  viewer reads the stack); set the thickness above.
 - `*.dxf`: Edge.Cuts outline in mm, for laser-cut aluminium, steel or acrylic.
 - `*.step`: the plate solid, in the same coordinates as the board STEP files.
+- `*.png`: a render.
 
-![MX plate](export/plate/unicorne-mx-plate.png)
+![MX 36-key plate](export/plate/unicorne-mx-36-plate.png)
 
 ## Files
 
@@ -124,6 +135,7 @@ M2 holes as its PCB, a 44.3 x 41.3 mm opening for the TPS43, and the same break 
 | `unicorne-choc.kicad_pcb`, `unicorne-choc.kicad_pro` | Choc V1/V2 hotswap PCB, same placement |
 | `unicorne.kicad_dru` | Extra DRC rules (LED cutout edge clearance) |
 | `lib/` | Project symbols and footprints; third-party credits in `lib/ATTRIBUTION.md` |
+| `tools/fp_tactile.py` | Generates the reset switch footprint |
 | `tools/layout.py` | Key, trackpad and outline geometry → `mock/layout.json`, `mock/unicorne.svg` |
 | `tools/gen_schematic.py` | Generates the schematic sheets from `mock/layout.json` |
 | `tools/gen_pcb.py` | Builds both PCBs from the schematic netlist and `mock/layout.json` |
@@ -134,7 +146,7 @@ M2 holes as its PCB, a 44.3 x 41.3 mm opening for the TPS43, and the same break 
 | `tools/export_3d.py`, `export/` | STEP export of both boards, and 3D renders |
 | `tools/export_gerbers.py`, `export/jlcpcb/` | JLCPCB gerber + drill zips |
 | `tools/waves.py` | Wavy silkscreen pattern on both sides of the routed PCBs |
-| `tools/gen_plate.py`, `plate/`, `export/plate/` | Switch plates and their exports |
+| `tools/gen_plate.py`, `plate/`, `export/plate/` | 42- and 36-key switch plates and their exports |
 | `mock/` | Layout data, a 1:1 printable SVG and the design overview page |
 
 ## Regenerating
