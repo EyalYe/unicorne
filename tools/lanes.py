@@ -42,10 +42,11 @@ LAYOUTS = {
     "choc": dict(
         col_via=(-3.5, -4.1),            # below socket pad 1 (-3.5, -6.0)
         gnd_via=(-2.73, 3.15),
-        # cathode (4.85, 4.5) up through a via, top layer between the centre
-        # post, side post and socket holes, back down onto the row lane
-        row_stub=[("B", [(4.85, 3.2)]), ("via", (4.85, 3.2)),
-                  ("F", [(4.85, 3.2), (3.55, 1.5), (3.55, 0.0), (2.6, -2.6), (2.6, -8.0)]),
+        # diode points down the key: cathode (6.5, 5.55) west to a via between it
+        # and the LED data lane, top layer between the centre post, side post and
+        # socket holes, back down onto the row lane
+        row_stub=[("B", [(4.95, 5.55)]), ("via", (4.95, 5.55)),
+                  ("F", [(4.95, 5.55), (4.95, 3.2), (3.55, 1.5), (3.55, 0.0), (2.6, -2.6), (2.6, -8.0)]),
                   ("via", (2.6, -8.0))],
         row=(2.6, -8.0),
         data_out=[(3.9, 4.0), (3.9, 6.3), (8.3, 6.3)],

@@ -125,6 +125,57 @@ def stitch(board):
             x += STITCH_PITCH
         y += STITCH_PITCH
     pcbnew.ZONE_FILLER(board).Fill(board.Zones())
+    return n + stitch_islands(board)
+
+
+def stitch_islands(board, step=0.25):
+    """The coarse grid can miss a small pour island entirely, leaving it (and any GND
+    pad it holds) cut off: give every island without a GND via or GND through-hole
+    pad one via, found on a fine grid where both pours have copper."""
+    zones = {z.GetLayer(): z for z in board.Zones() if z.GetNetname() == "GND"}
+    holes = [p for fp in board.GetFootprints() for p in fp.Pads() if p.HasHole()]
+    gnd_links = [v.GetPosition() for v in board.GetTracks()
+                 if isinstance(v, pcbnew.PCB_VIA) and v.GetNetname() == "GND"]
+    gnd_links += [p.GetPosition() for p in holes if p.GetNetname() == "GND"]
+    vias = [t for t in board.GetTracks() if isinstance(t, pcbnew.PCB_VIA)]
+    gnd = board.FindNet("GND")
+    r = M.VIA_D / 2 + 0.3
+    n = 0
+    for layer, zone in zones.items():
+        polys = zone.GetFilledPolysList(layer)
+        for i in range(polys.OutlineCount()):
+            outline = polys.Outline(i)
+            if any(outline.PointInside(p) for p in gnd_links):
+                continue
+            box = outline.BBox()
+            spot = None
+            y = pcbnew.ToMM(box.GetTop())
+            while spot is None and y < pcbnew.ToMM(box.GetBottom()):
+                x = pcbnew.ToMM(box.GetLeft())
+                while x < pcbnew.ToMM(box.GetRight()):
+                    pts = [pcbnew.VECTOR2I(pcbnew.FromMM(x + dx), pcbnew.FromMM(y + dy))
+                           for dx, dy in ((0, 0), (r, 0), (-r, 0), (0, r), (0, -r))]
+                    if (outline.PointInside(pts[0])
+                            and all(zones[L].HitTestFilledArea(L, p) for L in zones for p in pts)
+                            and not any(h.HitTest(pts[0], pcbnew.FromMM(M.VIA_D / 2 + 0.35)) for h in holes)
+                            and not any(v.HitTest(pts[0], pcbnew.FromMM(M.VIA_D + 0.3)) for v in vias)):
+                        spot = pts[0]
+                        break
+                    x += step
+                y += step
+            if spot is None:
+                continue
+            v = pcbnew.PCB_VIA(board)
+            v.SetPosition(spot)
+            v.SetWidth(pcbnew.FromMM(M.VIA_D))
+            v.SetDrill(pcbnew.FromMM(M.VIA_DRILL))
+            v.SetNet(gnd)
+            board.Add(v)
+            vias.append(v)
+            gnd_links.append(spot)
+            n += 1
+    if n:
+        pcbnew.ZONE_FILLER(board).Fill(board.Zones())
     return n
 
 
@@ -205,14 +256,18 @@ def route(variant="mx", attempts=4):
         shutil.copy(placed, path)
         failed = route_once(variant, path, first)
         signal = [f for f in failed if f[0] != "GND"]
-        print(f"attempt {attempt + 1}: {len(signal)} signal connections failed", flush=True)
-        if best is None or len(signal) < best[0]:
-            best = (len(signal), path.read_bytes())
-        if not signal:
+        # GND failures are fine if the pours join them up; DRC after the pours says
+        left = unconnected(path)
+        print(f"attempt {attempt + 1}: {len(signal)} signal connections failed, "
+              f"{len(left)} unconnected after the pours", flush=True)
+        if best is None or (len(signal), len(left)) < best[0]:
+            best = ((len(signal), len(left)), path.read_bytes())
+        if not signal and not left:
             break
+        # failed signal nets go first next time
         first = list(dict.fromkeys(first + [f[0] for f in signal]))
     path.write_bytes(best[1])
-    print(f"kept the best attempt: {best[0]} signal connections failed")
+    print(f"kept the best attempt: {best[0][0]} signal connections failed, {best[0][1]} unconnected")
 
 
 def route_once(variant, path, first):
