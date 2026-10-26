@@ -61,14 +61,13 @@ def undersized(path):
 
 def drop_pad_vias(path):
     """Delete vias that touch a surface-mount pad (an open via in a pad wicks the
-    solder away from the joint) and refill; the pours carry GND around them."""
+    solder away from the joint) and refill the pours under the board's own rules."""
     board = pcbnew.LoadBoard(str(path))
     smd = [q for q in board.GetPads() if not q.HasHole()]
     bad = [v.m_Uuid.AsString() for v in board.GetTracks() if isinstance(v, pcbnew.PCB_VIA)
            and any(q.HitTest(v.GetPosition(), v.GetWidth(pcbnew.F_Cu) // 2) for q in smd)]
-    if not bad:
-        return 0
-    # text edit and a fresh process: removing items leaves pcbnew unusable afterwards
+    # text edit and a fresh process: removing items leaves pcbnew unusable afterwards.
+    # Refill even with nothing removed: the plane repair filled under relaxed rules
     text = Path(path).read_text()
     text = re.sub(r"\t\(via\n.*?\n\t\)\n",
                   lambda m: "" if any(u in m.group() for u in bad) else m.group(), text, flags=re.S)
