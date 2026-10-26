@@ -39,7 +39,7 @@ LAYOUTS = {
         tabs=[(4.7, 11.0)],              # break-line tabs: (offset from row centre, width)
         # LED supply crosses the break line stacked under the row lane, so the rest of
         # the tab is open from below: (distance of its jogs from the line, y)
-        vdd_cross=(5.5, 3.3),
+        vdd_cross=(4.5, 3.3),
         keep_out=[(0.85, 8.5)],          # mounting holes stay out of this lane band
     ),
     "choc": dict(
