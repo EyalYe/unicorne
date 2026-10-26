@@ -21,6 +21,19 @@ Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 un
   supply up to 5 V on the LED IN pads for full brightness. Never the battery.
 - MSK-12C02 battery cut-off switch, through-hole battery pads
 - Exposed pads: expansion header (3V3, GND, UART, I2C) and GPIO header (P0.24, P1.00, P0.11)
+- Pro Micro mode: a Pro Micro-footprint controller without the nice!nano's three inner pins (P1.01, P1.02,
+  P1.07) works with three solder jumpers bridged, which move those nets to outer pins that aren't the Pro
+  Micro I2C pair:
+
+  | Jumper | Net (nice!nano pin) | Bridged to | That pin's other use, lost in this mode |
+  |---|---|---|---|
+  | JP4 | COL5 (P1.01) | P0.24 | free GPIO / sensor MISO |
+  | JP5 | COL6 (P1.02) | P0.11 | free GPIO / sensor CS |
+  | JP6 | ROW5 (P1.07) | P0.08 | UART RX |
+
+  I2C (SDA/SCL), the trackpad's RDY, LED data (P0.06) and LED power (P1.00) keep working. Leave all three
+  open with a nice!nano, or two controller pins drive one net. In firmware, point COL5, COL6 and ROW5 at the
+  bridged pins.
 
 The full pin plan and parts list are in `mock/index.html` (open it in a browser).
 
@@ -64,6 +77,7 @@ Leave all of these off for a board without lighting.
 | C2 | 1 | 100 nF capacitor | 0603 hand-solder | U2 decoupling; leave off with U2 |
 | JP3 | — | Solder jumper | — | U2 bypass: bridge it with JP2 on VCC and U2 left off |
 | JP1 | — | Solder jumper | — | Bridge it to send LED data from P0.06 (through U2) |
+| JP4–JP6 | — | Solder jumpers | — | Pro Micro mode only: bridge all three without a nice!nano; open with one |
 
 ### Off the PCB
 
@@ -140,13 +154,17 @@ break lines differ by side, at their average), with rounded corners.
 | `tools/layout.py` | Key, trackpad and outline geometry → `mock/layout.json`, `mock/unicorne.svg` |
 | `tools/gen_schematic.py` | Generates the schematic sheets from `mock/layout.json` |
 | `tools/gen_pcb.py` | Builds both PCBs from the schematic netlist and `mock/layout.json` |
-| `tools/finish_route.py` | Routes a freshly generated board: fixed lanes, then KiCad's ratsnest with the maze router, GND pours and stitching; up to 10 attempts, then GND repair and stub cleanup |
+| `tools/krt_route.py` | Routes a freshly generated board (used for both boards): fixed lanes, then [KiCadRoutingTools](https://github.com/drandyhaas/KiCadRoutingTools) 0.23.7 for every other signal at standard JLCPCB sizes with no via in or next to a pad, the maze router for anything left, GND pours and stitching, then its plane repair. Expects KiCadRoutingTools in `~/Development/tools/KiCadRoutingTools` with its own venv |
+| `tools/finish_route.py` | The older all-in-house router: fixed lanes, then KiCad's ratsnest with the maze router, GND pours and stitching; up to 10 attempts, then GND repair and stub cleanup. Also keeps new vias out of pads |
 | `tools/gnd_repair.py` | Finds GND copper the pours left cut off and joins it (a via, or rip-up and reroute of whatever boxes it in) |
 | `tools/lanes.py`, `tools/maze_route.py` | Fixed routing lanes for the key grid; the grid A* router |
 | `tools/route.py` | Freerouting driver (not used for the final boards) |
 | `tools/step_box.py`, `lib/3d/` | Placeholder STEP models and the socket / Choc switch models |
 | `tools/export_3d.py`, `export/` | STEP export of both boards, and 3D renders |
 | `tools/export_gerbers.py`, `export/jlcpcb/` | JLCPCB gerber + drill zips |
+| `docs/led-map.md`, `docs/led-map.csv` | Every LED's index in the data chain (0-based, for firmware), its reference, spot and the key's matrix row and column |
+| `tools/led_map.py` | Generates the LED map from the board |
+| `tools/led_order.json` | The LED chain order, picked in the LED Chain Order page; `gen_schematic.py` uses it when present |
 | `tools/waves.py` | Wavy silkscreen pattern on both sides of the routed PCBs |
 | `tools/gen_plate.py`, `plate/`, `export/plate/` | 42- and 36-key switch plates and their exports |
 | `mock/` | Layout data, a 1:1 printable SVG and the design overview page |
@@ -164,8 +182,15 @@ python3 tools/gen_schematic.py
 # then route them; both steps throw away any hand routing
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_pcb.py mx
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/gen_pcb.py choc
-/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/finish_route.py mx
-/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/finish_route.py choc
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/krt_route.py mx
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/krt_route.py choc
+# On MX the plane repair reaches U2 pad 3 (GND, boxed in by LED_DIN) only through a via in the
+# pad, which krt_route.py removes, leaving that pad unconnected. The committed board joins it by
+# hand: a via at (160.65, 137.45) between pads 3 and 4, a back-layer track to pad 3 and a
+# front-layer track to the GND copper.
+
+# LED map for firmware (chain index -> LED, switch, matrix position)
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/led_map.py
 
 # Wavy silkscreen on both PCBs (redraws only the waves, leaves the routing alone)
 /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/waves.py

@@ -102,6 +102,7 @@ def stitch(board):
     (checked after filling), so the top and bottom pours are tied together."""
     zones = {z.GetLayer(): z for z in board.Zones() if z.GetNetname() == "GND"}
     holes = [p for fp in board.GetFootprints() for p in fp.Pads() if p.HasHole()]
+    smd = [p for fp in board.GetFootprints() for p in fp.Pads() if not p.HasHole()]
     vias = [t for t in board.GetTracks() if isinstance(t, pcbnew.PCB_VIA)]
     gnd = board.FindNet("GND")
     box = board.GetBoardEdgesBoundingBox()
@@ -116,6 +117,8 @@ def stitch(board):
             centre = pts[0]
             if (all(zones[L].HitTestFilledArea(L, p) for L in (pcbnew.F_Cu, pcbnew.B_Cu) for p in pts)
                     and not any(h.HitTest(centre, pcbnew.FromMM(M.VIA_D / 2 + 0.35)) for h in holes)
+                    # GND pads sit inside the pour, but no via in or next to one
+                    and not any(q.HitTest(centre, pcbnew.FromMM(M.VIA_D / 2 + 0.25)) for q in smd)
                     and not any(v.HitTest(centre, pcbnew.FromMM(M.VIA_D + 0.3)) for v in vias)):
                 v = pcbnew.PCB_VIA(board)
                 v.SetPosition(centre)
@@ -137,6 +140,7 @@ def stitch_islands(board, step=0.25):
     pad one via, found on a fine grid where both pours have copper."""
     zones = {z.GetLayer(): z for z in board.Zones() if z.GetNetname() == "GND"}
     holes = [p for fp in board.GetFootprints() for p in fp.Pads() if p.HasHole()]
+    smd = [p for fp in board.GetFootprints() for p in fp.Pads() if not p.HasHole()]
     gnd_links = [v.GetPosition() for v in board.GetTracks()
                  if isinstance(v, pcbnew.PCB_VIA) and v.GetNetname() == "GND"]
     gnd_links += [p.GetPosition() for p in holes if p.GetNetname() == "GND"]
@@ -161,6 +165,7 @@ def stitch_islands(board, step=0.25):
                     if (outline.PointInside(pts[0])
                             and all(zones[L].HitTestFilledArea(L, p) for L in zones for p in pts)
                             and not any(h.HitTest(pts[0], pcbnew.FromMM(M.VIA_D / 2 + 0.35)) for h in holes)
+                            and not any(q.HitTest(pts[0], pcbnew.FromMM(M.VIA_D / 2 + 0.25)) for q in smd)
                             and not any(v.HitTest(pts[0], pcbnew.FromMM(M.VIA_D + 0.3)) for v in vias)):
                         spot = pts[0]
                         break
@@ -254,17 +259,26 @@ def route(variant="mx", attempts=10):
     placed = ROOT / "build" / "route" / f"{variant}_placed.kicad_pcb"
     placed.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy(path, placed)
-    first, best = [], None
+    first, best, routed = [], None, []
     for attempt in range(attempts):
         shutil.copy(placed, path)
-        failed = route_once(variant, path, first, seed=attempt)
+        worst = best[0][0] if best else None
+        failed = route_once(variant, path, first, seed=attempt, skip_pour_above=worst)
         signal = [f for f in failed if f[0] != "GND"]
+        if worst is not None and len(signal) > worst:
+            # can't beat the best attempt: no pours, stitching or DRC spent on it
+            print(f"attempt {attempt + 1}: {len(signal)} signal connections failed, "
+                  f"worse than the best ({worst}), not poured", flush=True)
+            first = list(dict.fromkeys(first + [f[0] for f in signal]))
+            continue
         # GND failures are fine if the pours join them up; DRC after the pours says
         left = unconnected(path)
         print(f"attempt {attempt + 1}: {len(signal)} signal connections failed, "
               f"{len(left)} unconnected after the pours", flush=True)
         if best is None or (len(signal), len(left)) < best[0]:
             best = ((len(signal), len(left)), path.read_bytes())
+        if not signal:
+            routed.append((len(left), path.read_bytes()))
         if not signal and not left:
             break
         # failed signal nets go first next time
@@ -274,7 +288,18 @@ def route(variant="mx", attempts=10):
     if best[0][0]:
         print(f"rescued {rescue(path)} of {best[0][0]} unrouted signal connections", flush=True)
     if best[0][1]:
-        fix_gnd(path)
+        # every attempt that routed all signals gets a go at the GND repair, each in a
+        # fresh process (repairs remove items, which leaves pcbnew unusable afterwards)
+        for n, (left, data) in enumerate(sorted(routed, key=lambda r: r[0]) or [(0, best[1])]):
+            path.write_bytes(data)
+            subprocess.run([sys.executable, "-I", __file__, "--fix-gnd", variant])
+            if not unconnected(path):
+                break
+            if n == 0:
+                first_try = path.read_bytes()
+        else:
+            if len(routed) > 1:
+                path.write_bytes(first_try)
     print(f"removed {drop_stubs(path)} dangling track stubs")
 
 
@@ -309,7 +334,7 @@ def rescue(path, candidates=10):
             for r in range(max(r0, 0), min(r1, grid.ny - 1) + 1):
                 for c in range(max(c0, 0), min(c1, grid.nx - 1) + 1):
                     o = grid.own[L][r * grid.nx + c]
-                    if o not in (0, M.BLOCK, netcode[name], netcode.get("GND")):
+                    if o not in (0, M.BLOCK, netcode[name]):       # GND too: the pours back it up
                         count[o] = count.get(o, 0) + 1
         names = {v: k for k, v in netcode.items()}
         net = netcode[name]
@@ -368,6 +393,10 @@ def fix_gnd(path):
         more, stuck = gnd_repair.repair(board)
         added += more
     board.Save(str(path))
+    # a link out of a boxed-in pocket lifts a net; if that net didn't fully route
+    # again, rescue it (which keeps a change only when nothing new is left unrouted)
+    if any(net_of(q) not in (None, "GND") for q in unconnected(path)):
+        print(f"  rescued {rescue(path)} signal connections the GND repair left unrouted", flush=True)
     print(f"GND repair: {added} vias, {joined} links out of boxed-in pockets, {stuck} groups still cut off, "
           f"{len(unconnected(path))} unconnected", flush=True)
 
@@ -443,6 +472,20 @@ def grid_for(board):
     M.edge_mask(board, grid, outline)
     M.stamp_pads(board, grid, netcode)
     vias = M.Vias(grid)
+    # no new via in or next to a surface-mount pad, its own net's included: an open
+    # via in a pad wicks the solder away from the joint
+    keep = pcbnew.FromMM(M.VIA_D / 2 + 0.25)
+    for pad in board.GetPads():
+        if pad.HasHole():
+            continue
+        box = pad.GetBoundingBox()
+        box.Inflate(keep)
+        x0, y0 = grid.cell(pcbnew.ToMM(box.GetLeft()), pcbnew.ToMM(box.GetTop()))
+        x1, y1 = grid.cell(pcbnew.ToMM(box.GetRight()), pcbnew.ToMM(box.GetBottom()))
+        for cy in range(max(y0, 0), min(y1, grid.ny - 1) + 1):
+            for cx in range(max(x0, 0), min(x1, grid.nx - 1) + 1):
+                if pad.HitTest(pcbnew.VECTOR2I_MM(*grid.xy(cx, cy)), keep):
+                    vias.near.add(cy * grid.nx + cx)
     stamp_copper(board, grid, netcode, vias)
     return outline, grid, netcode, vias
 
@@ -538,7 +581,7 @@ def join_cut_off(board, tries=6):
     return joined
 
 
-def route_once(variant, path, first, seed=0):
+def route_once(variant, path, first, seed=0, skip_pour_above=None):
     t0 = time.time()
     board = pcbnew.LoadBoard(str(path))
     print(f"laid {lanes.lay(board, variant)} lane tracks", flush=True)
@@ -562,7 +605,12 @@ def route_once(variant, path, first, seed=0):
     # same split GND pour): from the second attempt on, jitter the order within a tier
     jitter = random.Random(seed)
     pairs.sort(key=lambda p: (tier(p), not supply(p), length(p) * (1 + (0.5 * jitter.random() if seed else 0))))
+    # GND is never routed as tracks: the pours carry it, and fix_gnd joins anything
+    # the pours leave cut off. GND tracks only take the gaps signals need.
+    pairs = [q for q in pairs if net_of(q) != "GND"]
     failed = route_pairs(board, grid, netcode, vias, pairs, t0)
+    if skip_pour_above is not None and sum(f[0] != "GND" for f in failed) > skip_pour_above:
+        return failed                     # already worse than the best attempt
     M.pour_gnd(board, outline)
     print(f"added {stitch(board)} GND stitching vias", flush=True)
     board.Save(str(path))
@@ -574,4 +622,7 @@ def route_once(variant, path, first, seed=0):
 
 
 if __name__ == "__main__":
-    route(sys.argv[1] if len(sys.argv) > 1 else "mx")
+    if sys.argv[1:2] == ["--fix-gnd"]:
+        fix_gnd(ROOT / BOARDS[sys.argv[2]])
+    else:
+        route(sys.argv[1] if len(sys.argv) > 1 else "mx")

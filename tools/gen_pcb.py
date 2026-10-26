@@ -51,7 +51,7 @@ VARIANTS = {
                  hole_body=6.9),
 }
 LED_OFFSET = 4.75            # per-key LED, south of the switch centre (Corne v3)
-NO_BOM = {"J1", "J2", "J5", "J6", "JP1", "JP2", "JP3"}  # bare pads and the solder jumpers
+NO_BOM = {"J1", "J2", "J5", "J6", "JP1", "JP2", "JP3", "JP4", "JP5", "JP6"}  # bare pads and solder jumpers
 NO_MODEL = {"J3", "J4"}      # optional headers: shown as bare holes in 3D
 NANO_USB_EDGE = 17.78        # nice_nano footprint origin to its PCB edge at the USB end
 # The nice!nano's USB-C is mid-mount: its shell drops 0.7 mm below the nano's
@@ -167,6 +167,31 @@ def place_center(b, fp, x, y, orient, bottom=True):
     fp.Move(pcbnew.VECTOR2I(b.xy(x, y).x - c.x, b.xy(x, y).y - c.y))
 
 
+# Parts placed by hand: (dx, dy) from the nice!nano's centre (mm, as seen from above),
+# KiCad orientation, on the bottom side. Applied after the computed placement.
+HAND_PLACED = {
+    "J6": (-1.540, 72.568, 90.0, False),
+    "C2": (12.000, 65.930, -90.0, True),
+    "Q1": (0.562, 61.568, 0.0, True),
+    "JP3": (-10.650, 72.068, 0.0, True),
+    "R2": (7.088, 61.568, 0.0, True),
+    "R4": (4.088, 25.520, 180.0, True),
+    "JP4": (-4.500, 4.218, 90.0, True),
+    "R3": (-0.412, 25.520, 180.0, True),
+    "JP1": (-12.000, -12.932, 180.0, True),
+    "JP5": (-3.850, 12.568, 0.0, True),
+    "JP2": (-9.000, 64.368, -90.0, True),
+    "U2": (-16.350, 67.018, 0.0, True),
+    "JP6": (0.500, -7.282, 90.0, True),
+    "R5": (9.088, 25.568, 180.0, True),
+    "Q2": (0.062, 67.018, 180.0, True),
+    "R1": (-5.000, 61.480, -90.0, True),
+    "C1": (7.500, 65.930, -90.0, True),
+    "SW44": (12.000, -7.182, 90.0, False),
+    "J1": (17.000, -9.932, -90.0, True),
+}
+
+
 # Silkscreen names for every exposed pad, by reference and pad number
 PAD_LABELS = {
     "J1": ("BATT", {"1": "B+", "2": "B-"}),
@@ -195,13 +220,15 @@ def silk_text(b, text, pos, angle=0, layers=(pcbnew.F_SilkS, pcbnew.B_SilkS)):
         b.board.Add(t)
 
 
-def label_pads(b, fp, side):
+def label_pads(b, fp, side, title_at_end=False):
     """Name each pad of a 1-row pad group. `side` is +1/-1: which side of the row the
-    labels go (rows of vertical pads: +x/-x; rows of horizontal pads: +y/-y)."""
+    labels go (rows of vertical pads: +x/-x; rows of horizontal pads: +y/-y). The group
+    title goes beyond pad 1, or beyond the last pad with `title_at_end`."""
     title, names = PAD_LABELS[fp.GetReference()]
     fp.Reference().SetVisible(False)      # the group title names it instead
     pads = sorted(fp.Pads(), key=lambda p: int(p.GetNumber()))
     p0, p1 = pads[0].GetPosition(), pads[-1].GetPosition()
+    end = p1 if title_at_end else p0
     horizontal = abs(p1.x - p0.x) > abs(p1.y - p0.y)
     longest = max(len(n) for n in names.values())
     for pad in pads:
@@ -218,9 +245,11 @@ def label_pads(b, fp, side):
             silk_text(b, name, pcbnew.VECTOR2I(c.x + mm(side * reach), c.y))
     # group title beyond pad 1, along the row
     ux, uy = (p0.x - p1.x), (p0.y - p1.y)
+    if title_at_end:
+        ux, uy = -ux, -uy
     n = math.hypot(ux, uy)
     off = mm(2.0 + len(title) * SILK * 0.4) if horizontal else mm(2.4)
-    silk_text(b, title, pcbnew.VECTOR2I(int(p0.x + ux / n * off), int(p0.y + uy / n * off)))
+    silk_text(b, title, pcbnew.VECTOR2I(int(end.x + ux / n * off), int(end.y + uy / n * off)))
 
 
 # What each nice!nano net means, for the pin table on the bottom silkscreen
@@ -230,7 +259,7 @@ PIN_USE = {
     "LED_EN": "LED power on", "P0.11_CS": "GPIO / sens CS", "+3V3": "3V3 out",
     "RST": "reset button", "VBAT": "battery (switch)", "GND": "GND",
 }
-TABLE_SIZE, TABLE_PITCH = 0.8, 1.25
+TABLE_SIZE, TABLE_PITCH = 0.8, 1.2
 
 
 def pin_table(b, top, bottom):
@@ -542,8 +571,6 @@ def build(variant):
     part("SW44", 15.5, ny + 9.5, 90, bottom=False)     # reset, 3x6 THT on top beside the nano
     # Left of it: both headers and the LED parts, whose pins are all on this side.
     # SMD parts stay on the bottom.
-    part("J3", -13.5, ny + 10.0, 180)                  # expansion header (6 pins)
-    part("J4", -13.5, ny + 25.0, 180)                  # GPIO header (4 pins)
     part("JP1", -17.5, ny + 5.0, 90)                   # LED data jumper, by P0.06
     part("Q2", -18.0, ny + 14.0)
     part("R2", -18.0, ny + 18.0, 90)
@@ -556,21 +583,47 @@ def build(variant):
     part("C2", -23.0, ny + 29.5)
     part("U2", -23.0, ny + 33.0)                       # LED data level shifter
     part("JP3", -23.0, ny + 37.0, 90)                  # U2 bypass
-    tp_y = py + pad["h"] + 2.5
-    part("J2", 0, tp_y, 270, bottom=False)             # trackpad wire pads, pin 1 (SDA) right
-    # optical sensor pads just above the trackpad pads, inside the trackpad area
-    part("J5", 0, py + pad["h"] - 2.5, 90, bottom=False)
-    for i, ref in enumerate(("R3", "R4", "R5")):
-        part(ref, -4.5 + i * 4.5, tp_y + 4.3, 0)        # between the pad labels and the battery
+    # Pro Micro mode jumpers, under the nice!nano on the bottom, each beside the two
+    # pins it joins (offsets from the nano's centre, seen from above): COL5's inner pad
+    # and pin 8, COL6's inner pad and pin 10, and pin 2 for ROW5
+    nc = ny + NANO_USB_EDGE
+    PRO_MICRO = (("JP4", "C5", "0.24", -3.2, 5.0, 90), ("JP5", "C6", "0.11", -2.4, 12.0, 0),
+                 ("JP6", "R5", "0.08", -3.2, -8.0, 90))
+    for ref, _, _, dx, dy, orient in PRO_MICRO:
+        part(ref, dx, nc + dy, orient)
+    # The trackpad sits on the case over the nano, so its wire pads, the sensor pads,
+    # their pull-ups and the GPIO header (which shares MISO/CS with the sensor) go just
+    # below the nice!nano: the I2C, RDY, reset and SPI nets stay short
+    nc = ny + NANO_USB_EDGE
+    j5_y = ny + nano["h"] + 6.0
+    tp_y = j5_y + 8.0                                  # 2 tracks fit between the pad rows
+    part("J5", 0, j5_y, 90, bottom=False)              # optical sensor pads
+    for i, ref in enumerate(("R3", "R4", "R5")):       # pull-ups between sensor and trackpad pads
+        part(ref, -4.5 + i * 4.5, (j5_y + tp_y) / 2, 90)
+    part("J2", 0, tp_y, 90, bottom=False)              # trackpad wire pads, pin 1 (SDA) left, by the nano's SDA
+    part("J4", -15.0, tp_y, 270)                       # GPIO header, beside the trackpad pads
+    j3_y = tp_y + 6.5
+    part("J3", 0, j3_y, 270)                           # UART/I2C header, below the trackpad pads
+    # battery pads beside the power switch, LED IN pads high on the LED side
+    part("J1", 16.0, nc + 1.9, 270, bottom=False)
+    part("J6", -13.5, nc - 6.0, 0, bottom=False)
     batt = layout["battery"]
-    part("J1", (batt[0]["x"] + batt[1]["x"]) / 2, batt[0]["y"], 0, bottom=False)
-    part("J6", 8.0, batt[0]["y"], 0, bottom=False)    # external LED supply, beside the battery
+
+    # Placed by hand in the PCB editor (on the MX board, 2026-10-25): the LED supply and
+    # data group moved to the bottom of the board, where there is room, and small moves
+    # elsewhere. (dx, dy) from the nice!nano's centre, KiCad orientation, bottom side.
+    for ref, (dx, dy, orient, bottom) in HAND_PLACED.items():
+        fp = next(f for f in b.board.GetFootprints() if f.GetReference() == ref)
+        if fp.IsFlipped() != bottom:
+            fp.Flip(fp.GetPosition(), pcbnew.FLIP_DIRECTION_LEFT_RIGHT)
+        fp.SetOrientationDegrees(orient)
+        fp.SetPosition(b.xy(dx, nc + dy))
 
     # pad names: trackpad below its row, sensor above (inside the trackpad area),
     # battery below, headers on the side facing the nice!nano
     fps = {f.GetReference(): f for f in b.board.GetFootprints()}
     for ref, side in (("J2", 1), ("J5", -1), ("J1", 1), ("J3", 1), ("J4", 1), ("J6", 1)):
-        label_pads(b, fps[ref], side)
+        label_pads(b, fps[ref], side, title_at_end=(ref == "J2"))   # J2's pin 1 faces the GPIO header
     # which end of JP2 is which: pad 1 = VCC, pad 3 = J6 (external)
     for num, text in (("1", "VCC"), ("3", "EXT")):
         x, y = pad_xy(fps["JP2"], num)
@@ -579,16 +632,27 @@ def build(variant):
         n = math.hypot(dx, dy) or 1
         silk_text(b, text, pcbnew.VECTOR2I(mm(x + dx / n * 1.9), mm(y + dy / n * 1.9)),
                   layers=(pcbnew.B_SilkS,))            # JP2 is an SMD jumper on the bottom
-    # JP2's reference to its outer side, off Q1's pads
-    ref, c = fps["JP2"].Reference(), fps["JP2"].GetPosition()
-    ref.SetPosition(pcbnew.VECTOR2I(2 * c.x - ref.GetPosition().x - mm(1.0), ref.GetPosition().y))
+    # Pro Micro jumpers: what each one bridges, and a title
+    for ref, net, pin, *_ in PRO_MICRO:
+        c = fps[ref].GetPosition()
+        fps[ref].Reference().SetVisible(False)
+        text = f"{net}-{pin}"
+        box = fps[ref].GetBoundingBox(False)       # label starts just past the jumper itself
+        silk_text(b, text, pcbnew.VECTOR2I(box.GetRight() + mm(0.4 + len(text) * SILK * 0.4), c.y),
+                  layers=(pcbnew.B_SilkS,))
+    box = fps["JP6"].GetBoundingBox(False)
+    silk_text(b, "PRO MICRO", pcbnew.VECTOR2I(box.GetCenter().x, box.GetTop() - mm(1.0)),
+              layers=(pcbnew.B_SilkS,))
+    # SW44's reference on its outer side, away from the nice!nano's pins
+    ref, box = fps["SW44"].Reference(), fps["SW44"].GetBoundingBox(False)
+    ref.SetPosition(pcbnew.VECTOR2I(box.GetRight() + mm(1.0), box.GetCenter().y))
     # C2's reference to the side away from U2
     ref, c = fps["C2"].Reference(), fps["C2"].GetPosition()
     ref.SetPosition(pcbnew.VECTOR2I(ref.GetPosition().x, 2 * c.y - ref.GetPosition().y))
     for ref in ("Q1", "Q2", "U2", "SW43"):             # no room for these reference labels
         fps[ref].Reference().SetVisible(False)
-    # pin table under the trackpad, between the nice!nano and the sensor pad labels
-    pin_table(b, ny + nano["h"] + 1.5, py + pad["h"] - 8.5)
+    # pin table below the pads and pull-ups, above the bottom mounting holes
+    pin_table(b, j3_y + 3.5, batt[0]["y"] - 1.0)
 
     # --- outline (with the USB notch), trackpad, break lines. The trackpad sits on
     # the case above the board, so it is only drawn (F.Fab and User.Drawings) to show

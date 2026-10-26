@@ -36,7 +36,10 @@ LAYOUTS = {
         row_jog=(GAP_X, GAP_X),          # row lane jogs from x here to -x in the next cell
         row_jog_down=(GAP_X, GAP_X),     # ... when the next column sits lower
         lane_jog=GAP_X,                  # LED data / supply jog
-        tabs=[(4.7, 9.0)],               # break-line tabs: (offset from row centre, width)
+        tabs=[(4.7, 11.0)],              # break-line tabs: (offset from row centre, width)
+        # LED supply crosses the break line stacked under the row lane, so the rest of
+        # the tab is open from below: (distance of its jogs from the line, y)
+        vdd_cross=(4.5, 3.3),
         keep_out=[(0.85, 8.5)],          # mounting holes stay out of this lane band
     ),
     "choc": dict(
@@ -59,7 +62,10 @@ LAYOUTS = {
         row_jog_down="top",              # drop on the top layer: the row-above supply lane
                                          # drops through the same spot on the bottom
         lane_jog=8.3,
-        tabs=[(-8.0, 3.0), (7.4, 3.0)],
+        # one tab at the row lane, one at the supply lane, each with its lane near the
+        # tab's top edge so the tab is open from below
+        tabs=[(-7.3, 6.0), (8.1, 6.0)],
+        vdd_cross=None,
         keep_out=[(-9.6, -6.4), (4.7, 9.0)],
     ),
 }
@@ -140,6 +146,17 @@ def cells(board):
     return out
 
 
+def breaks(k, nxt):
+    """True when two neighbouring keys sit either side of a 36-key break line (one is
+    an outer pinky key, column 0)."""
+    cols = {fp_key_col(k.sw), fp_key_col(nxt.sw)}
+    return 0 in cols
+
+
+def fp_key_col(sw):
+    return int(sw.GetFieldText("Key").split()[1][2])
+
+
 def lay(board, variant="mx"):
     L = LAYOUTS[variant]
     cs = cells(board)
@@ -198,10 +215,22 @@ def lay(board, variant="mx"):
                         add_path(board, [k.at(rx, ry), k.at(jo, ry), nxt.at(-ji, ry), nxt.at(rx, ry)],
                                  pcbnew.B_Cu, W["row"], net)
                 lj = L["lane_jog"]
-                add_path(board, [k.at(2.72, vy), k.at(lj, vy), nxt.at(-lj, vy), nxt.at(2.72, vy)],
-                         pcbnew.B_Cu, W["vdd"], k.pad(k.led, "3").GetNet())
+                vdd_net = k.pad(k.led, "3").GetNet()
+                if L.get("vdd_cross") and breaks(k, nxt):
+                    # across the break line: up under the row lane, across, back down,
+                    # with both jogs well clear of the line
+                    d, cy = L["vdd_cross"]
+                    half = k.local(nxt.c)[0] / 2          # the line sits halfway between the keys
+                    add_path(board, [k.at(2.72, vy), k.at(half - d, vy), k.at(half - d, cy),
+                                     nxt.at(-half + d, cy), nxt.at(-half + d, vy), nxt.at(2.72, vy)],
+                             pcbnew.B_Cu, W["vdd"], vdd_net)
+                else:
+                    add_path(board, [k.at(2.72, vy), k.at(lj, vy), nxt.at(-lj, vy), nxt.at(2.72, vy)],
+                             pcbnew.B_Cu, W["vdd"], vdd_net)
                 dout, din = k.pad(k.led, "4"), nxt.pad(nxt.led, "2")
-                if dout.GetNetname() == din.GetNetname():
+                # a hop across a break line has no lane through the tab: the router takes
+                # it through the tab's open lower part
+                if dout.GetNetname() == din.GetNetname() and not breaks(k, nxt):
                     pts = ([dout.GetPosition()] + [k.at(*p) for p in L["data_out"]]
                            + [nxt.at(-lj, L["data_y"])] + [nxt.at(*p) for p in L["data_in"]]
                            + [din.GetPosition()])
