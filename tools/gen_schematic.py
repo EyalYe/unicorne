@@ -13,6 +13,7 @@ import copy
 import json
 import math
 import re
+import sys
 import uuid
 from pathlib import Path
 
@@ -357,25 +358,46 @@ def keys_with_refs(layout):
     return keys
 
 
+LED_ORDER = Path(__file__).resolve().parent / "led_order.json"
+
+
+def led_chain_from_file(keys, path=LED_ORDER):
+    """The chain as picked in the LED Chain Order page: a JSON list of LED names, "L K12"
+    for the LED under that key (side and key name, thumbs "L T0"), "L G3" for underglow
+    spot 3 of that side (mock/layout.json order). Every LED exactly once."""
+    names = json.loads(path.read_text())
+    by_name = {f'{k["side"]} {k["name"]}': ("key", k) for k in keys}
+    for side in "LR":
+        by_name.update({f"{side} G{i}": ("glow", side, i) for i in range(6)})
+    missing = set(by_name) - set(names)
+    unknown = [n for n in names if n not in by_name]
+    if missing or unknown or len(names) != len(set(names)):
+        sys.exit(f"{path.name}: missing {sorted(missing)}, unknown {unknown}, duplicates "
+                 f"{sorted({n for n in names if names.count(n) > 1})}")
+    return [by_name[n] for n in names]
+
+
 def led_chain(keys):
-    """One pass across the board with a single long hop at the end:
-    left underglow, left rows, left thumbs, right thumbs (they sit next to each
-    other), right rows, right underglow, then the breakable outer pinky columns,
-    right then left. Each row runs left to right as seen from above (DIN is on
-    an LED's left, DOUT on its right). Breaking a pinky column off never cuts
-    an LED that is still fitted."""
+    """One pass across the board, snaking: each half's rows alternate direction, so
+    every row change is a short hop at the row's end instead of a trip back across
+    it. Left underglow, left rows (0 left to right, 1 back, 2 left to right, ending
+    by the thumbs), left thumbs, right thumbs (they sit next to each other), right
+    rows mirrored (2, 1, 0, ending at the top outer key), right underglow, then the
+    breakable outer pinky columns, right then left. Breaking a pinky column off
+    never cuts an LED that is still fitted."""
     half = {side: {(k["row"] % 3, k["col"]): k for k in keys if k["side"] == side} for side in "LR"}
     # underglow spots (mock/layout.json order: (0,1) (0,3) (1,5) (1,1) (2,3) (2,5)),
     # walked so the left set starts by the nice!nano and ends by the first key
-    # LED, and the right set ends by the pinky column that follows it
-    chain = [("glow", "L", i) for i in (5, 2, 4, 1, 3, 0)]
-    for r in range(3):
-        chain += [("key", half["L"][(r, c)]) for c in range(1, 6)]
+    # LED, and the right set starts where the right rows end (by row 0's outer
+    # key) and ends by the pinky column that follows it
+    chain = [("glow", "L", i) for i in (5, 2, 1, 4, 3, 0)]   # shortest walk from U2 to row 0
+    for r, cols in ((0, range(1, 6)), (1, range(5, 0, -1)), (2, range(1, 6))):
+        chain += [("key", half["L"][(r, c)]) for c in cols]
     chain += [("key", half["L"][(t, 6)]) for t in range(3)]
     chain += [("key", half["R"][(t, 6)]) for t in (2, 1, 0)]
-    for r in range(3):
-        chain += [("key", half["R"][(r, c)]) for c in range(5, 0, -1)]
-    chain += [("glow", "R", i) for i in (3, 4, 5, 2, 1, 0)]
+    for r, cols in ((2, range(5, 0, -1)), (1, range(1, 6)), (0, range(5, 0, -1))):
+        chain += [("key", half["R"][(r, c)]) for c in cols]
+    chain += [("glow", "R", i) for i in (0, 1, 2, 5, 4, 3)]
     chain += [("key", half["R"][(r, 0)]) for r in range(3)]
     chain += [("key", half["L"][(r, 0)]) for r in range(3)]
     return chain
@@ -541,7 +563,7 @@ def build():
                 "column 0 breaks off for the 36-key version.", 25.4, 246.38)
 
     # ---- LEDs: one chain from LED_DIN
-    chain = led_chain(keys)
+    chain = led_chain_from_file(keys) if LED_ORDER.exists() else led_chain(keys)
     prev = "LED_DIN"
     glow_xy = layout["underglow"]
     for i, item in enumerate(chain):

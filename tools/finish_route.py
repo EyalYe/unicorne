@@ -573,6 +573,9 @@ def route_once(variant, path, first, seed=0, skip_pour_above=None):
     # same split GND pour): from the second attempt on, jitter the order within a tier
     jitter = random.Random(seed)
     pairs.sort(key=lambda p: (tier(p), not supply(p), length(p) * (1 + (0.5 * jitter.random() if seed else 0))))
+    # GND is never routed as tracks: the pours carry it, and fix_gnd joins anything
+    # the pours leave cut off. GND tracks only take the gaps signals need.
+    pairs = [q for q in pairs if net_of(q) != "GND"]
     failed = route_pairs(board, grid, netcode, vias, pairs, t0)
     if skip_pour_above is not None and sum(f[0] != "GND" for f in failed) > skip_pour_above:
         return failed                     # already worse than the best attempt

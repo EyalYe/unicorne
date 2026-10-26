@@ -1,0 +1,7945 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "e1dc25f1-c0e5-4857-9283-2efd9c99d3c5")
+	(paper "A3")
+	(title_block
+		(title "unicorne - key matrix")
+		(date "2026-10-24")
+		(rev "0.1")
+		(company "unicorne")
+	)
+	(lib_symbols
+		(symbol "Diode:1N4148W"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4148W"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_SMD:D_SOD-123"
+				(at 0 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "D*SOD?123*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "1N4148W_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27)
+						(xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27)
+						(xy 1.27 -1.27)
+						(xy -1.27 0)
+						(xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0)
+						(xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4148W_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27)
+						(xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27)
+						(xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 30.48 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dd7bf21e-4537-44c8-9ab4-51122f0a58a8")
+		(property "Reference" "SW1"
+			(at 30.48 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R0C0"
+			(at 30.48 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 30.48 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K00"
+			(at 30.48 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f5a6e193-25d2-4e0e-b232-a609bbcd1e68")
+		)
+		(pin "2"
+			(uuid "5a555798-fd7f-4971-bea9-19f8587f30d9")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 25.4 40.64)
+			(xy 22.86 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47a069a8-ff97-4b7e-9d38-bd798f1c86ff")
+	)
+	(global_label "COL0"
+		(shape passive)
+		(at 22.86 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5294a558-b05f-48e3-9202-ecf359085f96")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 39.37 40.64 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "41349b3c-fbd3-44d9-9477-8292e8378894")
+		(property "Reference" "D1"
+			(at 39.37 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 39.37 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 39.37 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K00"
+			(at 39.37 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a6dda51-d624-46b4-9c99-d74aac085c20")
+		)
+		(pin "2"
+			(uuid "de449aff-cb23-4dbf-b0a7-27581c9e22a3")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 43.18 40.64)
+			(xy 45.72 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d83c175b-e7e2-446c-b9ec-7933161d91db")
+	)
+	(global_label "ROW0"
+		(shape passive)
+		(at 45.72 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5fdbc659-d5b8-4a59-ba69-ab378cc09508")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 83.82 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2dd14898-09c4-4996-815a-72dd1bce34b0")
+		(property "Reference" "SW2"
+			(at 83.82 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R0C1"
+			(at 83.82 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 83.82 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K01"
+			(at 83.82 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "19dc5b34-c160-42f8-bfdc-3919f89e1c93")
+		)
+		(pin "2"
+			(uuid "fb69c529-2bfc-4fc4-8aea-f4b609e9340b")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 78.74 40.64)
+			(xy 76.2 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6aad8cdd-b578-45ea-8e57-d2d31238420b")
+	)
+	(global_label "COL1"
+		(shape passive)
+		(at 76.2 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3b48b6e6-58bd-4cda-83cc-86e7596ca2ed")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 92.71 40.64 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "68d9361f-f271-4b48-b85b-16f98f25d68d")
+		(property "Reference" "D2"
+			(at 92.71 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 92.71 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 92.71 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K01"
+			(at 92.71 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "838e6ed2-b80a-44e1-a35e-b6483de51e70")
+		)
+		(pin "2"
+			(uuid "20ad68d2-d9ba-423e-b741-08750e0728c4")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 96.52 40.64)
+			(xy 99.06 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1c63019-de44-4bc7-ab97-d1c9a6cea256")
+	)
+	(global_label "ROW0"
+		(shape passive)
+		(at 99.06 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3ede15b3-bc25-4e36-b9b4-f0a32ba8916b")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 137.16 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "35fc15bd-d76b-4a03-9a10-4e001a50c67e")
+		(property "Reference" "SW3"
+			(at 137.16 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R0C2"
+			(at 137.16 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 137.16 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K02"
+			(at 137.16 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0ce762d2-b414-4591-b8ad-6d52f8a77f6b")
+		)
+		(pin "2"
+			(uuid "f07d3394-1644-4201-9210-2f67763363e2")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 132.08 40.64)
+			(xy 129.54 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3faccdd0-9f83-41f1-ae99-4ca836286cd5")
+	)
+	(global_label "COL2"
+		(shape passive)
+		(at 129.54 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "34f8e58c-f73b-4bd8-b8e5-2adbabf20415")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 146.05 40.64 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b7fb399d-8330-43cb-865b-00476834eabb")
+		(property "Reference" "D3"
+			(at 146.05 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 146.05 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 146.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K02"
+			(at 146.05 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "542bcfc1-8a04-43a1-a8a4-2c6dc23266bd")
+		)
+		(pin "2"
+			(uuid "40e67829-12dc-4857-8a50-66040fe87744")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 149.86 40.64)
+			(xy 152.4 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7261327-3fa5-4d3f-816d-47db41cfbe8d")
+	)
+	(global_label "ROW0"
+		(shape passive)
+		(at 152.4 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e60ce065-95a1-4865-81bd-a92f4390fc63")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 190.5 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6d6cb851-df69-4ae0-a7ec-9c5597745058")
+		(property "Reference" "SW4"
+			(at 190.5 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R0C3"
+			(at 190.5 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 190.5 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K03"
+			(at 190.5 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "248446aa-d9ce-4bfd-b9f7-f75b73b3e760")
+		)
+		(pin "2"
+			(uuid "5a7cf0d7-a53f-42f6-b3b6-d990fd737a40")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 185.42 40.64)
+			(xy 182.88 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8d45426-f019-4372-87f1-c5108930e4d1")
+	)
+	(global_label "COL3"
+		(shape passive)
+		(at 182.88 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3eb1f0f0-24dd-4d2c-87c2-d2f9a7593c29")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 199.39 40.64 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ac4b75b2-cf86-4bab-8d76-09e09330ae74")
+		(property "Reference" "D4"
+			(at 199.39 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 199.39 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 199.39 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K03"
+			(at 199.39 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "391499e7-3c84-421e-bf24-beb81e9dc904")
+		)
+		(pin "2"
+			(uuid "6b0e9958-bec4-440a-b768-81a27b1c365c")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 203.2 40.64)
+			(xy 205.74 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd82d508-d0d1-47ea-92e3-b992c9832b42")
+	)
+	(global_label "ROW0"
+		(shape passive)
+		(at 205.74 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e28225cc-2218-4114-bb95-05738afb21bf")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 243.84 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "70381510-8a99-42bf-a933-5acc3b860698")
+		(property "Reference" "SW5"
+			(at 243.84 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R0C4"
+			(at 243.84 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 243.84 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K04"
+			(at 243.84 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6802b3d8-a06f-425f-989b-85239c2c3c76")
+		)
+		(pin "2"
+			(uuid "3b4b0138-dec8-4acb-9b49-0ecc3d576546")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 238.76 40.64)
+			(xy 236.22 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40e8b32f-6329-486c-a600-9638a33ad7b1")
+	)
+	(global_label "COL4"
+		(shape passive)
+		(at 236.22 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "caa6fc46-9ca4-40a7-922b-f6d69acba2fb")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 252.73 40.64 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2bb9d8d4-f44e-44b6-a865-c4db86caa6a8")
+		(property "Reference" "D5"
+			(at 252.73 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 252.73 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 252.73 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K04"
+			(at 252.73 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51cb2469-5035-423e-bea3-a81e5f8aefca")
+		)
+		(pin "2"
+			(uuid "33e56e0e-ddd9-4e17-8fce-b722b5fb5961")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 256.54 40.64)
+			(xy 259.08 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3da85448-814e-40b0-b9e8-a87f7341408a")
+	)
+	(global_label "ROW0"
+		(shape passive)
+		(at 259.08 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a9204ac2-d239-4259-89b0-93b987951398")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 297.18 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d2c9fc46-6617-4510-a500-1f3b75a87083")
+		(property "Reference" "SW6"
+			(at 297.18 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R0C5"
+			(at 297.18 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 297.18 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 297.18 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K05"
+			(at 297.18 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d131f7a0-110d-4c35-a8d3-5b2784749ded")
+		)
+		(pin "2"
+			(uuid "5b45ce52-83bc-4bc7-b701-a9903c9798aa")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 292.1 40.64)
+			(xy 289.56 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b2516d6-2917-4a41-bf09-c2cd0ee71e3c")
+	)
+	(global_label "COL5"
+		(shape passive)
+		(at 289.56 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "820f7d1b-29a5-4d6c-8824-d05ed510faa3")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 306.07 40.64 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bf57f8b-0096-4e55-a165-e50163dd740e")
+		(property "Reference" "D6"
+			(at 306.07 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 306.07 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 306.07 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 306.07 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K05"
+			(at 306.07 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a7b5b05-dede-48a0-ba77-ebe41f1cac7e")
+		)
+		(pin "2"
+			(uuid "1223794b-04a2-455e-8f23-73efdde7b3a7")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 309.88 40.64)
+			(xy 312.42 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de733e21-877d-419d-a7a6-e014684e755b")
+	)
+	(global_label "ROW0"
+		(shape passive)
+		(at 312.42 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "365481d8-48d0-4339-be29-48fc3752e873")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 30.48 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "539bdfeb-c4af-4bb1-a06f-7735816c4018")
+		(property "Reference" "SW7"
+			(at 30.48 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R1C0"
+			(at 30.48 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 30.48 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K10"
+			(at 30.48 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e3c6e0f4-66da-4e7c-a3a0-33ce812547f5")
+		)
+		(pin "2"
+			(uuid "8ade9a12-939f-4153-9bc1-892e8db9e5e9")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 25.4 73.66)
+			(xy 22.86 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d63565c5-1ad4-491e-946a-10ea6a40962e")
+	)
+	(global_label "COL0"
+		(shape passive)
+		(at 22.86 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "173a3674-c833-435f-8049-81a75c5ea1d3")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 39.37 73.66 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fb1b5509-4d4b-4fa0-8a24-0ef6bbfcade8")
+		(property "Reference" "D7"
+			(at 39.37 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 39.37 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 39.37 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K10"
+			(at 39.37 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dd82759c-50a1-4ba4-b105-86e6ddcef1c9")
+		)
+		(pin "2"
+			(uuid "a71f8376-5996-4259-960f-3ed94805bf77")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 43.18 73.66)
+			(xy 45.72 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "171c8c08-7eec-4011-b0d8-d59da0614aa8")
+	)
+	(global_label "ROW1"
+		(shape passive)
+		(at 45.72 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "51a8a36f-601b-4c94-b2b4-054de1aab019")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 83.82 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "524f02e4-f3bc-4268-bf4b-718458c61026")
+		(property "Reference" "SW8"
+			(at 83.82 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R1C1"
+			(at 83.82 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 83.82 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K11"
+			(at 83.82 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e21a5490-eeb5-4bf0-8377-d641c4c4b5b2")
+		)
+		(pin "2"
+			(uuid "ca6a4ec4-96b3-4b10-9daf-8287d84cb53c")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 78.74 73.66)
+			(xy 76.2 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2df53a7-a5fb-4297-8bdc-4972bc6aac1b")
+	)
+	(global_label "COL1"
+		(shape passive)
+		(at 76.2 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e6fde7e2-14bc-45a7-8b94-5aa11398afb3")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 92.71 73.66 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cfb58841-eaf2-4d02-a2ff-a1d9dedc4361")
+		(property "Reference" "D8"
+			(at 92.71 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 92.71 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 92.71 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K11"
+			(at 92.71 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "12329268-f62e-4728-ba84-6d846a1b1b5d")
+		)
+		(pin "2"
+			(uuid "828d37c4-f6d9-481b-9a11-96c15f9aecf5")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 96.52 73.66)
+			(xy 99.06 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "379e1b04-6363-4da2-9c4a-3bf4b6df6d75")
+	)
+	(global_label "ROW1"
+		(shape passive)
+		(at 99.06 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5047d095-808d-4ae7-880c-b59624f32529")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 137.16 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "77b95d62-4fd6-4a87-851d-1070dbf134bb")
+		(property "Reference" "SW9"
+			(at 137.16 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R1C2"
+			(at 137.16 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 137.16 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K12"
+			(at 137.16 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38957ccf-37fe-4f3b-b305-3795a42751f8")
+		)
+		(pin "2"
+			(uuid "da8977f2-7cd0-456c-9fb9-6261ac41719d")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 132.08 73.66)
+			(xy 129.54 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01f6fe2a-47b3-46b9-9ce4-cdf81fa844d5")
+	)
+	(global_label "COL2"
+		(shape passive)
+		(at 129.54 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c4cd667a-3f5d-45b5-a80b-2948380f61eb")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 146.05 73.66 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fb8cf46d-2bee-46fe-b201-4b96a1db9053")
+		(property "Reference" "D9"
+			(at 146.05 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 146.05 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 146.05 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K12"
+			(at 146.05 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "202b7136-bad4-40a9-b391-54ec606d01ea")
+		)
+		(pin "2"
+			(uuid "6a33bc3d-0ee5-4b6b-bf47-5823fa280a2f")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 149.86 73.66)
+			(xy 152.4 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61c830de-8c0e-479d-9abc-f03ffe670ec2")
+	)
+	(global_label "ROW1"
+		(shape passive)
+		(at 152.4 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ee4172aa-be2c-446e-b44d-57ab4b13a2cf")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 190.5 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "78c8a7a3-5826-441d-9c4b-df86c557dac5")
+		(property "Reference" "SW10"
+			(at 190.5 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R1C3"
+			(at 190.5 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 190.5 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K13"
+			(at 190.5 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e6da9d4e-dd94-4087-b47c-4a5759821a16")
+		)
+		(pin "2"
+			(uuid "a622b922-11c2-44db-8476-e2f1cfb312b9")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 185.42 73.66)
+			(xy 182.88 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f69454fc-1d36-43dc-bad2-0db181ea9403")
+	)
+	(global_label "COL3"
+		(shape passive)
+		(at 182.88 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "44071258-da52-4e0a-954a-8dc752522601")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 199.39 73.66 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e7fc0817-658c-4033-b98b-96a992b83064")
+		(property "Reference" "D10"
+			(at 199.39 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 199.39 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 199.39 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K13"
+			(at 199.39 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0aabefb9-6167-45fb-862f-3db896e1aba9")
+		)
+		(pin "2"
+			(uuid "5855b2a6-cde9-4569-a982-e1a88c26071d")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 203.2 73.66)
+			(xy 205.74 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a53c84c-a72c-46e7-a097-4da0c5d5a322")
+	)
+	(global_label "ROW1"
+		(shape passive)
+		(at 205.74 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "41ce1a42-3796-4173-ae94-0e271239cc56")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 243.84 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fec0cb77-f440-496f-96e3-4e7b819d8535")
+		(property "Reference" "SW11"
+			(at 243.84 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R1C4"
+			(at 243.84 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 243.84 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K14"
+			(at 243.84 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7592c2bf-f174-4dfb-befe-af237bb7c6d9")
+		)
+		(pin "2"
+			(uuid "85849900-5586-49df-8ad8-cb01e88c32ce")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 238.76 73.66)
+			(xy 236.22 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4038a2d0-7757-482a-b61a-b5dd73e878e9")
+	)
+	(global_label "COL4"
+		(shape passive)
+		(at 236.22 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f1733d63-310b-4450-865d-5791ff3be5b7")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 252.73 73.66 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "53794d93-8481-4004-90f2-d1460a01a8c6")
+		(property "Reference" "D11"
+			(at 252.73 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 252.73 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 252.73 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K14"
+			(at 252.73 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9087d29-213d-44ec-9ad4-81d12f0f3a7a")
+		)
+		(pin "2"
+			(uuid "64da4ec7-21cb-49aa-91af-81e9f081dca3")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 256.54 73.66)
+			(xy 259.08 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1257621-2ec6-45e0-a9ba-f76a6dc17160")
+	)
+	(global_label "ROW1"
+		(shape passive)
+		(at 259.08 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a7c3e3a7-71b8-4aaf-8be5-a86633d002bd")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 297.18 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7dc5387b-544e-4d14-8d32-75fbb9e0f585")
+		(property "Reference" "SW12"
+			(at 297.18 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R1C5"
+			(at 297.18 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 297.18 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 297.18 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K15"
+			(at 297.18 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b6f1a4f6-3f02-4664-b1f4-90bb60bb54d6")
+		)
+		(pin "2"
+			(uuid "e9a8dbb4-9776-4a4b-a615-69177cd45966")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 292.1 73.66)
+			(xy 289.56 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3676b92-7f5e-406c-b663-432a7a1fa80d")
+	)
+	(global_label "COL5"
+		(shape passive)
+		(at 289.56 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4bc5e80a-94c4-4940-9f42-9c4e5803459f")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 306.07 73.66 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03ecfaf6-b7fe-43eb-8843-e89279bf9ec8")
+		(property "Reference" "D12"
+			(at 306.07 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 306.07 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 306.07 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 306.07 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K15"
+			(at 306.07 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "138cbc78-2002-41b3-8d79-ac5ea07b55e5")
+		)
+		(pin "2"
+			(uuid "11c51239-93b9-4a00-9183-a2073e033105")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 309.88 73.66)
+			(xy 312.42 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd61777f-7656-4f35-b359-9dbe14a5b6f7")
+	)
+	(global_label "ROW1"
+		(shape passive)
+		(at 312.42 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c0c40d38-d3d5-4279-a70b-fd8110c6881b")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 30.48 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f03a57f7-b578-4d1c-9945-9ac0d7d3ea35")
+		(property "Reference" "SW13"
+			(at 30.48 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R2C0"
+			(at 30.48 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 30.48 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K20"
+			(at 30.48 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "576c6dd0-25ce-4844-ba2b-2c601ae5e11e")
+		)
+		(pin "2"
+			(uuid "fbf3a1de-b707-4cab-924e-bc8ac58abf77")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 25.4 106.68)
+			(xy 22.86 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9a075f5-9f57-42bb-98aa-eba208d1639d")
+	)
+	(global_label "COL0"
+		(shape passive)
+		(at 22.86 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8dbe2750-937b-4a49-9964-4fc5ab77828b")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 39.37 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6431df2c-b035-4fe1-92bb-17d052690051")
+		(property "Reference" "D13"
+			(at 39.37 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 39.37 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 39.37 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K20"
+			(at 39.37 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3358eda-ba2d-4dbe-9a52-3906d2576673")
+		)
+		(pin "2"
+			(uuid "f1d92ab1-ab34-42e6-87f7-4d0934c0333e")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 43.18 106.68)
+			(xy 45.72 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13ee6d88-be1f-4982-9c6f-cfe726536f39")
+	)
+	(global_label "ROW2"
+		(shape passive)
+		(at 45.72 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d7c8a58a-f6bc-45f5-ac8e-8eff2528e83c")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 83.82 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0efff44c-6437-4351-927e-da0168126c7e")
+		(property "Reference" "SW14"
+			(at 83.82 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R2C1"
+			(at 83.82 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 83.82 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K21"
+			(at 83.82 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "31ffc1bc-c05f-44c0-9ffb-53cffe15bb4b")
+		)
+		(pin "2"
+			(uuid "a3a08b41-1847-4308-990a-99a74473927a")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 78.74 106.68)
+			(xy 76.2 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49f6df11-4e06-48cd-93cc-3e2275e1c4fe")
+	)
+	(global_label "COL1"
+		(shape passive)
+		(at 76.2 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4a53adb5-2ade-4409-8740-e8e962a8c432")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 92.71 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e8087093-54a8-43c4-8f28-f0ba43df668b")
+		(property "Reference" "D14"
+			(at 92.71 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 92.71 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 92.71 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K21"
+			(at 92.71 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c2ed289-da30-48a4-b9f3-c629a2db9415")
+		)
+		(pin "2"
+			(uuid "13228134-5300-4033-97b1-7424cc13af16")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 96.52 106.68)
+			(xy 99.06 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b51d41f-2749-4ff3-8ffa-d129f866b13b")
+	)
+	(global_label "ROW2"
+		(shape passive)
+		(at 99.06 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0968163a-9931-4a65-8d5f-2dc1c184ed01")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 137.16 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2b6b4693-8e57-47e2-876f-3028ab617fa1")
+		(property "Reference" "SW15"
+			(at 137.16 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R2C2"
+			(at 137.16 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 137.16 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K22"
+			(at 137.16 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0df85fb3-de99-43e5-ba51-24ded158d1e2")
+		)
+		(pin "2"
+			(uuid "f8e4b501-4c00-494e-820f-dcce68459942")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 132.08 106.68)
+			(xy 129.54 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72d20858-9e4f-4c14-b3d4-f64496fee4c7")
+	)
+	(global_label "COL2"
+		(shape passive)
+		(at 129.54 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a2e9770e-ae1a-4a23-953f-d44991faaedb")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 146.05 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "307c6bcf-abfa-488d-b7f2-062057b8faf7")
+		(property "Reference" "D15"
+			(at 146.05 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 146.05 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 146.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K22"
+			(at 146.05 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5507baf-4dce-40de-9dc4-04455ba13998")
+		)
+		(pin "2"
+			(uuid "af696db3-9e3d-4a2c-8ee8-ab3b2751e9f1")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 149.86 106.68)
+			(xy 152.4 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e18b6ab3-cab7-46bf-b46f-b0ffd9a774c5")
+	)
+	(global_label "ROW2"
+		(shape passive)
+		(at 152.4 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e9680237-cb22-4bdf-b784-3f1550c6249e")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 190.5 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b84d1e56-b7bd-4573-9ee8-031db634589e")
+		(property "Reference" "SW16"
+			(at 190.5 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R2C3"
+			(at 190.5 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 190.5 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K23"
+			(at 190.5 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2a2fd3d-9c71-4355-8350-3bd042aeb52f")
+		)
+		(pin "2"
+			(uuid "fe13e6d9-55c9-459f-b376-f39f184779b8")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 185.42 106.68)
+			(xy 182.88 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5d725a5-63a2-49de-8e0e-428b4091a170")
+	)
+	(global_label "COL3"
+		(shape passive)
+		(at 182.88 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "eafb2590-6026-4b49-bc3d-cb43abb564ad")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 199.39 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "aebe0c08-2182-45e3-b5a3-a0f24a2b3331")
+		(property "Reference" "D16"
+			(at 199.39 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 199.39 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 199.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K23"
+			(at 199.39 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3855b071-9c1e-4402-80ba-b7c7b2c0e164")
+		)
+		(pin "2"
+			(uuid "48b0b240-3be7-40a8-a455-3955afd1cfd8")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 203.2 106.68)
+			(xy 205.74 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "958e17b1-e0b5-497b-8f49-f6e20b6552e4")
+	)
+	(global_label "ROW2"
+		(shape passive)
+		(at 205.74 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f2f05f6e-9cc8-4239-a0f5-0466a9d811eb")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 243.84 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1e573d42-6405-4b89-8b39-975df94f15e0")
+		(property "Reference" "SW17"
+			(at 243.84 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R2C4"
+			(at 243.84 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 243.84 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K24"
+			(at 243.84 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "23b672af-0a23-499e-a8cb-aea98eb1e770")
+		)
+		(pin "2"
+			(uuid "aec6b654-33c6-46df-9cf6-2af329aa3e2d")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 238.76 106.68)
+			(xy 236.22 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f9e1293-79a2-40be-b445-90cacee3c8a9")
+	)
+	(global_label "COL4"
+		(shape passive)
+		(at 236.22 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d4538b70-2d5b-4c43-90e8-60b4163165b5")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 252.73 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1f394aa5-9ea1-4bd5-ab67-42ff27ce106d")
+		(property "Reference" "D17"
+			(at 252.73 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 252.73 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 252.73 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K24"
+			(at 252.73 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2957c962-91e7-4bf4-8af0-292e3ea95174")
+		)
+		(pin "2"
+			(uuid "34670b8e-3b60-4bda-b0c6-510c7c253206")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 256.54 106.68)
+			(xy 259.08 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0e2c28f-2e6e-46ea-a934-ef6ced232299")
+	)
+	(global_label "ROW2"
+		(shape passive)
+		(at 259.08 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bf15951c-d4f2-4431-a7c1-d76f410ce255")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 297.18 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "70fca860-baf0-40ae-96bf-7df181b91e35")
+		(property "Reference" "SW18"
+			(at 297.18 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R2C5"
+			(at 297.18 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 297.18 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 297.18 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K25"
+			(at 297.18 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "143fc450-e5ac-40e8-b309-c510ac75ebf4")
+		)
+		(pin "2"
+			(uuid "9afd4ad4-8eaf-452f-94d4-3d8d26789f7e")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 292.1 106.68)
+			(xy 289.56 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eac22abf-cf56-49aa-ac8d-2d57cc7d0f37")
+	)
+	(global_label "COL5"
+		(shape passive)
+		(at 289.56 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "654cd46c-9a80-45c2-a34f-0cdef14bd461")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 306.07 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7f229314-a240-41e4-b699-bd48144d22e2")
+		(property "Reference" "D18"
+			(at 306.07 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 306.07 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 306.07 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 306.07 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L K25"
+			(at 306.07 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "31b9ad74-dfef-4537-9190-b7a464d6fd3e")
+		)
+		(pin "2"
+			(uuid "fc672a6f-1eaf-4136-b048-2705754be825")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 309.88 106.68)
+			(xy 312.42 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0361994e-c097-4407-b83f-9b14ab9d0c1a")
+	)
+	(global_label "ROW2"
+		(shape passive)
+		(at 312.42 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "189e3e77-f0b6-4988-ae27-7a906a5cf2e6")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 350.52 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2d2d7371-b5cc-48d8-aad2-917c219aed91")
+		(property "Reference" "SW19"
+			(at 350.52 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R0C6"
+			(at 350.52 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 350.52 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 350.52 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L T0"
+			(at 350.52 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e423b0f5-88ac-4328-8334-b4655a6afa3d")
+		)
+		(pin "2"
+			(uuid "2d35f007-fe95-4a6a-ad8b-831231640551")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 345.44 40.64)
+			(xy 342.9 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c69bdf6-e948-4e13-b1fa-bea2d1cd5891")
+	)
+	(global_label "COL6"
+		(shape passive)
+		(at 342.9 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "704e385d-7f94-442e-8329-b01c797c420c")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 359.41 40.64 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ad1fdd7c-f05a-464b-ad7d-126bd50a0bf3")
+		(property "Reference" "D19"
+			(at 359.41 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 359.41 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 359.41 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 359.41 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L T0"
+			(at 359.41 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "26130ec2-092c-47c0-8efb-8643826a71e0")
+		)
+		(pin "2"
+			(uuid "9da0d857-cb74-44e1-876a-53293eefc9c7")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 363.22 40.64)
+			(xy 365.76 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e50d638c-cc94-407c-82d6-d2608c8a8b97")
+	)
+	(global_label "ROW0"
+		(shape passive)
+		(at 365.76 40.64 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5d43e3dd-2240-4094-a2e5-31e53b51e334")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 350.52 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f8b5c349-0571-4446-b1f5-80fb0699ad47")
+		(property "Reference" "SW20"
+			(at 350.52 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R1C6"
+			(at 350.52 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 350.52 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 350.52 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L T1"
+			(at 350.52 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "66cf9814-7866-4a92-a792-24a2d1425123")
+		)
+		(pin "2"
+			(uuid "6e9fe8b6-1d67-47f4-918d-8ea4f0bf5a96")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 345.44 73.66)
+			(xy 342.9 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9793505c-42ec-4c6f-ac44-d72724e58d9a")
+	)
+	(global_label "COL6"
+		(shape passive)
+		(at 342.9 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "76d3b845-6c1a-4d49-ab15-b726abd13699")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 359.41 73.66 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "14eae42b-226f-4102-a212-9faa0587744d")
+		(property "Reference" "D20"
+			(at 359.41 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 359.41 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 359.41 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 359.41 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L T1"
+			(at 359.41 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c79ebbee-8b74-4a5f-b428-30404d4b4aeb")
+		)
+		(pin "2"
+			(uuid "3c5e389e-c4f6-4c20-a0dc-3cfc402b720c")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 363.22 73.66)
+			(xy 365.76 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f899e741-f49c-46eb-8a3d-65951294a7c7")
+	)
+	(global_label "ROW1"
+		(shape passive)
+		(at 365.76 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9e9f3d71-1391-4508-9c92-1531de5d3030")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 350.52 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c2bd9f60-cdcf-4863-b88a-db2a8eb22035")
+		(property "Reference" "SW21"
+			(at 350.52 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R2C6"
+			(at 350.52 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.50u"
+			(at 350.52 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 350.52 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L T2"
+			(at 350.52 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cd865667-2006-41a7-bb26-b1a098c23375")
+		)
+		(pin "2"
+			(uuid "9041e90a-5459-4ab9-a4f8-5cbbbcc3a831")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 345.44 106.68)
+			(xy 342.9 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12ed4806-0e83-41bf-a237-b5eade3216a6")
+	)
+	(global_label "COL6"
+		(shape passive)
+		(at 342.9 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "713318c0-81e3-49e9-b349-1b123bd4ac5f")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 359.41 106.68 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "470d21d5-2d84-4533-b0cc-4645a9a27219")
+		(property "Reference" "D21"
+			(at 359.41 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 359.41 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 359.41 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 359.41 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "L T2"
+			(at 359.41 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bfda8e56-c7a7-47ab-b482-f3afc478f4a0")
+		)
+		(pin "2"
+			(uuid "ff23dc56-32a6-4550-9174-635d765b61a0")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 363.22 106.68)
+			(xy 365.76 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41d17f38-f8ac-4641-8c24-90f45426d762")
+	)
+	(global_label "ROW2"
+		(shape passive)
+		(at 365.76 106.68 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "be513202-9553-40db-b323-f36c3614a9b4")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 30.48 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fd3d9865-fde3-4488-84b5-479deeaa7661")
+		(property "Reference" "SW22"
+			(at 30.48 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R3C0"
+			(at 30.48 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 30.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K00"
+			(at 30.48 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "07c68a4c-a4ed-4189-ac22-525010e7e2f9")
+		)
+		(pin "2"
+			(uuid "b5e69142-bd75-40b3-9700-2f4e81235db4")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 25.4 139.7)
+			(xy 22.86 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9881855d-b54f-4013-8134-a5ff2071a42f")
+	)
+	(global_label "COL0"
+		(shape passive)
+		(at 22.86 139.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cd01798c-b321-474f-bc85-8602b73ed517")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 39.37 139.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ea334c52-bd92-4824-9d14-4de4d2606c6d")
+		(property "Reference" "D22"
+			(at 39.37 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 39.37 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 39.37 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K00"
+			(at 39.37 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7705840d-9988-475c-9b27-b30333e43619")
+		)
+		(pin "2"
+			(uuid "a889bea6-c5a8-441a-ac41-812ce6c742cc")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 43.18 139.7)
+			(xy 45.72 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da321fab-a5c8-466d-9dd4-36de5c402f50")
+	)
+	(global_label "ROW3"
+		(shape passive)
+		(at 45.72 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e26702de-5398-4c1e-989b-0199046d3b0d")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 83.82 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "704a707e-14b5-43b2-a735-10ef6432398c")
+		(property "Reference" "SW23"
+			(at 83.82 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R3C1"
+			(at 83.82 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 83.82 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K01"
+			(at 83.82 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "85c028ab-c9eb-4a90-8530-05dc5f23d9c5")
+		)
+		(pin "2"
+			(uuid "71e55b0a-89f5-495d-aeea-5b0a118c38b4")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 78.74 139.7)
+			(xy 76.2 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0349610e-7d0a-4d67-b4bc-4ffb49bd329f")
+	)
+	(global_label "COL1"
+		(shape passive)
+		(at 76.2 139.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fa92749a-bf1e-416b-a0f8-99dd7e4e6e97")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 92.71 139.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a69183eb-f43f-462d-8cf6-5caf14c870c4")
+		(property "Reference" "D23"
+			(at 92.71 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 92.71 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 92.71 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K01"
+			(at 92.71 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "72335090-ff5b-46eb-a8a3-cc4083ac3747")
+		)
+		(pin "2"
+			(uuid "6cfdbf92-dfbf-44a4-89b4-23e680bfb400")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 96.52 139.7)
+			(xy 99.06 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbaba221-eb46-4c97-aaa4-4ba9e193db1d")
+	)
+	(global_label "ROW3"
+		(shape passive)
+		(at 99.06 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "36d37ccb-eb77-43de-816f-d72ac29ac98c")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 137.16 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "61a0d821-dec2-462d-8b05-7a78b838c23b")
+		(property "Reference" "SW24"
+			(at 137.16 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R3C2"
+			(at 137.16 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 137.16 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K02"
+			(at 137.16 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d54891b4-7c5e-47a3-b265-049f6975e872")
+		)
+		(pin "2"
+			(uuid "cf36abfb-9b29-4863-86d5-e33dfaf754c1")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 132.08 139.7)
+			(xy 129.54 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c03077c8-38b9-4018-b132-c082ed5bae23")
+	)
+	(global_label "COL2"
+		(shape passive)
+		(at 129.54 139.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1ac1df37-c190-4f4d-8832-6f94506b5342")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 146.05 139.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "049fc640-77ea-4387-9fed-437c6b0186aa")
+		(property "Reference" "D24"
+			(at 146.05 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 146.05 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 146.05 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K02"
+			(at 146.05 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "175a8d58-bd54-42b5-b4d2-622443e56f2f")
+		)
+		(pin "2"
+			(uuid "4df1581a-b80b-475d-8789-c270af8c757a")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 149.86 139.7)
+			(xy 152.4 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "464885a6-384c-45f8-b5c0-32073ce30d0e")
+	)
+	(global_label "ROW3"
+		(shape passive)
+		(at 152.4 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2df07e24-b6a0-49be-86ea-7d9fe9f864d2")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 190.5 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ca9cc539-073f-440f-b364-7c722d0a8832")
+		(property "Reference" "SW25"
+			(at 190.5 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R3C3"
+			(at 190.5 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 190.5 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K03"
+			(at 190.5 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1c5a9551-4bc8-43a9-be94-57a46adfcab1")
+		)
+		(pin "2"
+			(uuid "d4788817-1bc4-462d-ae05-2fb123b44ef4")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 185.42 139.7)
+			(xy 182.88 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "497dbd50-b6a8-4f3e-9fd9-3b93d7b0031f")
+	)
+	(global_label "COL3"
+		(shape passive)
+		(at 182.88 139.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f298eba3-1ef6-479d-bf22-a06b01b5ff00")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 199.39 139.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5fad0dbf-8a48-4476-b1c2-5f9f75175a56")
+		(property "Reference" "D25"
+			(at 199.39 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 199.39 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 199.39 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K03"
+			(at 199.39 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "49a75707-aca5-484e-9345-88d327431f38")
+		)
+		(pin "2"
+			(uuid "065631e1-8b75-4006-9024-eb505ac2eec6")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 203.2 139.7)
+			(xy 205.74 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "495a8836-a4b1-4333-b2e3-170389f47dae")
+	)
+	(global_label "ROW3"
+		(shape passive)
+		(at 205.74 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c4caad4b-97a5-4a00-8bd4-0dad32ab0605")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 243.84 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f557ff71-c1c8-4b0f-9721-bcc1b6e030f1")
+		(property "Reference" "SW26"
+			(at 243.84 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R3C4"
+			(at 243.84 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 243.84 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K04"
+			(at 243.84 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "844552aa-4415-4293-b16f-4081a6cc746c")
+		)
+		(pin "2"
+			(uuid "4268a6ec-5902-4c85-a887-966b065fa4c8")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 238.76 139.7)
+			(xy 236.22 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1e18121-70d3-41d2-962a-c7ee3dc11f05")
+	)
+	(global_label "COL4"
+		(shape passive)
+		(at 236.22 139.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7f3dec0d-41e5-4cb0-a25f-ca5d144a5e4b")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 252.73 139.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "456732b9-1dc0-4f5f-9554-46f901d9a6e2")
+		(property "Reference" "D26"
+			(at 252.73 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 252.73 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 252.73 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K04"
+			(at 252.73 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d02a7ec6-9b7b-409a-8b25-b3e4613317c6")
+		)
+		(pin "2"
+			(uuid "29161d00-beaf-45b2-b35e-2a050bf0d464")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 256.54 139.7)
+			(xy 259.08 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd0b74bc-0cd3-4bb3-b9b4-f4ad128ff96f")
+	)
+	(global_label "ROW3"
+		(shape passive)
+		(at 259.08 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4512c2d2-3972-46b4-bffa-991729727337")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 297.18 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "70efb8e2-8d20-468d-a225-8ba911eac4ea")
+		(property "Reference" "SW27"
+			(at 297.18 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R3C5"
+			(at 297.18 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 297.18 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 297.18 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K05"
+			(at 297.18 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6845f2a-0722-4885-b464-12f195f9baf4")
+		)
+		(pin "2"
+			(uuid "831d47e2-88a1-4470-a4e4-b6b784c09093")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 292.1 139.7)
+			(xy 289.56 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24b20a6a-c85c-4aca-9f63-16edadd8fc3b")
+	)
+	(global_label "COL5"
+		(shape passive)
+		(at 289.56 139.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "64b93c5c-b467-4814-9bd5-f1ca65184593")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 306.07 139.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "66bc5bee-66a3-45a5-965f-2cc3dd14c78b")
+		(property "Reference" "D27"
+			(at 306.07 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 306.07 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 306.07 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 306.07 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K05"
+			(at 306.07 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "baa72249-1059-4de2-826e-7c65b243bd8b")
+		)
+		(pin "2"
+			(uuid "c7ae9b64-b97d-4061-abf8-1059b48920bd")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 309.88 139.7)
+			(xy 312.42 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff84dada-19e1-43fc-b16f-ab2a7bc0ffba")
+	)
+	(global_label "ROW3"
+		(shape passive)
+		(at 312.42 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bd90c593-f8e6-45f3-839f-5a38ebb6ec60")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 30.48 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "37ea0cd0-a93d-4d2f-8335-c42712145dcc")
+		(property "Reference" "SW28"
+			(at 30.48 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R4C0"
+			(at 30.48 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 30.48 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K10"
+			(at 30.48 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a30af2eb-95f6-4a81-a187-c5b347ac4aaf")
+		)
+		(pin "2"
+			(uuid "9d45a136-7c12-4a37-be5f-f370812106f0")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 25.4 172.72)
+			(xy 22.86 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eadd8ab7-5cdb-43e9-882a-1b4c6b3ea481")
+	)
+	(global_label "COL0"
+		(shape passive)
+		(at 22.86 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a2cc3725-6cb7-40ea-9084-29e0007f5af4")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 39.37 172.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "752e48ca-8fc0-4725-ba93-6ab9d903139c")
+		(property "Reference" "D28"
+			(at 39.37 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 39.37 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 39.37 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K10"
+			(at 39.37 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b57cb085-6b10-447c-81f9-b8d6d5ac9ef2")
+		)
+		(pin "2"
+			(uuid "68bf368f-ca1d-4ead-ac8a-751087491f64")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 43.18 172.72)
+			(xy 45.72 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb0f4b0e-5b6b-4e68-b307-56f16e71843b")
+	)
+	(global_label "ROW4"
+		(shape passive)
+		(at 45.72 172.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "03769b19-9a07-4277-9957-ce99c36219fb")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 83.82 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "20c33bc0-2641-445d-9386-4e027379d914")
+		(property "Reference" "SW29"
+			(at 83.82 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R4C1"
+			(at 83.82 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 83.82 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K11"
+			(at 83.82 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ee5a273d-0561-4de9-aa90-6834604072ad")
+		)
+		(pin "2"
+			(uuid "9a03cfd5-3953-4938-9477-2621c4577f83")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 78.74 172.72)
+			(xy 76.2 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "435e332e-5d2b-402b-8f96-8f57f422a86b")
+	)
+	(global_label "COL1"
+		(shape passive)
+		(at 76.2 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "65f6903d-e14f-4ba8-93e0-0a1672995b98")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 92.71 172.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "534ef8df-e806-41fc-b438-0c57d2d3f755")
+		(property "Reference" "D29"
+			(at 92.71 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 92.71 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 92.71 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K11"
+			(at 92.71 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2424ca0a-7eb5-48de-9964-cd56d226c66b")
+		)
+		(pin "2"
+			(uuid "b7a10133-6054-407e-81ab-b4f2ca4a3d12")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 96.52 172.72)
+			(xy 99.06 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3254f809-27f9-4c41-ae57-1b6d2c993de0")
+	)
+	(global_label "ROW4"
+		(shape passive)
+		(at 99.06 172.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ffa66175-7016-4b7a-84d4-453559d68443")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 137.16 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1ffa5c05-6d83-45f6-b30c-06b5b9a3fa44")
+		(property "Reference" "SW30"
+			(at 137.16 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R4C2"
+			(at 137.16 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 137.16 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K12"
+			(at 137.16 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5434b66f-2669-4b82-9501-be9fecf92caa")
+		)
+		(pin "2"
+			(uuid "a0310b12-a107-4af3-a86e-6de6281d61b0")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 132.08 172.72)
+			(xy 129.54 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "108b7b36-8b2c-40e7-8d20-b3fe086560b7")
+	)
+	(global_label "COL2"
+		(shape passive)
+		(at 129.54 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cb99ad75-5a38-477b-8c59-0b19a4acd43f")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 146.05 172.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "47000370-1fb7-4793-a3f2-fb2733981a0d")
+		(property "Reference" "D30"
+			(at 146.05 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 146.05 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 146.05 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K12"
+			(at 146.05 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "40ab706f-e701-46fd-84e6-bba789b0d6ce")
+		)
+		(pin "2"
+			(uuid "be9180ad-d13b-4868-a65d-f22488fae3d1")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 149.86 172.72)
+			(xy 152.4 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "647f0f4a-284b-42f5-98a7-af701beaf022")
+	)
+	(global_label "ROW4"
+		(shape passive)
+		(at 152.4 172.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bdbc33c4-6c60-42fd-bea8-bca858b91356")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 190.5 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e0f26762-1c09-45fe-90e7-8e1e431926a4")
+		(property "Reference" "SW31"
+			(at 190.5 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R4C3"
+			(at 190.5 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 190.5 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K13"
+			(at 190.5 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3f632e39-7b59-46b9-adfc-91d6ea969a1f")
+		)
+		(pin "2"
+			(uuid "92d54304-c55e-40c5-9095-4c29974949de")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 185.42 172.72)
+			(xy 182.88 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38870d65-d834-46be-b99b-d6c29a951df0")
+	)
+	(global_label "COL3"
+		(shape passive)
+		(at 182.88 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b6c86fe5-f3e7-48aa-ad7d-3e92191da3e4")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 199.39 172.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ef04c698-ca15-4410-b6d7-56b1a6fb9cfd")
+		(property "Reference" "D31"
+			(at 199.39 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 199.39 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 199.39 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K13"
+			(at 199.39 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "82487b2b-6817-4e94-8417-20c8dc0069f8")
+		)
+		(pin "2"
+			(uuid "8eb3873e-a1eb-442d-92d2-c9794231de7d")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 203.2 172.72)
+			(xy 205.74 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12e6f4c8-25a8-4573-8bd1-86adf848d12c")
+	)
+	(global_label "ROW4"
+		(shape passive)
+		(at 205.74 172.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "51614e77-24c0-492b-b006-65985374cd9e")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 243.84 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7d2b25b1-5999-4577-966c-4683c293ee02")
+		(property "Reference" "SW32"
+			(at 243.84 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R4C4"
+			(at 243.84 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 243.84 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K14"
+			(at 243.84 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e759ffc2-649e-46b1-9157-8cdde6233d83")
+		)
+		(pin "2"
+			(uuid "3b553911-2bb9-4b88-b8a6-12ff706ca7d3")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 238.76 172.72)
+			(xy 236.22 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0801ed7e-0ceb-4f8e-a1c5-510f045ae73f")
+	)
+	(global_label "COL4"
+		(shape passive)
+		(at 236.22 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7f15297f-d490-4ce3-9342-6aa802420c13")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 252.73 172.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6b35b00f-86cf-49fb-87fe-6f3a96a4963d")
+		(property "Reference" "D32"
+			(at 252.73 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 252.73 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 252.73 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K14"
+			(at 252.73 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "638ed6dc-fd67-4875-a0fb-0fdedc23e72a")
+		)
+		(pin "2"
+			(uuid "ce6a0f9c-2efa-450e-b3a1-4a08c09c4a5e")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 256.54 172.72)
+			(xy 259.08 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88665620-c2ac-4c51-9fce-88c0f6e15f26")
+	)
+	(global_label "ROW4"
+		(shape passive)
+		(at 259.08 172.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c6897e3e-433f-494d-b244-b996b3adcf97")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 297.18 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "677b9302-80be-4c12-9c61-e4cc6344beef")
+		(property "Reference" "SW33"
+			(at 297.18 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R4C5"
+			(at 297.18 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 297.18 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 297.18 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K15"
+			(at 297.18 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed5a68e9-3045-4d26-bbc9-c49cc815b556")
+		)
+		(pin "2"
+			(uuid "0a4883fe-2850-4a9b-bc75-e25f85252a46")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 292.1 172.72)
+			(xy 289.56 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e6c3e2b-bd32-4f66-9005-6125e245bb1c")
+	)
+	(global_label "COL5"
+		(shape passive)
+		(at 289.56 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6452e4ae-f434-44f2-98ce-7c47da223fa5")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 306.07 172.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "66a8a0d2-2bb7-4545-ba5e-1790df82b303")
+		(property "Reference" "D33"
+			(at 306.07 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 306.07 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 306.07 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 306.07 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K15"
+			(at 306.07 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "93dc00ec-4969-438e-92ae-cfe6e3ff0ac1")
+		)
+		(pin "2"
+			(uuid "8314efef-145f-4ef3-b354-b8dd0e014a43")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 309.88 172.72)
+			(xy 312.42 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86de195f-5aa2-400b-a28e-6dc619ba84ac")
+	)
+	(global_label "ROW4"
+		(shape passive)
+		(at 312.42 172.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "684fc19d-2af5-4b92-997b-8cffa68a8f6b")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 30.48 205.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "98bfcd0c-40f4-4843-9e71-2acf84073697")
+		(property "Reference" "SW34"
+			(at 30.48 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R5C0"
+			(at 30.48 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 30.48 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K20"
+			(at 30.48 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ca596703-7087-4582-b06e-1a2f71fda4a3")
+		)
+		(pin "2"
+			(uuid "5011096a-fd44-4fc3-9aec-c6fa5331484d")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 25.4 205.74)
+			(xy 22.86 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "891e6b82-03de-4254-b6ff-6bbdf0ef7043")
+	)
+	(global_label "COL0"
+		(shape passive)
+		(at 22.86 205.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "931824cf-3440-47a5-8db8-6bf863e25823")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 39.37 205.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b28292bd-f448-40f7-b674-ddcd59c494fa")
+		(property "Reference" "D34"
+			(at 39.37 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 39.37 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 39.37 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K20"
+			(at 39.37 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "23837592-459b-480a-b158-3e5c4a3da04b")
+		)
+		(pin "2"
+			(uuid "48bb498a-00be-4a14-8fe5-86937f6717b8")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 43.18 205.74)
+			(xy 45.72 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14fee287-05f3-41c2-a351-9b2a570d5daa")
+	)
+	(global_label "ROW5"
+		(shape passive)
+		(at 45.72 205.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "055cb889-4066-4d87-b447-e3f6f43c4a28")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 83.82 205.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4507560a-d698-44fb-aa94-d86fe5fb1240")
+		(property "Reference" "SW35"
+			(at 83.82 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R5C1"
+			(at 83.82 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 83.82 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K21"
+			(at 83.82 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "51d83453-e603-4eaa-83e1-e0afdab1a5b6")
+		)
+		(pin "2"
+			(uuid "2cda4dee-22ab-483e-94da-f4ddce3d2829")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 78.74 205.74)
+			(xy 76.2 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25e78b85-bc0a-4b8c-8c26-85bd92664f92")
+	)
+	(global_label "COL1"
+		(shape passive)
+		(at 76.2 205.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b000a15d-0f7e-4fe5-94dd-b06cbf8ad64f")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 92.71 205.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "142291b9-cc8b-4d92-8a0d-6a03bc3e667f")
+		(property "Reference" "D35"
+			(at 92.71 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 92.71 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 92.71 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K21"
+			(at 92.71 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "79fce594-5b80-4556-b29b-c8b0a3360bad")
+		)
+		(pin "2"
+			(uuid "565695a9-eb71-4e28-b092-cf84a99602d1")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 96.52 205.74)
+			(xy 99.06 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb5827b0-08e0-49f1-a3b3-bf1d1afafa88")
+	)
+	(global_label "ROW5"
+		(shape passive)
+		(at 99.06 205.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "31b32770-4c81-4c3e-aae5-506f0504af57")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 137.16 205.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e4b1e5d-7b6e-4e32-9542-ee41d5bb953d")
+		(property "Reference" "SW36"
+			(at 137.16 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R5C2"
+			(at 137.16 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 137.16 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.16 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K22"
+			(at 137.16 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6a2f1a59-08f1-445b-b62f-6021f5b14a2d")
+		)
+		(pin "2"
+			(uuid "cec7c72a-2868-4363-851f-87602b35b037")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 132.08 205.74)
+			(xy 129.54 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cb929c9-3d58-42de-9408-85bf2cd9d95e")
+	)
+	(global_label "COL2"
+		(shape passive)
+		(at 129.54 205.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8438f35a-f4c3-4a42-9eab-beffb3b0f53c")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 146.05 205.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6fdeb531-5e52-475a-b69d-b43501257491")
+		(property "Reference" "D36"
+			(at 146.05 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 146.05 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 146.05 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K22"
+			(at 146.05 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "49eec65b-b6f8-493e-a817-98fca07a072f")
+		)
+		(pin "2"
+			(uuid "3671df9e-8cc2-4ee7-9b0e-053f5d0285c8")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 149.86 205.74)
+			(xy 152.4 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa25be1f-f3ed-445d-849a-016e2407f674")
+	)
+	(global_label "ROW5"
+		(shape passive)
+		(at 152.4 205.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bf039dcb-6155-4b60-8646-6d54b2ce84c9")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 190.5 205.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6a4cbc5a-2042-4d42-90ef-5b4fef344bc4")
+		(property "Reference" "SW37"
+			(at 190.5 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R5C3"
+			(at 190.5 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 190.5 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K23"
+			(at 190.5 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92e234f3-bec2-46b1-8d7d-1fd4d077ac3f")
+		)
+		(pin "2"
+			(uuid "c371b58b-9895-4c0a-9f7b-5061ef2a7400")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 185.42 205.74)
+			(xy 182.88 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a0ed8bf-deeb-4166-8f79-33ea850c7f2d")
+	)
+	(global_label "COL3"
+		(shape passive)
+		(at 182.88 205.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "500a9cbc-0f76-454b-8bc6-bc59cb40e8b4")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 199.39 205.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a029994-f226-46fd-a95a-10b9b4969e86")
+		(property "Reference" "D37"
+			(at 199.39 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 199.39 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 199.39 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K23"
+			(at 199.39 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a846586-03d7-4ca9-b573-7bd44e0d041e")
+		)
+		(pin "2"
+			(uuid "87d3fab5-97f2-4159-8c17-c6b1c26e6d30")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 203.2 205.74)
+			(xy 205.74 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25939ab2-e183-4b32-9a80-047553adf012")
+	)
+	(global_label "ROW5"
+		(shape passive)
+		(at 205.74 205.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7da72570-ffc2-403c-9e7c-22434b77a43d")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 243.84 205.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d2a9b74e-a28c-4b31-b0cb-14e53c369435")
+		(property "Reference" "SW38"
+			(at 243.84 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R5C4"
+			(at 243.84 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 243.84 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K24"
+			(at 243.84 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "56d3d433-b3ef-4fe5-9cb3-0d513e599905")
+		)
+		(pin "2"
+			(uuid "eb11f9c5-87e2-4e22-95eb-da0afc4f2c19")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 238.76 205.74)
+			(xy 236.22 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "107bfa4b-8f8d-430d-b037-33e2f3d29ed5")
+	)
+	(global_label "COL4"
+		(shape passive)
+		(at 236.22 205.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "30cd192a-2380-4095-adba-b78720287fd7")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 252.73 205.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5e86b631-f56a-4b63-a909-6735cc0595cd")
+		(property "Reference" "D38"
+			(at 252.73 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 252.73 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 252.73 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 252.73 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K24"
+			(at 252.73 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "20bf8bdf-afe3-4ea0-aae5-a1cf12e48708")
+		)
+		(pin "2"
+			(uuid "c25eb69b-e93d-49e3-8cdd-2f16f81e6007")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 256.54 205.74)
+			(xy 259.08 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d7b49ac-83ff-4b56-b100-6cd07991d0c3")
+	)
+	(global_label "ROW5"
+		(shape passive)
+		(at 259.08 205.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d7f2cd15-0423-44e0-923f-a54112a8c65a")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 297.18 205.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d653b3ac-f086-4699-ae0e-9429eed104da")
+		(property "Reference" "SW39"
+			(at 297.18 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R5C5"
+			(at 297.18 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 297.18 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 297.18 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K25"
+			(at 297.18 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "29aa457f-f9ca-4914-8098-f5f283214354")
+		)
+		(pin "2"
+			(uuid "c9ea1068-a1a6-4e41-8a06-90de8fe3e40b")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 292.1 205.74)
+			(xy 289.56 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6923186-347f-438f-aaaf-e33672026e5d")
+	)
+	(global_label "COL5"
+		(shape passive)
+		(at 289.56 205.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7ecb4b19-5155-441a-9137-ff3b1c540f5c")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 306.07 205.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "27f736da-d85d-4ad3-9f4a-7db3e4d79366")
+		(property "Reference" "D39"
+			(at 306.07 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 306.07 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 306.07 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 306.07 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R K25"
+			(at 306.07 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cbfa4c00-ed04-45e4-9366-006af99a3fb5")
+		)
+		(pin "2"
+			(uuid "9080b794-c961-4fbd-b3f1-b50032b4be9e")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 309.88 205.74)
+			(xy 312.42 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1b66057-83c3-4a91-b60c-de8a89441381")
+	)
+	(global_label "ROW5"
+		(shape passive)
+		(at 312.42 205.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e16d235d-df97-45b8-988c-6743438ed85a")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 350.52 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "14545b31-088f-45fc-981c-0460944a8d8a")
+		(property "Reference" "SW40"
+			(at 350.52 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R3C6"
+			(at 350.52 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 350.52 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 350.52 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R T0"
+			(at 350.52 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d06ba237-7125-4d3f-944c-865665b2a530")
+		)
+		(pin "2"
+			(uuid "d8587959-4385-46fe-800c-6ce17945bd6f")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 345.44 139.7)
+			(xy 342.9 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e9ab27b-3537-4ee6-a2b1-a2f1548fb8e9")
+	)
+	(global_label "COL6"
+		(shape passive)
+		(at 342.9 139.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5cf548e6-53ee-4772-8299-426961fc26d7")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 359.41 139.7 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "95dd8f00-55ff-40bc-b107-4a645d893c7c")
+		(property "Reference" "D40"
+			(at 359.41 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 359.41 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 359.41 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 359.41 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R T0"
+			(at 359.41 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae92d773-f6ee-4ceb-a116-98d0e57fce34")
+		)
+		(pin "2"
+			(uuid "2090b66a-569c-4de1-b1b0-a7a7f2af9686")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 363.22 139.7)
+			(xy 365.76 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2020bb7-e6a9-4d13-9b4a-0b2d94d3dc32")
+	)
+	(global_label "ROW3"
+		(shape passive)
+		(at 365.76 139.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bb25e7e0-f633-4845-a668-d70d49c118a5")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 350.52 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a72681ed-abb7-4b55-85b3-388b86785e63")
+		(property "Reference" "SW41"
+			(at 350.52 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R4C6"
+			(at 350.52 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.00u"
+			(at 350.52 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 350.52 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R T1"
+			(at 350.52 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67b4d0e6-4fbf-40cf-8385-9a81368152ad")
+		)
+		(pin "2"
+			(uuid "152e9771-bf3a-425e-831b-f5327fefb584")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 345.44 172.72)
+			(xy 342.9 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37381c56-16f4-46f3-97c1-74c6259b0891")
+	)
+	(global_label "COL6"
+		(shape passive)
+		(at 342.9 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "978b345f-9605-42b3-af3b-3843d0da5976")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 359.41 172.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "30465fe2-b52e-41c7-8a48-67f729694f57")
+		(property "Reference" "D41"
+			(at 359.41 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 359.41 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 359.41 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 359.41 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R T1"
+			(at 359.41 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4bb96144-c22f-44fb-82ec-d98d41955013")
+		)
+		(pin "2"
+			(uuid "2812aa2c-ff42-45bf-93f6-61558091c8b3")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 363.22 172.72)
+			(xy 365.76 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c03edd57-70d1-4ae0-aebc-026a53475450")
+	)
+	(global_label "ROW4"
+		(shape passive)
+		(at 365.76 172.72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "91780f43-cc81-4110-a702-06c19a8197e6")
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 350.52 205.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "807977e9-d025-4c32-9993-6b23890024b4")
+		(property "Reference" "SW42"
+			(at 350.52 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R5C6"
+			(at 350.52 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "unicorne:SW_Hotswap_Kailh_MX_1.50u"
+			(at 350.52 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 350.52 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R T2"
+			(at 350.52 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "939655c0-a8cf-404c-ba73-7f406d8e9def")
+		)
+		(pin "2"
+			(uuid "2c07c7b7-6389-4134-b797-5fa7fa84e80d")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "SW42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 345.44 205.74)
+			(xy 342.9 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b33ec95c-ba2c-439b-aee4-4925098c66ea")
+	)
+	(global_label "COL6"
+		(shape passive)
+		(at 342.9 205.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8ec33b87-89d2-4c45-ab6b-8390619e64a4")
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 359.41 205.74 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4e61dbdc-3ca5-4bba-9adf-05a85dfad5d9")
+		(property "Reference" "D42"
+			(at 359.41 200.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 359.41 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 359.41 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 359.41 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Key" "R T2"
+			(at 359.41 205.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0e6eea91-b776-4be4-b477-083fccb0b9b8")
+		)
+		(pin "2"
+			(uuid "19c9bee2-95c8-40f0-83e8-e38e67cbe9e0")
+		)
+		(instances
+			(project "unicorne"
+				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/e1dc25f1-c0e5-4857-9283-2efd9c99d3c5"
+					(reference "D42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 363.22 205.74)
+			(xy 365.76 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8819511-2b68-40d1-98dc-fae9bda4e58a")
+	)
+	(global_label "ROW5"
+		(shape passive)
+		(at 365.76 205.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c20b91e-dd0c-4f8c-9bf8-deb37e5d712b")
+	)
+	(text "COL2ROW. Left half: rows 0-2 (SW1-SW21). Right half: rows 3-5 (SW22-SW42).\nColumn 6 is the thumb cluster. Columns count from the outer pinky on both halves;\ncolumn 0 breaks off for the 36-key version."
+		(exclude_from_sim no)
+		(at 25.4 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "4b824a32-0164-464d-b038-ef9e0636236d")
+	)
+	(embedded_fonts no)
+)

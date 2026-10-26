@@ -7,10 +7,20 @@ Status: layout fixed, schematic done, MX and Choc boards fully routed (DRC: 0 un
 
 
 > **`heuristic` branch:** both PCBs carry only the fixed routing lanes that `tools/lanes.py` lays for
-> the 42 key cells (column vias, row stubs and lanes, LED data hops, LED_VDD lanes, jogs, GND vias), with
-> mounting holes nudged off them. Everything else (the nice!nano, the pad rows and the LED cluster) is
-> unrouted, with no pours: a starting point for routing the centre by hand. The files in `export/` are
-> the routed boards from `main`.
+> the 42 key cells (column vias, row stubs and lanes, LED data hops, LED_VDD lanes stacked under the row
+> lane at the break-line tabs, jogs, GND vias), with mounting holes nudged off them. Everything else (the
+> nice!nano, the pad rows and the LED cluster) is unrouted, with no pours: a starting point for routing the
+> centre by hand or with another router. The files in `export/` (other than `export/quilter/`) are the
+> routed boards from `main`.
+>
+> **Quilter:** `export/quilter/<mx|choc>/as-is/` and `.../fallback/` hold the upload files
+> (`tools/quilter_export.py`). Upload the six files of one set individually (Quilter takes no zip):
+> `unicorne.kicad_pcb`, `unicorne.kicad_sch`, `matrix.kicad_sch`, `leds.kicad_sch`, `unicorne.kicad_pro`,
+> `unicorne.kicad_dru`. Try `as-is` first (the real board, with the LED cutouts and break-line slots on
+> Edge.Cuts); if Quilter's preview trips over those (it supports one closed outline), use `fallback`, where
+> they are keepouts of the same shape and only the outer outline is on Edge.Cuts. Quilter keeps every part
+> and every lane track and via; it regenerates the copper pours, so ask for GND pours on both layers. Pick a
+> 2-layer, 1.6 mm stackup (JLCPCB's, or the one from the project file).
 
 ## Design
 

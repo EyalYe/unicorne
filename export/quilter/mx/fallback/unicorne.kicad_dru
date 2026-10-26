@@ -1,0 +1,7 @@
+(version 1)
+
+# KiCad's reverse-mount SK6812MINI-E footprint has its own LED cutout closer to
+# its pads than the board-wide 0.25 mm edge clearance. Relax it for LEDs only.
+(rule "LED cutout"
+  (condition "A.memberOfFootprint('LED*') || B.memberOfFootprint('LED*')")
+  (constraint edge_clearance (min 0.1mm)))
