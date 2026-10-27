@@ -30,7 +30,7 @@ import gnd_repair  # noqa: E402
 import maze_route as M  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-CLI = Path("/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli")
+CLI = Path("/usr/bin/kicad-cli")
 BOARDS = {"mx": "unicorne.kicad_pcb", "choc": "unicorne-choc.kicad_pcb"}
 WIDTH = {"LED_VDD": 0.3, "LED_SRC": 0.3, "LED_EXT": 0.3, "GND": 0.3, "+3V3": 0.3,
          "VBAT": 0.4, "BATT+": 0.4}

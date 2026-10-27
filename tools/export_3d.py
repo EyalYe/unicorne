@@ -9,7 +9,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CLI = "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli"
+CLI = "/usr/bin/kicad-cli"
 BOARDS = {"mx": "unicorne.kicad_pcb", "choc": "unicorne-choc.kicad_pcb"}
 
 if __name__ == "__main__":

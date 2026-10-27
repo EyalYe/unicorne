@@ -18,7 +18,7 @@ import uuid
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-KICAD = Path("/Applications/KiCad/KiCad.app/Contents/SharedSupport")
+KICAD = Path("/usr/share/kicad")
 PROJECT = "unicorne"
 VERSION = "20260306"
 STUB = 2.54

@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "05905be4-470a-49f5-8fa7-35a6ef79c2d5")
+	(uuid "7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec")
 	(paper "A3")
 	(title_block
 		(title "unicorne - LEDs")
@@ -848,7 +848,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "62e9120e-1c12-43d6-8ab2-ca70d5f9f537")
+		(uuid "cab01308-fe47-420d-9b81-7dbcbc4032fb")
 		(property "Reference" "LED1"
 			(at 36.83 29.21 0)
 			(effects
@@ -895,20 +895,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "39845a75-7e01-4d7f-b723-c61421a5bc3a")
+			(uuid "ef400bbf-8469-41e8-b2b9-5009e4808cd4")
 		)
 		(pin "2"
-			(uuid "2efae732-b89d-4cc7-98ac-fc32b496f19f")
+			(uuid "63a8bfd6-c5b5-465a-90c2-5e6c464f7607")
 		)
 		(pin "3"
-			(uuid "cdd995a5-8bf9-4b74-b510-f752deb2cabb")
+			(uuid "188e917d-786f-41a5-9b96-22ae9f1c0803")
 		)
 		(pin "4"
-			(uuid "4b7d4f3d-e9e1-445d-8164-180397b6fa3b")
+			(uuid "6e464886-8ad1-4485-aa8f-b846fabe4870")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED1")
 					(unit 1)
 				)
@@ -924,7 +924,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bde5a412-d1f1-4a50-ab0e-d15673c7b898")
+		(uuid "126af5aa-af04-4ebb-92a4-211b88cf76b2")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -934,7 +934,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "0294f84e-bb19-473c-9c19-b8807604a860")
+		(uuid "e97128c8-55a0-475d-a46c-7cbd9c52f12e")
 		(property "Reference" "#PWRL01"
 			(at 30.48 22.86 0)
 			(effects
@@ -971,11 +971,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "19cd743b-b298-4cd5-a945-a17ef366694d")
+			(uuid "38d265ac-ef72-4e8e-a930-9c6b47f7fd0e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL01")
 					(unit 1)
 				)
@@ -991,7 +991,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0c17344c-6baa-4773-9dea-ee2f446d13dd")
+		(uuid "b2c038ba-dcaf-4ada-a555-159be43e96de")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1001,7 +1001,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "a56fa0c7-e25d-4821-8255-7f3e86095463")
+		(uuid "434a13d8-68de-43b7-9f33-968f316cd6f7")
 		(property "Reference" "#PWRL02"
 			(at 30.48 43.18 0)
 			(effects
@@ -1038,11 +1038,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "b025a7a8-f410-4c3d-8c81-617aa3bbaf63")
+			(uuid "de3229c1-2d0f-4c01-98f9-4d403b622699")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL02")
 					(unit 1)
 				)
@@ -1058,7 +1058,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8a18fa9d-8dc6-40c4-ac37-6d6483e27935")
+		(uuid "ecc77200-9dc3-4769-a84d-b621b220fb62")
 	)
 	(global_label "LED_DIN"
 		(shape passive)
@@ -1070,7 +1070,7 @@
 			)
 			(justify right)
 		)
-		(uuid "866b58ca-3f0c-442d-bd58-62cf4e72b4e7")
+		(uuid "f04997b8-f09f-4c37-825a-d9dde15cafab")
 	)
 	(wire
 		(pts
@@ -1081,7 +1081,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3062985d-fa7f-4801-aeb6-9df7a160c4ee")
+		(uuid "238a8d4a-5a23-4648-b989-d9c65c46d28f")
 	)
 	(label "LED_D1"
 		(at 40.64 38.1 0)
@@ -1091,7 +1091,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "0bb0131c-be23-4092-915d-66fdc6a4f4d0")
+		(uuid "c640c93f-3ded-431f-9df3-284d3dca288d")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -1101,7 +1101,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4545765d-5fcc-4f16-a03d-17c766f5349a")
+		(uuid "440601a2-aaf2-434a-aac8-5b5ef0fde8c6")
 		(property "Reference" "LED2"
 			(at 80.01 29.21 0)
 			(effects
@@ -1148,20 +1148,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "539537b5-fd70-41e8-8679-ad625fe0ff67")
+			(uuid "20099c2a-1fe3-471e-b819-8b824cd815d8")
 		)
 		(pin "2"
-			(uuid "db1eb7a6-5085-400c-9c14-9d3b5ee57976")
+			(uuid "50d5bf12-4860-46f2-8881-37119a375165")
 		)
 		(pin "3"
-			(uuid "efa5e960-8529-4386-a679-4318c17b026b")
+			(uuid "0a149053-54d4-4154-8fec-fd3663590b01")
 		)
 		(pin "4"
-			(uuid "a255e90d-9b48-4c20-980c-48ab618080a2")
+			(uuid "f0ce320a-743a-471f-9ff8-86307633c99c")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED2")
 					(unit 1)
 				)
@@ -1177,7 +1177,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "86b5e5d9-b93e-4237-aa83-10a802b7523b")
+		(uuid "ba3f629c-6be2-40f5-8150-0d1e4ba1bc77")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -1187,7 +1187,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "1edc0e6d-320c-4ed4-9526-c9a1efcdad50")
+		(uuid "82b9155b-c62a-456c-8c99-6c4217711923")
 		(property "Reference" "#PWRL03"
 			(at 73.66 22.86 0)
 			(effects
@@ -1224,11 +1224,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "a96e8017-df44-40be-98d8-9c69c4ec73f0")
+			(uuid "6d57d740-9759-42a1-a30b-0b195ed6f10b")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL03")
 					(unit 1)
 				)
@@ -1244,7 +1244,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1dd7f657-e0ac-4fff-85a1-0da0ba926e83")
+		(uuid "d3f041fa-27fb-4114-b49e-a5fed40d9f13")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1254,7 +1254,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "3c27fc85-e922-4c9b-9c22-9b8b111fc0f2")
+		(uuid "3b3be671-af47-4fdd-8bae-ff8e70226bd6")
 		(property "Reference" "#PWRL04"
 			(at 73.66 43.18 0)
 			(effects
@@ -1291,11 +1291,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "a591c358-2979-4a15-b676-42c7b6ce943f")
+			(uuid "e034633e-3ab0-4ead-be8e-2ae4a1318925")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL04")
 					(unit 1)
 				)
@@ -1311,7 +1311,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "70b320f6-ce3b-4a58-b6f1-f3b51bb752de")
+		(uuid "307e660f-7723-4fec-a406-3d550115ec30")
 	)
 	(label "LED_D1"
 		(at 63.5 38.1 180)
@@ -1321,7 +1321,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "1956fced-f903-4f15-9ab7-b7f37df811e2")
+		(uuid "c624018e-ba0f-43ec-aaaa-1a1cbb961058")
 	)
 	(wire
 		(pts
@@ -1332,7 +1332,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f23cbf2b-2d78-422a-8ed2-a257f2e71ac9")
+		(uuid "39e6ac17-9f23-4ad7-9761-2e704e3ef673")
 	)
 	(label "LED_D2"
 		(at 83.82 38.1 0)
@@ -1342,7 +1342,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d90b0882-f4e1-4634-882d-5fa22a887b90")
+		(uuid "ba04892d-9f20-4bdb-9076-f07eef39bad6")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -1352,7 +1352,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dae6a441-6d1f-4a38-83a8-c718ea8c5dc3")
+		(uuid "7d15ac21-1164-4ff4-adb3-6433fe552e6e")
 		(property "Reference" "LED3"
 			(at 123.19 29.21 0)
 			(effects
@@ -1399,20 +1399,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "7933e5a6-475f-4531-bf55-903305af505e")
+			(uuid "751403d5-d411-4beb-9cc5-9428cac51e14")
 		)
 		(pin "2"
-			(uuid "1c0be74c-3593-4c1f-ae9c-2b0a1fec5510")
+			(uuid "ff93d637-6ebe-427e-a032-185c877f92e9")
 		)
 		(pin "3"
-			(uuid "f869d91c-511d-497d-a8b3-8b8e89c1fedc")
+			(uuid "3b391dc7-17bc-4403-98b9-9d91cfb59017")
 		)
 		(pin "4"
-			(uuid "79e4a158-b922-4228-89a9-37e451358493")
+			(uuid "a9f2a441-130f-44a8-b29f-e53c27f2ee67")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED3")
 					(unit 1)
 				)
@@ -1428,7 +1428,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6dbe4c39-23dc-4a8b-92c5-3ec898c8e6e4")
+		(uuid "abc80f1b-6b57-4419-aa28-c054d4cbf0fe")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -1438,7 +1438,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "002f0194-353a-4237-9c64-1e5d46df185e")
+		(uuid "b0727b13-7274-4fa8-8ea4-da2ebdb38ba6")
 		(property "Reference" "#PWRL05"
 			(at 116.84 22.86 0)
 			(effects
@@ -1475,11 +1475,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "1caa7230-7d01-41f0-a226-38d53a5eff31")
+			(uuid "3284ee68-91e0-4741-b406-e62f57eec943")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL05")
 					(unit 1)
 				)
@@ -1495,7 +1495,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2e71ba05-43b6-4a81-85c0-dd60982df703")
+		(uuid "7ed72e88-f710-485a-887e-fed212073989")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1505,7 +1505,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "cd9c69e3-63da-4b1e-883c-3bf32532834b")
+		(uuid "9b6b8942-0500-4fcd-bc36-40159c135e54")
 		(property "Reference" "#PWRL06"
 			(at 116.84 43.18 0)
 			(effects
@@ -1542,11 +1542,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "1935d076-1af7-40a0-9b64-9b57063a0fa8")
+			(uuid "30544a0b-89e8-4c91-b81f-89a374233dc8")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL06")
 					(unit 1)
 				)
@@ -1562,7 +1562,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d88eaa29-c114-4b05-9746-cdc06aad372f")
+		(uuid "50e8f955-134e-4dde-ba4e-bac98ed09627")
 	)
 	(label "LED_D2"
 		(at 106.68 38.1 180)
@@ -1572,7 +1572,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f6f382b0-a0bd-4070-9283-ff87c9fffaf5")
+		(uuid "e209fe64-2a7b-46d5-8814-f7ff794e29d0")
 	)
 	(wire
 		(pts
@@ -1583,7 +1583,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "77ab5f2c-2b39-44a0-bd58-2006fc23f79e")
+		(uuid "e8a83cce-df82-4704-a651-fe1e2659dd90")
 	)
 	(label "LED_D3"
 		(at 127 38.1 0)
@@ -1593,7 +1593,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4a4ecdb1-d9e6-4436-9093-cbe329c3df3f")
+		(uuid "db26c6b8-4717-4ad3-9ebb-4a747c28cd4a")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -1603,7 +1603,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "287e40c0-325a-4ea3-999a-b50cdccafa27")
+		(uuid "9eebe5d4-66c1-4bda-96c1-7984e7d16c92")
 		(property "Reference" "LED4"
 			(at 166.37 29.21 0)
 			(effects
@@ -1650,20 +1650,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "689f35b6-453b-4121-a26c-a0d0e160354c")
+			(uuid "cac4f116-f125-4d13-bf5b-1d1147287286")
 		)
 		(pin "2"
-			(uuid "e437ddab-61e3-4ab5-b541-90e29151adc1")
+			(uuid "f7618ed2-03be-45cd-b704-31ea75fdfebb")
 		)
 		(pin "3"
-			(uuid "13ebd83c-28f5-40ba-9861-28c2f42ce75e")
+			(uuid "d2c534a6-8a91-4e34-b30c-c8132d88b939")
 		)
 		(pin "4"
-			(uuid "e33a6c06-8c86-43bc-bfdb-834a9e2e6355")
+			(uuid "45fc1ec8-3e2e-463f-8980-26c1d978b5d9")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED4")
 					(unit 1)
 				)
@@ -1679,7 +1679,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e6164b93-c069-4e1b-9564-1a4a47b536d3")
+		(uuid "3c7d59bb-f18d-4ba8-8557-25442bc0e60e")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -1689,7 +1689,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "3d267d61-49dd-47d7-8071-e0b8d250712b")
+		(uuid "fe45efa8-0c55-400d-ab8f-854d5ac5a2c1")
 		(property "Reference" "#PWRL07"
 			(at 160.02 22.86 0)
 			(effects
@@ -1726,11 +1726,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "1279723a-1047-46a0-85b0-3e5497f99353")
+			(uuid "a1283759-2986-4cb3-96a8-dc2992f445ad")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL07")
 					(unit 1)
 				)
@@ -1746,7 +1746,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f0c25da4-99a0-497c-bd44-78403a7bcdff")
+		(uuid "d9d25878-9e9c-4a58-bb53-35778f412c67")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1756,7 +1756,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "574f5461-3750-47f8-ae13-e3fe351caf91")
+		(uuid "1634e037-8971-4327-b285-355904d547a3")
 		(property "Reference" "#PWRL08"
 			(at 160.02 43.18 0)
 			(effects
@@ -1793,11 +1793,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "5f88d889-abaf-4ae6-ae56-7c87a55f9393")
+			(uuid "e2717c5e-1f9a-4fb2-900d-29f7745fb714")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL08")
 					(unit 1)
 				)
@@ -1813,7 +1813,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a61e7b57-2ee7-4571-a71b-ebc729c0acef")
+		(uuid "ba18ad1c-06ce-4e7d-8e57-331ac6d9850a")
 	)
 	(label "LED_D3"
 		(at 149.86 38.1 180)
@@ -1823,7 +1823,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c998451c-2a04-4837-a6a6-5218329ab8f9")
+		(uuid "2b5ea4d6-0c0a-4084-a2d0-dc03bbe3e5e2")
 	)
 	(wire
 		(pts
@@ -1834,7 +1834,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "21ee0ad3-ab95-468c-bd6c-35bbee5a0455")
+		(uuid "fbff4ced-d6a3-40c6-8228-f509601acb1b")
 	)
 	(label "LED_D4"
 		(at 170.18 38.1 0)
@@ -1844,7 +1844,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c98e50e3-53c6-4e61-87be-42e02e16fe4f")
+		(uuid "b117f4b4-21ad-401d-baa9-d09ebcaae9b9")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -1854,7 +1854,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "686e855a-c804-42dd-b476-39eca77a6706")
+		(uuid "bc10fe57-52a8-48e0-8dbf-5ce0d8a91337")
 		(property "Reference" "LED5"
 			(at 209.55 29.21 0)
 			(effects
@@ -1901,20 +1901,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "657e853f-ff00-49d5-a1fc-d8c3045311b2")
+			(uuid "22b52485-60cc-417b-b803-4096a9fe1341")
 		)
 		(pin "2"
-			(uuid "58f70c66-39b8-4276-8a8a-27a946f0bc74")
+			(uuid "3954f21f-12a2-4c82-bf2f-32146e4644f5")
 		)
 		(pin "3"
-			(uuid "11c48e8c-630d-4429-bbd1-51ea38b59001")
+			(uuid "f2ab3b40-d339-4b0a-8e0a-b536147a0ce6")
 		)
 		(pin "4"
-			(uuid "b2048417-010b-471d-ab5d-f549403e35be")
+			(uuid "bb6767d4-8a0e-4722-9c5d-0ec17728580e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED5")
 					(unit 1)
 				)
@@ -1930,7 +1930,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4d452bde-e436-474a-a68c-3667a2c20b06")
+		(uuid "ff031373-2f36-49d3-a0ec-2e2aa7e354ad")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -1940,7 +1940,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "2218d9c2-41dd-48fd-a171-7afd4b6da63d")
+		(uuid "59c54f90-20f7-4ddf-aaa7-eb83d7c2a933")
 		(property "Reference" "#PWRL09"
 			(at 203.2 22.86 0)
 			(effects
@@ -1977,11 +1977,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0abbe294-93b8-4308-8a7b-6b0fc269aa73")
+			(uuid "ffdef2fa-4487-403c-914a-b1e1b20a173a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL09")
 					(unit 1)
 				)
@@ -1997,7 +1997,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b6dfb097-ff57-4402-8797-ca2d4f54e76c")
+		(uuid "732f8b91-3c34-4332-86c3-e72d7475c59a")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2007,7 +2007,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "7c84c745-ec88-417b-a24b-01470393c6d5")
+		(uuid "a658f15d-10a2-4f68-8a9c-db985afbb986")
 		(property "Reference" "#PWRL10"
 			(at 203.2 43.18 0)
 			(effects
@@ -2044,11 +2044,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "fb27b31b-9535-4dae-83aa-ef9d3ec4587e")
+			(uuid "74ecba23-d1ac-45c8-993e-a0768d733930")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL10")
 					(unit 1)
 				)
@@ -2064,7 +2064,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4aae914a-8a04-489d-99cf-1f7fafd8380b")
+		(uuid "46287f77-4583-4741-83e0-503bab99b7d9")
 	)
 	(label "LED_D4"
 		(at 193.04 38.1 180)
@@ -2074,7 +2074,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "31e9f622-b92d-4327-b6d8-028e21406602")
+		(uuid "d9ed95de-e9b3-4e71-b6fa-59fc04033362")
 	)
 	(wire
 		(pts
@@ -2085,7 +2085,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a93fa3db-de74-43a6-9d00-071ca92f3c0e")
+		(uuid "b405991c-9878-49bf-a474-83c341bbd8fe")
 	)
 	(label "LED_D5"
 		(at 213.36 38.1 0)
@@ -2095,7 +2095,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fb281e1e-2aaa-4cca-92fe-6b4dea325fcb")
+		(uuid "d0a76b7f-1fed-4ae2-8004-976aec8175d7")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -2105,7 +2105,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "85859482-288c-4bf8-a427-18b3f647f218")
+		(uuid "876e30f9-88aa-4f9c-8cee-216f4dda54fb")
 		(property "Reference" "LED6"
 			(at 252.73 29.21 0)
 			(effects
@@ -2152,20 +2152,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "a653344a-cd6c-4430-a358-c3f871979910")
+			(uuid "affcff80-27bc-4972-8c35-4d4d6c47df2f")
 		)
 		(pin "2"
-			(uuid "dc951b1b-e4fc-4ca0-b6ca-9bfebde16a36")
+			(uuid "15a9f8b3-431a-49c4-8bc1-936d7d49421e")
 		)
 		(pin "3"
-			(uuid "33f07e22-9f04-4995-b81f-01b859c5a301")
+			(uuid "34bf71d4-6e8c-4892-a3ec-269c8a8fae05")
 		)
 		(pin "4"
-			(uuid "9ef1a0a0-9f80-4757-93bd-7e22ba615eb7")
+			(uuid "6d4dc866-0983-4c73-8ef8-7c516cba7b87")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED6")
 					(unit 1)
 				)
@@ -2181,7 +2181,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "fb9f0db0-a085-447d-9f20-adce6cc7c52f")
+		(uuid "db3fe160-18f7-40bb-b8d3-2046ca1e3a58")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -2191,7 +2191,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "3398d6c2-a398-4bd7-81de-ee6333680479")
+		(uuid "fbcb9ec5-1685-47e2-9fad-2cb4816b5f42")
 		(property "Reference" "#PWRL11"
 			(at 246.38 22.86 0)
 			(effects
@@ -2228,11 +2228,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "dbc84675-0900-4715-8d47-b3ed4cb6694d")
+			(uuid "2d8420aa-f453-43d6-bdd0-bcb23ac60c67")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL11")
 					(unit 1)
 				)
@@ -2248,7 +2248,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6bd3439e-494c-4dd1-b356-7f0dc78165ef")
+		(uuid "05b8cddc-e947-452e-981e-efbd0cfd659f")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2258,7 +2258,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "66170781-6f1b-467c-b3e7-bfc5d1319c24")
+		(uuid "c1c4be81-ed51-4359-8af1-ce992dbd0963")
 		(property "Reference" "#PWRL12"
 			(at 246.38 43.18 0)
 			(effects
@@ -2295,11 +2295,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "c9011704-1af3-4ee0-a303-f993fa2eddbb")
+			(uuid "c6cf0a6d-fdc8-4e33-ba89-b87b7b68050e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL12")
 					(unit 1)
 				)
@@ -2315,7 +2315,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "661b4fe4-c4fb-4f44-8bc8-3bedecf7de89")
+		(uuid "d69772a4-36e2-4210-921a-3a2069be74d7")
 	)
 	(label "LED_D5"
 		(at 236.22 38.1 180)
@@ -2325,7 +2325,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "edc551d5-90f7-4c23-af4f-a0fb9afff83a")
+		(uuid "47cddeb3-5bef-408c-b50f-ac9fce042ce9")
 	)
 	(wire
 		(pts
@@ -2336,7 +2336,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5f38a0d9-2777-486e-9e97-7ed09a7fff72")
+		(uuid "e5599bc7-74fc-4863-91ee-1a7fd393a384")
 	)
 	(label "LED_D6"
 		(at 256.54 38.1 0)
@@ -2346,7 +2346,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6df8dd13-5f1d-48e9-a340-781fd0d025d6")
+		(uuid "d0e261cd-64cd-49d9-9b1b-c2df3809d8d5")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -2356,7 +2356,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f4c31472-0628-407b-af03-af6005052420")
+		(uuid "ff25b8e9-d73c-4db5-8341-eb1f29c3b0f2")
 		(property "Reference" "LED7"
 			(at 295.91 29.21 0)
 			(effects
@@ -2403,20 +2403,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "c067db7d-3a3c-4408-b1a7-2f8ab003392e")
+			(uuid "9b24b330-9453-48a2-b5fb-d4fd0fc39822")
 		)
 		(pin "2"
-			(uuid "0f62546b-3ec4-4e9c-b9f4-255767a224fe")
+			(uuid "70460f3f-a3c4-420a-acea-97d9a1990656")
 		)
 		(pin "3"
-			(uuid "6a75b26f-f7a7-4000-9d41-1b5ccff82e62")
+			(uuid "ba7e4d3c-f2da-417a-9a28-c58ff9edb5b0")
 		)
 		(pin "4"
-			(uuid "ca80d2f2-9897-4340-9b25-c4089e6cc218")
+			(uuid "21e43ee8-dfad-4938-a152-de2d5c4255aa")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED7")
 					(unit 1)
 				)
@@ -2432,7 +2432,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "236c3ef3-8385-4d52-b887-136019a577ec")
+		(uuid "bdfd9c45-db50-4cd4-a97b-6d433791458f")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -2442,7 +2442,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "f8ffb409-002c-4f26-9702-f864c86a9b0e")
+		(uuid "5ffe2890-704f-4e08-ad69-b522b74a9a14")
 		(property "Reference" "#PWRL13"
 			(at 289.56 22.86 0)
 			(effects
@@ -2479,11 +2479,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "c38118eb-3a0c-4baa-b7e7-172c77d77ad9")
+			(uuid "92039dfe-b6c6-4129-a8ca-5c027d9f4348")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL13")
 					(unit 1)
 				)
@@ -2499,7 +2499,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "06f72407-cbce-4f10-9ef9-7485d44723e4")
+		(uuid "7fc02ae6-2675-4365-95ba-7414d5339753")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2509,7 +2509,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "f239775c-a9b9-45ce-8c38-b9365b89b2ee")
+		(uuid "5308ccbb-e9e3-4e4c-a1e5-3a3f1b59ee13")
 		(property "Reference" "#PWRL14"
 			(at 289.56 43.18 0)
 			(effects
@@ -2546,11 +2546,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "14466520-657f-4f26-abea-3ad09bc475b9")
+			(uuid "cba9d804-a0d4-46cd-9e75-6b6373e16830")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL14")
 					(unit 1)
 				)
@@ -2566,7 +2566,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4b92a27f-a7a7-4b1e-b283-16974cf2cb8e")
+		(uuid "14b3dfc8-73a8-4100-aa74-b7ecffe13148")
 	)
 	(label "LED_D6"
 		(at 279.4 38.1 180)
@@ -2576,7 +2576,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "57235d8f-d4e2-4149-a523-f500df5e0960")
+		(uuid "73ec01f8-c455-49a0-a5ef-d5b7413f1b31")
 	)
 	(wire
 		(pts
@@ -2587,7 +2587,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "36035605-6a6b-4fdf-9dc7-6199aa261fa1")
+		(uuid "cc03aee0-4273-404b-a3ae-ef2f719f365a")
 	)
 	(label "LED_D7"
 		(at 299.72 38.1 0)
@@ -2597,7 +2597,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e263062c-829e-4ac9-bd55-eba1f7451b81")
+		(uuid "df572239-98ac-4963-b1db-09cfd979b05b")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -2607,7 +2607,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a3208178-31d5-4ca3-a18b-84de471aaa43")
+		(uuid "6a5d1416-9856-4eaa-8725-f9563b1152e3")
 		(property "Reference" "LED8"
 			(at 339.09 29.21 0)
 			(effects
@@ -2654,20 +2654,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "19a123ed-5d5f-4095-bdb6-8718492c658b")
+			(uuid "959cca0e-0dc4-48e8-9f94-787c48aadfae")
 		)
 		(pin "2"
-			(uuid "68a8de08-a523-4a9e-adcf-64da58568d84")
+			(uuid "ecc3a106-cd55-4d46-9d9a-6b4c5fed7c3d")
 		)
 		(pin "3"
-			(uuid "d684d8e2-77c6-4caa-b362-b4baa0d4ca04")
+			(uuid "3c21593d-ce09-478b-afc0-d9452df341e0")
 		)
 		(pin "4"
-			(uuid "96647bcd-ecb8-4bc6-8168-4acf4b629c1e")
+			(uuid "ec095a36-6e35-494d-b9c1-252486324cc2")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED8")
 					(unit 1)
 				)
@@ -2683,7 +2683,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "179571e4-5e71-44ab-a557-4eb12e448e2f")
+		(uuid "f6bf3855-2d67-4c09-a932-1284ae9a5328")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -2693,7 +2693,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "33a05d38-6a2f-4c0b-92e0-f5aa2b7e77b0")
+		(uuid "d7309bf5-1f32-49b7-ac26-ac542eaca0ab")
 		(property "Reference" "#PWRL15"
 			(at 332.74 22.86 0)
 			(effects
@@ -2730,11 +2730,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "af2824c4-cefd-4627-8678-cf93dae7374b")
+			(uuid "a4e0d315-9d7f-403b-a9c9-efea307c5d57")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL15")
 					(unit 1)
 				)
@@ -2750,7 +2750,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bd834321-fbb5-444c-89f5-32e2a1ef67d7")
+		(uuid "1fbe260a-868a-4bd1-baf7-2fe3a9dbb4cf")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2760,7 +2760,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "e99cbf82-74a4-4e1e-8e1e-828e7c8549a5")
+		(uuid "c03e61c2-3e1e-4901-ab7a-b1311143942a")
 		(property "Reference" "#PWRL16"
 			(at 332.74 43.18 0)
 			(effects
@@ -2797,11 +2797,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "4f1c2738-d095-4823-91cd-66191bd5309a")
+			(uuid "4f1ca9ca-54ab-43c7-9d35-e5b7098a87d8")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL16")
 					(unit 1)
 				)
@@ -2817,7 +2817,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6d06b47a-a224-40e5-8f5c-4fdfe2dad828")
+		(uuid "803eb8c9-e118-407a-b880-a94c33ad55a7")
 	)
 	(label "LED_D7"
 		(at 322.58 38.1 180)
@@ -2827,7 +2827,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "02b06fe9-9b64-45ee-83f4-d5924d0a62da")
+		(uuid "541295ba-ad6c-412d-8a72-392814cbf13e")
 	)
 	(wire
 		(pts
@@ -2838,7 +2838,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cb2d92e1-67d9-4ebd-b335-d949fe58aff0")
+		(uuid "58b48f0e-34f1-4f96-9aec-d57b42342a3b")
 	)
 	(label "LED_D8"
 		(at 342.9 38.1 0)
@@ -2848,7 +2848,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "be3bfc86-a5e8-4fa0-9766-3af473c07090")
+		(uuid "a6c54708-6c0c-4780-a2d4-cc4a5f2b473f")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -2858,7 +2858,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "858c4c88-ba9d-4863-b860-4a3767f7100c")
+		(uuid "7a78fd58-e5d5-4f1c-ab10-48e62e1d2e85")
 		(property "Reference" "LED9"
 			(at 382.27 29.21 0)
 			(effects
@@ -2905,20 +2905,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "e9c3def1-c035-4067-a0c7-7c7baf954ed8")
+			(uuid "b2b0455b-8cb2-4be9-8653-28dd83b4f0ad")
 		)
 		(pin "2"
-			(uuid "38d030fd-6a15-4288-a15b-517f84dee492")
+			(uuid "43a3e152-f8e1-40e7-8aa1-c6b86dc5e99e")
 		)
 		(pin "3"
-			(uuid "bf5914a9-6883-4c6f-a62f-9c672f6d2cf3")
+			(uuid "8498066b-26b5-4e22-951c-5b477877e44c")
 		)
 		(pin "4"
-			(uuid "2eb73ff8-185b-47fc-a9e3-449b7260d846")
+			(uuid "9cffe54c-d74d-4702-92fa-d7b32b923460")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED9")
 					(unit 1)
 				)
@@ -2934,7 +2934,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a898ee08-f77b-4f00-85c8-2d484fad5916")
+		(uuid "33256cb5-62bb-4339-bdcd-1fb462d7ca3e")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -2944,7 +2944,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "e4fcb072-c5ed-43b1-98ff-2f7e1aefb889")
+		(uuid "af359ff1-4154-40f0-9aab-f48a23e1f17e")
 		(property "Reference" "#PWRL17"
 			(at 375.92 22.86 0)
 			(effects
@@ -2981,11 +2981,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "9faf4909-0ae4-4a34-9132-916131955c20")
+			(uuid "9d55483b-64a2-49f9-a3a0-ec03d94eb53f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL17")
 					(unit 1)
 				)
@@ -3001,7 +3001,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6576576b-c9a5-48a1-be82-530bab3882bb")
+		(uuid "4d423cd4-71ea-4565-bad5-82e6f7a84dd4")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3011,7 +3011,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "f5cebe0b-8037-43f7-b4bf-56b86726cc08")
+		(uuid "339ee554-05c7-4ed1-8d4f-ccd3aa604e56")
 		(property "Reference" "#PWRL18"
 			(at 375.92 43.18 0)
 			(effects
@@ -3048,11 +3048,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "14197dd2-6a68-4ae2-a686-bb530d944f0a")
+			(uuid "16c57a16-3f17-4a6e-a0b0-a7b75747852b")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL18")
 					(unit 1)
 				)
@@ -3068,7 +3068,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "abe25eee-07b9-43f1-8ce6-a7cf9c6f44ef")
+		(uuid "1c6e7370-2377-45ba-8447-2370448264d6")
 	)
 	(label "LED_D8"
 		(at 365.76 38.1 180)
@@ -3078,7 +3078,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c5b1c27e-1640-429f-b996-59f8f2028fe2")
+		(uuid "c65ff8cf-c119-431a-a26b-b89703069456")
 	)
 	(wire
 		(pts
@@ -3089,7 +3089,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "32149509-7321-4de5-959b-631f11af9dd0")
+		(uuid "19e6dcd3-1af0-4667-9d9c-26045e070927")
 	)
 	(label "LED_D9"
 		(at 386.08 38.1 0)
@@ -3099,7 +3099,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "baf82b62-f1a7-4feb-a32d-e2567a25812e")
+		(uuid "35ad2534-0b55-4fe6-83da-58f35ce52639")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -3109,7 +3109,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "637b89d3-bf01-4a64-8005-f0a8d1e4a772")
+		(uuid "23b0c3c6-5f8b-4989-9ed0-ccc8d5401137")
 		(property "Reference" "LED10"
 			(at 36.83 64.77 0)
 			(effects
@@ -3156,20 +3156,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "7e10358e-4938-43eb-99bc-36aa71a55548")
+			(uuid "e05514b5-79a6-46b0-a84c-b8635f1d6ca1")
 		)
 		(pin "2"
-			(uuid "442bef04-66d5-42d9-b85e-33693c261713")
+			(uuid "0ca1fc7f-e3be-4328-aeba-f8f3531d2fb5")
 		)
 		(pin "3"
-			(uuid "e8f4c4ab-21f0-4591-a2a4-87ce8c7f7dd6")
+			(uuid "ae942daa-8c83-4c3c-889d-b48eb82741b5")
 		)
 		(pin "4"
-			(uuid "bf7d4673-ec50-4665-9b48-b5eb48702eb1")
+			(uuid "01df0418-1ca7-4460-90ee-6b9b10d1ab03")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED10")
 					(unit 1)
 				)
@@ -3185,7 +3185,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c306c47d-e281-4e1c-850e-7b94b424f90f")
+		(uuid "998a0f7c-0315-40d3-96a5-1429a638be33")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -3195,7 +3195,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "a0152a18-3090-4622-8691-3724f352da1b")
+		(uuid "9daa86b2-d64d-4ce2-996f-39cf22de24f9")
 		(property "Reference" "#PWRL19"
 			(at 30.48 58.42 0)
 			(effects
@@ -3232,11 +3232,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "c4aba2b4-7ab2-4dee-a886-9f1f1b227f69")
+			(uuid "42dffa70-e844-4e8e-b42e-7d5a5be35152")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL19")
 					(unit 1)
 				)
@@ -3252,7 +3252,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1156b964-2271-4c7e-8171-c774ade18b04")
+		(uuid "112d710f-a7fb-4666-b7b6-bac93acb6041")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3262,7 +3262,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "8f09e8d5-9fae-4456-b360-5120226606ed")
+		(uuid "c737da40-23e5-423c-aa6b-2cd31ccac6ac")
 		(property "Reference" "#PWRL20"
 			(at 30.48 78.74 0)
 			(effects
@@ -3299,11 +3299,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "472c7814-3665-4a59-9961-648b3ee17fa8")
+			(uuid "b23f86e4-5533-4384-8288-32c2043c2a02")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL20")
 					(unit 1)
 				)
@@ -3319,7 +3319,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c22d9bf5-9c56-4b78-b08e-5cd81acc297f")
+		(uuid "c71f279e-4bec-4f40-a80b-14301b3576ed")
 	)
 	(label "LED_D9"
 		(at 20.32 73.66 180)
@@ -3329,7 +3329,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2a3a54c4-bb79-46e9-9793-ad7ddf17b4b9")
+		(uuid "2aeeb841-8c58-430c-ae8b-6cb003585315")
 	)
 	(wire
 		(pts
@@ -3340,7 +3340,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6062057e-1ce1-468d-b4bd-cb145ab7c9bd")
+		(uuid "1e33e135-3be2-4d70-bcf8-c712168467fe")
 	)
 	(label "LED_D10"
 		(at 40.64 73.66 0)
@@ -3350,7 +3350,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "758cbcac-cf99-4589-8c83-4833f3a208cb")
+		(uuid "a8835ed7-dd95-4412-82f4-486072162f09")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -3360,7 +3360,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "08da8d51-7974-461e-b8cc-4e3ce0e0fbeb")
+		(uuid "bea7b431-aa5d-468b-b883-f6919aade0f0")
 		(property "Reference" "LED11"
 			(at 80.01 64.77 0)
 			(effects
@@ -3407,20 +3407,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "33fc5f5b-605e-48cb-98aa-b0de180728ce")
+			(uuid "67618c7e-efb9-45d2-8899-d23c864d6883")
 		)
 		(pin "2"
-			(uuid "d03d0bb4-c0d1-4f33-a017-f5fd99f60390")
+			(uuid "ffca132c-abaf-457b-bc7f-ec5412fb2369")
 		)
 		(pin "3"
-			(uuid "5b189afc-e1c0-45e6-96ed-9227efd72f02")
+			(uuid "266aff03-63a5-4ffb-92ad-c4cd0d442cd0")
 		)
 		(pin "4"
-			(uuid "7caa8b62-93a7-4238-9e4c-5c0ffee65dd2")
+			(uuid "62475772-56be-4f45-ba54-57176cddb943")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED11")
 					(unit 1)
 				)
@@ -3436,7 +3436,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0e5d2f7b-b646-4bf8-aba2-011dfdae94d8")
+		(uuid "fc63485c-50ab-4647-9335-f9de55b32977")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -3446,7 +3446,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ddf60564-cc36-4d2c-ad25-085e8a5ab442")
+		(uuid "292a7419-f978-4002-96ec-1a38ea6893d9")
 		(property "Reference" "#PWRL21"
 			(at 73.66 58.42 0)
 			(effects
@@ -3483,11 +3483,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d3ae0551-0aa5-44be-8ea1-0351187933b0")
+			(uuid "2fb453ed-e7ce-4a19-864d-6b874eb2df27")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL21")
 					(unit 1)
 				)
@@ -3503,7 +3503,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f848cfd5-b6a1-4e3c-b077-d1c8ed893b97")
+		(uuid "f11e6034-75ab-40db-a5f7-77cdcf6dc75a")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3513,7 +3513,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "d910370d-8de8-4c35-a9de-b0bb902527e2")
+		(uuid "c47aacae-87b2-4d3f-b43b-3de3e4aa0027")
 		(property "Reference" "#PWRL22"
 			(at 73.66 78.74 0)
 			(effects
@@ -3550,11 +3550,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "758dc4aa-fe50-4799-9e66-bf6038de26f8")
+			(uuid "a084d923-48cf-4050-abe1-7f785a37f528")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL22")
 					(unit 1)
 				)
@@ -3570,7 +3570,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0d14b5d7-1164-45e8-afc2-cfa2b12892ce")
+		(uuid "154bbb33-912a-49b0-8378-add4898ddfc1")
 	)
 	(label "LED_D10"
 		(at 63.5 73.66 180)
@@ -3580,7 +3580,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b2037c33-94bb-4d35-bbfb-36d02928fc08")
+		(uuid "0c801e86-6904-492d-a15e-0a894ecf5c8a")
 	)
 	(wire
 		(pts
@@ -3591,7 +3591,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "fa32e0b4-e000-41e2-8cb5-b729a19fc80f")
+		(uuid "4380dae4-159e-4807-9dcd-67418a137a09")
 	)
 	(label "LED_D11"
 		(at 83.82 73.66 0)
@@ -3601,7 +3601,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "624bacb1-5aec-4633-9e9a-6c81cb7c2c0a")
+		(uuid "88e69129-42de-4991-9577-df38786f394c")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -3611,7 +3611,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "11308f13-2343-47f0-9c38-9bb7dacc102b")
+		(uuid "406a6894-52f2-4736-a0b9-db2c337d1d29")
 		(property "Reference" "LED12"
 			(at 123.19 64.77 0)
 			(effects
@@ -3658,20 +3658,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "0e0970ea-7645-4462-a8d1-6f9b25d46eae")
+			(uuid "bfdb4dc4-46ec-46d8-a291-203d47aa97f0")
 		)
 		(pin "2"
-			(uuid "d4b2ca9c-0b93-4730-a1eb-e27fc31e155b")
+			(uuid "612fb6eb-f4a8-416b-af20-cd780c7aa057")
 		)
 		(pin "3"
-			(uuid "6dfb8681-4768-4133-b193-89089170a083")
+			(uuid "1e2693aa-88ca-413b-849c-c1411a2359e5")
 		)
 		(pin "4"
-			(uuid "0ac1608a-79ca-4b34-a66c-264377ae45c3")
+			(uuid "08630aa6-8798-448c-a06f-9b98f5fb8a2a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED12")
 					(unit 1)
 				)
@@ -3687,7 +3687,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "28b8d6db-c029-4fdf-bcdd-bc4c91fba871")
+		(uuid "33bb1111-7e4b-4c1c-a228-1b38cfd7d412")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -3697,7 +3697,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "14eedfb1-ce76-4e4a-b43f-ef142aa25716")
+		(uuid "67844a1f-a2b8-4a38-9f81-264ac71b89a5")
 		(property "Reference" "#PWRL23"
 			(at 116.84 58.42 0)
 			(effects
@@ -3734,11 +3734,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "24544ea8-5b79-49bc-b402-39636c0f9bc7")
+			(uuid "a2d17c82-3b68-43ef-8719-8039d3a061ec")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL23")
 					(unit 1)
 				)
@@ -3754,7 +3754,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f6810d2b-521e-4118-ae65-c33a886ee012")
+		(uuid "d439c773-18e7-4087-ad80-1d88107952c6")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3764,7 +3764,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "495fc4aa-c8d6-4f50-b745-e4c3a360d9fe")
+		(uuid "19574a21-674d-4bab-a47d-a0d2c6655025")
 		(property "Reference" "#PWRL24"
 			(at 116.84 78.74 0)
 			(effects
@@ -3801,11 +3801,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "e175897a-68f5-4bd5-8a61-60991756f862")
+			(uuid "3ad6e881-1382-4968-858c-77bc7b7b9deb")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL24")
 					(unit 1)
 				)
@@ -3821,7 +3821,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "27d27c24-97b4-43f2-9c93-d8a1183ed587")
+		(uuid "97c6305d-4d6a-405a-9c33-aa6f400fe80e")
 	)
 	(label "LED_D11"
 		(at 106.68 73.66 180)
@@ -3831,7 +3831,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "cd449a8f-4ad5-4fc4-ae48-ebddece28a5d")
+		(uuid "cc3ffc8f-c38b-4daa-bbd1-d7a63529fcbc")
 	)
 	(wire
 		(pts
@@ -3842,7 +3842,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e8ac10cf-b2f5-4f9e-aefb-04a7c571325f")
+		(uuid "18feab52-ae10-4334-87cd-859af70c1132")
 	)
 	(label "LED_D12"
 		(at 127 73.66 0)
@@ -3852,7 +3852,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4584ffd2-090d-4bad-8c23-2463966338e4")
+		(uuid "b589fbc5-540b-4295-9d9c-f5353aad2405")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -3862,7 +3862,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e733cfe5-0c6e-4ce5-9399-ca5fcb2ebde6")
+		(uuid "6f702db0-8a5c-44a2-9aed-93fd9284cfa4")
 		(property "Reference" "LED13"
 			(at 166.37 64.77 0)
 			(effects
@@ -3909,20 +3909,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "9a0684d4-cd4b-4e4e-a29e-9e341b3bcc3f")
+			(uuid "3f102690-504c-408e-93a6-ed1480bb3ed9")
 		)
 		(pin "2"
-			(uuid "e5ef3a66-1f44-4492-a8f8-5e9f3b709231")
+			(uuid "43c8f99a-92e6-4886-b132-f5b5bc926f34")
 		)
 		(pin "3"
-			(uuid "7ed720b0-0b41-46db-a200-48dcbc7ebc96")
+			(uuid "50e04f32-405c-4f9b-b6ac-aab8ac1e2b45")
 		)
 		(pin "4"
-			(uuid "09a7277a-75a3-410d-9adc-56a460cf2efc")
+			(uuid "fa1063ee-c705-449c-af8f-39d564e791c9")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED13")
 					(unit 1)
 				)
@@ -3938,7 +3938,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a671365e-7842-4743-9887-bfdfdf0b6c7f")
+		(uuid "724278c0-a291-4e32-8c0e-0708cb17882e")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -3948,7 +3948,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "20d08302-bbd1-4cc7-b25c-87785b3f354a")
+		(uuid "9e1382d6-3eb0-4f9d-b3c4-17e4961b575d")
 		(property "Reference" "#PWRL25"
 			(at 160.02 58.42 0)
 			(effects
@@ -3985,11 +3985,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "54ae034c-d1b8-4d3d-ac2f-0fc94e180265")
+			(uuid "5db94eb0-50d9-4f67-8d65-6cd7d5297fe8")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL25")
 					(unit 1)
 				)
@@ -4005,7 +4005,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "db9a6bc9-805d-4dc1-bbf8-a6cce7206fd0")
+		(uuid "36e001f0-1cda-498b-92a5-62774939a3ef")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4015,7 +4015,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "653ea179-a1a5-4c76-b37f-e7e4d17267e6")
+		(uuid "01bf1256-e28e-43f6-9683-154d397e3fba")
 		(property "Reference" "#PWRL26"
 			(at 160.02 78.74 0)
 			(effects
@@ -4052,11 +4052,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "ce71bb84-17bc-40a2-b271-20190ff5d517")
+			(uuid "d3eacee6-ec9a-45d6-ba81-e4427a0a5f4f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL26")
 					(unit 1)
 				)
@@ -4072,7 +4072,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ea638d7a-6e20-4100-a496-3a07288936fe")
+		(uuid "0ee0695b-ae6e-4afa-9ad2-50d1166f2910")
 	)
 	(label "LED_D12"
 		(at 149.86 73.66 180)
@@ -4082,7 +4082,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2cd56fc7-99ec-4b62-80d4-f4b73080cf92")
+		(uuid "c3bc1f6e-faa9-4ee9-999d-1edaeaf4bfce")
 	)
 	(wire
 		(pts
@@ -4093,7 +4093,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5213d202-51e9-48c3-bf64-5818497f6839")
+		(uuid "9e710811-0e46-43bc-a7bc-b9c76f2296c8")
 	)
 	(label "LED_D13"
 		(at 170.18 73.66 0)
@@ -4103,7 +4103,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "122bc8d5-a99b-4597-9f40-5c51627e3966")
+		(uuid "f457d91b-1da1-41c4-8b7a-5aedf58eac30")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -4113,7 +4113,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ba6f5772-0d9d-4c93-96f1-27636c52f752")
+		(uuid "a24b1620-a079-4bcc-b77f-a173972acb27")
 		(property "Reference" "LED14"
 			(at 209.55 64.77 0)
 			(effects
@@ -4160,20 +4160,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "d42bf3e6-ef75-45ed-8c07-f15a69d886ef")
+			(uuid "5320d1d8-3a54-4ff0-891a-683c4ce524c0")
 		)
 		(pin "2"
-			(uuid "2268c8b3-03db-4b8a-a695-a60a264f0329")
+			(uuid "3eff8d26-4e98-44ee-87fe-377c496efeef")
 		)
 		(pin "3"
-			(uuid "eaeb523d-9874-4453-8ed0-98d5430568b1")
+			(uuid "2fc1ba83-f4ea-4c26-927f-9079ffbd9671")
 		)
 		(pin "4"
-			(uuid "26dd03cb-1b23-4201-9405-f94f6a83f183")
+			(uuid "bcfcd911-cbac-41b5-887b-788e1627075f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED14")
 					(unit 1)
 				)
@@ -4189,7 +4189,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "16049a92-b2fc-47b2-a527-8e0b52873d9a")
+		(uuid "ce43a582-b78c-4e8e-aed0-08c430cf95ea")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -4199,7 +4199,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "dde13d4e-1dbe-4a94-b8b3-de2ea0afcc06")
+		(uuid "b211f77a-142a-4285-9e65-ed9f72411c93")
 		(property "Reference" "#PWRL27"
 			(at 203.2 58.42 0)
 			(effects
@@ -4236,11 +4236,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "86de4941-368b-4d09-8b12-da668d042796")
+			(uuid "060bdca9-5533-479e-8f03-403ec9eec5b4")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL27")
 					(unit 1)
 				)
@@ -4256,7 +4256,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "735a30be-f922-42e2-9288-ea271e6a45f7")
+		(uuid "6a009128-3558-467c-ad1a-28353fb5a157")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4266,7 +4266,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "fc25d2c8-8c86-4900-9d56-c6585b0ac61c")
+		(uuid "b93f04c5-59a0-463f-a06a-6fe712e17a1c")
 		(property "Reference" "#PWRL28"
 			(at 203.2 78.74 0)
 			(effects
@@ -4303,11 +4303,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "e3534a52-b47e-43fd-a5c2-fb011b8e243b")
+			(uuid "2e405f5d-c766-4ab1-a443-9de46ca85993")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL28")
 					(unit 1)
 				)
@@ -4323,7 +4323,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b89309af-699d-4d32-af43-faecdda209b1")
+		(uuid "797c5135-f20f-46c5-b1f2-4fb07b466b39")
 	)
 	(label "LED_D13"
 		(at 193.04 73.66 180)
@@ -4333,7 +4333,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "9c0196f1-3c6a-4f42-b3b0-2912f244cfdf")
+		(uuid "97a2c97d-ff9e-4933-9ea7-8a9c6f9668fd")
 	)
 	(wire
 		(pts
@@ -4344,7 +4344,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e27eaeb5-e6c2-4498-ac57-0206afd33d09")
+		(uuid "4378856c-8d88-42a4-b195-a2d05240031f")
 	)
 	(label "LED_D14"
 		(at 213.36 73.66 0)
@@ -4354,7 +4354,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5cb55942-bf10-4185-9072-0aba9baa8de5")
+		(uuid "28a407eb-114b-4721-ba67-38fcbc892964")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -4364,7 +4364,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3bb72698-ba20-48b4-888e-f77d40f1a971")
+		(uuid "57d4f968-c591-4695-a8bc-24a17246e58f")
 		(property "Reference" "LED15"
 			(at 252.73 64.77 0)
 			(effects
@@ -4411,20 +4411,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "687fa893-0f3c-4b54-a9a9-8e2e9ee455db")
+			(uuid "7dfeab43-772b-48f6-8180-e168c1af67d0")
 		)
 		(pin "2"
-			(uuid "165f555d-4fcb-411a-a1f2-4cc5ef17b24d")
+			(uuid "4021fd73-d141-4786-bf13-6ccf2e56c144")
 		)
 		(pin "3"
-			(uuid "64027d8f-3378-4ade-9239-83d4556dba89")
+			(uuid "514eb68e-f7a3-4027-b59b-138980925a74")
 		)
 		(pin "4"
-			(uuid "d110221b-bfc5-4b82-ad94-54b0a1f643c0")
+			(uuid "28872a4f-3e8c-47b8-aa93-90cfadbf1613")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED15")
 					(unit 1)
 				)
@@ -4440,7 +4440,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "87b423e5-3168-4d27-bda0-943d17d99224")
+		(uuid "fdbd9546-8bc8-477c-a681-cebfbbbb52ed")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -4450,7 +4450,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "cb94d028-4cd7-47d7-bd07-8aa25f455974")
+		(uuid "ce4ae955-d50a-4f7b-8f5c-0257f69bc6b5")
 		(property "Reference" "#PWRL29"
 			(at 246.38 58.42 0)
 			(effects
@@ -4487,11 +4487,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8ecea005-176f-479d-b6d0-de48dcf75b98")
+			(uuid "76b5e32b-6f1d-4150-8066-4d34581eac97")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL29")
 					(unit 1)
 				)
@@ -4507,7 +4507,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "46c3df5b-e46c-4dda-84bd-ba83ed6c6587")
+		(uuid "c506d711-88e9-4377-a284-b1354593c993")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4517,7 +4517,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ccef0b84-f5a3-4526-ab62-2e43ff3be05d")
+		(uuid "a75b0b67-74a2-450b-8961-02b90e72fa5d")
 		(property "Reference" "#PWRL30"
 			(at 246.38 78.74 0)
 			(effects
@@ -4554,11 +4554,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d596729b-98fb-4500-802b-fda369b72b9f")
+			(uuid "48b57604-ce01-4c63-a9a9-82c51426c5b8")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL30")
 					(unit 1)
 				)
@@ -4574,7 +4574,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c9ca21f4-146d-410b-881c-8459ad59a823")
+		(uuid "b608f68f-40f3-488f-95fe-69cc0946de47")
 	)
 	(label "LED_D14"
 		(at 236.22 73.66 180)
@@ -4584,7 +4584,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "db324724-2cf2-4b2a-bd1a-d78482cf4c20")
+		(uuid "90600264-a023-4f90-b5b5-b3a77193e9f2")
 	)
 	(wire
 		(pts
@@ -4595,7 +4595,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "05a2cbbc-0333-4b19-8297-a75972e0d73d")
+		(uuid "931376b8-e1cb-4eec-90ad-a94623951550")
 	)
 	(label "LED_D15"
 		(at 256.54 73.66 0)
@@ -4605,7 +4605,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d77927ce-87a6-41cc-a2e9-8bafa4d1c2d6")
+		(uuid "5e36ea36-1616-4ed0-ae90-22445fd079e5")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -4615,7 +4615,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dbe03826-26de-481e-85ae-d1befcce3ba6")
+		(uuid "8bb0859c-e6aa-4b71-b37c-7d21378a335a")
 		(property "Reference" "LED16"
 			(at 295.91 64.77 0)
 			(effects
@@ -4662,20 +4662,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "855c30c6-cbab-4d8a-883f-6f036c975dbf")
+			(uuid "5bf8ebcc-e6d3-46f9-8399-3e0e074b457d")
 		)
 		(pin "2"
-			(uuid "807bb2f1-1f2c-4bbf-b840-2b403f00eb1e")
+			(uuid "1bd628df-e53e-4d5e-b143-4b5e1ca0e808")
 		)
 		(pin "3"
-			(uuid "961fb6d2-817b-4a14-a7e1-a8df8b84d75d")
+			(uuid "92f803bf-0e81-40b2-9165-fe347f60e43a")
 		)
 		(pin "4"
-			(uuid "d4b53156-5c74-4e7a-bff8-77bfd220652c")
+			(uuid "02b4738d-71a2-400c-a57e-c11f037000cb")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED16")
 					(unit 1)
 				)
@@ -4691,7 +4691,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2a721c03-7973-4444-bcfd-a26343282e92")
+		(uuid "84f82b55-6b26-4675-9b2e-8e6aa759e4df")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -4701,7 +4701,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "626d8ee5-8a86-497a-9341-4be3c9148b0f")
+		(uuid "f5f483c4-ca1a-4bd3-b466-a8d4f4dc093b")
 		(property "Reference" "#PWRL31"
 			(at 289.56 58.42 0)
 			(effects
@@ -4738,11 +4738,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "33310dbf-0b65-469a-b9f9-9f96de4efa37")
+			(uuid "d7fc523c-a1c9-48ca-8a7c-1d63244e20a7")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL31")
 					(unit 1)
 				)
@@ -4758,7 +4758,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a5dd2d48-63ca-4e32-9d3d-d558716febf0")
+		(uuid "7d69a99a-7ddc-4322-862c-37291d4fd212")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4768,7 +4768,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "3acc4cba-e8fc-4e8c-8c89-209c1825535d")
+		(uuid "772f0eba-a290-47b7-92c1-be3177d7678a")
 		(property "Reference" "#PWRL32"
 			(at 289.56 78.74 0)
 			(effects
@@ -4805,11 +4805,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d64112b0-6536-4191-b1c8-1314dbf4beef")
+			(uuid "fcf664a1-927c-496d-aaae-01fb1b38e1bc")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL32")
 					(unit 1)
 				)
@@ -4825,7 +4825,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "de23269d-e13f-4ed6-98a4-f12fb7ffaaf6")
+		(uuid "b46b1356-36bd-473d-bc98-251f9b7f5064")
 	)
 	(label "LED_D15"
 		(at 279.4 73.66 180)
@@ -4835,7 +4835,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "7aca10c4-9ee8-4489-b04c-970cc48efc4f")
+		(uuid "7c939c58-bfcd-421a-9fec-00e3ac22cd22")
 	)
 	(wire
 		(pts
@@ -4846,7 +4846,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "23c4e700-7b30-4aba-a0a4-e46c59509c15")
+		(uuid "62c49204-b33e-4283-ac04-8600c2cd3058")
 	)
 	(label "LED_D16"
 		(at 299.72 73.66 0)
@@ -4856,7 +4856,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ec73bbf6-0058-45b0-bacc-f7e78cbfe0ac")
+		(uuid "3c59e223-1039-4c12-ab42-a3af5d09f263")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -4866,7 +4866,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a78d74ab-1875-4eab-a1f2-fbb5817b125c")
+		(uuid "ed106d43-7ac7-4a66-894c-588ff2fa7f3f")
 		(property "Reference" "LED17"
 			(at 339.09 64.77 0)
 			(effects
@@ -4913,20 +4913,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "7d89ded1-0ef2-432a-9bee-da8c4cb72e5e")
+			(uuid "c699a631-a1cb-43c4-aa9c-3eb2dba1db06")
 		)
 		(pin "2"
-			(uuid "8f4ac280-c85f-46a7-af8f-1fd44fa6f247")
+			(uuid "9ac00b31-8a3f-4751-acb8-27c8fa000556")
 		)
 		(pin "3"
-			(uuid "c603d7d9-e2c7-48d8-8587-1c60fc570416")
+			(uuid "1b0b4df0-a0a7-40df-858b-e3a134125bc5")
 		)
 		(pin "4"
-			(uuid "399360de-fc9b-4b0d-997c-525cfa219e17")
+			(uuid "4ba40f7e-d6af-4f82-9632-a6db57ea5653")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED17")
 					(unit 1)
 				)
@@ -4942,7 +4942,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c0fc6949-d9bf-4f67-b679-58d4f0d26398")
+		(uuid "34bc4c3e-9fe0-434b-8625-c9048c255c53")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -4952,7 +4952,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "c950f846-28c5-44b2-bcc6-c1f0db61036f")
+		(uuid "981f061e-063e-4e3e-81e0-2e116fdd0bec")
 		(property "Reference" "#PWRL33"
 			(at 332.74 58.42 0)
 			(effects
@@ -4989,11 +4989,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "b8e2eca8-a9da-4f6e-9f8e-f28216ec4911")
+			(uuid "9464cf7e-b6ba-4f42-adca-3eb9da9d666d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL33")
 					(unit 1)
 				)
@@ -5009,7 +5009,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "69a22821-ee32-413b-b176-592fca46046c")
+		(uuid "c29d87e7-8992-42d6-ba6b-c1d2d75afb57")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5019,7 +5019,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "f7cb9ce7-a4e5-47e3-bade-622d3213b1b4")
+		(uuid "28ab8da7-c5e9-4998-b4ee-3cfdbdabe1df")
 		(property "Reference" "#PWRL34"
 			(at 332.74 78.74 0)
 			(effects
@@ -5056,11 +5056,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d48bf0b1-0e77-460d-b4e9-c682a0ae88d5")
+			(uuid "8a59ac65-44d4-4c36-be2e-16d1734eef44")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL34")
 					(unit 1)
 				)
@@ -5076,7 +5076,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c53b24c4-f312-468b-8cdf-54f994091555")
+		(uuid "7ac45d48-2d31-4191-8d2a-de37162b7aa3")
 	)
 	(label "LED_D16"
 		(at 322.58 73.66 180)
@@ -5086,7 +5086,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "9ff9a690-4a18-4bdf-8c39-43d7cf5bdaa3")
+		(uuid "1b17dc7f-51b3-4036-b78d-ee92c761ea9f")
 	)
 	(wire
 		(pts
@@ -5097,7 +5097,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d33ffc3d-9aa3-418e-a39e-5303ac1f07bc")
+		(uuid "9b74ec48-1de8-4c5b-9bdd-5eafe51b402c")
 	)
 	(label "LED_D17"
 		(at 342.9 73.66 0)
@@ -5107,7 +5107,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "22b1c49d-3f65-4d8c-9d74-8fac30ad05ea")
+		(uuid "3c6807e7-d8af-4d16-8299-a8260278687b")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -5117,7 +5117,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "19d70c4f-cd50-408d-bf99-bceb89785e48")
+		(uuid "a817eedf-4d67-448c-9b7d-6b736480525d")
 		(property "Reference" "LED18"
 			(at 382.27 64.77 0)
 			(effects
@@ -5164,20 +5164,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "856bd8f0-e7af-458d-adea-0b3651898ebb")
+			(uuid "f08a87d7-cc39-477e-bf25-d47aeb4034ff")
 		)
 		(pin "2"
-			(uuid "9cae9004-9eee-4f47-8a25-3246d06aab1e")
+			(uuid "7f745d23-28ac-4814-97e7-f58eaa0357fc")
 		)
 		(pin "3"
-			(uuid "60d6bd2a-f16c-4258-a15b-e36bf1206c9e")
+			(uuid "aa52822c-54bd-4545-a81f-9acfc68061f4")
 		)
 		(pin "4"
-			(uuid "2cf2671c-5155-43fd-ab9e-5c11bb7fe0f3")
+			(uuid "36283577-c479-47c2-b39c-e0b3cbf564d7")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED18")
 					(unit 1)
 				)
@@ -5193,7 +5193,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "73f59e4e-d4fd-411e-a112-9c415e6eae3f")
+		(uuid "a3d331c6-edb1-4982-abcc-a62500f593a2")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -5203,7 +5203,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "9f2b0c60-6678-4d63-8a0a-4df9668a6e4e")
+		(uuid "434f8211-a433-4b7e-8a1c-366f9c7a4402")
 		(property "Reference" "#PWRL35"
 			(at 375.92 58.42 0)
 			(effects
@@ -5240,11 +5240,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d2c32b3a-bc91-4335-a7e8-aab15c5f9e9e")
+			(uuid "be478267-a6ec-4084-8b2b-8c3674d790eb")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL35")
 					(unit 1)
 				)
@@ -5260,7 +5260,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f77ace2f-db42-4f86-bb64-2c29cc8cbb36")
+		(uuid "2148bcd0-56b1-4d2d-aabf-7b0779f98f21")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5270,7 +5270,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "2219f8b2-9205-4d78-b1f4-7a30f5d01d1d")
+		(uuid "bcfa02d7-3fe8-4be1-8c00-bec8f39367a8")
 		(property "Reference" "#PWRL36"
 			(at 375.92 78.74 0)
 			(effects
@@ -5307,11 +5307,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "2f8f38dd-ca89-408f-bcde-9253b7eccd35")
+			(uuid "acb744f4-1cc9-42da-848b-d1fe63382bb1")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL36")
 					(unit 1)
 				)
@@ -5327,7 +5327,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "240ef776-24a2-40b1-948f-d46741006d48")
+		(uuid "5466e304-2591-499c-8aa4-8fc200974480")
 	)
 	(label "LED_D17"
 		(at 365.76 73.66 180)
@@ -5337,7 +5337,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "83e20dc4-f87c-4b36-9de5-00e42ceca070")
+		(uuid "31287787-ef94-4234-bb22-ff66d8ca21e2")
 	)
 	(wire
 		(pts
@@ -5348,7 +5348,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "45e5b62e-bbe0-4822-a9e2-120a80a3e6ca")
+		(uuid "47d0e7c2-4b93-49e9-b14d-03292331ff7a")
 	)
 	(label "LED_D18"
 		(at 386.08 73.66 0)
@@ -5358,7 +5358,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d72eead7-dcc0-407e-8128-e4cbaf826869")
+		(uuid "60524c8d-c00a-42af-a8a9-a28d18276256")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -5368,7 +5368,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ece21533-fae7-4c55-928e-4b8852009bc9")
+		(uuid "e19e901e-1e27-4e3c-be91-bb7dbdd5c9bc")
 		(property "Reference" "LED19"
 			(at 36.83 100.33 0)
 			(effects
@@ -5415,20 +5415,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "53fb280d-2d6e-4f4a-abc3-9cc3731e3ed3")
+			(uuid "efda7faf-4200-40f3-90dd-47045d6eb1bd")
 		)
 		(pin "2"
-			(uuid "6fdf3751-350f-4fad-92ee-af126dea3c78")
+			(uuid "7b2030fd-8427-4b48-9c76-eb121993b6b4")
 		)
 		(pin "3"
-			(uuid "37968a5b-3731-45c0-829b-548e03e09565")
+			(uuid "bb160d8e-e75b-4fa3-b18a-b241a849fb4b")
 		)
 		(pin "4"
-			(uuid "7488af5a-0f20-4bd6-a68a-ff461a4fdb2e")
+			(uuid "1e599160-2640-45ea-8e72-9c66eae1c931")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED19")
 					(unit 1)
 				)
@@ -5444,7 +5444,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "34d04bea-4029-4c33-b1d2-745c2830a26f")
+		(uuid "be490e91-c22d-4715-8245-6821bc3c8bfc")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -5454,7 +5454,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "b885fe28-ab9e-4908-882d-2f1f126b3f7f")
+		(uuid "daec6c33-51c9-447d-87fd-dac1993437ee")
 		(property "Reference" "#PWRL37"
 			(at 30.48 93.98 0)
 			(effects
@@ -5491,11 +5491,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "43e0eae4-2329-45f4-b0c4-012652f6bc77")
+			(uuid "48e0af10-c0dc-4d08-9fa3-2afa26289a0e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL37")
 					(unit 1)
 				)
@@ -5511,7 +5511,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5a21c43b-e2b2-4717-a20d-7d4b595d5933")
+		(uuid "3a130d4d-6fc6-497c-8af2-ea431a4e1724")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5521,7 +5521,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "25c8af29-bfbf-48bc-8bec-65f2dc34ebf9")
+		(uuid "669f2140-02c8-4d48-83ca-3d12b4706cf5")
 		(property "Reference" "#PWRL38"
 			(at 30.48 114.3 0)
 			(effects
@@ -5558,11 +5558,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "75a57d0f-e16e-4847-9b8f-c159230526ff")
+			(uuid "ffaa18ad-8b50-4c46-b60a-b40b60a7723b")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL38")
 					(unit 1)
 				)
@@ -5578,7 +5578,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2fe7e4d3-031a-4759-8542-05253ac3e577")
+		(uuid "abdb275b-bc34-477a-9212-44633548c5bc")
 	)
 	(label "LED_D18"
 		(at 20.32 109.22 180)
@@ -5588,7 +5588,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "a42e44af-d8fe-4745-9547-0077fb54612e")
+		(uuid "026a44f1-26ce-4e3b-bf53-af44b30c94b3")
 	)
 	(wire
 		(pts
@@ -5599,7 +5599,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "22cc0b51-961e-4d7e-a863-64af3215d3b5")
+		(uuid "80873f7c-8bab-43d1-b09d-606fa34ee170")
 	)
 	(label "LED_D19"
 		(at 40.64 109.22 0)
@@ -5609,7 +5609,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ad729580-ccaf-4d8f-ba7e-dd51bfb8ae5d")
+		(uuid "09b85463-9033-47be-971d-7c907ee6473e")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -5619,7 +5619,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "99760399-28ac-4bdb-945f-b209ad1e6fc6")
+		(uuid "84a9d40d-6fb8-4942-bc2d-dfda1538ecb3")
 		(property "Reference" "LED20"
 			(at 80.01 100.33 0)
 			(effects
@@ -5666,20 +5666,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "ae2ab239-41b5-41c2-b370-8ec7bcc83295")
+			(uuid "fa8a216b-3090-4b2f-af8c-0fede1caacd3")
 		)
 		(pin "2"
-			(uuid "0afa396c-370c-4f6e-85bc-3e10325a392f")
+			(uuid "1ca2a2dc-8e1c-47dc-9260-aec99669a4cb")
 		)
 		(pin "3"
-			(uuid "82945d3e-042d-4a0b-b586-92dd4644808f")
+			(uuid "ba125c77-e3bd-4cbf-bad7-1ba58145a59c")
 		)
 		(pin "4"
-			(uuid "230f5a5f-1f28-461f-b8bf-0d16afbaf937")
+			(uuid "d5900072-348d-40a4-b6f8-00941431320c")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED20")
 					(unit 1)
 				)
@@ -5695,7 +5695,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bcc8eebe-46d5-48ad-978c-3e3795045ea6")
+		(uuid "06bea019-9e39-4ef0-8b7c-32a8fdf0ad92")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -5705,7 +5705,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "1dbdf610-f00b-466b-8b76-5807b992a729")
+		(uuid "63a55e23-4243-4a16-ac49-7c688fa96f98")
 		(property "Reference" "#PWRL39"
 			(at 73.66 93.98 0)
 			(effects
@@ -5742,11 +5742,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0db16b2c-9e93-42f3-a4f3-8b36e0048af9")
+			(uuid "6d6ce444-1f6f-4105-986f-9d5e359f2454")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL39")
 					(unit 1)
 				)
@@ -5762,7 +5762,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0c28a093-3be9-4316-8e87-a276187b5478")
+		(uuid "21e21125-acce-498e-a654-58bf44b5f7e8")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5772,7 +5772,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "3696442c-0161-44db-b2cd-9be3639e5d6a")
+		(uuid "4c445c21-3d86-4bab-977b-0cfb51dfaaa2")
 		(property "Reference" "#PWRL40"
 			(at 73.66 114.3 0)
 			(effects
@@ -5809,11 +5809,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "58fa3532-7717-4f11-addb-2b246dd49768")
+			(uuid "5828f88a-2684-4ad7-8be0-9e0e6d42a24c")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL40")
 					(unit 1)
 				)
@@ -5829,7 +5829,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8e9a0613-5a74-44a0-8a8c-3022fe7ffb04")
+		(uuid "868cff32-1349-4f50-8a46-be55e2319059")
 	)
 	(label "LED_D19"
 		(at 63.5 109.22 180)
@@ -5839,7 +5839,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ba452756-85f2-4f7a-82ff-2ccf7626bfdb")
+		(uuid "605eb909-a7e3-4c09-847b-070c6735bd8a")
 	)
 	(wire
 		(pts
@@ -5850,7 +5850,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5e0c41f4-50cd-4fcb-98b6-e8bf77a71f9d")
+		(uuid "9cca849a-3cb2-475f-92e8-7a95f2656658")
 	)
 	(label "LED_D20"
 		(at 83.82 109.22 0)
@@ -5860,7 +5860,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e11970e3-a5ce-4bf1-91bd-9165060d32f8")
+		(uuid "3b290c4c-2eea-4441-ac65-7594d2f51728")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -5870,7 +5870,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f592f109-0496-4995-b786-b8ecd4efbe9a")
+		(uuid "de5e4237-e1fc-451a-a265-155248ab9b9d")
 		(property "Reference" "LED21"
 			(at 123.19 100.33 0)
 			(effects
@@ -5917,20 +5917,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "9587fe63-70f3-4d90-a558-ebc4e99abb21")
+			(uuid "7e72301a-5666-437c-ae45-7b7562a317db")
 		)
 		(pin "2"
-			(uuid "0af14c75-f735-4e19-92a7-d8dea35211db")
+			(uuid "b5971899-f4e1-49fb-9280-17cbac21b8db")
 		)
 		(pin "3"
-			(uuid "fc9dc1f7-fd83-4a1f-afcc-7b502a086cfc")
+			(uuid "cd00ca41-3f27-40a0-99dc-93ff4028ff2e")
 		)
 		(pin "4"
-			(uuid "74fb5881-698c-4add-9ebd-21d545fa52f6")
+			(uuid "e084bea7-a985-4a8e-9595-97cbc5d8879f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED21")
 					(unit 1)
 				)
@@ -5946,7 +5946,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "15002425-5205-4e15-9a25-9e629d9cf24c")
+		(uuid "3a45ea87-2d53-4518-b316-25d98be6085e")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -5956,7 +5956,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ef0767a9-2877-46b0-99f7-7653176bff29")
+		(uuid "ff36844c-9ebd-4110-a059-f50cfc3d57a5")
 		(property "Reference" "#PWRL41"
 			(at 116.84 93.98 0)
 			(effects
@@ -5993,11 +5993,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d58ed401-f4a8-4a80-8b9d-0693a52e7585")
+			(uuid "9ffa8cc4-a4ef-4731-b030-e62618f3d96f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL41")
 					(unit 1)
 				)
@@ -6013,7 +6013,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7b7d686c-3c00-4d22-89c0-38d473d4c2c5")
+		(uuid "9235fc03-20aa-40ac-a71c-6e77676a6d58")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6023,7 +6023,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "fc98ccf0-67d9-4707-b423-84ad9091aaf9")
+		(uuid "aba0e9a1-1179-4699-ac12-177c84bc7ff4")
 		(property "Reference" "#PWRL42"
 			(at 116.84 114.3 0)
 			(effects
@@ -6060,11 +6060,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d5ffbccd-7455-4dae-998e-e740e9f2783d")
+			(uuid "af56facb-8131-4db8-a0dd-b3814516daf6")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL42")
 					(unit 1)
 				)
@@ -6080,7 +6080,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7db9a645-0cf7-4797-b3d8-c79e8885ea79")
+		(uuid "d29955b9-f8bd-4c75-8e0a-54beec41f949")
 	)
 	(label "LED_D20"
 		(at 106.68 109.22 180)
@@ -6090,7 +6090,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "6ce0178b-0124-4a77-9810-8488f7baccc4")
+		(uuid "9f5cc77a-bec9-468d-992f-cebfe02996e3")
 	)
 	(wire
 		(pts
@@ -6101,7 +6101,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "50ea1e60-5821-4eb1-8dcb-ac68db823a87")
+		(uuid "b0753106-30e6-4fbc-9497-84ac4f4692d3")
 	)
 	(label "LED_D21"
 		(at 127 109.22 0)
@@ -6111,7 +6111,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bf3f3195-a6e3-4785-855b-5a1d9a29c034")
+		(uuid "fb10f507-05b2-4c94-bca9-0f657647ec91")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -6121,7 +6121,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2d34c5b2-8e69-4e95-94ff-353571e96920")
+		(uuid "9415a71f-1c25-402d-b1e4-9fcb94bcf1a0")
 		(property "Reference" "LED22"
 			(at 166.37 100.33 0)
 			(effects
@@ -6168,20 +6168,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "41fe2afe-f399-4584-9226-eda33c532bf1")
+			(uuid "71f9d085-44f8-44bf-8a31-a39cce8f4912")
 		)
 		(pin "2"
-			(uuid "115527a5-2b68-4710-99c6-24fe756d8ddf")
+			(uuid "e064d174-3685-468e-98aa-21ee16f50491")
 		)
 		(pin "3"
-			(uuid "fbd42d66-0247-412b-884e-507c81cc5d74")
+			(uuid "f7623310-9a61-4ac4-8229-de7af6b219e5")
 		)
 		(pin "4"
-			(uuid "88dfb057-fd93-4bf1-ac22-d936e3d8b947")
+			(uuid "fc714100-1943-46b3-baac-0b7e23df0f24")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED22")
 					(unit 1)
 				)
@@ -6197,7 +6197,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bf25a5a8-809f-4022-8aaf-afd755adc326")
+		(uuid "28ca756d-68e5-42b8-88fe-0c0e43883f01")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -6207,7 +6207,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "586fe87d-dc80-4d61-bf2b-fa01452f1106")
+		(uuid "1735ef09-1006-44e3-8c8b-5460c1566876")
 		(property "Reference" "#PWRL43"
 			(at 160.02 93.98 0)
 			(effects
@@ -6244,11 +6244,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "227e3d7d-c06e-4382-ab2c-b85c6cb9a307")
+			(uuid "cf81f60d-ad2b-4459-b65f-5db06d5caef9")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL43")
 					(unit 1)
 				)
@@ -6264,7 +6264,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "910c2e2e-e339-4c1e-bb14-d32a33ec2677")
+		(uuid "007c5363-2bcf-43c7-8b2c-64fecdd9b162")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6274,7 +6274,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "046945f0-1032-4b79-b0db-0b91cc941cb1")
+		(uuid "55d6c37b-b9b5-4601-916e-ae988d68bff8")
 		(property "Reference" "#PWRL44"
 			(at 160.02 114.3 0)
 			(effects
@@ -6311,11 +6311,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "b1a78136-2061-4a1e-b21f-194152ce5b9a")
+			(uuid "6514dd80-ce10-48ba-9d59-b65dae6742ce")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL44")
 					(unit 1)
 				)
@@ -6331,7 +6331,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ac92465e-c636-479d-9643-c4fe426da2e4")
+		(uuid "813ea9cf-9245-4233-abe7-05b229884272")
 	)
 	(label "LED_D21"
 		(at 149.86 109.22 180)
@@ -6341,7 +6341,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "101b5f90-2a7e-4443-aea0-20cb864e1948")
+		(uuid "5aff6c4c-a754-4860-bc9b-6f5250f44f30")
 	)
 	(wire
 		(pts
@@ -6352,7 +6352,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "768c263d-6239-44f9-a703-82fba488cbbd")
+		(uuid "d42ff4c5-9361-4535-a37f-d061eb38d1c2")
 	)
 	(label "LED_D22"
 		(at 170.18 109.22 0)
@@ -6362,7 +6362,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "57d85098-46bb-4e22-a17a-67265bd91ba4")
+		(uuid "cf2ebe83-88eb-4039-a1b5-e5dce077b514")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -6372,7 +6372,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "daa4b7a4-f667-4384-8223-e7ec023ec117")
+		(uuid "4bfe49ed-887e-4cb9-877f-513f8a8fbd4b")
 		(property "Reference" "LED23"
 			(at 209.55 100.33 0)
 			(effects
@@ -6419,20 +6419,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "e0463349-11de-408d-9964-d04bcb6dfd85")
+			(uuid "21f6d8c6-c5da-4f88-bacf-69e51037b98c")
 		)
 		(pin "2"
-			(uuid "e2f0c8bb-09e8-4576-8766-747b30c8f0c9")
+			(uuid "588109bc-9896-4105-93aa-f8dcf10fc7e2")
 		)
 		(pin "3"
-			(uuid "de8a70a4-7885-4ce0-86f4-e13949304d2d")
+			(uuid "55439dba-b565-4f1c-a82e-e505338cc256")
 		)
 		(pin "4"
-			(uuid "8f02af37-73f1-4396-adc2-2003e540a2eb")
+			(uuid "30477598-5b83-4e1c-992d-7cac69d874c7")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED23")
 					(unit 1)
 				)
@@ -6448,7 +6448,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1786ebc9-afeb-4d9b-906b-32e81014f7aa")
+		(uuid "18e936d4-b0b5-4573-aa08-197b01899c12")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -6458,7 +6458,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "45de82e4-cf3a-4c60-87ab-58d1e74d345d")
+		(uuid "c5ec08bf-c245-407a-b14d-8fba0663bee1")
 		(property "Reference" "#PWRL45"
 			(at 203.2 93.98 0)
 			(effects
@@ -6495,11 +6495,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "a4e1883d-da38-4752-aef8-20955a6bd93d")
+			(uuid "e2c4b34a-12ec-4be8-b2aa-46e2c1797ca9")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL45")
 					(unit 1)
 				)
@@ -6515,7 +6515,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "22a182a6-7ce4-4542-b996-38de2895cdcc")
+		(uuid "b6a03192-8390-4eae-b618-eafb7dcc3c6d")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6525,7 +6525,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "56393c0d-83d7-46ff-bd72-81e545ace495")
+		(uuid "59ae1965-8b98-4b1e-82e7-069987c0161b")
 		(property "Reference" "#PWRL46"
 			(at 203.2 114.3 0)
 			(effects
@@ -6562,11 +6562,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "46451b6a-3024-44f7-a859-89d460f9b526")
+			(uuid "0baacbbd-3d6e-40df-bf0b-cf09b254424a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL46")
 					(unit 1)
 				)
@@ -6582,7 +6582,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b6e764db-ef6b-4258-8525-3cfde4d214b8")
+		(uuid "a3988805-c33f-4497-857f-36f2d9615e41")
 	)
 	(label "LED_D22"
 		(at 193.04 109.22 180)
@@ -6592,7 +6592,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "5eba7936-a6bc-452d-8b2f-c6cbb293fa3a")
+		(uuid "f2a8367e-9564-48ff-b63a-a5f571fbba5f")
 	)
 	(wire
 		(pts
@@ -6603,7 +6603,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7c69b617-ae9d-4a7e-a982-c0c8d3bdab32")
+		(uuid "c52c9d0a-ae0f-431d-af4c-78ad5bf501aa")
 	)
 	(label "LED_D23"
 		(at 213.36 109.22 0)
@@ -6613,7 +6613,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5109d74c-b285-44df-a361-cf09450ec01c")
+		(uuid "b7db081c-8512-433b-874b-640c683c7b2f")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -6623,7 +6623,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5d7e1161-ee15-42fc-9e7f-5bf7b49e1b9c")
+		(uuid "e92a97a6-06a5-4e04-bb4f-931ac6021985")
 		(property "Reference" "LED24"
 			(at 252.73 100.33 0)
 			(effects
@@ -6670,20 +6670,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "dc21c7db-ce06-4cc6-88d6-1a061bd9a3b3")
+			(uuid "b0e93998-3260-4238-9fd7-00889383c351")
 		)
 		(pin "2"
-			(uuid "ba751091-5178-4b5c-8d5d-4dc504e10d8e")
+			(uuid "25a1b9f9-177d-44b7-b3c0-761319001da4")
 		)
 		(pin "3"
-			(uuid "8aa520f1-1cfd-434f-8311-c74008cd5ffb")
+			(uuid "173b72c1-4bbd-4fcf-a45e-03a883e0b696")
 		)
 		(pin "4"
-			(uuid "515b5c7e-2f61-4e8c-92dd-1b53952e77c9")
+			(uuid "c23aeb08-7527-4cc0-a598-7cc41c7a482e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED24")
 					(unit 1)
 				)
@@ -6699,7 +6699,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "70c51818-80ec-41be-9f90-ea907c74b6aa")
+		(uuid "435b2eaf-5b49-4aa8-abe2-f7fb339fe153")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -6709,7 +6709,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "965da0aa-9e18-4c04-9ca8-90f941420e95")
+		(uuid "6d645906-cdbb-492f-9be6-c9b9b424a991")
 		(property "Reference" "#PWRL47"
 			(at 246.38 93.98 0)
 			(effects
@@ -6746,11 +6746,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "7115b039-ece3-4a6a-a606-a0ad7f2e2e34")
+			(uuid "a723c66c-1ca4-45c7-ad6c-f542bfd398b5")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL47")
 					(unit 1)
 				)
@@ -6766,7 +6766,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "89eab9ad-a1ca-4b17-9bd6-9a144a35d6bd")
+		(uuid "621483b3-66e5-4b2a-8ef9-84632ec8e332")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6776,7 +6776,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "d216bbae-0515-4e2b-be88-5a2e54344e74")
+		(uuid "38ca68d1-7097-4dd5-a3b6-928d9706daa4")
 		(property "Reference" "#PWRL48"
 			(at 246.38 114.3 0)
 			(effects
@@ -6813,11 +6813,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "3d88f335-591a-4910-a951-e40786b2a070")
+			(uuid "3561f245-0199-4ebc-bb7e-93ee57abd533")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL48")
 					(unit 1)
 				)
@@ -6833,7 +6833,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0065e673-b3e6-41e1-be28-94a09afa8068")
+		(uuid "33df538e-6e9e-416c-95d3-bd41cd6929d5")
 	)
 	(label "LED_D23"
 		(at 236.22 109.22 180)
@@ -6843,7 +6843,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "37a563fd-c033-40b9-92fd-e1a13defcb49")
+		(uuid "7d898863-e453-454c-ad6d-0047a9e15bce")
 	)
 	(wire
 		(pts
@@ -6854,7 +6854,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bff8f0e4-cfdf-485c-8318-dee24d4649b1")
+		(uuid "200079a5-b1f8-4359-84bb-a8fa6c618438")
 	)
 	(label "LED_D24"
 		(at 256.54 109.22 0)
@@ -6864,7 +6864,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c729f993-ccab-4304-8bf9-66b92af16fb7")
+		(uuid "ab09a0f5-787d-477a-a323-0b2c2b43d592")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -6874,7 +6874,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2136d224-b9e4-44b0-91a5-0712ec3d1f80")
+		(uuid "cd346dc1-c576-4558-9a71-17ce38ecef73")
 		(property "Reference" "LED25"
 			(at 295.91 100.33 0)
 			(effects
@@ -6921,20 +6921,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "9cc61f43-16b9-4dbe-9ffc-98429f048f0e")
+			(uuid "0c714a45-a2ea-417b-bdb1-2f5df9f130e5")
 		)
 		(pin "2"
-			(uuid "5bbfef92-f351-466b-b3fb-6b6512b47b02")
+			(uuid "0b5517e9-aba4-416c-b482-74d0e654ce64")
 		)
 		(pin "3"
-			(uuid "8473d764-c3a1-482c-94a4-56d2ac52eb56")
+			(uuid "bcf4868c-c814-4172-aa29-ddea6d41842a")
 		)
 		(pin "4"
-			(uuid "48f557cd-e291-4332-99dc-64d4a02bbfbe")
+			(uuid "527f7ff4-dd25-489f-82b7-91342fe87fd3")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED25")
 					(unit 1)
 				)
@@ -6950,7 +6950,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d4f5fc00-8f33-4680-841b-508ae15dd4fa")
+		(uuid "7f545b79-e7cf-4028-a5cc-3c29c39ec6bb")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -6960,7 +6960,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "5858432f-4660-47aa-92a3-4addc44bb599")
+		(uuid "2c66cee1-e2f7-416a-ac70-d03770951fa5")
 		(property "Reference" "#PWRL49"
 			(at 289.56 93.98 0)
 			(effects
@@ -6997,11 +6997,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "fe40dab7-2121-4b2c-86d5-a73a40d693b8")
+			(uuid "45c42ac0-47bd-403b-b1ce-f36a3efe263f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL49")
 					(unit 1)
 				)
@@ -7017,7 +7017,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "515e70f5-387e-4fd5-bf0e-b8f38e9f0ca8")
+		(uuid "a19e0808-b83f-4e76-b5ca-2c20d7ae6b73")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7027,7 +7027,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "82a4debc-06ee-43c3-957e-df30e586c44f")
+		(uuid "3ebb2dae-997e-43ad-aaeb-371fe4421ac4")
 		(property "Reference" "#PWRL50"
 			(at 289.56 114.3 0)
 			(effects
@@ -7064,11 +7064,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "fededf58-d5ba-4b98-a308-ff60a080f630")
+			(uuid "2b5aa116-e886-495e-9f6a-3e4ebaeeee94")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL50")
 					(unit 1)
 				)
@@ -7084,7 +7084,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f3b8ce6a-a8bd-49bd-a721-88b428ac4f1a")
+		(uuid "ca018b08-7247-4c85-8dd8-15619d098450")
 	)
 	(label "LED_D24"
 		(at 279.4 109.22 180)
@@ -7094,7 +7094,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "bc02d3f3-d81d-4c07-bea8-37205e432a0e")
+		(uuid "79f21122-d26a-41da-8f15-604545343319")
 	)
 	(wire
 		(pts
@@ -7105,7 +7105,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4d1aa4aa-c707-470b-a117-473ba72e9eaf")
+		(uuid "02078c2d-7704-4372-b241-210c6fd3f645")
 	)
 	(label "LED_D25"
 		(at 299.72 109.22 0)
@@ -7115,7 +7115,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "94823a3a-56ef-44dc-b90a-760f50522686")
+		(uuid "acaf2c97-f9ad-43d2-9c82-73dd3a4360e6")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -7125,7 +7125,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "cb9457e1-00b9-4c0d-bdad-109fbbe55eec")
+		(uuid "462cd09d-b00b-4ade-a234-3a2cb52b2cd9")
 		(property "Reference" "LED26"
 			(at 339.09 100.33 0)
 			(effects
@@ -7172,20 +7172,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "d4046f2e-ee29-4e79-a082-0abf5a28ffde")
+			(uuid "4b58a2bd-604d-41d4-a901-1d8a6520a48d")
 		)
 		(pin "2"
-			(uuid "bc66e51e-971d-44c8-b965-e171e7c2d81e")
+			(uuid "08e3b2bd-e2c0-4ee3-8145-8b6480165948")
 		)
 		(pin "3"
-			(uuid "f3e78668-c043-4ef7-9907-c7e0aa4b10d4")
+			(uuid "99249002-8668-4daa-8aa4-99948e0c5aac")
 		)
 		(pin "4"
-			(uuid "eaa34103-55d8-4f1d-b22f-03961c7a01b7")
+			(uuid "71211d8a-1533-41e4-a248-113b7e981e0b")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED26")
 					(unit 1)
 				)
@@ -7201,7 +7201,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "064da7f6-d6e3-4b46-b765-ef4a48ee2ef0")
+		(uuid "af0fb71e-2673-4a15-b1e1-86acdacb31b7")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -7211,7 +7211,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "06d8012b-bfe4-4edd-a630-58f1900e2cab")
+		(uuid "90bd4147-88ab-4484-bdbc-1c05a6a50b7d")
 		(property "Reference" "#PWRL51"
 			(at 332.74 93.98 0)
 			(effects
@@ -7248,11 +7248,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "57dea4b2-7096-4af9-8ac7-e121445ad7ea")
+			(uuid "9e29f947-61e5-4117-97a7-ecf9f9ece11e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL51")
 					(unit 1)
 				)
@@ -7268,7 +7268,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3f4ab33f-a9c9-4240-abf8-d88eaad3c87d")
+		(uuid "1838454c-5034-42b8-b96b-e52849215843")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7278,7 +7278,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "557010c6-546f-4b05-af3c-1accbf5217d9")
+		(uuid "c792cc34-ffef-494c-975c-43bfc24e5125")
 		(property "Reference" "#PWRL52"
 			(at 332.74 114.3 0)
 			(effects
@@ -7315,11 +7315,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8182470e-a3ae-41b2-bd63-c14577b94353")
+			(uuid "7fa2d675-660b-4a01-8b61-3b5a583f4e50")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL52")
 					(unit 1)
 				)
@@ -7335,7 +7335,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c90670c8-7ed4-49c7-b7ef-1695780ed7b4")
+		(uuid "03ad2cb4-0f2b-4e86-a2a2-08fccf781cd9")
 	)
 	(label "LED_D25"
 		(at 322.58 109.22 180)
@@ -7345,7 +7345,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f44dea73-4c69-4d4f-8e26-2fb5f8245088")
+		(uuid "e729f0b4-856f-4018-8e18-c5e5230e2cbc")
 	)
 	(wire
 		(pts
@@ -7356,7 +7356,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "38c961fc-b36f-47f5-a773-527b158284a0")
+		(uuid "c32810d6-6546-46d2-ae7d-179aaf958665")
 	)
 	(label "LED_D26"
 		(at 342.9 109.22 0)
@@ -7366,7 +7366,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "31f5e74a-cb7d-42c8-80ea-1efecf0593a8")
+		(uuid "5ed7e46d-fb68-4d50-bcb3-711bcafbed0a")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -7376,7 +7376,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "fd70d7f8-9926-402a-85a5-11b66baf3260")
+		(uuid "1a8bd501-6aae-44c1-9cfd-4cce704658be")
 		(property "Reference" "LED27"
 			(at 382.27 100.33 0)
 			(effects
@@ -7423,20 +7423,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "ccfeca46-bd60-43e4-a88f-30fb1053219e")
+			(uuid "245d7808-3230-47b7-a8ee-a9dff77dd5bc")
 		)
 		(pin "2"
-			(uuid "0c6c95bf-61bd-4281-a456-b6e053f547b3")
+			(uuid "49901c12-f886-4bfc-b95a-4d6a446546e6")
 		)
 		(pin "3"
-			(uuid "ac0cbd9e-ff6c-4b81-ba1a-793f13208424")
+			(uuid "532f30da-0d44-4908-8c81-27d20b02084d")
 		)
 		(pin "4"
-			(uuid "fba8d089-e415-4390-9ac0-3cafc196496b")
+			(uuid "e6a12df7-80f4-4f9e-8a83-46adb6fff2ff")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED27")
 					(unit 1)
 				)
@@ -7452,7 +7452,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "fdbe70fc-5e98-4909-8a9d-71ccf5ffc18a")
+		(uuid "d5c36e00-29d0-4713-86f1-692219508c1e")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -7462,7 +7462,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "aeb3b4b9-4804-406e-8476-58192d69faef")
+		(uuid "bcd37373-acca-4f4f-826c-d978597905f2")
 		(property "Reference" "#PWRL53"
 			(at 375.92 93.98 0)
 			(effects
@@ -7499,11 +7499,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "edd7fef7-e7c2-43c2-abbe-a8f63c561ea7")
+			(uuid "cc977626-dbd8-4b40-8748-2c7b076ff9dc")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL53")
 					(unit 1)
 				)
@@ -7519,7 +7519,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "abe358c8-6370-43ed-ab98-dd701e875b69")
+		(uuid "8edf254e-6fed-41e8-a3da-5e3f62483c9f")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7529,7 +7529,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "29c0e2c8-fc75-4b3d-a742-8aba358bf37b")
+		(uuid "41f0dcd8-1acb-408b-9004-255d94e496c7")
 		(property "Reference" "#PWRL54"
 			(at 375.92 114.3 0)
 			(effects
@@ -7566,11 +7566,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "c553a47c-cbea-4e94-9a9c-733a00c81ada")
+			(uuid "d0445da8-b968-4c81-b794-493e4391af9a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL54")
 					(unit 1)
 				)
@@ -7586,7 +7586,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f9632347-babf-408f-8701-a111c0d06be2")
+		(uuid "e52c041d-8a72-4eb4-be90-c18f6bd39d1c")
 	)
 	(label "LED_D26"
 		(at 365.76 109.22 180)
@@ -7596,7 +7596,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f40419a8-fc9d-4535-aab2-7702f876592d")
+		(uuid "4906e838-a6a8-4072-b8b3-b3755f011732")
 	)
 	(wire
 		(pts
@@ -7607,7 +7607,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "de7afcee-962e-4ce8-accc-8cf958e84f2a")
+		(uuid "2aa8324d-e783-402f-a12f-2487895659cd")
 	)
 	(label "LED_D27"
 		(at 386.08 109.22 0)
@@ -7617,7 +7617,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "29cdaa68-b61d-4fb2-9122-86d1e6e4c762")
+		(uuid "caf05821-afe4-49b6-b5a0-5c3b30c0794f")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -7627,7 +7627,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "26595f3a-d94a-4e66-b433-8f0b0f0b9ac8")
+		(uuid "42665c02-fefc-43a2-88b3-33a1322f7c10")
 		(property "Reference" "LED28"
 			(at 36.83 135.89 0)
 			(effects
@@ -7674,20 +7674,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "4a7e8870-4eea-480d-8547-be025c5b10a8")
+			(uuid "21efe6b8-03e9-4193-8301-c949402f5657")
 		)
 		(pin "2"
-			(uuid "c4ec1f37-8c12-462d-ae06-3ab45492b985")
+			(uuid "d476c4d8-1707-4e88-a977-2ae08dbf3cf7")
 		)
 		(pin "3"
-			(uuid "f142c4b4-6f08-42f9-882d-67910967bfed")
+			(uuid "d7cc2545-21a8-4123-867c-38bb47413102")
 		)
 		(pin "4"
-			(uuid "2a4bdb16-a203-48a7-aedf-15247a35e235")
+			(uuid "a291cb2b-a9f6-4a6c-ac03-781ad0dfb6cc")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED28")
 					(unit 1)
 				)
@@ -7703,7 +7703,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a444e8b9-b468-4076-9d3d-a8f3c91fb780")
+		(uuid "eb7077ac-e0b7-4e9a-8524-07868355ac13")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -7713,7 +7713,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "948fd1b5-b5e3-4a21-9a6e-f2f8795c69a9")
+		(uuid "553064a8-e542-4e8d-918c-1e6c3f1ba28d")
 		(property "Reference" "#PWRL55"
 			(at 30.48 129.54 0)
 			(effects
@@ -7750,11 +7750,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8f137f67-0f58-4c81-8268-f93af080d447")
+			(uuid "3cd6c547-0a15-4a96-9356-a0f052745531")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL55")
 					(unit 1)
 				)
@@ -7770,7 +7770,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a615a298-769b-4433-ab5d-596c9cd9cefc")
+		(uuid "f49437e2-01e1-4744-b643-a80180988116")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7780,7 +7780,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "eccdf889-c4e9-4ce1-bdf1-12b27b1542bd")
+		(uuid "15573bb1-767f-4b9f-a307-6140f0c33b62")
 		(property "Reference" "#PWRL56"
 			(at 30.48 149.86 0)
 			(effects
@@ -7817,11 +7817,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "7b2e4d89-c899-444b-98b5-525623494335")
+			(uuid "9cd356d1-69e0-4000-9e64-c30338f8bf63")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL56")
 					(unit 1)
 				)
@@ -7837,7 +7837,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e1900742-0f79-4e07-9b5a-bf06ed2b897f")
+		(uuid "4b40a218-0d1a-425b-8e77-c17fb1744ba6")
 	)
 	(label "LED_D27"
 		(at 20.32 144.78 180)
@@ -7847,7 +7847,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c565a95b-9295-44b2-bcfc-c74c8300314a")
+		(uuid "b3321df0-e434-49dc-985e-ecbeb6f03e8d")
 	)
 	(wire
 		(pts
@@ -7858,7 +7858,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1e5d0738-3e9e-4674-a2ff-5dfcf05335fc")
+		(uuid "1ef99d1d-e6f6-4b30-ae9c-b307c7edd397")
 	)
 	(label "LED_D28"
 		(at 40.64 144.78 0)
@@ -7868,7 +7868,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e76b5e49-bdc2-4ef4-bee9-de741227c92a")
+		(uuid "9e3ed7fe-3fea-4125-bce9-3393123c5aa6")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -7878,7 +7878,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "71ac4eaa-931b-4891-bc41-e2a535869d1e")
+		(uuid "ef19fdd5-89c7-4a9a-bd5f-95e58fd6032e")
 		(property "Reference" "LED29"
 			(at 80.01 135.89 0)
 			(effects
@@ -7925,20 +7925,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "a01074d3-7cdb-4b98-a153-d079ee20090e")
+			(uuid "2cd7e809-faeb-4a59-b48b-d386b5320de0")
 		)
 		(pin "2"
-			(uuid "c1b0d986-f1bf-487c-93ed-243dc5c6a15c")
+			(uuid "ba16dd84-7443-49d2-a2f5-0d5a71e5164b")
 		)
 		(pin "3"
-			(uuid "51e77a5b-2e92-46da-87f9-c0ab5a447b5e")
+			(uuid "8b9b5766-3f51-4bee-9b88-04f069e02cc7")
 		)
 		(pin "4"
-			(uuid "a05599cb-6138-4119-99c9-5c1bc54e3f64")
+			(uuid "a1719d1b-3da6-4a09-b617-1903c925fa9e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED29")
 					(unit 1)
 				)
@@ -7954,7 +7954,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1ed0d041-f8d6-420b-aaae-93ab5dc08cf4")
+		(uuid "b315f3de-978d-46ab-8dde-9c3fe752a5d2")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -7964,7 +7964,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "633a13c9-3e4c-49b7-b21c-f0b769db728c")
+		(uuid "04eea289-adf8-44de-bcc1-dfdd25e27771")
 		(property "Reference" "#PWRL57"
 			(at 73.66 129.54 0)
 			(effects
@@ -8001,11 +8001,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d16222ab-a004-49d2-881a-22616bc5f12a")
+			(uuid "543fc36d-ff72-4c95-90bd-100403181363")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL57")
 					(unit 1)
 				)
@@ -8021,7 +8021,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "63c8375e-d5b5-4c2c-96c7-fcd50310e966")
+		(uuid "601f1303-6c8c-4200-ab34-3f05d9e57344")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8031,7 +8031,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "4ffb9d3a-6c2d-49e6-9a0a-4682dbdcac54")
+		(uuid "0eb47f1f-e8d3-4d60-9b5c-c37526c8dc4f")
 		(property "Reference" "#PWRL58"
 			(at 73.66 149.86 0)
 			(effects
@@ -8068,11 +8068,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "7b1a78aa-7775-4310-bdcb-214811e83082")
+			(uuid "9081647d-794b-4b2b-93ab-cd9861d13fa1")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL58")
 					(unit 1)
 				)
@@ -8088,7 +8088,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "32003fea-e1da-4246-92e4-84b23ec4f6f7")
+		(uuid "b6a4d111-e348-4a51-8264-d26d6533ab73")
 	)
 	(label "LED_D28"
 		(at 63.5 144.78 180)
@@ -8098,7 +8098,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "27840c63-51d1-43b8-8db2-c4dfef86b018")
+		(uuid "7a687c97-8471-41e5-81dc-556e39c894a2")
 	)
 	(wire
 		(pts
@@ -8109,7 +8109,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c56067a5-09b6-483d-a46a-fd237131c572")
+		(uuid "57a378fc-e46a-4b16-bf76-e7bb26206d94")
 	)
 	(label "LED_D29"
 		(at 83.82 144.78 0)
@@ -8119,7 +8119,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e3675097-12c0-4274-bae4-877d4a9ba4f2")
+		(uuid "3dfedc49-6484-436e-84c1-1461c78e9557")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -8129,7 +8129,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f81d2f65-d99c-4a0b-abd7-f16f320a2b8b")
+		(uuid "e4f65f1a-fbb0-42b3-b721-839a9c00e313")
 		(property "Reference" "LED30"
 			(at 123.19 135.89 0)
 			(effects
@@ -8176,20 +8176,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "9920ae49-b4ce-4e5e-965e-cabf41ab1fc5")
+			(uuid "963f308c-2773-43e0-9f30-116c127216d8")
 		)
 		(pin "2"
-			(uuid "6bee8d1d-d28d-4eab-ae4f-f7621a2ead86")
+			(uuid "b7f1fa01-83f4-4a83-82e9-680c08cfb6e3")
 		)
 		(pin "3"
-			(uuid "59fb42de-852e-4ed2-a868-884e78726576")
+			(uuid "0f3cf0fa-4287-4f16-b64c-2481df5bf854")
 		)
 		(pin "4"
-			(uuid "ac579948-430e-4b4e-bd73-cdf7cacd2692")
+			(uuid "cf47524d-2410-45a3-8904-c2b0819926db")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED30")
 					(unit 1)
 				)
@@ -8205,7 +8205,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4def7319-a949-448c-a1fc-83a9986c0729")
+		(uuid "0b499fa5-9eab-43d8-90c1-9cd655d720ea")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -8215,7 +8215,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "6745e9f4-b270-465d-b385-9fa156162c47")
+		(uuid "11c854ac-1208-4160-87da-d4fb45eefe31")
 		(property "Reference" "#PWRL59"
 			(at 116.84 129.54 0)
 			(effects
@@ -8252,11 +8252,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "a9d972ca-2ab3-43f3-9db3-14ae74c627a4")
+			(uuid "6e4a3c6b-51b1-4c2e-8873-873319525533")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL59")
 					(unit 1)
 				)
@@ -8272,7 +8272,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5e318eb8-d55d-4635-9c15-0d45e9cd7286")
+		(uuid "a2ec9cd1-068a-4921-81b1-5513231424c3")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8282,7 +8282,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "280af3a3-45c9-42b1-b18b-f1a7f805afa0")
+		(uuid "ceb6dfa7-4ed3-4526-9eba-2b98769225a0")
 		(property "Reference" "#PWRL60"
 			(at 116.84 149.86 0)
 			(effects
@@ -8319,11 +8319,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "84756570-14a7-4eb0-9b9c-b5d36f102304")
+			(uuid "758babbe-dc33-4bc3-b554-fe00cd242ed0")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL60")
 					(unit 1)
 				)
@@ -8339,7 +8339,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "614091c1-df43-498b-88ea-507dd8f2266e")
+		(uuid "df8fba33-0a45-40b3-b9be-57b95959b9e6")
 	)
 	(label "LED_D29"
 		(at 106.68 144.78 180)
@@ -8349,7 +8349,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "cf7d810e-7073-4ac2-a30a-6fc4981530b8")
+		(uuid "4cc91c9f-9986-4cca-a0c5-79990046bbb3")
 	)
 	(wire
 		(pts
@@ -8360,7 +8360,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2bd09ac7-1690-4ff4-ba92-a6bddff68f69")
+		(uuid "2ce83406-8c73-4ce8-8f0a-ad4c48096db1")
 	)
 	(label "LED_D30"
 		(at 127 144.78 0)
@@ -8370,7 +8370,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9d1ec5f7-9e98-4857-a9d9-baf435c24889")
+		(uuid "6cc4c5af-ff3b-4cfb-9043-5abc2d984d6e")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -8380,7 +8380,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "65eadb5a-d536-4fe3-b246-9a6d14811f77")
+		(uuid "f07a4e78-b6b4-4b0f-9e2a-3c3de100d481")
 		(property "Reference" "LED31"
 			(at 166.37 135.89 0)
 			(effects
@@ -8427,20 +8427,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "e68ff4b6-cb08-492d-8fea-5b60f585611a")
+			(uuid "dbd247d9-d72d-47e5-95f2-5e1547d2a652")
 		)
 		(pin "2"
-			(uuid "ea176016-2f81-4b2c-af14-225bf5213193")
+			(uuid "169a544f-f7eb-405b-b3b2-43182cba6e0a")
 		)
 		(pin "3"
-			(uuid "10fc444e-390d-485c-b177-94d959b64970")
+			(uuid "3b802f6f-6841-4fa5-b464-3e04c3f0ad41")
 		)
 		(pin "4"
-			(uuid "bb9c507c-71c0-46bc-a4e4-b5dbfccde522")
+			(uuid "b9df55a4-1f14-4e98-bc32-cf92611c773e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED31")
 					(unit 1)
 				)
@@ -8456,7 +8456,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8c831a74-e106-46d6-8a7f-b3a74f3e0cc6")
+		(uuid "b0733448-444a-40de-a710-84e25728c4bb")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -8466,7 +8466,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ff55c1b8-4e05-4cc2-ba24-3a11baeec9c0")
+		(uuid "b04df766-b543-4c02-a675-0a3848484866")
 		(property "Reference" "#PWRL61"
 			(at 160.02 129.54 0)
 			(effects
@@ -8503,11 +8503,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "73c86001-f384-4983-bb64-6bba464ced01")
+			(uuid "5ac07b01-5f81-464f-a4a5-bfdf11aaf0ad")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL61")
 					(unit 1)
 				)
@@ -8523,7 +8523,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7bac71e1-ee3e-497c-9217-67eb69ec86b2")
+		(uuid "3bd74bef-62f7-4116-b49c-8fac37fba13c")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8533,7 +8533,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "4b9303fc-4fee-44e1-9cd9-5447764e06b1")
+		(uuid "aac3c71b-04a1-4686-bc64-d2c2b343d06b")
 		(property "Reference" "#PWRL62"
 			(at 160.02 149.86 0)
 			(effects
@@ -8570,11 +8570,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0f07c81a-1bc5-4609-9e73-314d6455f846")
+			(uuid "1e8a3d07-6787-493d-8a81-aadbfe35dcbe")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL62")
 					(unit 1)
 				)
@@ -8590,7 +8590,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "db6fe327-25e7-4b24-a0e0-6da02d7f6823")
+		(uuid "df1316be-189d-4133-8bdc-04f1b57dbc7b")
 	)
 	(label "LED_D30"
 		(at 149.86 144.78 180)
@@ -8600,7 +8600,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "95a2fc27-87de-44a4-a9e4-b0b70ca9093c")
+		(uuid "2ae2aa02-e935-4135-b41c-1fc97e89841a")
 	)
 	(wire
 		(pts
@@ -8611,7 +8611,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d1f8fc39-f4bb-473f-8d4f-b39d9b202bbc")
+		(uuid "601310cf-2a60-41c6-870d-f932fd345f92")
 	)
 	(label "LED_D31"
 		(at 170.18 144.78 0)
@@ -8621,7 +8621,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7aafc501-037c-4e3a-a5f7-89f004500602")
+		(uuid "daa5bbc0-dbad-4172-9043-c7ed9d0a8d48")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -8631,7 +8631,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "53b6e1c9-a359-43c7-b112-6bfb2dafe09c")
+		(uuid "0365929e-e3e1-467b-9be9-dfea28c88343")
 		(property "Reference" "LED32"
 			(at 209.55 135.89 0)
 			(effects
@@ -8678,20 +8678,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "986ce909-c905-4aba-b179-f01e7f7b0638")
+			(uuid "37aa965c-0cd0-4731-8e68-50093b0babc6")
 		)
 		(pin "2"
-			(uuid "4f2eef78-1c27-4243-ab20-bc67ce8e2448")
+			(uuid "75a9a318-8f55-4143-a6fb-386a25095f39")
 		)
 		(pin "3"
-			(uuid "dbbcc1b7-1821-4d63-8bdf-c205e8a6c493")
+			(uuid "0f6a7316-f9fe-47e4-9e44-1e7ac86109f3")
 		)
 		(pin "4"
-			(uuid "89fc6f06-7829-4434-a625-f7355583f558")
+			(uuid "f4ad64c3-34b6-423f-90e2-2c02dbe3758d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED32")
 					(unit 1)
 				)
@@ -8707,7 +8707,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0fe5566f-3659-41d8-9f5c-dc53f9880544")
+		(uuid "84f0b7b9-a0c1-4885-a78e-2c8c70ae97ba")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -8717,7 +8717,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "04ccb529-41e1-4e44-98ba-52e206d07300")
+		(uuid "f55696a3-6653-43e2-ade2-c2d25117ce50")
 		(property "Reference" "#PWRL63"
 			(at 203.2 129.54 0)
 			(effects
@@ -8754,11 +8754,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "27d96134-5e1c-44eb-af91-ae82f5921152")
+			(uuid "e232da63-3e69-4da1-b0df-fee54f0c43f1")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL63")
 					(unit 1)
 				)
@@ -8774,7 +8774,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1d4084a9-e85b-471a-a8ef-57c80a01ea42")
+		(uuid "cadff52b-d66b-47c5-80e7-3bfb11650deb")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8784,7 +8784,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "bb929d69-9e0e-45ff-850c-8a659fade3b5")
+		(uuid "1ad4f592-0f49-4ef5-9ba6-e9fc7e6f382d")
 		(property "Reference" "#PWRL64"
 			(at 203.2 149.86 0)
 			(effects
@@ -8821,11 +8821,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8727d8b3-66f1-4baf-9347-9f688bbe988e")
+			(uuid "c137e588-526c-4479-949a-965ea2aa496a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL64")
 					(unit 1)
 				)
@@ -8841,7 +8841,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e1e119f8-de6b-46fe-8a76-49e70ee2c61d")
+		(uuid "0043f1b4-e5d3-4c44-861a-24fdeaa6e431")
 	)
 	(label "LED_D31"
 		(at 193.04 144.78 180)
@@ -8851,7 +8851,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "6484a372-ecfe-4c3c-9531-229f1df25885")
+		(uuid "7e7afb82-59af-4cd3-9686-baff1180bdf2")
 	)
 	(wire
 		(pts
@@ -8862,7 +8862,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "25dd4da8-9079-4eff-b16a-3546876cb435")
+		(uuid "3586aba5-e7af-4ab4-b425-d14e6ee293ee")
 	)
 	(label "LED_D32"
 		(at 213.36 144.78 0)
@@ -8872,7 +8872,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4f0f1768-c2b0-4a93-9741-9d8a93ec02f3")
+		(uuid "8c4bceff-e1f7-4b5b-a199-371ece5c7788")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -8882,7 +8882,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e9fefce8-22fe-4feb-9f68-f49a18805b41")
+		(uuid "9f2f7fe4-1218-48dd-8995-22a03bf2d777")
 		(property "Reference" "LED33"
 			(at 252.73 135.89 0)
 			(effects
@@ -8929,20 +8929,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "610ed4b8-61a9-4a84-9956-6c68348000bf")
+			(uuid "912cbb0d-c97e-4829-a123-ed054c167ea6")
 		)
 		(pin "2"
-			(uuid "162b7ebb-2f41-4ccf-97c9-b949cc4d4179")
+			(uuid "9d462a9f-5cf5-4cb1-aa7d-2cf90437e680")
 		)
 		(pin "3"
-			(uuid "088a8685-122b-4394-8fec-ab089d6c145e")
+			(uuid "fad3bd05-659f-4a89-a4f6-1223e2ea4c07")
 		)
 		(pin "4"
-			(uuid "7333edfd-0269-430e-a0b8-1c0384488a95")
+			(uuid "73453163-e2dc-4dd0-927f-5a0dbff62afc")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED33")
 					(unit 1)
 				)
@@ -8958,7 +8958,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "fb8189fd-02b4-40bd-8524-61957d693a05")
+		(uuid "addf5f83-f89c-45cd-9434-8a94ab1211c9")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -8968,7 +8968,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "65486f23-231d-4b62-b657-d3ee5dca2d00")
+		(uuid "a3af83f0-b50b-49a5-a9d3-386d21719a6e")
 		(property "Reference" "#PWRL65"
 			(at 246.38 129.54 0)
 			(effects
@@ -9005,11 +9005,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "e6fea9aa-c61e-44aa-bce2-0bd0fadb9cbd")
+			(uuid "fd9c4150-19bb-4cce-bc0a-0a0a8924050f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL65")
 					(unit 1)
 				)
@@ -9025,7 +9025,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9cdeacd0-dd9c-4122-94c6-fd65103c058e")
+		(uuid "f28c4b5c-e356-42db-88f4-44a5d4b541a5")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9035,7 +9035,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "98575522-511b-4d59-bd87-74884339c302")
+		(uuid "616f0422-b244-4741-942f-657adf40259f")
 		(property "Reference" "#PWRL66"
 			(at 246.38 149.86 0)
 			(effects
@@ -9072,11 +9072,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "bb18a0ed-6713-487f-ad54-c78b6b03d3d9")
+			(uuid "603a2903-c009-4732-a253-06553d8fcce4")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL66")
 					(unit 1)
 				)
@@ -9092,7 +9092,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "25cbf890-46bd-4b1e-afc2-48296806020c")
+		(uuid "3c2f6cfd-5e6b-4c47-9639-7d386187b3c5")
 	)
 	(label "LED_D32"
 		(at 236.22 144.78 180)
@@ -9102,7 +9102,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "321c3c97-0a00-444e-999c-192103832cf9")
+		(uuid "0c39042c-353a-4d0d-abfb-72d9153b45f0")
 	)
 	(wire
 		(pts
@@ -9113,7 +9113,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "96ecef66-ef1a-476c-b038-ddf04ca8ef7d")
+		(uuid "ef10c8ea-1ae0-4e92-89c3-048012d0d714")
 	)
 	(label "LED_D33"
 		(at 256.54 144.78 0)
@@ -9123,7 +9123,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "202178bb-6b97-415f-8f02-2a3002bf08f4")
+		(uuid "d3def176-3432-4231-9388-f360692f99a9")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -9133,7 +9133,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "05ea6595-693a-4998-a866-6b99bcd9e27d")
+		(uuid "cd2e8886-f0dc-49ac-88af-4bdb5e22faa5")
 		(property "Reference" "LED34"
 			(at 295.91 135.89 0)
 			(effects
@@ -9180,20 +9180,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "9368795e-2010-4e02-ac0a-2ab109fe4690")
+			(uuid "bd9cb0b0-32c5-4fb8-847c-c0c253751aa0")
 		)
 		(pin "2"
-			(uuid "2315cb3a-1c50-4f1e-a92d-d722872112e0")
+			(uuid "7ffb3983-12bf-48c8-ae3b-a9300379d890")
 		)
 		(pin "3"
-			(uuid "71cbc1ca-4776-4360-87ce-1d575812a604")
+			(uuid "85b4d90d-ea82-45da-9c36-587e6ed9f8bd")
 		)
 		(pin "4"
-			(uuid "e8ce3142-e469-4677-acc0-a024e2415ff1")
+			(uuid "032b6383-e367-457c-85fd-63ceae331e9b")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED34")
 					(unit 1)
 				)
@@ -9209,7 +9209,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b72f1af2-4d35-4fc1-baae-9f483cbe9c47")
+		(uuid "9dd23b49-226c-4219-a55a-ec15a59d305b")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -9219,7 +9219,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "c36ab51b-05c2-44b0-81fd-5ff759e526aa")
+		(uuid "e5d031f3-37ea-4922-a4ee-7866f87bf152")
 		(property "Reference" "#PWRL67"
 			(at 289.56 129.54 0)
 			(effects
@@ -9256,11 +9256,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "a736e559-ce1b-45de-9576-2f625da5c3be")
+			(uuid "3602a11e-3ac8-44c7-89cf-898a1a0cf39a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL67")
 					(unit 1)
 				)
@@ -9276,7 +9276,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3475c712-927a-4de0-969a-14aa66a23c17")
+		(uuid "42d1563c-8a88-41a3-9ebb-82f8e6bb7aff")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9286,7 +9286,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "f95280c9-ac4a-4285-a37e-e56e34cca2ce")
+		(uuid "5282b9eb-ecb7-4799-b571-07120dd5beeb")
 		(property "Reference" "#PWRL68"
 			(at 289.56 149.86 0)
 			(effects
@@ -9323,11 +9323,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "95e147bd-0747-41c1-8cc4-9ed3e9b8cd93")
+			(uuid "ca63ad47-dea7-4d5d-b03b-174594ecf269")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL68")
 					(unit 1)
 				)
@@ -9343,7 +9343,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9c286e56-9460-4296-ad2f-aad983a6612b")
+		(uuid "55e0353e-f29b-4877-9052-fbe45e1167ce")
 	)
 	(label "LED_D33"
 		(at 279.4 144.78 180)
@@ -9353,7 +9353,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "6b973911-0a95-4d09-a650-12d8303ff64e")
+		(uuid "0cdb186b-1194-47c1-8d74-f5219084941a")
 	)
 	(wire
 		(pts
@@ -9364,7 +9364,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9a381292-4ee1-4e3a-a95c-ef3ec96c1981")
+		(uuid "f6574d91-86e6-4158-90d2-8d65081a79f9")
 	)
 	(label "LED_D34"
 		(at 299.72 144.78 0)
@@ -9374,7 +9374,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3c73c0d9-ba19-4de4-8a08-7204eaa93108")
+		(uuid "ea5c5179-0d8f-490a-9c90-6a251116451c")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -9384,7 +9384,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d9383f2e-1112-49fa-8bb1-4909584ebdcc")
+		(uuid "7c0a9af7-03b3-4b9f-a30d-81df2960c3da")
 		(property "Reference" "LED35"
 			(at 339.09 135.89 0)
 			(effects
@@ -9431,20 +9431,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "5b939081-80a8-470a-9a87-ad4606a1b292")
+			(uuid "7aca1b2f-2f8d-445b-aad5-4717ade34be2")
 		)
 		(pin "2"
-			(uuid "23936ef9-52ba-4ca2-8c2b-7236de07b30d")
+			(uuid "8f8284e8-14e5-4d44-8541-7e717e59e49b")
 		)
 		(pin "3"
-			(uuid "6dae433a-c2ff-420f-b173-cd276a24fdb0")
+			(uuid "40eeef85-472d-411a-8bca-effa0b126faf")
 		)
 		(pin "4"
-			(uuid "37235275-4a8c-496f-95db-cf8699e4691c")
+			(uuid "bd15f891-e645-42ff-a1e1-c88067ad6125")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED35")
 					(unit 1)
 				)
@@ -9460,7 +9460,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c5e16502-6cd6-47d6-a543-ec6f49b23c9f")
+		(uuid "73478fa8-daf9-40a3-a652-95dfc7dff593")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -9470,7 +9470,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "866edd69-b4d9-490c-a49c-7c7944e17cfa")
+		(uuid "3a535c34-72a8-4954-8e9e-9643f34d4556")
 		(property "Reference" "#PWRL69"
 			(at 332.74 129.54 0)
 			(effects
@@ -9507,11 +9507,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "53d3e320-33b3-4aa9-90a4-84727b8cf7b9")
+			(uuid "a9750d07-3b3d-421e-9cbd-0927703a0c60")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL69")
 					(unit 1)
 				)
@@ -9527,7 +9527,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6b9e088c-d0f0-4100-b236-b536f744c275")
+		(uuid "6e9d4630-471a-4b7a-9800-552cd4480ef2")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9537,7 +9537,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "a38d16a7-9094-4d4c-8a66-c6dfd1c8ee98")
+		(uuid "bcff9819-1ab8-43ac-9aba-5430d968c7da")
 		(property "Reference" "#PWRL70"
 			(at 332.74 149.86 0)
 			(effects
@@ -9574,11 +9574,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "14821cdd-c6f8-4d3d-9b42-80367d6e3c89")
+			(uuid "d8844c1c-2737-47d2-b0d2-9a5b0c9bff2b")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL70")
 					(unit 1)
 				)
@@ -9594,7 +9594,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b8924812-dbb9-46a2-b03c-799e34c0160c")
+		(uuid "e38c431b-8668-4a59-b40e-683f6b1c2df2")
 	)
 	(label "LED_D34"
 		(at 322.58 144.78 180)
@@ -9604,7 +9604,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "8f0fb6a5-7e70-4c9b-a868-c9572a88203d")
+		(uuid "1c10476e-2096-4018-97a7-4cfda1b9ed66")
 	)
 	(wire
 		(pts
@@ -9615,7 +9615,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "40864b14-ce4b-4db8-a600-e84245548543")
+		(uuid "403e714a-6447-4b9c-978b-acd02a81b82a")
 	)
 	(label "LED_D35"
 		(at 342.9 144.78 0)
@@ -9625,7 +9625,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6a5812ac-497b-47e4-9461-83234b193fa2")
+		(uuid "bc821a0c-0698-43a6-b146-ee02a364e0ac")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -9635,7 +9635,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "79491031-6aeb-4422-af4b-64959446aac6")
+		(uuid "adf6c0ad-15c5-475b-aca4-ad7e63741f8a")
 		(property "Reference" "LED36"
 			(at 382.27 135.89 0)
 			(effects
@@ -9682,20 +9682,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "a6522b33-fca1-4b0f-ac2e-a97f594a76ce")
+			(uuid "30375798-bfc1-4fa1-b121-904bad70bf31")
 		)
 		(pin "2"
-			(uuid "707fb47e-ac6c-4df4-b3de-1a1f162d41d5")
+			(uuid "b1c8220d-84ec-42d3-8a18-bc738c2445b5")
 		)
 		(pin "3"
-			(uuid "dd2b6f53-cd08-475b-87f1-71f6251fbcee")
+			(uuid "e5d96705-e7e3-4644-b83b-5394ac18474e")
 		)
 		(pin "4"
-			(uuid "0ca23ca1-dd19-4450-812e-7e1058d7b14c")
+			(uuid "9ce7a3ff-8dbd-4515-9227-bb51b4070403")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED36")
 					(unit 1)
 				)
@@ -9711,7 +9711,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5519e6ce-81d9-4b34-9658-6c3ffdc847aa")
+		(uuid "532a53f7-cab2-4887-9cb7-23b38ac9231e")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -9721,7 +9721,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "1f510ada-cb59-41dc-a5bd-68c1174e7dd5")
+		(uuid "dd542b2d-e5d2-4867-a417-21a7af95f166")
 		(property "Reference" "#PWRL71"
 			(at 375.92 129.54 0)
 			(effects
@@ -9758,11 +9758,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "eba9fa70-f805-41d1-ab53-2b4ca333f270")
+			(uuid "7d6732c3-d0d1-4b4d-bd6f-e7fffa584f24")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL71")
 					(unit 1)
 				)
@@ -9778,7 +9778,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cad8777b-b570-4f7c-a7b7-d90b472be808")
+		(uuid "0c160b49-da13-4452-912c-4e55a6f94c54")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9788,7 +9788,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "d976a045-0b05-47cf-8bdb-9fbb03880cb5")
+		(uuid "ec49e250-ae9d-4e08-a8b6-d2fa01c0352c")
 		(property "Reference" "#PWRL72"
 			(at 375.92 149.86 0)
 			(effects
@@ -9825,11 +9825,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "e68e33b1-d66a-4072-bdf9-501595cfda5e")
+			(uuid "5cac72af-f05d-427a-b393-5054c6b13797")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL72")
 					(unit 1)
 				)
@@ -9845,7 +9845,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e7552e92-ef74-4139-ae7b-e801053fc283")
+		(uuid "cbf62da6-2737-495f-9bfb-effb42be217a")
 	)
 	(label "LED_D35"
 		(at 365.76 144.78 180)
@@ -9855,7 +9855,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2fd3e14b-3b81-4418-94da-fc82a5969bed")
+		(uuid "555e3f45-4765-4e34-95b0-4596366b5dab")
 	)
 	(wire
 		(pts
@@ -9866,7 +9866,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cd85951b-8836-41cb-b073-41d33059ba98")
+		(uuid "daed0c2e-d607-4273-9e24-3facd5ab7085")
 	)
 	(label "LED_D36"
 		(at 386.08 144.78 0)
@@ -9876,7 +9876,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "14db29e7-5f7e-4563-9419-acf5094b6a51")
+		(uuid "8cbb93a0-f9c5-4263-ac5c-db3a58c54b9e")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -9886,7 +9886,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "448cc928-ee6f-4e5c-b02d-d7ffa4f6b0cd")
+		(uuid "a7d76d46-0296-424a-87d6-fbd908a8ba52")
 		(property "Reference" "LED37"
 			(at 36.83 171.45 0)
 			(effects
@@ -9933,20 +9933,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "23540abd-7af0-48fc-99e1-dd2b0265e7c6")
+			(uuid "f1fdfb3d-82f1-4331-b8fe-851764ecbe34")
 		)
 		(pin "2"
-			(uuid "413128f4-2f93-468e-a3ca-68356a8efbea")
+			(uuid "421ec354-6d76-4593-a26a-0c5a41d74aad")
 		)
 		(pin "3"
-			(uuid "2b36e4c0-57e7-427f-a2d3-69f4d8102945")
+			(uuid "ecde9b6e-d51d-4295-8688-7f6ba34efae2")
 		)
 		(pin "4"
-			(uuid "d10562f2-5c43-427e-b958-ab29fa6bb963")
+			(uuid "3aaede4f-8572-476c-9b8f-90e34b43b42d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED37")
 					(unit 1)
 				)
@@ -9962,7 +9962,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d320ae1b-2364-4da6-9adf-0b258eea8076")
+		(uuid "85abb984-68eb-48e4-bcb8-9ffc84bb7ac6")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -9972,7 +9972,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "9a175dbb-c27d-4972-b84a-7e3b782123f9")
+		(uuid "52cf5024-426b-427d-930d-b6e8a6abe0f7")
 		(property "Reference" "#PWRL73"
 			(at 30.48 165.1 0)
 			(effects
@@ -10009,11 +10009,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0afbec37-6ca2-45d5-a665-c7fd6fecba83")
+			(uuid "fe462951-18a5-4fcf-b46f-41a36e68f387")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL73")
 					(unit 1)
 				)
@@ -10029,7 +10029,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "aacb9825-cc64-4901-9b54-d2862df80ebf")
+		(uuid "b10b4545-d41f-49fe-926c-e69fcf9fcbce")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10039,7 +10039,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "8790b696-5c60-4cca-8c2c-67a6b1b9f2de")
+		(uuid "914d8a30-f610-41e7-8928-ed2c596b2c2b")
 		(property "Reference" "#PWRL74"
 			(at 30.48 185.42 0)
 			(effects
@@ -10076,11 +10076,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "a6e46b17-614f-4d52-97d2-8e362df89c7a")
+			(uuid "db1056ce-fb37-4cbc-b6c9-f4af8f94420b")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL74")
 					(unit 1)
 				)
@@ -10096,7 +10096,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "591ba31f-1044-4b4a-8378-b49dfd646ab3")
+		(uuid "8dc87805-4a96-4291-97a6-434b6d624985")
 	)
 	(label "LED_D36"
 		(at 20.32 180.34 180)
@@ -10106,7 +10106,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "5e7f637d-e42c-49ef-8ea1-deebcc8a9de5")
+		(uuid "6a3ab0f9-68fa-4ade-9162-a67829288bb8")
 	)
 	(wire
 		(pts
@@ -10117,7 +10117,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ad95286a-cb06-47fe-9da7-6c9f48fccd66")
+		(uuid "fd115dc1-c809-4988-a543-9672ba207ffc")
 	)
 	(label "LED_D37"
 		(at 40.64 180.34 0)
@@ -10127,7 +10127,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "223dd6b1-1bd0-4522-ace6-7240a07050c9")
+		(uuid "2bf6d28a-770f-4e59-819a-924d1b2fdfa2")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -10137,7 +10137,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d89933f5-128d-4a81-a534-61b56742e007")
+		(uuid "ead07a6f-0683-4b35-8d3e-1778e33ad888")
 		(property "Reference" "LED38"
 			(at 80.01 171.45 0)
 			(effects
@@ -10184,20 +10184,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "2083f039-5684-416f-9d87-5da9467810a6")
+			(uuid "2679d6b4-19cf-41d9-a512-636b9bd27c07")
 		)
 		(pin "2"
-			(uuid "aafbd248-76fe-4ad7-8c66-8dd047d9e896")
+			(uuid "18c5bd7b-6405-4939-969e-010447263284")
 		)
 		(pin "3"
-			(uuid "1af3e7b1-4a68-4b8c-87d7-dc4890914597")
+			(uuid "7fe37be3-3384-4372-ad86-08fdee7f4fe6")
 		)
 		(pin "4"
-			(uuid "4e1f7d4d-0bcc-4a15-838e-d6a739714973")
+			(uuid "0974ddbc-21da-4bec-b18c-dbdc5800cf7e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED38")
 					(unit 1)
 				)
@@ -10213,7 +10213,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2f8324b0-e2d6-47a0-a6de-9b4bd85ecb9d")
+		(uuid "e445d513-9dcc-420a-ac23-f5c61626232e")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -10223,7 +10223,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "a350396e-f95b-44fe-9f7d-2f19e5c93a93")
+		(uuid "c40c8aa7-a717-43da-9d84-f1c7b447ae66")
 		(property "Reference" "#PWRL75"
 			(at 73.66 165.1 0)
 			(effects
@@ -10260,11 +10260,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "51157914-b0e5-4f2f-b7c3-e25ce7861c04")
+			(uuid "da88ea2e-e3b9-4f22-a01c-655813b12e9d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL75")
 					(unit 1)
 				)
@@ -10280,7 +10280,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c59ae9ee-7f9d-4b0f-a217-352e6a44aa03")
+		(uuid "6e16f949-30e2-4da3-8d92-973c4e5adfc8")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10290,7 +10290,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "45056158-c35b-45da-9cc7-f64911646522")
+		(uuid "a1481b00-7b23-4add-ad91-9277d1088025")
 		(property "Reference" "#PWRL76"
 			(at 73.66 185.42 0)
 			(effects
@@ -10327,11 +10327,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "39a0dcc8-7ba2-4033-957b-f7e8e0e69751")
+			(uuid "1975cb3d-04ba-4165-bd27-d108ad48ee2a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL76")
 					(unit 1)
 				)
@@ -10347,7 +10347,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "33e386fa-0ac6-4a09-9170-217eed490d95")
+		(uuid "86b5a891-6c6b-4e91-bdbe-f79650adc88f")
 	)
 	(label "LED_D37"
 		(at 63.5 180.34 180)
@@ -10357,7 +10357,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "8848a31a-2f01-43ea-a920-5ae9c3c0dff0")
+		(uuid "4e65f8f4-3047-4118-984f-cf3f7dd8779c")
 	)
 	(wire
 		(pts
@@ -10368,7 +10368,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "73eb6a78-503d-4c5d-8516-d2175f97624f")
+		(uuid "cbe852d3-6a94-40cf-b0ae-f36302d2a0e1")
 	)
 	(label "LED_D38"
 		(at 83.82 180.34 0)
@@ -10378,7 +10378,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2177938a-f35b-43d9-a78a-5f46133ee993")
+		(uuid "c15f2abc-5e0d-41ef-b318-bb370f798fb6")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -10388,7 +10388,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e9331ee9-fe39-4845-a99e-1dca40c59128")
+		(uuid "410cd3be-ea7b-48cb-b2f3-0ac3690f472f")
 		(property "Reference" "LED39"
 			(at 123.19 171.45 0)
 			(effects
@@ -10435,20 +10435,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "87579da4-9951-4141-903c-1a000ef2acc1")
+			(uuid "912346a8-ff4b-42a1-a22d-8e714e6cc843")
 		)
 		(pin "2"
-			(uuid "d952125a-29f2-405c-b4c4-7855371e8118")
+			(uuid "1094018d-74d9-4c52-bb43-e81e7269515f")
 		)
 		(pin "3"
-			(uuid "c82fc647-2266-4b29-9567-14f822c6174a")
+			(uuid "f6953b84-b172-44ab-84e2-4af612598c92")
 		)
 		(pin "4"
-			(uuid "09a4522b-3443-4279-bc58-9f2c43241d7c")
+			(uuid "96a36d84-5c0e-45dc-9d65-07246f7e7cd5")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED39")
 					(unit 1)
 				)
@@ -10464,7 +10464,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "aba4470d-3282-46b4-8d66-3a8d4a3497c0")
+		(uuid "f3253113-a1b2-4261-8ad3-1b2e3103ad58")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -10474,7 +10474,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "a79ff4ed-6039-434a-8cb5-605bf08cf51e")
+		(uuid "b5ad1e7f-0f6d-4801-b2b0-4a597981f914")
 		(property "Reference" "#PWRL77"
 			(at 116.84 165.1 0)
 			(effects
@@ -10511,11 +10511,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "55843024-530d-4aca-a868-e2fdcb201d75")
+			(uuid "1abda4af-deb2-4e46-bd98-36e66374b8f6")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL77")
 					(unit 1)
 				)
@@ -10531,7 +10531,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9d0331c1-c9cb-4959-805c-1d77a9bf7995")
+		(uuid "511d5b3c-21e0-4e7a-b4dc-61fe63fcc264")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10541,7 +10541,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ff7b3f27-4d5d-4011-9579-a7dd0fd4685b")
+		(uuid "ec8b44a1-6317-4d34-8d53-97a0001d443d")
 		(property "Reference" "#PWRL78"
 			(at 116.84 185.42 0)
 			(effects
@@ -10578,11 +10578,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "3d8f20fa-4fcb-4afe-aa82-be6086588532")
+			(uuid "5e349e6d-1d06-4999-bf2f-f73d92c68452")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL78")
 					(unit 1)
 				)
@@ -10598,7 +10598,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3746cd40-90e4-4409-ba12-9ca7cc1171ad")
+		(uuid "c4950fa5-1f80-4b67-b974-b2f44a4bbef7")
 	)
 	(label "LED_D38"
 		(at 106.68 180.34 180)
@@ -10608,7 +10608,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b934cfda-5c04-4daf-93d5-cf2f9306bbf5")
+		(uuid "1fde9cab-ba2b-4f70-9b70-ffb5229f2f4e")
 	)
 	(wire
 		(pts
@@ -10619,7 +10619,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "15f8c742-82cf-4bc0-91a4-6896d7da252d")
+		(uuid "8d7c6c30-6470-4434-92c8-06c0850780b3")
 	)
 	(label "LED_D39"
 		(at 127 180.34 0)
@@ -10629,7 +10629,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "980a10c4-5a27-48ee-92e8-7352462288b6")
+		(uuid "9f07f8bf-4108-47cb-8de7-7e3e74a23e8d")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -10639,7 +10639,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0d813d0d-4cd1-47f1-b6f8-a3b01f4c4688")
+		(uuid "645743a6-e3fa-4ad4-9793-dfb22e4cc266")
 		(property "Reference" "LED40"
 			(at 166.37 171.45 0)
 			(effects
@@ -10686,20 +10686,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "d495c439-2a35-462b-b415-d0eebf482356")
+			(uuid "aecbc3fa-44b9-4b1a-afba-f82d5eb9aa3f")
 		)
 		(pin "2"
-			(uuid "14189da2-9f67-4732-979a-3eedc0f6d5bb")
+			(uuid "a411775d-6df0-4eb3-895a-25ffb798187f")
 		)
 		(pin "3"
-			(uuid "6f209d87-708a-4a79-98a2-595f2cac7cff")
+			(uuid "47a9b4c2-7c8e-4784-a3ce-f5e57ed81d95")
 		)
 		(pin "4"
-			(uuid "720991c0-3e4a-4f18-9aa3-3605af1fb0b8")
+			(uuid "70408eba-48f7-4dc8-9c85-94004f514f9d")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED40")
 					(unit 1)
 				)
@@ -10715,7 +10715,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3745a82f-8af7-452d-9951-70179c6baa69")
+		(uuid "a988271b-9026-4761-b4b7-5f6da303343d")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -10725,7 +10725,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "e62422bf-db09-408d-8e32-1d35e564b13d")
+		(uuid "b332024a-e1f3-487f-b3ea-b6296026493c")
 		(property "Reference" "#PWRL79"
 			(at 160.02 165.1 0)
 			(effects
@@ -10762,11 +10762,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "b22e909a-e127-46de-9f54-965b36f976fd")
+			(uuid "bb0642cd-a465-4a48-9a85-2dffce99a5b9")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL79")
 					(unit 1)
 				)
@@ -10782,7 +10782,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b1b19243-98e4-41fa-b0ba-9a8a3a29aadd")
+		(uuid "094cbccd-7713-4000-b8b5-7cc9548bbf02")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10792,7 +10792,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "90a22cc9-3c7b-415d-bac1-89d33d77032c")
+		(uuid "14477c6a-1b90-4ead-8511-de84baa94ce9")
 		(property "Reference" "#PWRL80"
 			(at 160.02 185.42 0)
 			(effects
@@ -10829,11 +10829,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "924f45ed-add9-4bda-97e5-9fedd7de97ed")
+			(uuid "9fea3a86-b7bb-4cc9-83a5-87106956d4d2")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL80")
 					(unit 1)
 				)
@@ -10849,7 +10849,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d8f86a78-4c2a-4402-9900-af501a310557")
+		(uuid "a541486b-e092-475e-b4b6-7b61e9b260c9")
 	)
 	(label "LED_D39"
 		(at 149.86 180.34 180)
@@ -10859,7 +10859,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3831e93e-6e35-4529-9326-81e5975f378c")
+		(uuid "f7b84080-bfe6-4170-b450-3d2384457a24")
 	)
 	(wire
 		(pts
@@ -10870,7 +10870,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2cadfa25-8723-46f1-8730-204e0a37503d")
+		(uuid "cc32aab2-ae64-4516-846a-6f4f965af06e")
 	)
 	(label "LED_D40"
 		(at 170.18 180.34 0)
@@ -10880,7 +10880,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7782e7e9-fa6e-47a9-9c50-9ea6a1ebab71")
+		(uuid "31da0fc9-cb3a-4b44-929e-18f8d2b0a052")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -10890,7 +10890,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "35d6784e-b985-4171-b968-64e56e073d71")
+		(uuid "904d5549-a1fb-495c-96b6-e35763a39bd6")
 		(property "Reference" "LED41"
 			(at 209.55 171.45 0)
 			(effects
@@ -10937,20 +10937,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "c4628f7c-30f4-48f0-b9b2-f402ccfba251")
+			(uuid "1f722029-50d0-41e9-9f82-0ea416f24568")
 		)
 		(pin "2"
-			(uuid "92e5f1ac-48cc-43e3-a083-b58071a2dca3")
+			(uuid "54aa8044-cd5c-43ec-8c13-1d49a9855593")
 		)
 		(pin "3"
-			(uuid "edc3c78c-ed90-4283-a4b3-b77ddf444c6c")
+			(uuid "aa1a74b0-fcf1-4953-940a-515400505335")
 		)
 		(pin "4"
-			(uuid "81477376-4b7a-4cb4-8e3a-4161f52238d5")
+			(uuid "a29edf57-2329-4150-aac4-a22160b79a0c")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED41")
 					(unit 1)
 				)
@@ -10966,7 +10966,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4729a4bc-fa96-45e0-87fb-4fb5b67a5278")
+		(uuid "b69152e9-2960-40b4-a802-1831b88bcfc0")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -10976,7 +10976,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "98ecaa96-3f32-4239-86f8-e6b1f02ff428")
+		(uuid "862f7a72-58cd-40bb-973b-5ba611905e84")
 		(property "Reference" "#PWRL81"
 			(at 203.2 165.1 0)
 			(effects
@@ -11013,11 +11013,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0e9d9876-ebfd-485f-821b-61e1ace25939")
+			(uuid "0bc6630d-3788-4964-8532-bb84e0b9ef33")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL81")
 					(unit 1)
 				)
@@ -11033,7 +11033,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5cc3d92b-d5c7-4b24-ad88-e61ad4c42bca")
+		(uuid "2d292227-c7cf-4a95-9705-ff14325e35a3")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11043,7 +11043,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "b2d9ba8b-eef4-45f3-be2a-98227fab47c7")
+		(uuid "29680dba-6f55-4c32-8854-2a8c9e4039ce")
 		(property "Reference" "#PWRL82"
 			(at 203.2 185.42 0)
 			(effects
@@ -11080,11 +11080,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0465936b-5512-411a-93ae-5a72c1169e18")
+			(uuid "0b298859-a123-4ee4-a268-76d4baa53245")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL82")
 					(unit 1)
 				)
@@ -11100,7 +11100,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ac417ede-e164-42cd-bd1c-a58b1d975393")
+		(uuid "4d69c075-b693-4bf4-8432-d45a0e95da38")
 	)
 	(label "LED_D40"
 		(at 193.04 180.34 180)
@@ -11110,7 +11110,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f8322d40-aea7-4b34-b8c7-ffdf20ba9c2e")
+		(uuid "1b00ae03-44bb-440a-8f65-26c78e0c5833")
 	)
 	(wire
 		(pts
@@ -11121,7 +11121,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "593d0dc1-626d-4a51-b361-bbbc0777a966")
+		(uuid "c8f2507a-bc8e-452a-bf32-b86323cdbb34")
 	)
 	(label "LED_D41"
 		(at 213.36 180.34 0)
@@ -11131,7 +11131,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fc8556ce-2e8d-479a-8d90-3dfa685ad91c")
+		(uuid "27d61fbc-83a3-4b27-9a1b-4d2dc15d1743")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -11141,7 +11141,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dca9e997-5b28-48e6-94bf-cca0aa2faa9a")
+		(uuid "dda07aab-37e9-4c85-b085-ff84deeab55c")
 		(property "Reference" "LED42"
 			(at 252.73 171.45 0)
 			(effects
@@ -11188,20 +11188,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "80a594fb-5448-4cae-9dcf-d9ce57e88edf")
+			(uuid "e1fce0cb-6337-4a59-890e-4fe5f8904a17")
 		)
 		(pin "2"
-			(uuid "4dfc73cb-faf2-4386-a94c-3dc734cb22d4")
+			(uuid "5e932370-c73b-496d-9596-771f1f390426")
 		)
 		(pin "3"
-			(uuid "84656fa0-43bf-45ce-89c5-631dcb7a9717")
+			(uuid "523db5ae-8f50-440c-8a47-2329cf90c2de")
 		)
 		(pin "4"
-			(uuid "8f90c1d7-8840-422c-8b1b-734b9f3ca39c")
+			(uuid "c8be172c-22d7-4877-bdbc-0a776e3b03a1")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED42")
 					(unit 1)
 				)
@@ -11217,7 +11217,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2afaea5a-a8ca-4cb5-9a07-5b816292d747")
+		(uuid "68180f22-1a50-4833-af63-15a3569b841d")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -11227,7 +11227,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "5e6a734c-7b4d-4379-bb3f-775c0b2d03dd")
+		(uuid "5a9396d9-2fdf-4d63-88b0-3cd0ed3dc6b5")
 		(property "Reference" "#PWRL83"
 			(at 246.38 165.1 0)
 			(effects
@@ -11264,11 +11264,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "4830b467-a395-4aab-8c0b-bbe884a7ff7f")
+			(uuid "6da3b07a-2a49-428f-a14a-fd2385b16c46")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL83")
 					(unit 1)
 				)
@@ -11284,7 +11284,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "81dcbd39-a9d7-49cc-85fd-b07f929aa986")
+		(uuid "3e34e60a-9008-4b36-8043-fd6751b87210")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11294,7 +11294,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "46d947db-a6ed-41a6-be20-e634ad023a14")
+		(uuid "a3210e53-eecd-4626-b063-e15ca0fac338")
 		(property "Reference" "#PWRL84"
 			(at 246.38 185.42 0)
 			(effects
@@ -11331,11 +11331,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8990d397-a7dc-410a-9a8a-c91922df661f")
+			(uuid "3864d7b5-64fc-47a1-9b93-83f6db3a7772")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL84")
 					(unit 1)
 				)
@@ -11351,7 +11351,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e39897fb-e4ad-4ac9-b555-8543cfa6ef27")
+		(uuid "c5342cdc-60ec-469b-bf5a-76850a463500")
 	)
 	(label "LED_D41"
 		(at 236.22 180.34 180)
@@ -11361,7 +11361,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "fcab6fac-c1dc-430d-92ba-3468de9a5e43")
+		(uuid "ef1f1aee-e81f-449e-accc-0a568c5ed11b")
 	)
 	(wire
 		(pts
@@ -11372,7 +11372,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d00c567e-cd4d-42dd-bfcb-64cdc5497725")
+		(uuid "23912813-e166-45a9-8126-8fc73d105574")
 	)
 	(label "LED_D42"
 		(at 256.54 180.34 0)
@@ -11382,7 +11382,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "56d69e07-cee6-4a38-a651-a74319beae62")
+		(uuid "b71f7761-98ba-426e-a561-525b95be9bf4")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -11392,7 +11392,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4fcddab2-0453-4b1d-9b90-508e54a85761")
+		(uuid "a64de51a-af1b-429b-b536-88c2104d58f6")
 		(property "Reference" "LED43"
 			(at 295.91 171.45 0)
 			(effects
@@ -11439,20 +11439,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "670852e2-6e3e-471f-b23a-812f034d30fd")
+			(uuid "c421c2dd-c8fd-4bd2-815d-7baf6d380ac8")
 		)
 		(pin "2"
-			(uuid "fb78b91c-db56-4a5f-adf2-3e00f20ff44e")
+			(uuid "dc01d9a5-9874-48ab-8bf4-6b4ece0c3619")
 		)
 		(pin "3"
-			(uuid "c137c490-87b4-446a-96e6-706ba94b9900")
+			(uuid "ce490014-9690-49e1-aed1-dbdc956bf1ee")
 		)
 		(pin "4"
-			(uuid "858e8d37-dccf-4cf5-beb7-f490bd40caf6")
+			(uuid "55ee75d9-573b-4077-a27a-14083ee52e18")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED43")
 					(unit 1)
 				)
@@ -11468,7 +11468,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f90fab04-d30b-4f52-bd6e-25ccb683b40c")
+		(uuid "568dca0b-8167-4720-9964-319f2bc541af")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -11478,7 +11478,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "9dc84ad5-c4d7-4833-a2fb-fa94138a29ec")
+		(uuid "c89a5f09-8e6a-42c3-ab86-b4159403f00d")
 		(property "Reference" "#PWRL85"
 			(at 289.56 165.1 0)
 			(effects
@@ -11515,11 +11515,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "37b9f4fc-0e7a-405d-adea-5ed7db864f5b")
+			(uuid "668af39c-c747-43cf-a9be-66ad5a2c66d8")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL85")
 					(unit 1)
 				)
@@ -11535,7 +11535,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2f775efa-959f-4284-bf7a-901e3753de26")
+		(uuid "117233a1-4109-4195-ac65-ed45eb4b46bc")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11545,7 +11545,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "0873cf1e-dc03-49b8-9bc6-a5429aba0683")
+		(uuid "fa082ccd-fe5a-4ad5-8a80-828043fd4e9a")
 		(property "Reference" "#PWRL86"
 			(at 289.56 185.42 0)
 			(effects
@@ -11582,11 +11582,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "219c8ba5-160f-451f-a1e6-27aea4e25596")
+			(uuid "b9ec6604-7885-4385-a41c-d284dd9e3eda")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL86")
 					(unit 1)
 				)
@@ -11602,7 +11602,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a9199dc2-df9d-4a11-8067-cf04dad90ea6")
+		(uuid "099645e7-b73f-4b47-a37d-54f49990b6cf")
 	)
 	(label "LED_D42"
 		(at 279.4 180.34 180)
@@ -11612,7 +11612,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b66c0819-1618-43d7-8f85-d226b44208d9")
+		(uuid "dd175c4d-ecee-4396-95c2-21f38f18a4a6")
 	)
 	(wire
 		(pts
@@ -11623,7 +11623,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "77e944a3-30d4-481e-b382-96be6a31b4f5")
+		(uuid "2dcd38ce-a3ec-4390-9619-5c2756ebe246")
 	)
 	(label "LED_D43"
 		(at 299.72 180.34 0)
@@ -11633,7 +11633,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3b61e31c-e859-4e70-a975-45a3dc394c12")
+		(uuid "d69e9f31-18fd-4b1b-a4fb-5826096c148b")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -11643,7 +11643,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c2a60eca-090c-475e-9877-92016bf39368")
+		(uuid "c0fef132-d9aa-4fb5-86f2-46c05e59d780")
 		(property "Reference" "LED44"
 			(at 339.09 171.45 0)
 			(effects
@@ -11690,20 +11690,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "82665c6c-baae-4d16-8cb3-b3e88a80feec")
+			(uuid "77a0425a-f052-4138-b320-da989608009d")
 		)
 		(pin "2"
-			(uuid "bdf9ec56-9eb3-4a63-bafa-0b165c5b3ec2")
+			(uuid "66a8b6d0-176f-4d7b-8796-c90e1778eca5")
 		)
 		(pin "3"
-			(uuid "24dbea18-ffd6-4a1e-b49e-dafff3c549b0")
+			(uuid "34936a1f-c2ba-4c01-9479-4265d1f03d21")
 		)
 		(pin "4"
-			(uuid "f8fd3d72-cfa4-49ba-9f74-c126c50cd4d6")
+			(uuid "5e0340eb-156e-4303-bfbb-eea5dfe8fe69")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED44")
 					(unit 1)
 				)
@@ -11719,7 +11719,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b2cdea43-eab0-4ddd-83a5-82ad34c09614")
+		(uuid "fb366ce7-479f-473d-a9e5-af7e47557974")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -11729,7 +11729,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "df82cbc2-de7a-4a77-b849-12058e8d6c00")
+		(uuid "8915d708-e9e2-4e92-8b75-f9e35fc83d41")
 		(property "Reference" "#PWRL87"
 			(at 332.74 165.1 0)
 			(effects
@@ -11766,11 +11766,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "46328196-c074-4fca-b34d-77124df1f643")
+			(uuid "06e37fa0-7e0c-489f-a7e9-c19f5aa07426")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL87")
 					(unit 1)
 				)
@@ -11786,7 +11786,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "39909505-1290-465e-b2f6-c187d1e2f9f7")
+		(uuid "855401f8-c4f6-485f-a3d6-8eb9ec51957c")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11796,7 +11796,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "8a5ba33c-08f1-4275-9d76-7e829f77ad77")
+		(uuid "eacee00a-3b7a-40ef-a7c7-6ef81bcbc5fa")
 		(property "Reference" "#PWRL88"
 			(at 332.74 185.42 0)
 			(effects
@@ -11833,11 +11833,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "cdf0168b-5023-43d3-986c-95a38654c76b")
+			(uuid "3f4914da-cddf-401c-b45b-d465a527de9f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL88")
 					(unit 1)
 				)
@@ -11853,7 +11853,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "938490f6-2962-43e9-94c4-2282a5b698ef")
+		(uuid "1cd98d56-9bb8-4471-8cc0-ba29303ab2a6")
 	)
 	(label "LED_D43"
 		(at 322.58 180.34 180)
@@ -11863,7 +11863,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "969cc78b-e321-49d2-ac72-b18a5e422c80")
+		(uuid "d6284ba3-5288-43d0-8cf2-be4ccf714676")
 	)
 	(wire
 		(pts
@@ -11874,7 +11874,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "28eb133d-6f15-4f5b-b8af-cb842ad5dffd")
+		(uuid "d7096a66-8706-4b3e-84f8-22ff0ba99ce4")
 	)
 	(label "LED_D44"
 		(at 342.9 180.34 0)
@@ -11884,7 +11884,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4d6c79e3-681b-4047-a8bc-a8b45e59fea2")
+		(uuid "885be3d6-25e5-438b-8128-b20e61be599d")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -11894,7 +11894,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ef3a05f9-3c3f-46cd-87aa-23fc00ea2a0e")
+		(uuid "1d2d6cc1-5f92-4cc2-8240-3510596ca26f")
 		(property "Reference" "LED45"
 			(at 382.27 171.45 0)
 			(effects
@@ -11941,20 +11941,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "e6894ca6-6bae-477e-a6b5-1379de52cc73")
+			(uuid "5fb40449-4b32-4b3d-afea-97cbfbb4c7b2")
 		)
 		(pin "2"
-			(uuid "0b0985fd-eea8-4fad-b2a9-93edd3b71f9d")
+			(uuid "2b487928-e2d5-4fb0-b67d-ae91a86f8b07")
 		)
 		(pin "3"
-			(uuid "12520414-12c8-477e-9017-d4e03f101dfe")
+			(uuid "3b697979-b0bf-4a15-84a0-700811d27b48")
 		)
 		(pin "4"
-			(uuid "d75b6e90-2da9-4cc5-b61b-f118e71cee60")
+			(uuid "759dfffd-fef5-47e8-bf75-2d7785725d1e")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED45")
 					(unit 1)
 				)
@@ -11970,7 +11970,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4d865ae5-92a8-4b12-b22b-d49eb8465c22")
+		(uuid "e3072589-35e4-4aa6-aba2-370053be8bfa")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -11980,7 +11980,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "eea6a386-ef42-4b08-91d3-19a526d098cd")
+		(uuid "7c97fffb-692c-45d2-a8e9-a56050220f93")
 		(property "Reference" "#PWRL89"
 			(at 375.92 165.1 0)
 			(effects
@@ -12017,11 +12017,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0f785af5-28ab-40e2-b30b-7432d76d794c")
+			(uuid "1910b9bb-e5b2-4bd0-9f2d-016d6da9d8ab")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL89")
 					(unit 1)
 				)
@@ -12037,7 +12037,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "168e7793-6636-4315-8e5d-337f6f1b176c")
+		(uuid "264230e9-2a38-4099-9626-6a9e23377b55")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -12047,7 +12047,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "b50086fe-f907-4b83-a012-5b15f74a3f45")
+		(uuid "98aa7d76-79d2-4709-bff0-7489fffab672")
 		(property "Reference" "#PWRL90"
 			(at 375.92 185.42 0)
 			(effects
@@ -12084,11 +12084,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d7578dcb-f28a-4ae5-b0a1-abfea15d5817")
+			(uuid "d8ba024e-26fc-4de7-a04d-481687cde001")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL90")
 					(unit 1)
 				)
@@ -12104,7 +12104,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d4685b75-9622-43dd-b4ac-811182340a61")
+		(uuid "b6999fa1-bd10-4492-bd13-6b72ae16f110")
 	)
 	(label "LED_D44"
 		(at 365.76 180.34 180)
@@ -12114,7 +12114,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "0ecd4539-ec65-4a54-b5d4-602f9219091e")
+		(uuid "a5dcbb07-b8e3-4b53-9e9b-3e4be6c13546")
 	)
 	(wire
 		(pts
@@ -12125,7 +12125,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f1db9689-f087-4051-8439-9a9c803b5512")
+		(uuid "02c49d09-5593-4a00-99e9-a34788547e85")
 	)
 	(label "LED_D45"
 		(at 386.08 180.34 0)
@@ -12135,7 +12135,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "12aec62d-7c99-44d9-91b0-34a2fcf99f90")
+		(uuid "c554a599-3cbb-48a3-bd7c-f8952bcea008")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -12145,7 +12145,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "395ff0d9-897b-4123-aff1-edfbe389c141")
+		(uuid "3120960e-aff0-41e9-8898-d0f47b7abff6")
 		(property "Reference" "LED46"
 			(at 36.83 207.01 0)
 			(effects
@@ -12192,20 +12192,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "7096a31c-7ed4-42bc-b69d-e058c99f42e6")
+			(uuid "9b67ec75-20cb-4b35-b5c5-00967c6fa90e")
 		)
 		(pin "2"
-			(uuid "e114c86b-556b-40c7-bd63-9414c1204339")
+			(uuid "5d0dab2a-84f9-49dc-b0ff-e57c622ac6df")
 		)
 		(pin "3"
-			(uuid "23e39b4c-2d69-4443-aec2-fad0ae36d59c")
+			(uuid "b2e6b6d4-abb0-43aa-a9f0-b1a6af57438a")
 		)
 		(pin "4"
-			(uuid "e40bde6f-6fb5-45ca-a6a0-4256aebc65b8")
+			(uuid "ec2feba0-a4e3-44ba-92f8-fb29152db368")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED46")
 					(unit 1)
 				)
@@ -12221,7 +12221,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "fa8c3dcb-cd87-400d-b166-6df54666c2b2")
+		(uuid "73de704c-c08b-4a10-a190-88612e70626b")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -12231,7 +12231,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "bba87e94-9ca4-4d15-a339-3deaaec4ef62")
+		(uuid "afaab274-ca0c-4b72-9262-5ce06c7bea3e")
 		(property "Reference" "#PWRL91"
 			(at 30.48 200.66 0)
 			(effects
@@ -12268,11 +12268,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "86bede27-5e40-40be-83af-06fbe6b09ffe")
+			(uuid "c0b88a50-15f9-4178-8459-590b4a9a7cee")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL91")
 					(unit 1)
 				)
@@ -12288,7 +12288,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d9cdec21-aba4-4365-833d-c9aaacef7acb")
+		(uuid "7a286f28-aab0-4e85-b336-66272395c520")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -12298,7 +12298,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "0e5e78bf-75a5-45ec-b49f-e38e68d0b8fe")
+		(uuid "63a8498a-0126-4579-9855-bbfd91c5e7c9")
 		(property "Reference" "#PWRL92"
 			(at 30.48 220.98 0)
 			(effects
@@ -12335,11 +12335,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "bc13e504-35f5-407a-bf88-d00bb1a824c6")
+			(uuid "143fa5cb-b922-460e-8347-aacfa9f2f194")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL92")
 					(unit 1)
 				)
@@ -12355,7 +12355,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3bf42954-6439-41e9-ba78-ea22af4ccb4a")
+		(uuid "8b311471-ac20-436d-aa73-d4191a002235")
 	)
 	(label "LED_D45"
 		(at 20.32 215.9 180)
@@ -12365,7 +12365,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "06214e9e-5a6c-4d73-a14c-fc2570b83666")
+		(uuid "01c5e2f6-c0ea-47f1-ada4-07429c4b0f36")
 	)
 	(wire
 		(pts
@@ -12376,7 +12376,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "828903fa-4f07-45f3-afe2-923e4db4c2f3")
+		(uuid "c62138da-6661-4309-b25e-b6ced085f713")
 	)
 	(label "LED_D46"
 		(at 40.64 215.9 0)
@@ -12386,7 +12386,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9158ff3d-fc2f-46a9-b62b-a2f493969ffe")
+		(uuid "c576cd37-af8b-43b0-9031-39331dba0806")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI")
@@ -12396,7 +12396,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "2c6d5b18-f2e2-4fb3-ae40-1e74798594a4")
+		(uuid "a44bc1d9-c53d-4920-a4c2-f920c405c7d9")
 		(property "Reference" "LED47"
 			(at 80.01 207.01 0)
 			(effects
@@ -12443,20 +12443,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "ca2b972f-9990-4d0c-9769-0b443fad7783")
+			(uuid "92a0b5d4-b07f-4cb0-bde5-c58bc2cb4548")
 		)
 		(pin "2"
-			(uuid "073778eb-4206-4f97-b622-9a9894d17993")
+			(uuid "76453fdc-4780-44e6-a55a-906d5fb18d9a")
 		)
 		(pin "3"
-			(uuid "ec4ba616-8d7d-48ba-9814-b8989ddbff06")
+			(uuid "a5e222ee-7866-4eb6-98ef-03143cd658b9")
 		)
 		(pin "4"
-			(uuid "ea9b4ef4-6fa2-41f9-983a-3c903089e25d")
+			(uuid "56813c97-fad4-4edd-b420-b9c332d172f0")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED47")
 					(unit 1)
 				)
@@ -12472,7 +12472,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "639d221e-6521-4d22-ae04-6de6983356f3")
+		(uuid "2af3163d-19bb-4424-a886-5087940c17cc")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -12482,7 +12482,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "fcc43e7b-5b91-4a59-8f48-64901d4ba49f")
+		(uuid "bb3a18d1-4445-429f-8c9a-4345b7ac5ede")
 		(property "Reference" "#PWRL93"
 			(at 73.66 200.66 0)
 			(effects
@@ -12519,11 +12519,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "3495dea6-766e-40c0-baa7-71e39a1fcf1d")
+			(uuid "9e0e6f05-6d79-4ece-8ac0-4e173552f22c")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL93")
 					(unit 1)
 				)
@@ -12539,7 +12539,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d05545f2-68de-40fa-a052-2aafdc305282")
+		(uuid "daffe956-0251-4081-ae04-5dd25ae2b351")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -12549,7 +12549,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "5d58b5a2-3e58-4e62-b7ec-166e0837e268")
+		(uuid "83382519-a1a6-474a-894b-b9da45afad61")
 		(property "Reference" "#PWRL94"
 			(at 73.66 220.98 0)
 			(effects
@@ -12586,11 +12586,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "00e8e154-bbea-41cf-8096-a2497bde321c")
+			(uuid "2357f16b-9e46-4eab-8640-7386c84bf17f")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL94")
 					(unit 1)
 				)
@@ -12606,7 +12606,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "972ef9c8-bcee-4c67-aec2-402325cfebdb")
+		(uuid "d1482211-6b4d-42e4-8563-4613af8e3e00")
 	)
 	(label "LED_D46"
 		(at 63.5 215.9 180)
@@ -12616,7 +12616,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d628f761-20b2-45f4-9dcd-2da294bdaaeb")
+		(uuid "152a00d7-0f33-433e-be3f-a0639bc6e06f")
 	)
 	(wire
 		(pts
@@ -12627,7 +12627,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "51720012-7b11-470a-ab76-aa2961fa7b63")
+		(uuid "e8ab05a9-838f-473b-a282-db03c4e03783")
 	)
 	(label "LED_D47"
 		(at 83.82 215.9 0)
@@ -12637,7 +12637,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d27de762-8603-47ab-bd81-f70da0134168")
+		(uuid "82dd08ef-f511-4286-ad9c-b239f22b5864")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -12647,7 +12647,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4ace4c09-3dbb-4dfa-abb7-cad27c28fe53")
+		(uuid "27b08759-aede-4317-b5e4-5b7a59204a75")
 		(property "Reference" "LED48"
 			(at 123.19 207.01 0)
 			(effects
@@ -12694,20 +12694,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "2154500d-3944-4b6d-8af0-6e257dbbb709")
+			(uuid "ea451eae-d0c6-40b1-b9b7-755683815128")
 		)
 		(pin "2"
-			(uuid "6b2a6994-ffa5-4595-b15e-2b114a57e93f")
+			(uuid "889bd93e-3611-4778-a694-91cc9eafbab3")
 		)
 		(pin "3"
-			(uuid "e6954174-dffe-42e2-ae51-a990bfd2ac0c")
+			(uuid "83c2ef8e-cdab-4387-a764-e8062d580ff8")
 		)
 		(pin "4"
-			(uuid "13d2c610-a871-469d-ad55-2a63c8bf610a")
+			(uuid "d11fa864-77b9-4825-9573-8287ef3d6094")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED48")
 					(unit 1)
 				)
@@ -12723,7 +12723,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "87445515-5b48-4649-803f-24c2a3327919")
+		(uuid "37dba385-a22a-48be-aecc-d9dfefd742c2")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -12733,7 +12733,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "0de53e1b-2a4f-4051-b391-6583977d721b")
+		(uuid "783ea302-b597-4cde-8bf3-9fc898cc8b86")
 		(property "Reference" "#PWRL95"
 			(at 116.84 200.66 0)
 			(effects
@@ -12770,11 +12770,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8f48c448-0a71-4a3f-94f2-616b781739f1")
+			(uuid "fbe20684-d8ef-4404-986c-06f176323285")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL95")
 					(unit 1)
 				)
@@ -12790,7 +12790,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9c93673e-5710-4ff2-887f-b364d9fb6ea9")
+		(uuid "bdbf31ee-c064-44a3-b15c-beaca8c04f80")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -12800,7 +12800,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "29824f50-ea69-4318-986a-a4e7413bf37f")
+		(uuid "59019977-ad47-4ea6-955f-d99b441b4c15")
 		(property "Reference" "#PWRL96"
 			(at 116.84 220.98 0)
 			(effects
@@ -12837,11 +12837,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "3a410c26-e943-4f0d-b3e1-879a30f02523")
+			(uuid "2d0ee250-999a-448b-92d3-c517d121bcf3")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL96")
 					(unit 1)
 				)
@@ -12857,7 +12857,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "485614e2-7c47-4f66-a416-cc8228f38c5b")
+		(uuid "c4c29d98-aeb8-4f49-8bc7-46aa8ace0236")
 	)
 	(label "LED_D47"
 		(at 106.68 215.9 180)
@@ -12867,7 +12867,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "fd89ebb7-291e-4c6d-b4d3-261b441bb39f")
+		(uuid "946de443-f282-4843-b46f-ffababce9748")
 	)
 	(wire
 		(pts
@@ -12878,7 +12878,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a606f453-31cd-4d73-a0b2-8b3dd7c300bc")
+		(uuid "79759c69-7b87-4055-8541-3c0257bbbdec")
 	)
 	(label "LED_D48"
 		(at 127 215.9 0)
@@ -12888,7 +12888,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4b7146cf-a3c8-42dd-83b2-77995fa7662e")
+		(uuid "5085d84a-8032-4796-928f-a972d6b082d2")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -12898,7 +12898,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6b7e4d7a-f12e-4781-be51-689e471ce406")
+		(uuid "f0370478-833d-44f9-a3de-e68ece46fb19")
 		(property "Reference" "LED49"
 			(at 166.37 207.01 0)
 			(effects
@@ -12945,20 +12945,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "c8de6787-8c86-4550-91ae-5e76f654c9f4")
+			(uuid "8a00a2a1-3aa6-41eb-ae19-a751f4b04deb")
 		)
 		(pin "2"
-			(uuid "54c5f59f-dfaa-41e1-80a7-801bf2f4eeaa")
+			(uuid "36f046fb-cabf-485a-9613-796487984314")
 		)
 		(pin "3"
-			(uuid "8028065e-6bf6-4141-b294-41f3aed46e2a")
+			(uuid "bf67e9c1-5466-472f-a6af-6e5478cb4d1b")
 		)
 		(pin "4"
-			(uuid "66dfe1e8-89ec-48fd-ac3a-6e1dff15aa53")
+			(uuid "dac4cb76-263d-4c8f-bb76-694125cbc2c7")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED49")
 					(unit 1)
 				)
@@ -12974,7 +12974,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d8d7f3af-240d-4fc2-8a83-497000b57dec")
+		(uuid "246a1928-65cc-45bc-b8a0-a13461b3af6d")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -12984,7 +12984,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "027871a0-82ed-42fd-8d08-5806bab3d976")
+		(uuid "0dfd530e-bbe6-4b6b-a038-970a96246b13")
 		(property "Reference" "#PWRL97"
 			(at 160.02 200.66 0)
 			(effects
@@ -13021,11 +13021,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "9882cc6f-e1e8-436a-8a83-70e4f6325f53")
+			(uuid "a53d03d3-c3e1-40f2-81c3-7372ae7bac33")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL97")
 					(unit 1)
 				)
@@ -13041,7 +13041,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e7dec78e-799d-4943-9b3e-771b6774cdda")
+		(uuid "1accc099-b565-47a7-ae11-c68ab22d36cc")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -13051,7 +13051,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "874f427c-75c9-4e72-938e-fe5c2417613d")
+		(uuid "df3b6266-7cfe-4fc9-9216-9867b506a0f2")
 		(property "Reference" "#PWRL98"
 			(at 160.02 220.98 0)
 			(effects
@@ -13088,11 +13088,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "2816cefd-2946-4fe3-9cbc-2fd3f27db315")
+			(uuid "eb7ba8a5-8119-4c0a-9c6e-e923af49e7f2")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL98")
 					(unit 1)
 				)
@@ -13108,7 +13108,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "12a0e765-3f3f-4436-8703-3a4510dd0a15")
+		(uuid "071bc076-f48c-4b98-a6d1-b24bbe568245")
 	)
 	(label "LED_D48"
 		(at 149.86 215.9 180)
@@ -13118,7 +13118,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "a2fb9d75-cfb5-48f7-b4b6-62172d57d011")
+		(uuid "bc8fcf22-5705-4be3-bd6b-50fccbb533c7")
 	)
 	(wire
 		(pts
@@ -13129,7 +13129,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "183f3087-9bc0-439f-824a-be1830e1d8cc")
+		(uuid "2f962163-a046-48b4-8a69-244791c1e3da")
 	)
 	(label "LED_D49"
 		(at 170.18 215.9 0)
@@ -13139,7 +13139,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "adc3374e-40e3-4ba2-bbcf-813a2f2c6029")
+		(uuid "1354a2bb-eb3b-446b-a140-76275f39f551")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -13149,7 +13149,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8f0b3f22-af3f-4523-ba0b-06511cc886ab")
+		(uuid "f575f51d-c407-4a3e-a741-4402200c94c1")
 		(property "Reference" "LED50"
 			(at 209.55 207.01 0)
 			(effects
@@ -13196,20 +13196,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "a62466b7-4ab6-4ed4-b62d-7472d7a0ebc5")
+			(uuid "c2e5d356-78e0-499d-b73e-4411131292af")
 		)
 		(pin "2"
-			(uuid "5bf3e03e-136e-463f-8876-5ac5fee2eadb")
+			(uuid "b64bf569-4d82-4241-bbcd-abe61da60201")
 		)
 		(pin "3"
-			(uuid "486bf26d-dedb-4d7a-a7d1-0f1404d746ad")
+			(uuid "cef319c0-336e-4566-9e94-a5372aeffda9")
 		)
 		(pin "4"
-			(uuid "35554c0a-8049-4e64-ba84-331224b65667")
+			(uuid "b95400db-7d0d-412a-b77b-8b6b4de1cb29")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED50")
 					(unit 1)
 				)
@@ -13225,7 +13225,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "23fc3de9-af54-4e4e-a296-f03bedea11b8")
+		(uuid "9276c111-207d-4515-af2a-650895c43ff8")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -13235,7 +13235,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "88c81be4-72a6-4d70-90cd-414f3adcb614")
+		(uuid "6c5003cc-198f-4f1c-845e-1476af09cd77")
 		(property "Reference" "#PWRL99"
 			(at 203.2 200.66 0)
 			(effects
@@ -13272,11 +13272,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "781953b7-49af-4b37-8832-41f9049f0ff3")
+			(uuid "13f68550-14b7-41fc-8b62-66e11959e659")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL99")
 					(unit 1)
 				)
@@ -13292,7 +13292,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f5253fd7-cf94-4ebe-913a-ab07091dfecc")
+		(uuid "2075059a-42c5-498e-abc4-c2817f10b7f4")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -13302,7 +13302,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "7496ba77-7a38-44c6-8fbf-9d8f74b1fd3b")
+		(uuid "74aac2a1-a77d-4daf-bfdb-66247336c43c")
 		(property "Reference" "#PWRL100"
 			(at 203.2 220.98 0)
 			(effects
@@ -13339,11 +13339,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8ef9650b-16e9-456e-a88b-b2b08d4b2e65")
+			(uuid "b379b10c-4289-423e-ade2-f52c11cdaa45")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL100")
 					(unit 1)
 				)
@@ -13359,7 +13359,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b87f0f3e-801c-4443-b8a3-d1dc22bb4e62")
+		(uuid "6bba0f08-0ca7-4813-935f-179805c49e23")
 	)
 	(label "LED_D49"
 		(at 193.04 215.9 180)
@@ -13369,7 +13369,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "e2d79969-9311-42bc-80fb-e73fa374e736")
+		(uuid "383f53a6-531e-4046-b3d9-1a79deb9a7eb")
 	)
 	(wire
 		(pts
@@ -13380,7 +13380,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "26783071-449f-4a96-9984-0a7e0d9abb34")
+		(uuid "f61e8a30-fb79-4612-856a-9200e72ef5dc")
 	)
 	(label "LED_D50"
 		(at 213.36 215.9 0)
@@ -13390,7 +13390,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5088a95b-5926-4bca-8a0d-0f2c62487e1f")
+		(uuid "fd93487d-a44e-4840-9312-e3983ff224eb")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -13400,7 +13400,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c03a14ad-b636-45ce-ba38-0ed8cec488c6")
+		(uuid "f46363e6-dc5d-47ba-acaa-1bc3d23f0409")
 		(property "Reference" "LED51"
 			(at 252.73 207.01 0)
 			(effects
@@ -13447,20 +13447,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "3ecc9ec1-ea0a-4823-92f3-79d8bda36469")
+			(uuid "ae9a8557-9639-4adf-adaf-5effde922aee")
 		)
 		(pin "2"
-			(uuid "ecfaa229-689e-4659-b22c-cbd88c2eafc6")
+			(uuid "27ba096e-73dd-4d4b-9955-def902e5bc28")
 		)
 		(pin "3"
-			(uuid "fddf32d8-1ef7-467f-aabd-4a997a03162a")
+			(uuid "f3fec229-e386-4077-9d7c-2b38b376043c")
 		)
 		(pin "4"
-			(uuid "5df92c90-3b3b-49b3-acf3-c7c30eba7097")
+			(uuid "9928a53f-45d6-4196-8535-91655106da15")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED51")
 					(unit 1)
 				)
@@ -13476,7 +13476,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "46f9fdae-03ad-4e11-a4b1-7324137d290f")
+		(uuid "b26aa103-3e62-4073-978a-dd2d6e1ab5d1")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -13486,7 +13486,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ccbdb706-af35-4814-9a73-2902b25eae0c")
+		(uuid "2eedf315-89ed-4b6c-ae02-f5f2797d87f6")
 		(property "Reference" "#PWRL101"
 			(at 246.38 200.66 0)
 			(effects
@@ -13523,11 +13523,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "2900ba77-68e1-4899-aeab-129cc67f77f4")
+			(uuid "736a7e35-6a1f-48b8-b513-cc6e2bc74a02")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL101")
 					(unit 1)
 				)
@@ -13543,7 +13543,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "834ab492-92ed-4edd-ac20-f95f598fd8b0")
+		(uuid "194b143c-c433-4e9c-b585-0a92494677fc")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -13553,7 +13553,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "785a8736-7e94-41c2-a94b-924c3d5ff534")
+		(uuid "0b4e1756-25d2-4cbf-9292-790c97e39688")
 		(property "Reference" "#PWRL102"
 			(at 246.38 220.98 0)
 			(effects
@@ -13590,11 +13590,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "a69db267-577b-404f-9c68-c41686febf7c")
+			(uuid "f78caf0f-1104-415e-9a64-93db96b469a3")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL102")
 					(unit 1)
 				)
@@ -13610,7 +13610,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8a94b685-baec-4559-a8d7-2e588433c9a6")
+		(uuid "789d85fe-ff92-4874-a8a4-fff1b40fef79")
 	)
 	(label "LED_D50"
 		(at 236.22 215.9 180)
@@ -13620,7 +13620,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "051764a4-1a0b-4dd6-b08c-a16d795bb9b2")
+		(uuid "ebf9fe52-6a94-4004-8688-86e8a4e903c3")
 	)
 	(wire
 		(pts
@@ -13631,7 +13631,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "66f68ed6-6630-4008-aa60-1ed225cd5800")
+		(uuid "4eeb9bad-2332-48d9-b783-fa8325711057")
 	)
 	(label "LED_D51"
 		(at 256.54 215.9 0)
@@ -13641,7 +13641,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5d40da73-e2aa-4c1b-a03f-02b274794378")
+		(uuid "1d8cd29a-9c05-48e0-a7a8-56cc74347673")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -13651,7 +13651,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a3b3517a-32eb-4ad7-acc2-fbb7656c5178")
+		(uuid "3cab3a07-a912-4567-bd67-f90b620e21fe")
 		(property "Reference" "LED52"
 			(at 295.91 207.01 0)
 			(effects
@@ -13698,20 +13698,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "6ab39d5b-da02-4241-849f-672bb2124b24")
+			(uuid "bddf068c-ecef-4367-87af-cdc1330ce789")
 		)
 		(pin "2"
-			(uuid "27ac4313-cf98-47cf-a4c3-96b81d4d357d")
+			(uuid "57f054cb-fec4-4d49-af1b-b94104541411")
 		)
 		(pin "3"
-			(uuid "fd9b2451-ee63-4469-baa1-56dc373fd12b")
+			(uuid "6f759324-4223-4a33-8884-bccd9ff7c63e")
 		)
 		(pin "4"
-			(uuid "e5463822-8523-4b11-bb4a-29f16e5f4abd")
+			(uuid "5cd1828c-66d8-4410-bcd0-b15170a81963")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED52")
 					(unit 1)
 				)
@@ -13727,7 +13727,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4cb3b071-a2c9-48c9-a146-2e2e75b98be6")
+		(uuid "89f58989-6514-4d1f-9add-68054c289f34")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -13737,7 +13737,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "a62e1f42-3855-460f-8b63-b4102525cc38")
+		(uuid "b677736e-81a4-45a1-8504-364558dce9ff")
 		(property "Reference" "#PWRL103"
 			(at 289.56 200.66 0)
 			(effects
@@ -13774,11 +13774,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "fb803026-5b87-49f7-9ba7-c566993ef8c9")
+			(uuid "d70169de-5c83-4ea4-b5d3-7510173d44e5")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL103")
 					(unit 1)
 				)
@@ -13794,7 +13794,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "89c447b7-bf04-4921-b156-eb5413b60b96")
+		(uuid "fec9335a-65af-4dc2-9b09-ab498bb3bfa0")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -13804,7 +13804,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "bd50c03e-456f-4335-a5e4-4ec964b74448")
+		(uuid "5a6509c8-140c-4edd-b1a0-fb02e175b743")
 		(property "Reference" "#PWRL104"
 			(at 289.56 220.98 0)
 			(effects
@@ -13841,11 +13841,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "74cb7d45-bc6f-409d-b38e-c2675f2e866d")
+			(uuid "f8ca3db9-94a3-4aad-a58b-1ec005c5e459")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL104")
 					(unit 1)
 				)
@@ -13861,7 +13861,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d52c555a-c745-4827-8eeb-e168e0f94512")
+		(uuid "cf207c00-90be-4a24-92d7-1f0af75f30dd")
 	)
 	(label "LED_D51"
 		(at 279.4 215.9 180)
@@ -13871,7 +13871,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ceace42d-03c7-4fe4-8bb5-c128e1c4463f")
+		(uuid "2d9c2bb1-8889-45a3-a1dc-6b990e884fbb")
 	)
 	(wire
 		(pts
@@ -13882,7 +13882,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7f76b5bf-1f9e-4a83-b58b-2853ee9dd545")
+		(uuid "31c07c4a-7aa3-43dd-8061-6b1340ce350b")
 	)
 	(label "LED_D52"
 		(at 299.72 215.9 0)
@@ -13892,7 +13892,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7974ed03-814f-49dd-bbf0-a24663965c50")
+		(uuid "5ac254c3-2915-45d5-bdbb-5bb755009667")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -13902,7 +13902,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ced4ff38-40d7-4e6e-b18e-3936eed26815")
+		(uuid "ad665f5f-888e-4704-b776-93d6a6a2d4f8")
 		(property "Reference" "LED53"
 			(at 339.09 207.01 0)
 			(effects
@@ -13949,20 +13949,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "c0c76b18-1902-459a-95ae-6e22d2ad9275")
+			(uuid "c2c84972-5eef-49b8-a244-4e6d791f009d")
 		)
 		(pin "2"
-			(uuid "48e92dca-07d3-4588-8eeb-ca9b78a5d9b7")
+			(uuid "56bfd7fb-5ff6-4141-b073-d43b541135bd")
 		)
 		(pin "3"
-			(uuid "7dea1c70-624e-4dbb-a70d-a2b896558bb6")
+			(uuid "3ec02590-c263-4e07-9f4f-48fbfc53d0bc")
 		)
 		(pin "4"
-			(uuid "c637bb3f-c38c-4161-acf3-7dd649ecef43")
+			(uuid "80dad9eb-19cb-4c9d-aa71-f078407702ff")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED53")
 					(unit 1)
 				)
@@ -13978,7 +13978,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9d30e524-7d09-4771-b334-5a93125b43f3")
+		(uuid "0f8fcfad-4280-40a7-8fa3-415418818465")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -13988,7 +13988,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "15ba0aa0-567e-4301-81b7-4d984ce7a781")
+		(uuid "2ab69847-557a-446f-a1d0-4f34c1165a13")
 		(property "Reference" "#PWRL105"
 			(at 332.74 200.66 0)
 			(effects
@@ -14025,11 +14025,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "7e6fbf97-ef54-4b2b-806b-d53ece40b2f5")
+			(uuid "ac1343a8-2a58-468d-b21d-2296d61e812b")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL105")
 					(unit 1)
 				)
@@ -14045,7 +14045,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "115ced11-a27e-4d6e-8a67-e82523f771e5")
+		(uuid "8baca650-bd4d-4920-8c64-d9f6079f2013")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -14055,7 +14055,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "90e9e995-5e87-43f7-9030-a3238557122b")
+		(uuid "49f9b5af-ea56-42d6-8f2a-883d3bc4fad8")
 		(property "Reference" "#PWRL106"
 			(at 332.74 220.98 0)
 			(effects
@@ -14092,11 +14092,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "ba95c796-25dc-485e-b86c-e6ad7120ab1e")
+			(uuid "a81a8806-7720-45fc-aec1-1c783bc85083")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL106")
 					(unit 1)
 				)
@@ -14112,7 +14112,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2f0a3eb5-418e-424a-8162-e26de9bf1f9e")
+		(uuid "ef1c31cf-d697-421b-b335-7422142ed810")
 	)
 	(label "LED_D52"
 		(at 322.58 215.9 180)
@@ -14122,7 +14122,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "8fe21d5e-227a-47ad-8af5-df5efe9cba48")
+		(uuid "5258f5d6-7d5c-4156-80b0-39d25976d518")
 	)
 	(wire
 		(pts
@@ -14133,7 +14133,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "346b337b-ee90-4f96-9c69-94ef1bffb8af")
+		(uuid "25259652-e892-4447-8355-756b9b4c7422")
 	)
 	(label "LED_D53"
 		(at 342.9 215.9 0)
@@ -14143,7 +14143,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ad5b74fb-2575-4782-996c-5db3ed656e55")
+		(uuid "a1875738-f153-4a01-8aa2-b29689475c0f")
 	)
 	(symbol
 		(lib_id "LED:SK6812MINI-E")
@@ -14153,7 +14153,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8e7c8a0e-18fe-4e57-be65-c1e5a1c637a7")
+		(uuid "1790de4f-b5e9-40a4-b53e-5e732c134534")
 		(property "Reference" "LED54"
 			(at 382.27 207.01 0)
 			(effects
@@ -14200,20 +14200,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "1d6078cc-1619-404c-8fa2-6c89cea99480")
+			(uuid "7609b3a2-4b74-441a-936e-3287c6f313b6")
 		)
 		(pin "2"
-			(uuid "1b7c52ca-4686-488c-bbae-660b22f065b7")
+			(uuid "34ed7c25-9596-4d8f-9763-14db00279e4c")
 		)
 		(pin "3"
-			(uuid "4f1702ed-5944-48e3-8ca3-fdadd4caa9f0")
+			(uuid "fc809eb2-69cd-46aa-bdf2-845c78c3bc5d")
 		)
 		(pin "4"
-			(uuid "a06f944f-6f86-4b16-bd25-ad5d76f9752b")
+			(uuid "47575182-8f5d-4415-bcd3-4d76b5ac7601")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "LED54")
 					(unit 1)
 				)
@@ -14229,7 +14229,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "83dd6f4c-4877-4f97-b370-c0274d69f2e1")
+		(uuid "fde7958c-0ec4-4b9d-a3c1-3aa4864c150f")
 	)
 	(symbol
 		(lib_id "unicorne:LED_VDD")
@@ -14239,7 +14239,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "0a731b96-9352-466e-a6f3-79b454b2993c")
+		(uuid "d09f62d1-5cbc-464d-bf0f-b04d78fbabb9")
 		(property "Reference" "#PWRL107"
 			(at 375.92 200.66 0)
 			(effects
@@ -14276,11 +14276,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "9b653bfd-d8e3-419b-a38a-669de08d8c23")
+			(uuid "cf79411c-8871-4f7e-a86a-4d4b3c2b2069")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL107")
 					(unit 1)
 				)
@@ -14296,7 +14296,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "49da3ffc-a22a-4ad1-909f-08c659e24d40")
+		(uuid "a755a34d-6c5d-4a4b-9517-d93de91ab04d")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -14306,7 +14306,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "17903f73-4115-4e75-b280-eb059131123e")
+		(uuid "9e95c50f-f59b-4630-8491-de11c9b6c283")
 		(property "Reference" "#PWRL108"
 			(at 375.92 220.98 0)
 			(effects
@@ -14343,11 +14343,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "6c0d478e-d653-45c2-b164-0dda44b827e2")
+			(uuid "25ad748a-acf0-4db4-ba15-2041e2737a8a")
 		)
 		(instances
 			(project "unicorne"
-				(path "/cad2f934-2e49-4f11-bbd2-8b519fa40732/05905be4-470a-49f5-8fa7-35a6ef79c2d5"
+				(path "/b548902e-4d5c-4f3b-9491-93d49b8558df/7a5dee2a-65ac-46a4-b3bb-c980acbfa9ec"
 					(reference "#PWRL108")
 					(unit 1)
 				)
@@ -14363,7 +14363,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4041749d-3fa8-4f81-8b19-4eb2833ac271")
+		(uuid "3bd877b5-95e2-4f3f-b600-0302dce6b897")
 	)
 	(label "LED_D53"
 		(at 365.76 215.9 180)
@@ -14373,11 +14373,11 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2c5cda23-90f8-405f-a3e0-6e125dc24948")
+		(uuid "b9d537f7-1d70-424c-aa91-c86d782f0521")
 	)
 	(no_connect
 		(at 383.54 215.9)
-		(uuid "1fbc2bcb-bea5-4c31-a186-c916fc973db3")
+		(uuid "125ea211-2d06-4414-bed3-86b955f6ae26")
 	)
 	(text "Chain: left underglow, left rows (left to right), left thumbs, right thumbs, right rows,\nright underglow, then the breakable outer pinky columns (right, then left). LED_VDD powers all."
 		(exclude_from_sim no)
@@ -14388,7 +14388,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "fcfc85a4-8d60-4990-88f9-8491e7ca4a35")
+		(uuid "d1a9ed0c-aa5e-486b-8aae-3a7d6c2d5a31")
 	)
 	(embedded_fonts no)
 )

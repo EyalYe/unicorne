@@ -30,7 +30,7 @@ import gen_pcb as G  # noqa: E402
 from layout import rot  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-CLI = "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli"
+CLI = "/usr/bin/kicad-cli"
 PLATES = {
     # switch cutout (square, mm), plate thickness, matching PCB
     "mx": dict(cut=14.0, thickness=1.5, pcb="unicorne.kicad_pcb"),

@@ -24,9 +24,8 @@ from layout import rot  # noqa: E402
 import lanes  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-KICAD = Path("/Applications/KiCad/KiCad.app")
-CLI = KICAD / "Contents/MacOS/kicad-cli"
-FP_DIR = KICAD / "Contents/SharedSupport/footprints"
+CLI = Path("/usr/bin/kicad-cli")
+FP_DIR = Path("/usr/share/kicad/footprints")
 
 # Per switch type: footprints, diode (x, y, rotation) in the switch frame, the
 # break line's distance from the pinky column on the (left, right) half, and the
